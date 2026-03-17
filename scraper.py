@@ -5,6 +5,8 @@ from datetime import datetime
 
 BLUE_RATE = 1290
 OUTPUT_FILE = "listings.json"
+CCA_FILE = "cca_precios.json"
+CCA_PDF_URL = "https://www.cca.org.ar/descargas/precios/Autos.pdf"
 
 def fetch(url, headers=None):
     req = urllib.request.Request(url, headers=headers or {
@@ -14,157 +16,260 @@ def fetch(url, headers=None):
     })
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
-            return r.read().decode('utf-8', errors='ignore')
+            return r.read()
     except Exception as e:
         print(f"Error fetching {url}: {e}")
-        return ""
+        return b""
+
+def parse_cca_pdf():
+    import subprocess, sys, tempfile, os
+    try:
+        from pdfminer.high_level import extract_text
+    except ImportError:
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pdfminer.six', '-q'])
+        from pdfminer.high_level import extract_text
+
+    print("Descargando PDF CCA...")
+    pdf_data = fetch(CCA_PDF_URL)
+    if not pdf_data:
+        print("No se pudo descargar el PDF CCA")
+        return {}
+
+    with tempfile.NamedTemporaryFile(suffix='.pdf', delete=False) as f:
+        f.write(pdf_data)
+        tmp_path = f.name
+
+    try:
+        text = extract_text(tmp_path)
+    finally:
+        os.unlink(tmp_path)
+
+    prices = {}
+    current_marca = ""
+    current_modelo = ""
+    col_years = [0, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012]
+
+    for line in text.split('\n'):
+        line = line.strip()
+        if not line:
+            continue
+        if 'Visite Nuestro' in line or 'Autos - Pick' in line or '0 Km' in line:
+            continue
+
+        # Brand: all caps, no digits
+        if re.match(r'^[A-Z][A-Z\s\-]+$', line) and len(line) < 30 and not any(c.isdigit() for c in line):
+            current_marca = line.strip()
+            continue
+
+        # Model name
+        if re.match(r'^[A-Z][A-Za-z0-9\s]+$', line) and len(line) < 20 and not re.search(r'\d{4,}', line):
+            current_modelo = line.strip()
+            continue
+
+        # Price line
+        nums = re.findall(r'\b(\d{4,6})\b', line)
+        if nums and current_marca and current_modelo:
+            version_end = line.rfind(nums[0])
+            version = line[:version_end].strip()
+            trans = 'at' if re.search(r'\bAT\b|S-TRONIC|CVT|TIPTRONIC|DSG', version.upper()) else 'mt'
+
+            for idx, num_str in enumerate(nums):
+                if idx < len(col_years) and col_years[idx] > 0:
+                    price_usd = round(int(num_str) * 1000 / BLUE_RATE)
+                    year = col_years[idx]
+                    key = re.sub(r'[^a-z0-9_]', '_', f"{current_marca.lower()}_{current_modelo.lower()}_{year}_{trans}")
+                    key = re.sub(r'_+', '_', key).strip('_')
+                    if price_usd > 500:
+                        if key not in prices or price_usd > prices[key]:
+                            prices[key] = price_usd
+
+    print(f"CCA: {len(prices)} precios parseados")
+    return prices
+
+def scrape_rg(marca, paginas=3):
+    listings = []
+    base_url = f"https://www.rosariogarage.com/Autos/{marca}"
+    for page in range(1, paginas + 1):
+        url = base_url if page == 1 else f"{base_url}?page={page}"
+        html = fetch(url).decode('latin-1', errors='ignore')
+        if not html:
+            break
+        blocks = html.split('data-rel="')
+        parsed = 0
+        for block in blocks[1:]:
+            id_m = re.match(r'^(\d+)"', block)
+            if not id_m:
+                continue
+            item_id = id_m.group(1)
+            chunk = block[:4000]
+            title_m = re.search(r'class="list_type_anuncio">([^<]+)<', chunk)
+            if not title_m:
+                continue
+            title = title_m.group(1).replace('...', '').strip()
+            year_m = re.search(r'>(20\d{2}|19\d{2})</span>', chunk)
+            if not year_m:
+                continue
+            year = int(year_m.group(1))
+            km_m = re.search(r'>([\d.]+)\s*km\.</span>', chunk, re.I)
+            if not km_m:
+                continue
+            km = int(km_m.group(1).replace('.', ''))
+            if year < 2000 or km > 400000:
+                continue
+            trans_m = re.search(r'>(AT|MT)</span>', chunk, re.I)
+            trans = trans_m.group(1).upper() if trans_m else '?'
+            fuel_m = re.search(r'>(Nafta|Diesel|GNC|Eléctrico|Híbrido)</span>', chunk, re.I)
+            fuel = fuel_m.group(1) if fuel_m else '?'
+            price_m = re.search(r'class="precio[^"]*">\s*<a[^>]*>\s*([^\n<]+)', chunk, re.I)
+            price_raw = price_m.group(1).strip() if price_m else ''
+            if not price_raw or 'consultar' in price_raw.lower():
+                continue
+            precio_usd = parse_price(price_raw)
+            if not precio_usd:
+                continue
+            listings.append({
+                'id': item_id,
+                'url': f"https://www.rosariogarage.com/index.php?action=carro/showProduct&itmId={item_id}",
+                'title': title[:60], 'year': year, 'km': km,
+                'fuel': fuel, 'trans': trans,
+                'precio_usd': precio_usd, 'fuente': 'rg',
+                'model_key': extract_model_key(title, year)
+            })
+            parsed += 1
+        print(f"  RG {marca} p{page}: {parsed}")
+        if parsed == 0:
+            break
+    return listings
+
+def scrape_ac(marca, paginas=3):
+    listings = []
+    for page in range(1, paginas + 1):
+        url = f"https://www.autocosmos.com.ar/auto/usado/{marca}" + (f"?p={page}" if page > 1 else "")
+        html = fetch(url).decode('utf-8', errors='ignore')
+        if not html:
+            break
+        blocks = html.split('<article')
+        parsed = 0
+        for block in blocks[1:]:
+            chunk = block[:2000]
+            url_m = re.search(r'href="(/auto/usado/[^"]+)"', chunk)
+            if not url_m:
+                continue
+            rel_url = url_m.group(1)
+            item_id = 'ac_' + re.sub(r'[^a-z0-9]', '_', rel_url)[:40]
+            desc_m = re.search(r'content="([^"]*usado[^"]*)"', chunk) or re.search(r'description[^>]*content="([^"]+)"', chunk)
+            if not desc_m:
+                continue
+            desc = desc_m.group(1)
+            year_m = re.search(r'\((\d{4})\)', desc)
+            if not year_m:
+                continue
+            year = int(year_m.group(1))
+            if year < 2000:
+                continue
+            title_m = re.search(r'title="([^"]+)"', chunk)
+            title = title_m.group(1)[:60] if title_m else desc[:40]
+            usd_m = re.search(r'u\$s([\d.,]+)', desc, re.I)
+            precio_usd = 0
+            if usd_m:
+                precio_usd = int(usd_m.group(1).replace(',','').replace('.',''))
+                if precio_usd > 500000:
+                    precio_usd = round(precio_usd / BLUE_RATE)
+            else:
+                ars_m = re.search(r'content="(\d{6,9})"', chunk)
+                if ars_m:
+                    precio_usd = round(int(ars_m.group(1)) / BLUE_RATE)
+            if not precio_usd or precio_usd < 1000:
+                continue
+            km_m = re.search(r'([\d.]+)\s*km', desc, re.I)
+            km = int(km_m.group(1).replace('.','')) if km_m else 0
+            trans = 'AT' if re.search(r'autom|s.tronic|cvt|tiptronic', desc, re.I) else 'MT'
+            listings.append({
+                'id': item_id,
+                'url': f"https://www.autocosmos.com.ar{rel_url}",
+                'title': title, 'year': year, 'km': km,
+                'fuel': '?', 'trans': trans,
+                'precio_usd': precio_usd, 'fuente': 'ac',
+                'model_key': extract_model_key(title, year)
+            })
+            parsed += 1
+        print(f"  AC {marca} p{page}: {parsed}")
+        if parsed == 0:
+            break
+    return listings
 
 def parse_price(raw):
     if not raw or 'consultar' in raw.lower():
         return 0
-    num_str = re.sub(r'[^\d]', '', raw)
-    if not num_str:
+    num = int(re.sub(r'[^\d]', '', raw) or '0')
+    if not num:
         return 0
-    num = int(num_str)
-    if 'u$s' in raw.lower() or 'usd' in raw.lower():
+    if re.search(r'u\$s', raw, re.I):
         return num
     return round(num / BLUE_RATE)
 
-def scrape_kavak(page=1):
-    listings = []
-    api_url = f"https://listings-api.kavak.com/car?countryCode=AR&page={page}&limit=48&sort=price_asc"
-    html = fetch(api_url, headers={
-        'User-Agent': 'Mozilla/5.0',
-        'Accept': 'application/json',
-        'Origin': 'https://www.kavak.com',
-        'Referer': 'https://www.kavak.com/ar/usados',
-    })
-    try:
-        data = json.loads(html)
-        cars = data.get('data', data.get('cars', data.get('results', [])))
-        for car in cars:
-            title = f"{car.get('brand','')} {car.get('model','')} {car.get('version','')}".strip()
-            year = int(car.get('year', 0))
-            km = int(car.get('km', car.get('mileage', 0)))
-            price = car.get('price', car.get('salePrice', 0))
-            currency = car.get('currency', 'ARS')
-            precio_usd = price if currency == 'USD' else round(price / BLUE_RATE)
-            car_url = f"https://www.kavak.com/ar/usados/{car.get('brand','').lower()}/{car.get('id','')}"
-            trans = 'AT' if 'auto' in str(car.get('transmission','')).lower() else 'MT'
-            if year >= 2005 and precio_usd > 1000:
-                listings.append({
-                    'id': f"kv_{car.get('id', car.get('stockId', ''))}",
-                    'url': car_url, 'title': title[:60],
-                    'year': year, 'km': km,
-                    'fuel': car.get('fuelType', '?'), 'trans': trans,
-                    'precio_usd': precio_usd, 'fuente': 'kavak'
-                })
-    except Exception as e:
-        print(f"Kavak parse error: {e}")
-    return listings
+def extract_model_key(title, year):
+    t = title.lower()
+    brands = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda']
+    brand = next((b for b in brands if b in t), 'other')
+    models = ['a1','a3','a4','a5','a6','q2','q3','q5','q7','tt','yaris','corolla','hilux','rav4','polo','golf','vento','tiguan','focus','fiesta','ecosport','ranger','208','308','2008','3008','clio','sandero','duster','captur','fit','civic','hrv','crv','tracker','onix','cruze','etios','sienta','march','versa','sentra']
+    model = next((m for m in models if m in t), 'other')
+    return f"{brand}_{model}_{(year // 2) * 2}"
 
-def scrape_lavoz(marca='', page=1):
-    listings = []
-    base = "https://clasificadoslavoz.com.ar"
-    url = f"{base}/autos{'/' + marca if marca else ''}?page={page}"
-    html = fetch(url)
-    if not html:
-        return listings
-    match = re.search(r'__NEXT_DATA__\s*=\s*({.+?})\s*</script>', html, re.DOTALL)
-    if match:
-        try:
-            data = json.loads(match.group(1))
-            props = data.get('props', {}).get('pageProps', {})
-            items = props.get('listings', props.get('items', props.get('ads', [])))
-            for item in items:
-                title = item.get('title', '')
-                price_raw = str(item.get('price', {}).get('amount', '') or item.get('price', ''))
-                currency = item.get('price', {}).get('currency', 'ARS')
-                precio_usd = int(price_raw) if currency == 'USD' else parse_price(price_raw)
-                year_match = re.search(r'(20\d{2}|19\d{2})', title)
-                year = int(year_match.group(1)) if year_match else 0
-                km_raw = str(item.get('attributes', {}).get('km', item.get('km', '0')))
-                km = int(re.sub(r'\D', '', km_raw) or '0')
-                item_url = item.get('permalink', item.get('url', ''))
-                if not item_url.startswith('http'):
-                    item_url = base + item_url
-                if year >= 2005 and precio_usd > 1000:
-                    listings.append({
-                        'id': f"lv_{item.get('id', '')}",
-                        'url': item_url, 'title': title[:60],
-                        'year': year, 'km': km,
-                        'fuel': '?', 'trans': '?',
-                        'precio_usd': precio_usd, 'fuente': 'lavoz'
-                    })
-        except Exception as e:
-            print(f"La Voz parse error: {e}")
-    return listings
-
-def scrape_deconcesionarias(marca='', page=1):
-    listings = []
-    url = f"https://www.deconcesionarias.com.ar/autos-usados{'/' + marca if marca else ''}?pagina={page}"
-    html = fetch(url)
-    if not html:
-        return listings
-    blocks = re.split(r'class="[^"]*car[- _]card[^"]*"', html)
-    for block in blocks[1:]:
-        chunk = block[:1500]
-        title_m = re.search(r'<h[23][^>]*>([^<]{5,60})</h[23]>', chunk)
-        price_m = re.search(r'U\$[Ss]\s*([\d.,]+)|\$\s*([\d.]+)', chunk)
-        year_m = re.search(r'\b(20\d{2}|19\d{2})\b', chunk)
-        url_m = re.search(r'href="(/[^"]+autos[^"]+)"', chunk)
-        km_m = re.search(r'([\d.]+)\s*km', chunk, re.IGNORECASE)
-        if title_m and price_m and year_m:
-            g = price_m.groups()
-            price_str = g[0] or g[1] or '0'
-            precio_usd = int(re.sub(r'\D', '', price_str)) if g[0] else parse_price('$' + price_str)
-            year = int(year_m.group(1))
-            km = int(re.sub(r'\.', '', km_m.group(1))) if km_m else 0
-            item_url = 'https://www.deconcesionarias.com.ar' + url_m.group(1) if url_m else ''
-            if year >= 2005 and precio_usd > 1000:
-                listings.append({
-                    'id': f"dc_{hash(item_url or title_m.group(1)) % 9999999}",
-                    'url': item_url, 'title': title_m.group(1)[:60],
-                    'year': year, 'km': km,
-                    'fuel': '?', 'trans': '?',
-                    'precio_usd': precio_usd, 'fuente': 'deconcesionarias'
-                })
-    return listings
+def find_cca_price(listing, cca_prices):
+    t = listing['title'].lower()
+    year = listing['year']
+    trans = listing.get('trans', '?').lower()
+    brands = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda']
+    brand = next((b for b in brands if b in t), None)
+    if not brand:
+        return None
+    models = ['a1','a3','a4','a5','a6','q2','q3','q5','q7','tt','yaris','corolla','hilux','rav4','polo','golf','vento','tiguan','focus','fiesta','ecosport','208','308','2008','3008','clio','sandero','duster','captur','fit','civic','hrv','crv','tracker','onix','cruze']
+    model = next((m for m in models if m in t), None)
+    if not model:
+        return None
+    # Try exact match
+    key = re.sub(r'[^a-z0-9_]', '_', f"{brand}_{model}_{year}_{trans}")
+    if key in cca_prices:
+        return cca_prices[key]
+    # Try without trans
+    for k, v in cca_prices.items():
+        if brand in k and model in k and str(year) in k:
+            return v
+    return None
 
 def main():
     all_listings = []
-    marcas = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','bmw','mercedes-benz','hyundai','kia']
+    marcas = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda']
 
-    print("Scraping Kavak...")
-    for page in range(1, 5):
-        l = scrape_kavak(page)
-        print(f"  page {page}: {len(l)}")
-        all_listings.extend(l)
-        if not l: break
-
-    print("Scraping La Voz...")
+    print("Scraping RosarioGarage...")
     for marca in marcas:
-        for page in range(1, 3):
-            l = scrape_lavoz(marca, page)
-            print(f"  {marca} p{page}: {len(l)}")
-            all_listings.extend(l)
-            if not l: break
+        all_listings.extend(scrape_rg(marca, 3))
 
-    print("Scraping deConcesionarias...")
+    print("Scraping Autocosmos...")
     for marca in marcas:
-        for page in range(1, 3):
-            l = scrape_deconcesionarias(marca, page)
-            print(f"  {marca} p{page}: {len(l)}")
-            all_listings.extend(l)
-            if not l: break
+        all_listings.extend(scrape_ac(marca, 3))
 
     seen = set()
     unique = [l for l in all_listings if not (l['id'] in seen or seen.add(l['id']))]
+    print(f"Total listings: {len(unique)}")
+
+    cca_prices = parse_cca_pdf()
+
+    with open(CCA_FILE, 'w', encoding='utf-8') as f:
+        json.dump({'updated': datetime.utcnow().isoformat()+'Z', 'total': len(cca_prices), 'prices': cca_prices}, f, ensure_ascii=False)
+    print(f"CCA guardado: {len(cca_prices)} precios")
+
+    for l in unique:
+        cca = find_cca_price(l, cca_prices)
+        if cca:
+            l['precio_cca'] = cca
+            l['descuento_vs_cca'] = round((1 - l['precio_usd'] / cca) * 100)
 
     output = {'updated': datetime.utcnow().isoformat()+'Z', 'total': len(unique), 'listings': unique}
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"\nTotal: {len(unique)} listings → {OUTPUT_FILE}")
+    print(f"listings.json guardado: {len(unique)} autos")
 
 if __name__ == '__main__':
     main()
