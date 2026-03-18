@@ -15,7 +15,7 @@ def fetch(url, headers=None):
         'Accept-Language': 'es-AR,es;q=0.9',
     })
     try:
-        with urllib.request.urlopen(req, timeout=15) as r:
+        with urllib.request.urlopen(req, timeout=20) as r:
             return r.read()
     except Exception as e:
         print(f"Error fetching {url}: {e}")
@@ -32,7 +32,7 @@ def parse_cca_pdf():
     print("Descargando PDF CCA...")
     pdf_data = fetch(CCA_PDF_URL)
     if not pdf_data:
-        print("No se pudo descargar el PDF CCA")
+        print("No se pudo descargar PDF CCA")
         return {}
 
     with tempfile.NamedTemporaryFile(suffix='.pdf', delete=False) as f:
@@ -44,46 +44,281 @@ def parse_cca_pdf():
     finally:
         os.unlink(tmp_path)
 
+    # The PDF text comes concatenated. We need to find brand sections.
+    # Key insight: brands appear as all-caps words before model names.
+    # Models appear as short words/numbers before spec lines with prices.
+    
     prices = {}
-    current_marca = ""
-    current_modelo = ""
-    col_years = [0, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012]
+    
+    # Known brands and their model mappings
+    BRAND_MODELS = {
+        'TOYOTA': {
+            'COROLLA': ['corolla'],
+            'YARIS': ['yaris'],
+            'HILUX': ['hilux'],
+            'RAV4': ['rav4', 'rav 4'],
+            'SW4': ['sw4'],
+            'CAMRY': ['camry'],
+            'CHR': ['chr', 'c-hr'],
+            'ETIOS': ['etios'],
+            'FORTUNER': ['fortuner'],
+            'PRIUS': ['prius'],
+        },
+        'VOLKSWAGEN': {
+            'POLO': ['polo'],
+            'GOLF': ['golf'],
+            'VENTO': ['vento'],
+            'TIGUAN': ['tiguan'],
+            'AMAROK': ['amarok'],
+            'TAOS': ['taos'],
+            'NIVUS': ['nivus'],
+            'VIRTUS': ['virtus'],
+            'SAVEIRO': ['saveiro'],
+        },
+        'PEUGEOT': {
+            '208': ['208'],
+            '308': ['308'],
+            '2008': ['2008'],
+            '3008': ['3008'],
+            '408': ['408'],
+            '508': ['508'],
+        },
+        'RENAULT': {
+            'CLIO': ['clio'],
+            'SANDERO': ['sandero'],
+            'DUSTER': ['duster'],
+            'LOGAN': ['logan'],
+            'KWID': ['kwid'],
+            'CAPTUR': ['captur'],
+            'ARKANA': ['arkana'],
+            'OROCH': ['oroch'],
+        },
+        'HONDA': {
+            'CIVIC': ['civic'],
+            'HRV': ['hrv', 'hr-v'],
+            'CRV': ['crv', 'cr-v'],
+            'FIT': ['fit'],
+            'WRV': ['wrv', 'wr-v'],
+            'ACCORD': ['accord'],
+        },
+        'FORD': {
+            'FOCUS': ['focus'],
+            'ECOSPORT': ['ecosport'],
+            'RANGER': ['ranger'],
+            'KA': ['ka'],
+            'TERRITORY': ['territory'],
+            'BRONCO': ['bronco'],
+            'MAVERICK': ['maverick'],
+            'KUGA': ['kuga'],
+        },
+        'CHEVROLET': {
+            'ONIX': ['onix'],
+            'TRACKER': ['tracker'],
+            'CRUZE': ['cruze'],
+            'EQUINOX': ['equinox'],
+            'S10': ['s10', 's 10'],
+            'SPIN': ['spin'],
+        },
+        'FIAT': {
+            'CRONOS': ['cronos'],
+            'ARGO': ['argo'],
+            'PULSE': ['pulse'],
+            'FASTBACK': ['fastback'],
+            'MOBI': ['mobi'],
+            'TORO': ['toro'],
+            'STRADA': ['strada'],
+        },
+        'AUDI': {
+            'A1': ['a1'],
+            'A3': ['a3'],
+            'A4': ['a4'],
+            'A5': ['a5'],
+            'A6': ['a6'],
+            'Q2': ['q2'],
+            'Q3': ['q3'],
+            'Q5': ['q5'],
+            'Q7': ['q7'],
+            'TT': ['tt'],
+        },
+        'BMW': {
+            'SERIE 1': ['116', '118', '120', '125', '130', '135', '140'],
+            'SERIE 2': ['218', '220', '228', '230', '235', '240'],
+            'SERIE 3': ['318', '320', '325', '328', '330', '335', '340'],
+            'SERIE 4': ['420', '428', '430', '435', '440'],
+            'SERIE 5': ['520', '523', '525', '528', '530', '535', '540'],
+            'X1': ['x1'],
+            'X2': ['x2'],
+            'X3': ['x3'],
+            'X4': ['x4'],
+            'X5': ['x5'],
+        },
+        'MERCEDES BENZ': {
+            'CLASE A': ['a 200', 'a200', 'a 250', 'a250'],
+            'CLASE C': ['c 180', 'c180', 'c 200', 'c200', 'c 250', 'c250', 'c 300', 'c300'],
+            'CLASE E': ['e 200', 'e200', 'e 250', 'e250', 'e 300', 'e300'],
+            'GLA': ['gla'],
+            'GLB': ['glb'],
+            'GLC': ['glc'],
+        },
+        'HYUNDAI': {
+            'TUCSON': ['tucson'],
+            'SANTA FE': ['santa fe'],
+            'CRETA': ['creta'],
+            'VENUE': ['venue'],
+            'I30': ['i30', 'i 30'],
+        },
+        'KIA': {
+            'CERATO': ['cerato'],
+            'SPORTAGE': ['sportage'],
+            'SORENTO': ['sorento'],
+            'SELTOS': ['seltos'],
+            'STINGER': ['stinger'],
+            'RIO': ['rio'],
+            'PICANTO': ['picanto'],
+        },
+        'NISSAN': {
+            'MARCH': ['march'],
+            'VERSA': ['versa'],
+            'SENTRA': ['sentra'],
+            'KICKS': ['kicks'],
+            'XTRAIL': ['x-trail', 'xtrail'],
+            'NOTE': ['note'],
+            'FRONTIER': ['frontier'],
+        },
+        'MAZDA': {
+            'MAZDA2': ['mazda 2', 'mazda2', '2 sport'],
+            'MAZDA3': ['mazda 3', 'mazda3', '3 sport'],
+            'MAZDA6': ['mazda 6', 'mazda6'],
+            'CX3': ['cx-3', 'cx3'],
+            'CX5': ['cx-5', 'cx5'],
+            'CX9': ['cx-9', 'cx9'],
+        },
+        'CITROEN': {
+            'C3': ['c3'],
+            'C4': ['c4'],
+            'C5': ['c5'],
+            'BERLINGO': ['berlingo'],
+            'XSARA': ['xsara'],
+        },
+        'JEEP': {
+            'RENEGADE': ['renegade'],
+            'COMPASS': ['compass'],
+            'WRANGLER': ['wrangler'],
+            'GLADIATOR': ['gladiator'],
+            'GRAND CHEROKEE': ['grand cherokee'],
+        },
+    }
 
-    for line in text.split('\n'):
-        line = line.strip()
-        if not line:
+    # Column positions: 0Km=col0, 2025=col1, 2024=col2, ... 2012=col14
+    COL_YEARS = [0, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012]
+
+    text_upper = text.upper()
+    
+    for brand, models in BRAND_MODELS.items():
+        # Find brand position in text
+        brand_pos = text_upper.find(brand)
+        if brand_pos == -1:
+            print(f"  Brand not found: {brand}")
             continue
-        if 'Visite Nuestro' in line or 'Autos - Pick' in line or '0 Km' in line:
-            continue
-
-        # Brand: all caps, no digits
-        if re.match(r'^[A-Z][A-Z\s\-]+$', line) and len(line) < 30 and not any(c.isdigit() for c in line):
-            current_marca = line.strip()
-            continue
-
-        # Model name
-        if re.match(r'^[A-Z][A-Za-z0-9\s]+$', line) and len(line) < 20 and not re.search(r'\d{4,}', line):
-            current_modelo = line.strip()
-            continue
-
-        # Price line
-        nums = re.findall(r'\b(\d{4,6})\b', line)
-        if nums and current_marca and current_modelo:
-            version_end = line.rfind(nums[0])
-            version = line[:version_end].strip()
-            trans = 'at' if re.search(r'\bAT\b|S-TRONIC|CVT|TIPTRONIC|DSG', version.upper()) else 'mt'
-
-            for idx, num_str in enumerate(nums):
-                if idx < len(col_years) and col_years[idx] > 0:
-                    price_usd = round(int(num_str) * 1000 / BLUE_RATE)
-                    year = col_years[idx]
-                    key = re.sub(r'[^a-z0-9_]', '_', f"{current_marca.lower()}_{current_modelo.lower()}_{year}_{trans}")
-                    key = re.sub(r'_+', '_', key).strip('_')
-                    if price_usd > 500:
-                        if key not in prices or price_usd > prices[key]:
-                            prices[key] = price_usd
-
-    print(f"CCA: {len(prices)} precios parseados")
+        
+        # Find next brand to limit search area
+        next_brand_pos = len(text)
+        for other_brand in BRAND_MODELS.keys():
+            if other_brand == brand:
+                continue
+            pos = text_upper.find(other_brand, brand_pos + len(brand))
+            if pos != -1 and pos < next_brand_pos:
+                next_brand_pos = pos
+        
+        brand_text = text[brand_pos:next_brand_pos]
+        brand_text_upper = brand_text.upper()
+        
+        for model_name, model_variants in models.items():
+            # Find model in brand section
+            model_pos = -1
+            for variant in model_variants:
+                pos = brand_text_upper.find(variant.upper())
+                if pos != -1:
+                    model_pos = pos
+                    break
+            
+            if model_pos == -1:
+                continue
+            
+            # Find next model to limit search
+            next_model_pos = len(brand_text)
+            for other_model, other_variants in models.items():
+                if other_model == model_name:
+                    continue
+                for variant in other_variants:
+                    pos = brand_text_upper.find(variant.upper(), model_pos + 2)
+                    if pos != -1 and pos < next_model_pos:
+                        next_model_pos = pos
+            
+            model_text = brand_text[model_pos:next_model_pos]
+            
+            # Extract all 4-6 digit numbers (prices in thousands ARS)
+            all_nums = re.findall(r'\b(\d{4,6})\b', model_text)
+            
+            if len(all_nums) < 2:
+                continue
+            
+            # Group numbers into rows of up to 15 (one per column)
+            # Each row = one version line
+            # We calculate average price per year across all versions
+            year_totals = {}
+            year_counts = {}
+            
+            # Process in chunks that could be price rows
+            i = 0
+            while i < len(all_nums):
+                # A price row has between 1 and 14 prices (years with data)
+                row = []
+                j = i
+                while j < len(all_nums) and j < i + 14:
+                    val = int(all_nums[j])
+                    # Valid price range: 10000-999999 (in thousands ARS)
+                    if 10000 <= val <= 999999:
+                        row.append(val)
+                        j += 1
+                    else:
+                        break
+                
+                if len(row) >= 1:
+                    # Map to years - skip column 0 (0km)
+                    for idx, price in enumerate(row):
+                        year_idx = idx + 1  # skip 0km column
+                        if year_idx < len(COL_YEARS):
+                            year = COL_YEARS[year_idx]
+                            price_usd = round(price * 1000 / BLUE_RATE)
+                            if 2000 < price_usd < 300000:
+                                if year not in year_totals:
+                                    year_totals[year] = 0
+                                    year_counts[year] = 0
+                                year_totals[year] += price_usd
+                                year_counts[year] += 1
+                
+                i = max(i + 1, j)
+            
+            # Store average price per year
+            brand_key = brand.lower().replace(' ', '_')
+            model_key = model_name.lower().replace(' ', '_')
+            
+            for year, total in year_totals.items():
+                count = year_counts[year]
+                avg = round(total / count)
+                # Use same key format as scraper: brand_model_year_pair
+                year_pair = (year // 2) * 2
+                key = f"{brand_key}_{model_key}_{year_pair}"
+                # Keep median-ish: if multiple years map to same pair, average them
+                if key not in prices:
+                    prices[key] = avg
+                else:
+                    prices[key] = round((prices[key] + avg) / 2)
+            
+            print(f"  {brand} {model_name}: {len(year_totals)} años")
+    
+    print(f"CCA total: {len(prices)} precios")
     return prices
 
 def scrape_rg(marca, paginas=3):
@@ -210,37 +445,44 @@ def parse_price(raw):
 
 def extract_model_key(title, year):
     t = title.lower()
-    brands = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda']
+    brands = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda','citroen','jeep','mitsubishi','subaru','chery','haval','byd']
     brand = next((b for b in brands if b in t), 'other')
-    models = ['a1','a3','a4','a5','a6','q2','q3','q5','q7','tt','yaris','corolla','hilux','rav4','polo','golf','vento','tiguan','focus','fiesta','ecosport','ranger','208','308','2008','3008','clio','sandero','duster','captur','fit','civic','hrv','crv','tracker','onix','cruze','etios','sienta','march','versa','sentra']
+    models = ['a1','a3','a4','a5','a6','q2','q3','q5','q7','tt',
+              'yaris','corolla','hilux','rav4','sw4','chr','etios','fortuner','prius',
+              'polo','golf','vento','tiguan','amarok','taos','nivus','virtus',
+              '208','308','2008','3008','408',
+              'clio','sandero','duster','logan','kwid','captur','arkana',
+              'fit','civic','hrv','crv','wrv','accord',
+              'focus','ecosport','ranger','territory','kuga','maverick',
+              'onix','tracker','cruze','equinox','s10',
+              'cronos','argo','pulse','fastback','mobi','toro','strada',
+              'tucson','santa fe','creta','venue','i30',
+              'cerato','sportage','sorento','seltos','stinger','rio',
+              'march','versa','sentra','kicks','note','frontier',
+              'renegade','compass','wrangler','gladiator',
+              'c3','c4','berlingo']
     model = next((m for m in models if m in t), 'other')
     return f"{brand}_{model}_{(year // 2) * 2}"
 
 def find_cca_price(listing, cca_prices):
-    t = listing['title'].lower()
-    year = listing['year']
-    trans = listing.get('trans', '?').lower()
-    brands = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda']
-    brand = next((b for b in brands if b in t), None)
-    if not brand:
-        return None
-    models = ['a1','a3','a4','a5','a6','q2','q3','q5','q7','tt','yaris','corolla','hilux','rav4','polo','golf','vento','tiguan','focus','fiesta','ecosport','208','308','2008','3008','clio','sandero','duster','captur','fit','civic','hrv','crv','tracker','onix','cruze']
-    model = next((m for m in models if m in t), None)
-    if not model:
-        return None
-    # Try exact match
-    key = re.sub(r'[^a-z0-9_]', '_', f"{brand}_{model}_{year}_{trans}")
+    key = listing.get('model_key', '')
     if key in cca_prices:
         return cca_prices[key]
-    # Try without trans
-    for k, v in cca_prices.items():
-        if brand in k and model in k and str(year) in k:
-            return v
+    # Try partial match
+    parts = key.split('_')
+    if len(parts) >= 3:
+        brand, model = parts[0], parts[1]
+        year_pair = parts[2] if len(parts) > 2 else ''
+        for k, v in cca_prices.items():
+            if brand in k and model in k and year_pair in k:
+                return v
     return None
 
 def main():
     all_listings = []
-    marcas = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault','honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda']
+    marcas = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault',
+              'honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda',
+              'citroen','jeep','mitsubishi','subaru','chery','haval','byd']
 
     print("Scraping RosarioGarage...")
     for marca in marcas:
@@ -254,22 +496,28 @@ def main():
     unique = [l for l in all_listings if not (l['id'] in seen or seen.add(l['id']))]
     print(f"Total listings: {len(unique)}")
 
+    print("Parseando PDF CCA...")
     cca_prices = parse_cca_pdf()
 
     with open(CCA_FILE, 'w', encoding='utf-8') as f:
-        json.dump({'updated': datetime.utcnow().isoformat()+'Z', 'total': len(cca_prices), 'prices': cca_prices}, f, ensure_ascii=False)
+        json.dump({'updated': datetime.utcnow().isoformat()+'Z',
+                   'total': len(cca_prices), 'prices': cca_prices}, f, ensure_ascii=False, indent=2)
     print(f"CCA guardado: {len(cca_prices)} precios")
 
+    matched = 0
     for l in unique:
         cca = find_cca_price(l, cca_prices)
         if cca:
             l['precio_cca'] = cca
             l['descuento_vs_cca'] = round((1 - l['precio_usd'] / cca) * 100)
+            matched += 1
+
+    print(f"Listings con CCA: {matched}/{len(unique)}")
 
     output = {'updated': datetime.utcnow().isoformat()+'Z', 'total': len(unique), 'listings': unique}
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"listings.json guardado: {len(unique)} autos")
+    print(f"listings.json: {len(unique)} autos")
 
 if __name__ == '__main__':
     main()
