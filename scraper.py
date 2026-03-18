@@ -480,17 +480,38 @@ def find_cca_price(listing, cca_prices):
 
 def main():
     all_listings = []
-    marcas = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault',
+    marcas_rg_ac = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault',
               'honda','fiat','bmw','mercedes','hyundai','kia','nissan','mazda',
               'citroen','jeep','mitsubishi','subaru','chery','haval','byd']
+    
+    # ML uses different URL format for some brands
+    marcas_ml = [
+        ('audi', ''), ('toyota', 'corolla'), ('toyota', 'yaris'), ('toyota', 'hilux'),
+        ('volkswagen', 'polo'), ('volkswagen', 'golf'), ('volkswagen', 'vento'), ('volkswagen', 'tiguan'),
+        ('ford', 'focus'), ('ford', 'ecosport'), ('ford', 'ranger'), ('ford', 'territory'),
+        ('chevrolet', 'onix'), ('chevrolet', 'tracker'), ('chevrolet', 'cruze'),
+        ('peugeot', '208'), ('peugeot', '308'), ('peugeot', '2008'), ('peugeot', '3008'),
+        ('renault', 'clio'), ('renault', 'sandero'), ('renault', 'duster'), ('renault', 'captur'),
+        ('honda', 'civic'), ('honda', 'hr-v'), ('honda', 'cr-v'),
+        ('fiat', 'cronos'), ('fiat', 'argo'), ('fiat', 'pulse'),
+        ('bmw', ''), ('mercedes-benz', ''),
+        ('hyundai', 'tucson'), ('hyundai', 'creta'),
+        ('kia', 'sportage'), ('kia', 'cerato'), ('kia', 'seltos'),
+        ('nissan', 'versa'), ('nissan', 'kicks'), ('nissan', 'march'),
+        ('mazda', ''), ('jeep', 'renegade'), ('jeep', 'compass'),
+    ]
 
     print("Scraping RosarioGarage...")
-    for marca in marcas:
+    for marca in marcas_rg_ac:
         all_listings.extend(scrape_rg(marca, 3))
 
     print("Scraping Autocosmos...")
-    for marca in marcas:
+    for marca in marcas_rg_ac:
         all_listings.extend(scrape_ac(marca, 3))
+    
+    print("Scraping MercadoLibre...")
+    for marca, modelo in marcas_ml:
+        all_listings.extend(scrape_ml(marca, modelo, 5))
 
     seen = set()
     unique = [l for l in all_listings if not (l['id'] in seen or seen.add(l['id']))]
@@ -521,3 +542,150 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# ---- MercadoLibre scraper ----
+def scrape_ml(marca, modelo='', paginas=5):
+    listings = []
+    BLUE_RATE = 1290
+    
+    # Build URL - ML uses hyphenated names
+    marca_url = marca.replace(' ', '-').lower()
+    modelo_url = ('-' + modelo.replace(' ', '-').lower()) if modelo else ''
+    base = f"https://listado.mercadolibre.com.ar/{marca_url}{modelo_url}-usado"
+    
+    for page in range(paginas):
+        offset = page * 48
+        url = base if page == 0 else f"{base}_Desde_{offset + 1}"
+        html = fetch(url).decode('utf-8', errors='ignore')
+        if not html:
+            break
+        
+        parsed = parse_ml_listings(html, marca, BLUE_RATE)
+        print(f"  ML {marca}{modelo_url} p{page+1}: {len(parsed)}")
+        listings.extend(parsed)
+        if len(parsed) < 10:
+            break
+    
+    return listings
+
+def parse_ml_listings(html, marca, BLUE_RATE=1290):
+    listings = []
+    import json as json_mod
+    
+    # ML embeds data in __PRELOADED_STATE__ or similar JSON
+    # Try to find the JSON data blob
+    match = re.search(r'window\.__PRELOADED_STATE__\s*=\s*({.+?});\s*</script>', html, re.DOTALL)
+    if match:
+        try:
+            data = json_mod.loads(match.group(1))
+            results = data.get('initialState', {}).get('results', [])
+            for item in results:
+                listing = parse_ml_item(item, BLUE_RATE)
+                if listing:
+                    listings.append(listing)
+            if listings:
+                return listings
+        except:
+            pass
+    
+    # Fallback: parse HTML directly
+    # ML listing cards have class "ui-search-result"
+    blocks = html.split('ui-search-result__wrapper')
+    for block in blocks[1:]:
+        chunk = block[:3000]
+        
+        # Title
+        title_m = re.search(r'class="poly-component__title[^"]*">([^<]+)<', chunk)
+        if not title_m:
+            title_m = re.search(r'ui-search-item__title[^>]*>([^<]+)<', chunk)
+        if not title_m:
+            continue
+        title = title_m.group(1).strip()[:60]
+        
+        # Year
+        year_m = re.search(r'\b(20\d{2}|19\d{2})\b', chunk)
+        if not year_m:
+            continue
+        year = int(year_m.group(1))
+        if year < 2000:
+            continue
+        
+        # KM
+        km_m = re.search(r'([\d.]+)\s*[Kk][Mm]', chunk)
+        km = int(km_m.group(1).replace('.','')) if km_m else 0
+        
+        # Price - ML shows USD or ARS
+        price_usd_m = re.search(r'US\$\s*([\d.,]+)', chunk)
+        price_ars_m = re.search(r'\$\s*([\d.,]+)', chunk)
+        
+        precio_usd = 0
+        if price_usd_m:
+            precio_usd = int(price_usd_m.group(1).replace('.','').replace(',',''))
+        elif price_ars_m:
+            ars = int(price_ars_m.group(1).replace('.','').replace(',',''))
+            if ars > 100000:  # sanity check - must be real ARS price
+                precio_usd = round(ars / BLUE_RATE)
+        
+        if not precio_usd or precio_usd < 1000 or precio_usd > 500000:
+            continue
+        
+        # URL
+        url_m = re.search(r'href="(https://[^"]*mercadolibre\.com\.ar/[^"]+)"', chunk)
+        item_url = url_m.group(1) if url_m else ''
+        item_id = 'ml_' + re.sub(r'[^a-z0-9]', '_', item_url.split('/')[-1])[:40] if item_url else f"ml_{hash(title+str(year)) % 9999999}"
+        
+        # Trans
+        trans = 'AT' if re.search(r'autom|cvt|tiptronic|s.tronic', chunk, re.I) else '?'
+        
+        listings.append({
+            'id': item_id,
+            'url': item_url,
+            'title': title,
+            'year': year, 'km': km,
+            'fuel': '?', 'trans': trans,
+            'precio_usd': precio_usd,
+            'fuente': 'ml',
+            'model_key': extract_model_key(title, year)
+        })
+    
+    return listings
+
+def parse_ml_item(item, BLUE_RATE):
+    try:
+        title = item.get('title', '')[:60]
+        year_m = re.search(r'\b(20\d{2}|19\d{2})\b', title)
+        year = int(year_m.group(1)) if year_m else 0
+        
+        # Try attributes for year
+        for attr in item.get('attributes', []):
+            if attr.get('id') == 'VEHICLE_YEAR':
+                year = int(attr.get('value_name', year))
+        
+        if year < 2000:
+            return None
+        
+        price = item.get('price', 0)
+        currency = item.get('currency_id', 'ARS')
+        precio_usd = price if currency == 'USD' else round(price / BLUE_RATE)
+        
+        if not precio_usd or precio_usd < 1000 or precio_usd > 500000:
+            return None
+        
+        km = 0
+        for attr in item.get('attributes', []):
+            if attr.get('id') == 'KILOMETERS':
+                km_str = re.sub(r'\D', '', str(attr.get('value_name', '0')))
+                km = int(km_str) if km_str else 0
+        
+        return {
+            'id': f"ml_{item.get('id', '')}",
+            'url': item.get('permalink', ''),
+            'title': title,
+            'year': year, 'km': km,
+            'fuel': '?', 'trans': '?',
+            'precio_usd': precio_usd,
+            'fuente': 'ml',
+            'model_key': extract_model_key(title, year)
+        }
+    except:
+        return None
