@@ -411,10 +411,38 @@ def scrape_ac(marca, paginas=3):
             break
     return listings
 
+ML_CLIENT_ID = '1276426174135886'
+ML_CLIENT_SECRET = 'UmgRQbp0AobW9tv067O84hWDhGtRLVr5'
+ML_TOKEN_CACHE = {'token': ''}
+
+def get_ml_token():
+    """Obtiene token de ML usando client_credentials."""
+    import urllib.request, urllib.parse
+    data = urllib.parse.urlencode({
+        'grant_type': 'client_credentials',
+        'client_id': ML_CLIENT_ID,
+        'client_secret': ML_CLIENT_SECRET
+    }).encode()
+    req = urllib.request.Request(
+        'https://api.mercadolibre.com/oauth/token',
+        data=data,
+        headers={'Content-Type': 'application/x-www-form-urlencoded'}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            resp = json.loads(r.read())
+            token = resp.get('access_token', '')
+            print(f"  ML token OK: {token[:30]}...")
+            return token
+    except Exception as e:
+        print(f"  ML token error: {e}")
+        return ''
+
 def scrape_ml(marca, modelo='', paginas=5):
-    """Scrape MercadoLibre usando la API oficial con token."""
-    import os
-    token = os.environ.get('ML_TOKEN', '')
+    """Scrape MercadoLibre usando la API oficial."""
+    if not ML_TOKEN_CACHE['token']:
+        ML_TOKEN_CACHE['token'] = get_ml_token()
+    token = ML_TOKEN_CACHE['token']
     if not token:
         print(f"  ML: sin token, saltando")
         return []
