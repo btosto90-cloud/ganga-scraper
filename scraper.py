@@ -591,6 +591,66 @@ def find_cca_price(listing, cca_prices):
                 return v
     return None
 
+def scrape_demotores(marca, paginas=3):
+    listings = []
+    marca_url = marca.lower().replace(' ', '-')
+    for page in range(1, paginas + 1):
+        url = f"https://www.demotores.com.ar/autos-usados/{marca_url}" + (f"?page={page}" if page > 1 else "")
+        html = fetch(url).decode('utf-8', errors='ignore')
+        if not html:
+            break
+        parsed = 0
+        # Demotores uses data-id or similar patterns
+        blocks = html.split('class="listing-item')
+        if len(blocks) < 2:
+            blocks = html.split('data-item-id="')
+        for block in blocks[1:]:
+            chunk = block[:3000]
+            # Title
+            title_m = re.search(r'(?:class="[^"]*title[^"]*"|<h2)[^>]*>([^<]+)<', chunk)
+            if not title_m:
+                title_m = re.search(r'<a[^>]*title="([^"]+)"', chunk)
+            if not title_m:
+                continue
+            title = title_m.group(1).strip()[:60]
+            # Year
+            year_m = re.search(r'\b(20\d{2}|19\d{2})\b', chunk)
+            if not year_m:
+                continue
+            year = int(year_m.group(1))
+            if year < 2000 or year > 2026:
+                continue
+            # KM
+            km_m = re.search(r'([\d.]+)\s*[Kk][Mm]', chunk)
+            km = int(km_m.group(1).replace('.','')) if km_m else 0
+            # Price
+            price_m = re.search(r'(?:USD|U\$S|\$)\s*([\d.,]+)', chunk, re.I)
+            if not price_m:
+                continue
+            price_raw = price_m.group(0)
+            precio_usd = parse_price(price_raw)
+            if not precio_usd or precio_usd < 1000:
+                continue
+            # URL/ID
+            url_m = re.search(r'href="(/[^"]*auto[^"]*)"', chunk)
+            item_url = f"https://www.demotores.com.ar{url_m.group(1)}" if url_m else ''
+            item_id = 'dm_' + re.sub(r'[^a-z0-9]', '_', url_m.group(1))[:40] if url_m else f"dm_{abs(hash(title+str(year)))%9999999}"
+            trans = 'AT' if re.search(r'autom|cvt|tiptronic', chunk, re.I) else '?'
+            listings.append({
+                'id': item_id,
+                'url': item_url,
+                'title': title, 'year': year, 'km': km,
+                'fuel': '?', 'trans': trans,
+                'precio_usd': precio_usd, 'fuente': 'dm',
+                'model_key': extract_model_key(title, year)
+            })
+            parsed += 1
+        print(f"  DM {marca} p{page}: {parsed}")
+        if parsed == 0:
+            break
+    return listings
+
+
 def main():
     all_listings = []
     marcas_rg_ac = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault',
@@ -613,13 +673,21 @@ def main():
         ('mazda', ''), ('jeep', 'renegade'), ('jeep', 'compass'),
     ]
 
+    marcas_dm = ['audi','toyota','volkswagen','ford','chevrolet','peugeot','renault',
+               'honda','fiat','bmw','mercedes-benz','hyundai','kia','nissan','mazda',
+               'citroen','jeep','mitsubishi','subaru','chery','haval','byd']
+
     print("Scraping RosarioGarage...")
     for marca in marcas_rg_ac:
         all_listings.extend(scrape_rg(marca, 3))
 
     print("Scraping Autocosmos...")
     for marca in marcas_rg_ac:
-        all_listings.extend(scrape_ac(marca, 3))
+        all_listings.extend(scrape_ac(marca, 5))
+
+    print("Scraping Demotores...")
+    for marca in marcas_dm:
+        all_listings.extend(scrape_demotores(marca, 3))
 
     print("Scraping MercadoLibre...")
     for marca, modelo in marcas_ml:
