@@ -35,11 +35,14 @@ jobs:
           name: ml-debug
           path: ml_debug.html
 
-      - name: Commit results
+     - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
           git add listings.json cca_precios.json
-          git diff --cached --quiet || git commit -m "Update listings $(date -u +%Y-%m-%d)"
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git stash
+          git pull --rebase origin main
+          git stash pop
+          git commit -m "Update listings $(date -u +%Y-%m-%d)"
           git push
