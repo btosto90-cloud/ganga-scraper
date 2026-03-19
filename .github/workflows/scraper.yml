@@ -1,37 +1,7 @@
-name: Run Scraper
-
-on:
-  schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'scraper.py'
-
-jobs:
-  scrape:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install pdfminer.six requests
-
-      - name: Run scraper
-        run: python scraper.py
-
-      - name: Commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add listings.json cca_precios.json
-          git diff --cached --quiet || git commit -m "Update listings $(date -u +%Y-%m-%d)"
-          git push
+def scrape_ml(marca, modelo='', paginas=5):
+    listings = []
+    ...
+    for page in range(paginas):
+        ...
+        parsed = parse_ml_listings(html, marca)
+        print(f"  ML {marca}{modelo_url} p{page+1}: {len(parsed)} | html_len: {len(html)} | has_preloaded: {'__PRELOADED_STATE__' in html} | has_wrapper: {'ui-search-result__wrapper' in html}")
