@@ -435,67 +435,75 @@ def scrape_ml(marca, modelo='', paginas=5):
 def parse_ml_listings(html, marca):
     listings = []
 
-    match = re.search(r'window\.__PRELOADED_STATE__\s*=\s*({.+?});\s*</script>', html, re.DOTALL)
-    if match:
-        try:
-            data = json.loads(match.group(1))
-            results = data.get('initialState', {}).get('results', [])
-            for item in results:
-                listing = parse_ml_item(item)
-                if listing:
-                    listings.append(listing)
-            if listings:
-                return listings
-        except:
-            pass
+    # ML 2024+ structure: items are <li class="ui-search-layout__item">
+    # Split by li items
+    blocks = html.split('<li class="ui-search-layout__item')
+    if len(blocks) < 2:
+        # fallback: try old wrapper
+        blocks = html.split('ui-search-layout__item')
 
-    blocks = html.split('ui-search-result__wrapper')
     for block in blocks[1:]:
-        chunk = block[:3000]
+        chunk = block[:4000]
 
-        title_m = re.search(r'class="poly-component__title[^"]*">([^<]+)<', chunk)
-        if not title_m:
-            title_m = re.search(r'ui-search-item__title[^>]*>([^<]+)<', chunk)
+        # Title: inside <h2> or class containing "title"
+        title_m = (re.search(r'<h2[^>]*>([^<]+)</h2>', chunk) or
+                   re.search(r'class="[^"]*title[^"]*"[^>]*>([^<]+)<', chunk) or
+                   re.search(r'poly-component__title[^>]*>([^<]+)<', chunk))
         if not title_m:
             continue
         title = title_m.group(1).strip()[:60]
+        if not title or len(title) < 5:
+            continue
 
+        # Year: 4-digit year in attributes or title
         year_m = re.search(r'\b(20\d{2}|19\d{2})\b', chunk)
         if not year_m:
             continue
         year = int(year_m.group(1))
-        if year < 2000:
+        if year < 2000 or year > 2026:
             continue
 
+        # KM: number followed by km
         km_m = re.search(r'([\d.]+)\s*[Kk][Mm]', chunk)
-        km = int(km_m.group(1).replace('.','')) if km_m else 0
+        km = int(km_m.group(1).replace('.', '').replace(',', '')) if km_m else 0
+        if km > 500000:
+            continue
 
-        price_usd_m = re.search(r'US\$\s*([\d.,]+)', chunk)
-        price_ars_m = re.search(r'\$\s*([\d.,]+)', chunk)
-
+        # Price: USD preferred, then ARS converted
         precio_usd = 0
-        if price_usd_m:
-            precio_usd = int(price_usd_m.group(1).replace('.','').replace(',',''))
-        elif price_ars_m:
-            ars = int(price_ars_m.group(1).replace('.','').replace(',',''))
-            if ars > 100000:
+        usd_m = re.search(r'U[Ss][Dd]?\s*[\$]?\s*([\d.,]+)', chunk)
+        ars_m = re.search(r'price__fraction[^>]*>([\d.,]+)<', chunk)
+        if not ars_m:
+            ars_m = re.search(r'\$\s*([\d.,]+)', chunk)
+
+        if usd_m:
+            precio_usd = int(usd_m.group(1).replace('.', '').replace(',', ''))
+        elif ars_m:
+            ars_raw = ars_m.group(1).replace('.', '').replace(',', '')
+            ars = int(ars_raw) if ars_raw.isdigit() else 0
+            if ars > 500000:
                 precio_usd = round(ars / BLUE_RATE)
 
         if not precio_usd or precio_usd < 1000 or precio_usd > 500000:
             continue
 
-        url_m = re.search(r'href="(https://[^"]*mercadolibre\.com\.ar/[^"]+)"', chunk)
+        # URL: auto.mercadolibre.com.ar or mercadolibre.com.ar
+        url_m = re.search(r'href="(https://[^"]*(?:auto\.)?mercadolibre\.com\.ar/[^"?]+)"', chunk)
         item_url = url_m.group(1) if url_m else ''
-        item_id = 'ml_' + re.sub(r'[^a-z0-9]', '_', item_url.split('/')[-1])[:40] if item_url else f"ml_{hash(title+str(year)) % 9999999}"
+        # Extract MLA id from url
+        mla_m = re.search(r'MLA-?(\d+)', item_url)
+        item_id = f"ml_{mla_m.group(1)}" if mla_m else f"ml_{abs(hash(title+str(year))) % 9999999}"
 
-        trans = 'AT' if re.search(r'autom|cvt|tiptronic|s.tronic', chunk, re.I) else '?'
+        trans = 'AT' if re.search(r'autom|cvt|tiptronic|s.tronic|secuencial', chunk, re.I) else '?'
+        fuel_m = re.search(r'(nafta|diesel|gnc|el[eé]ctrico|h[ií]brido)', chunk, re.I)
+        fuel = fuel_m.group(1).capitalize() if fuel_m else '?'
 
         listings.append({
             'id': item_id,
             'url': item_url,
             'title': title,
             'year': year, 'km': km,
-            'fuel': '?', 'trans': trans,
+            'fuel': fuel, 'trans': trans,
             'precio_usd': precio_usd,
             'fuente': 'ml',
             'model_key': extract_model_key(title, year)
