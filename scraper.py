@@ -411,6 +411,26 @@ def scrape_ac(marca, paginas=3):
             break
     return listings
 
+def fetch_ml(url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Language': 'es-AR,es;q=0.9,en;q=0.8',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Cache-Control': 'max-age=0',
+    }
+    try:
+        import requests as req_lib
+        r = req_lib.get(url, headers=headers, timeout=20)
+        return r.text
+    except Exception as e:
+        print(f"  ML fetch error: {e}")
+        return ''
+
 def scrape_ml(marca, modelo='', paginas=5):
     listings = []
     marca_url = marca.replace(' ', '-').lower()
@@ -420,9 +440,18 @@ def scrape_ml(marca, modelo='', paginas=5):
     for page in range(paginas):
         offset = page * 48
         url = base if page == 0 else f"{base}_Desde_{offset + 1}"
-        html = fetch(url).decode('utf-8', errors='ignore')
+        html = fetch_ml(url)
         if not html:
             break
+
+        # DEBUG: guardar primer HTML de ML
+        if not hasattr(scrape_ml, '_debug_saved'):
+            scrape_ml._debug_saved = True
+            with open('ml_debug.html', 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f"  ML DEBUG html_len={len(html)} layout={'ui-search-layout__item' in html}")
+            idx = html.find('layout__item')
+            print(f"  ML DEBUG snippet: {repr(html[max(0,idx-20):idx+200]) if idx>-1 else 'NOT FOUND'}")
 
         parsed = parse_ml_listings(html, marca)
         print(f"  ML {marca}{modelo_url} p{page+1}: {len(parsed)}")
