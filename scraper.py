@@ -411,123 +411,100 @@ def scrape_ac(marca, paginas=3):
             break
     return listings
 
-def fetch_ml(url):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-        'Accept-Language': 'es-AR,es;q=0.9,en;q=0.8',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Cache-Control': 'max-age=0',
-    }
-    try:
-        import requests as req_lib
-        r = req_lib.get(url, headers=headers, timeout=20)
-        return r.text
-    except Exception as e:
-        print(f"  ML fetch error: {e}")
-        return ''
-
 def scrape_ml(marca, modelo='', paginas=5):
-    listings = []
-    marca_url = marca.replace(' ', '-').lower()
-    modelo_url = ('-' + modelo.replace(' ', '-').lower()) if modelo else ''
-    base = f"https://listado.mercadolibre.com.ar/{marca_url}{modelo_url}-usado"
+    """Scrape MercadoLibre usando la API oficial con token."""
+    import os
+    token = os.environ.get('ML_TOKEN', '')
+    if not token:
+        print(f"  ML: sin token, saltando")
+        return []
 
+    listings = []
+    # Categoria MLA1744 = Autos y Camionetas usados en Argentina
+    base_url = 'https://api.mercadolibre.com/sites/MLA/search'
+    headers = {'Authorization': f'Bearer {token}'}
+
+    # Build query
+    query = marca
+    if modelo:
+        query = f"{marca} {modelo}"
+
+    offset = 0
+    limit = 50
     for page in range(paginas):
-        offset = page * 48
-        url = base if page == 0 else f"{base}_Desde_{offset + 1}"
-        html = fetch_ml(url)
-        if not html:
+        params = f"category=MLA1744&q={query}+usado&condition=used&limit={limit}&offset={offset}"
+        url = f"{base_url}?{params}"
+        try:
+            import urllib.request
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=20) as r:
+                data = json.loads(r.read())
+        except Exception as e:
+            print(f"  ML API error {marca} {modelo}: {e}")
             break
 
-        # DEBUG: guardar primer HTML de ML
-        if not hasattr(scrape_ml, '_debug_saved'):
-            scrape_ml._debug_saved = True
-            with open('ml_debug.html', 'w', encoding='utf-8') as f:
-                f.write(html)
-            print(f"  ML DEBUG html_len={len(html)} layout={'ui-search-layout__item' in html}")
-            idx = html.find('layout__item')
-            print(f"  ML DEBUG snippet: {repr(html[max(0,idx-20):idx+200]) if idx>-1 else 'NOT FOUND'}")
+        results = data.get('results', [])
+        parsed = 0
+        for item in results:
+            listing = parse_ml_item(item)
+            if listing:
+                listings.append(listing)
+                parsed += 1
 
-        parsed = parse_ml_listings(html, marca)
-        print(f"  ML {marca}{modelo_url} p{page+1}: {len(parsed)}")
-        listings.extend(parsed)
-        if len(parsed) < 10:
+        print(f"  ML {marca} {modelo} p{page+1}: {parsed} (total API: {data.get('paging', {}).get('total', 0)})")
+
+        total = data.get('paging', {}).get('total', 0)
+        offset += limit
+        if offset >= min(total, paginas * limit):
             break
 
     return listings
 
-def parse_ml_listings(html, marca):
-    listings = []
+def parse_ml_item(item):
+    try:
+        title = item.get('title', '')[:60]
+        year = 0
+        km = 0
+        trans = '?'
+        fuel = '?'
 
-    # ML 2024+ structure: items are <li class="ui-search-layout__item">
-    # Split by li items
-    blocks = html.split('<li class="ui-search-layout__item')
-    if len(blocks) < 2:
-        # fallback: try old wrapper
-        blocks = html.split('ui-search-layout__item')
+        for attr in item.get('attributes', []):
+            attr_id = attr.get('id', '')
+            val = attr.get('value_name', '') or ''
+            if attr_id == 'VEHICLE_YEAR':
+                try:
+                    year = int(val)
+                except:
+                    pass
+            elif attr_id == 'KILOMETERS':
+                km_str = re.sub(r'\D', '', str(val))
+                km = int(km_str) if km_str else 0
+            elif attr_id == 'TRANSMISSION':
+                trans = 'AT' if any(x in val.lower() for x in ['autom', 'cvt', 'tiptronic']) else 'MT'
+            elif attr_id == 'FUEL_TYPE':
+                fuel = val
 
-    for block in blocks[1:]:
-        chunk = block[:4000]
+        if not year:
+            year_m = re.search(r'\b(20\d{2}|19\d{2})\b', title)
+            year = int(year_m.group(1)) if year_m else 0
 
-        # Title: inside <h2> or class containing "title"
-        title_m = (re.search(r'<h2[^>]*>([^<]+)</h2>', chunk) or
-                   re.search(r'class="[^"]*title[^"]*"[^>]*>([^<]+)<', chunk) or
-                   re.search(r'poly-component__title[^>]*>([^<]+)<', chunk))
-        if not title_m:
-            continue
-        title = title_m.group(1).strip()[:60]
-        if not title or len(title) < 5:
-            continue
-
-        # Year: 4-digit year in attributes or title
-        year_m = re.search(r'\b(20\d{2}|19\d{2})\b', chunk)
-        if not year_m:
-            continue
-        year = int(year_m.group(1))
         if year < 2000 or year > 2026:
-            continue
+            return None
 
-        # KM: number followed by km
-        km_m = re.search(r'([\d.]+)\s*[Kk][Mm]', chunk)
-        km = int(km_m.group(1).replace('.', '').replace(',', '')) if km_m else 0
-        if km > 500000:
-            continue
-
-        # Price: USD preferred, then ARS converted
-        precio_usd = 0
-        usd_m = re.search(r'U[Ss][Dd]?\s*[\$]?\s*([\d.,]+)', chunk)
-        ars_m = re.search(r'price__fraction[^>]*>([\d.,]+)<', chunk)
-        if not ars_m:
-            ars_m = re.search(r'\$\s*([\d.,]+)', chunk)
-
-        if usd_m:
-            precio_usd = int(usd_m.group(1).replace('.', '').replace(',', ''))
-        elif ars_m:
-            ars_raw = ars_m.group(1).replace('.', '').replace(',', '')
-            ars = int(ars_raw) if ars_raw.isdigit() else 0
-            if ars > 500000:
-                precio_usd = round(ars / BLUE_RATE)
+        price = item.get('price', 0) or 0
+        currency = item.get('currency_id', 'ARS')
+        if currency == 'USD':
+            precio_usd = int(price)
+        else:
+            precio_usd = round(price / BLUE_RATE)
 
         if not precio_usd or precio_usd < 1000 or precio_usd > 500000:
-            continue
+            return None
 
-        # URL: auto.mercadolibre.com.ar or mercadolibre.com.ar
-        url_m = re.search(r'href="(https://[^"]*(?:auto\.)?mercadolibre\.com\.ar/[^"?]+)"', chunk)
-        item_url = url_m.group(1) if url_m else ''
-        # Extract MLA id from url
-        mla_m = re.search(r'MLA-?(\d+)', item_url)
-        item_id = f"ml_{mla_m.group(1)}" if mla_m else f"ml_{abs(hash(title+str(year))) % 9999999}"
+        item_id = f"ml_{item.get('id', '')}"
+        item_url = item.get('permalink', '')
 
-        trans = 'AT' if re.search(r'autom|cvt|tiptronic|s.tronic|secuencial', chunk, re.I) else '?'
-        fuel_m = re.search(r'(nafta|diesel|gnc|el[eé]ctrico|h[ií]brido)', chunk, re.I)
-        fuel = fuel_m.group(1).capitalize() if fuel_m else '?'
-
-        listings.append({
+        return {
             'id': item_id,
             'url': item_url,
             'title': title,
@@ -536,47 +513,8 @@ def parse_ml_listings(html, marca):
             'precio_usd': precio_usd,
             'fuente': 'ml',
             'model_key': extract_model_key(title, year)
-        })
-
-    return listings
-
-def parse_ml_item(item):
-    try:
-        title = item.get('title', '')[:60]
-        year_m = re.search(r'\b(20\d{2}|19\d{2})\b', title)
-        year = int(year_m.group(1)) if year_m else 0
-
-        for attr in item.get('attributes', []):
-            if attr.get('id') == 'VEHICLE_YEAR':
-                year = int(attr.get('value_name', year))
-
-        if year < 2000:
-            return None
-
-        price = item.get('price', 0)
-        currency = item.get('currency_id', 'ARS')
-        precio_usd = price if currency == 'USD' else round(price / BLUE_RATE)
-
-        if not precio_usd or precio_usd < 1000 or precio_usd > 500000:
-            return None
-
-        km = 0
-        for attr in item.get('attributes', []):
-            if attr.get('id') == 'KILOMETERS':
-                km_str = re.sub(r'\D', '', str(attr.get('value_name', '0')))
-                km = int(km_str) if km_str else 0
-
-        return {
-            'id': f"ml_{item.get('id', '')}",
-            'url': item.get('permalink', ''),
-            'title': title,
-            'year': year, 'km': km,
-            'fuel': '?', 'trans': '?',
-            'precio_usd': precio_usd,
-            'fuente': 'ml',
-            'model_key': extract_model_key(title, year)
         }
-    except:
+    except Exception as e:
         return None
 
 def parse_price(raw):
