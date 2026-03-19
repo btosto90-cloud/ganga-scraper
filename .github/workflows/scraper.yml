@@ -35,7 +35,7 @@ jobs:
           name: ml-debug
           path: ml_debug.html
 
-     - name: Commit results
+      - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
