@@ -29,6 +29,7 @@ jobs:
         run: python scraper.py
         env:
           ML_TOKEN: ${{ secrets.ML_TOKEN }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
 
       - name: Upload debug HTML
         if: always()
