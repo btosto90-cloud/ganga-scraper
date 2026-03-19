@@ -425,14 +425,16 @@ def scrape_ml(marca, modelo='', paginas=5):
     headers = {'Authorization': f'Bearer {token}'}
 
     # Build query
+    import urllib.parse
     query = marca
     if modelo:
         query = f"{marca} {modelo}"
+    query_enc = urllib.parse.quote(query + ' usado')
 
     offset = 0
     limit = 50
     for page in range(paginas):
-        params = f"category=MLA1744&q={query}+usado&condition=used&limit={limit}&offset={offset}"
+        params = f"category=MLA1744&q={query_enc}&condition=used&limit={limit}&offset={offset}"
         url = f"{base_url}?{params}"
         try:
             import urllib.request
