@@ -1,5 +1,4 @@
 name: Run Scraper
-
 on:
   schedule:
     - cron: '0 8 * * *'
@@ -12,6 +11,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repo
@@ -26,25 +26,61 @@ jobs:
         run: pip install pdfminer.six requests
 
       - name: Run scraper
-        run: python scraper.py
+        id: scraper
+        run: |
+          python scraper.py 2>&1 | tee scraper_log.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
         env:
           ML_TOKEN: ${{ secrets.ML_TOKEN }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
 
-      - name: Upload debug HTML
+      - name: Show summary
+        if: always()
+        run: |
+          echo "=== RESUMEN ==="
+          if [ -f listings.json ]; then
+            python3 -c "
+          import json
+          with open('listings.json') as f:
+              d = json.load(f)
+          total = d.get('total', 0)
+          fuentes = d.get('fuentes', {})
+          updated = d.get('updated', 'N/A')
+          print(f'Total listings: {total}')
+          print(f'Fuentes: {fuentes}')
+          print(f'Actualizado: {updated}')
+          # Marcas encontradas
+          listings = d.get('listings', [])
+          marcas = {}
+          for l in listings:
+              mk = l.get('model_key','').split('_')[0]
+              marcas[mk] = marcas.get(mk, 0) + 1
+          print('Marcas:')
+          for m, c in sorted(marcas.items(), key=lambda x: -x[1]):
+              print(f'  {m}: {c}')
+          "
+          else
+            echo "listings.json no generado"
+          fi
+
+      - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ml-debug
-          path: ml_debug.html
+          name: scraper-debug-${{ github.run_number }}
+          path: |
+            scraper_log.txt
+            listings.json
+            cca_precios.json
+          retention-days: 7
 
       - name: Commit results
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git checkout origin/main -- . 2>/dev/null || true
           git add listings.json cca_precios.json
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update listings $(date -u +%Y-%m-%d)"
+          TOTAL=$(python3 -c "import json; d=json.load(open('listings.json')); print(d.get('total',0))" 2>/dev/null || echo "?")
+          git commit -m "Update listings $(date -u +%Y-%m-%d) - ${TOTAL} autos"
           git push
