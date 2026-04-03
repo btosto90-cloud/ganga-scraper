@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/btosto/Downloads/index_2.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganga Hunter 🔍</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #1a1a2e; }
+
+  header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  header h1 { font-size: 1.4rem; font-weight: 700; }
+  header span { font-size: 1.6rem; }
+  .subtitle { font-size: 0.8rem; opacity: 0.6; margin-top: 2px; }
+
+  .filters { background: white; padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; border-bottom: 1px solid #e0e0e0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .filter-group { display: flex; flex-direction: column; gap: 4px; }
+  .filter-group label { font-size: 0.72rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+  .filter-group select, .filter-group input { padding: 7px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.88rem; background: #fafafa; outline: none; transition: border 0.2s; }
+  .filter-group select:focus, .filter-group input:focus { border-color: #e63946; }
+  .filter-group input[type="number"] { width: 110px; }
+
+  .btn { padding: 8px 20px; background: #e63946; color: white; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.1s; align-self: flex-end; }
+  .btn:hover { background: #c1121f; }
+  .btn:active { transform: scale(0.97); }
+  .btn-secondary { background: #457b9d; }
+  .btn-secondary:hover { background: #1d6891; }
+
+  .stats-bar { background: #1a1a2e; color: white; padding: 0.6rem 1.5rem; display: flex; gap: 20px; font-size: 0.8rem; flex-wrap: wrap; }
+  .stat { display: flex; align-items: center; gap: 5px; }
+  .stat-val { font-weight: 700; color: #a8dadc; }
+  .stat-updated { margin-left: auto; opacity: 0.5; font-size: 0.72rem; }
+
+  .tabs { display: flex; gap: 0; background: white; border-bottom: 2px solid #e0e0e0; padding: 0 1.5rem; }
+  .tab { padding: 10px 18px; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: #888; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .tab.active { color: #e63946; border-bottom-color: #e63946; }
+  .tab:hover:not(.active) { color: #333; }
+
+  .content { padding: 1rem 1.5rem; max-width: 1400px; margin: 0 auto; }
+
+  .loading { text-align: center; padding: 3rem; color: #888; }
+  .loading .spinner { width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top-color: #e63946; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .error-msg { background: #fff0f0; border: 1px solid #ffcdd2; padding: 1rem 1.5rem; border-radius: 8px; color: #c62828; margin: 1rem 0; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+
+  .card { background: white; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid #e8e8e8; transition: transform 0.15s, box-shadow 0.15s; cursor: pointer; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+  .card.ganga { border-left: 4px solid #2a9d8f; }
+  .card.super_ganga { border-left: 4px solid #e63946; background: #fff8f8; }
+  .card.caro { border-left: 4px solid #aaa; opacity: 0.85; }
+
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+  .card-title { font-weight: 700; font-size: 0.95rem; color: #1a1a2e; line-height: 1.3; flex: 1; }
+  .tag { font-size: 0.68rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; white-space: nowrap; margin-left: 8px; }
+  .tag.super_ganga { background: #ffebee; color: #c62828; }
+  .tag.ganga { background: #e8f5e9; color: #2e7d32; }
+  .tag.normal { background: #f5f5f5; color: #757575; }
+  .tag.caro { background: #f5f5f5; color: #aaa; }
+
+  .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .badge { font-size: 0.72rem; padding: 2px 7px; border-radius: 4px; background: #f0f2f5; color: #555; }
+  .badge.at { background: #e3f2fd; color: #1565c0; }
+  .badge.mt { background: #fafafa; color: #888; }
+
+  .card-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+  .price-block { background: #f8f9fa; border-radius: 6px; padding: 8px 10px; }
+  .price-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 2px; }
+  .price-val { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; }
+  .price-val.highlight { color: #e63946; }
+  .price-val.market { color: #457b9d; }
+
+  .discount-bar { margin-top: 8px; }
+  .discount-label { font-size: 0.72rem; color: #888; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .discount-label span { font-weight: 600; }
+  .bar-track { height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
+  .bar-fill.good { background: #2a9d8f; }
+  .bar-fill.great { background: #e63946; }
+  .bar-fill.bad { background: #ccc; }
+
+  .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 8px; border-top: 1px solid #f0f0f0; }
+  .score { font-size: 0.75rem; color: #888; }
+  .score strong { color: #333; }
+  .link-btn { font-size: 0.75rem; color: #e63946; text-decoration: none; font-weight: 600; }
+  .link-btn:hover { text-decoration: underline; }
+
+  .fuente-badge { font-size: 0.65rem; padding: 1px 5px; border-radius: 3px; }
+  .fuente-badge.rg { background: #fff3e0; color: #e65100; }
+  .fuente-badge.ac { background: #e8eaf6; color: #283593; }
+  .fuente-badge.dm { background: #e8f5e9; color: #1b5e20; }
+
+  .section-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 1rem 0 0.6rem; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; }
+
+  .empty { text-align: center; padding: 3rem; color: #aaa; }
+  .empty .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+
+  @media (max-width: 600px) {
+    .filters { padding: 0.8rem 1rem; }
+    .content { padding: 0.8rem 1rem; }
+    .grid { grid-template-columns: 1fr; }
+    .stats-bar { padding: 0.6rem 1rem; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span>🔍</span>
+  <div>
+    <h1>Ganga Hunter</h1>
+    <div class="subtitle">Detector de autos subvaluados en Argentina</div>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="filter-group">
+    <label>Marca</label>
+    <select id="f-marca">
+      <option value="todas">Todas las marcas</option>
+      <option value="audi">Audi</option>
+      <option value="bmw">BMW</option>
+      <option value="chevrolet">Chevrolet</option>
+      <option value="citroen">Citroën</option>
+      <option value="fiat">Fiat</option>
+      <option value="ford">Ford</option>
+      <option value="honda">Honda</option>
+      <option value="hyundai">Hyundai</option>
+      <option value="jeep">Jeep</option>
+      <option value="kia">Kia</option>
+      <option value="mazda">Mazda</option>
+      <option value="mercedes">Mercedes-Benz</option>
+      <option value="nissan">Nissan</option>
+      <option value="peugeot">Peugeot</option>
+      <option value="renault">Renault</option>
+      <option value="toyota">Toyota</option>
+      <option value="volkswagen">Volkswagen</option>
+      <option value="chery">Chery</option>
+      <option value="haval">Haval</option>
+      <option value="byd">BYD</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Año mín</label>
+    <input type="number" id="f-anio" placeholder="ej: 2018" min="2000" max="2026" value="">
+  </div>
+  <div class="filter-group">
+    <label>KM máx</label>
+    <input type="number" id="f-km" placeholder="ej: 120000" value="">
+  </div>
+  <div class="filter-group">
+    <label>Precio máx (USD)</label>
+    <input type="number" id="f-precio" placeholder="Sin límite" value="">
+  </div>
+  <div class="filter-group">
+    <label>Transmisión</label>
+    <select id="f-trans">
+      <option value="0">Todas</option>
+      <option value="1">Solo AT</option>
+    </select>
+  </div>
+  <button class="btn" onclick="buscar()">🔍 Buscar</button>
+  <button class="btn btn-secondary" onclick="resetFiltros()">↺ Reset</button>
+</div>
+
+<div class="stats-bar" id="stats-bar" style="display:none">
+  <div class="stat">Total: <span class="stat-val" id="s-total">-</span></div>
+  <div class="stat">Gangas: <span class="stat-val" id="s-gangas">-</span></div>
+  <div class="stat">Con precio CCA: <span class="stat-val" id="s-cca">-</span></div>
+  <div class="stat">
+    Fuentes:
+    <span class="stat-val" id="s-fuentes">-</span>
+  </div>
+  <div class="stat-updated" id="s-updated"></div>
+</div>
+
+<div class="tabs">
+  <div class="tab" onclick="showTab(&#39;gangas&#39;, this)">🔥 Gangas</div>
+  <div class="tab active" onclick="showTab(&#39;normales&#39;, this)">📋 Todos</div>
+</div>
+
+<div class="content">
+  <div id="loading" class="loading" style="display: none;">
+    <div class="spinner"></div>
+    Buscando autos...
+  </div>
+  <div id="error" class="error-msg" style="display: block;">Pocas publicaciones</div>
+  <div id="tab-gangas" style="display: none;"></div>
+  <div id="tab-normales" style=""></div>
+</div>
+
+<script>
+const WORKER_URL = 'https://misty-sun-f8e0.b-tosto90.workers.dev';
+
+let currentData = null;
+let currentTab = 'gangas';
+
+async function buscar() {
+  const marca = document.getElementById('f-marca').value;
+  const anio = document.getElementById('f-anio').value;
+  const km = document.getElementById('f-km').value;
+  const precio = document.getElementById('f-precio').value;
+  const soloAt = document.getElementById('f-trans').value;
+
+  const params = new URLSearchParams();
+  params.set('marca', marca);
+  params.set('fuente', 'ambos');
+  if (anio) params.set('anio_min', anio);
+  if (km) params.set('km_max', km);
+  if (precio) params.set('precio_max', precio);
+  if (soloAt === '1') params.set('solo_at', '1');
+
+  showLoading(true);
+  hideError();
+
+  try {
+    const res = await fetch(`${WORKER_URL}?${params}`);
+    const data = await res.json();
+
+    if (!data.ok) {
+      showError(data.error || 'Error desconocido');
+      return;
+    }
+
+    currentData = data;
+    renderStats(data);
+    renderTab(currentTab);
+    document.getElementById('stats-bar').style.display = 'flex';
+  } catch(e) {
+    showError('Error conectando al servidor: ' + e.message);
+  } finally {
+    showLoading(false);
+  }
+}
+
+function resetFiltros() {
+  document.getElementById('f-marca').value = 'todas';
+  document.getElementById('f-anio').value = '';
+  document.getElementById('f-km').value = '';
+  document.getElementById('f-precio').value = '';
+  document.getElementById('f-trans').value = '0';
+}
+
+function showTab(tab, el) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-gangas').style.display = tab === 'gangas' ? '' : 'none';
+  document.getElementById('tab-normales').style.display = tab === 'normales' ? '' : 'none';
+  if (currentData) renderTab(tab);
+}
+
+function renderStats(data) {
+  const m = data.meta;
+  document.getElementById('s-total').textContent = m.total;
+  document.getElementById('s-gangas').textContent = m.gangas;
+  document.getElementById('s-cca').textContent = m.con_cca || 0;
+  const f = m.fuentes || {};
+  document.getElementById('s-fuentes').textContent =
+    `RG: ${f.rg||0} | AC: ${f.ac||0}`;
+  if (m.updated || data.updated) {
+    const d = new Date(m.updated || data.updated);
+    document.getElementById('s-updated').textContent =
+      'Actualizado: ' + d.toLocaleDateString('es-AR') + ' ' + d.toLocaleTimeString('es-AR', {hour:'2-digit',minute:'2-digit'});
+  }
+}
+
+function renderTab(tab) {
+  if (!currentData) return;
+  const el = document.getElementById(`tab-${tab}`);
+  const items = tab === 'gangas' ? currentData.gangas : currentData.normales;
+
+  if (!items || items.length === 0) {
+    el.innerHTML = `<div class="empty"><div class="icon">🔍</div><p>${tab === 'gangas' ? 'No se encontraron gangas con los filtros actuales.' : 'No hay resultados.'}</p></div>`;
+    return;
+  }
+
+  if (tab === 'gangas') {
+    const superGangas = items.filter(i => i.tag === 'super_ganga');
+    const gangas = items.filter(i => i.tag === 'ganga');
+    let html = '';
+    if (superGangas.length) {
+      html += `<div class="section-title">🔥 Super Gangas (${superGangas.length})</div><div class="grid">${superGangas.map(renderCard).join('')}</div>`;
+    }
+    if (gangas.length) {
+      html += `<div class="section-title">✅ Gangas (${gangas.length})</div><div class="grid">${gangas.map(renderCard).join('')}</div>`;
+    }
+    el.innerHTML = html || `<div class="empty"><div class="icon">😔</div><p>No se encontraron gangas.</p></div>`;
+  } else {
+    el.innerHTML = `<div class="section-title">Todos los autos (${items.length})</div><div class="grid">${items.map(renderCard).join('')}</div>`;
+  }
+}
+
+function renderCard(l) {
+  const descPct = l.descuento_pct || 0;
+  const barWidth = Math.min(100, Math.max(0, descPct));
+  const barClass = descPct >= 25 ? 'great' : descPct >= 10 ? 'good' : 'bad';
+  const transClass = l.trans === 'AT' ? 'at' : l.trans === 'MT' ? 'mt' : '';
+  const tagLabel = l.tag === 'super_ganga' ? '🔥 Super Ganga' : l.tag === 'ganga' ? '✅ Ganga' : l.tag === 'caro' ? 'Caro' : '';
+  const kmFmt = l.km ? l.km.toLocaleString('es-AR') + ' km' : '0 km';
+  const fuelBadge = l.fuel && l.fuel !== '?' ? `<span class="badge">${l.fuel}</span>` : '';
+  const transBadge = l.trans && l.trans !== '?' ? `<span class="badge ${transClass}">${l.trans}</span>` : '';
+  const fuenteBadge = `<span class="fuente-badge ${l.fuente}">${l.fuente.toUpperCase()}</span>`;
+
+  const precioMercado = l.precio_mercado ? `<div class="price-block"><div class="price-label">Precio mercado</div><div class="price-val market">USD ${l.precio_mercado.toLocaleString('es-AR')}</div></div>` : '';
+  const precioCca = l.precio_cca ? `<div class="price-block"><div class="price-label">CCA</div><div class="price-val">USD ${l.precio_cca.toLocaleString('es-AR')}</div></div>` : '';
+
+  const discountBar = l.precio_mercado ? `
+    <div class="discount-bar">
+      <div class="discount-label"><span>${descPct > 0 ? descPct + '% bajo mercado' : Math.abs(descPct) + '% sobre mercado'}</span></div>
+      <div class="bar-track"><div class="bar-fill ${barClass}" style="width:${barWidth}%"></div></div>
+    </div>` : '';
+
+  return `
+    <div class="card ${l.tag}" onclick="window.open('${l.url}','_blank')">
+      <div class="card-header">
+        <div class="card-title">${l.title}</div>
+        ${tagLabel ? `<span class="tag ${l.tag}">${tagLabel}</span>` : ''}
+      </div>
+      <div class="card-meta">
+        <span class="badge">${l.year}</span>
+        <span class="badge">${kmFmt}</span>
+        ${transBadge}
+        ${fuelBadge}
+        ${fuenteBadge}
+      </div>
+      <div class="card-prices">
+        <div class="price-block">
+          <div class="price-label">Precio pedido</div>
+          <div class="price-val highlight">USD ${l.precio_usd.toLocaleString('es-AR')}</div>
+        </div>
+        ${precioMercado || precioCca}
+      </div>
+      ${discountBar}
+      <div class="card-footer">
+        <div class="score">Score: <strong>${l.score_combinado}</strong></div>
+        <a class="link-btn" href="${l.url}" target="_blank" onclick="event.stopPropagation()">Ver publicación →</a>
+      </div>
+    </div>`;
+}
+
+function showLoading(v) {
+  document.getElementById('loading').style.display = v ? 'block' : 'none';
+}
+function showError(msg) {
+  const el = document.getElementById('error');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+function hideError() {
+  document.getElementById('error').style.display = 'none';
+}
+
+// Auto-buscar al cargar
+buscar();
+</script>
+
+
+</body></html>
