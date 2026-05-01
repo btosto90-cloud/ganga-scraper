@@ -359,6 +359,11 @@ def _parse_ac_block(block, marca_search):
     try:
         chunk = block[:4000]
 
+        # FILTRO CRÍTICO: descartar autos financiados (solo muestran anticipo, no precio total)
+        chunk_lower = chunk.lower()
+        if 'anticipo' in chunk_lower or 'financiado en cuotas' in chunk_lower or 'financiados' in chunk_lower:
+            return None
+
         # URL del listing -- de acá sacamos marca y modelo confiable
         url_m = re.search(r'href="(/auto/usado/[^"?#]+)"', chunk)
         if not url_m:
@@ -431,55 +436,60 @@ def _parse_ac_block(block, marca_search):
 
 def _parse_ac_price(chunk, year):
     """
-    Estrategia: extraer TODOS los precios candidatos y elegir el más realista
-    para el año del auto. Esto evita el bug de agarrar un número de teléfono o
-    un precio en pesos al inicio del chunk.
+    Solo aceptamos precios con marca explícita 'u$s' / 'usd'.
+    Cualquier otro número (anticipos, cuotas, etc) se descarta.
     """
-    candidates = []  # lista de (precio_usd, fuente)
+    candidates = []
 
-    # 1) U$S explícito (alta confianza)
+    # 1) U$S explícito (única fuente confiable)
     for m in re.finditer(r'u\$s\s*([\d.,]+)', chunk, re.I):
+        # Verificar que no esté en contexto de anticipo
+        start = max(0, m.start() - 60)
+        context = chunk[start:m.start()].lower()
+        if 'anticipo' in context or 'cuota' in context:
+            continue
         val = re.sub(r'[^\d]', '', m.group(1))
         if val:
             n = int(val)
-            if 1000 <= n <= 500000:
-                candidates.append((n, 'usd_text'))
+            if 1500 <= n <= 500000:
+                candidates.append(n)
 
-    # 2) Meta itemprop=price
-    for pat in [
-        r'itemprop="price"[^>]*content="([\d.,]+)"',
-        r'content="([\d.,]+)"[^>]*itemprop="price"',
-        r'"price"\s*:\s*"?([\d.,]+)"?',
-    ]:
-        for m in re.finditer(pat, chunk, re.I):
-            val = re.sub(r'[^\d]', '', m.group(1))
-            if val:
-                n = int(val)
-                # Si es chico es USD; si es grande, ARS
-                if 1000 <= n <= 500000:
-                    candidates.append((n, 'meta_usd'))
-                elif n > 500000:
-                    candidates.append((round(n / BLUE_RATE), 'meta_ars'))
+    # 2) USD explícito
+    for m in re.finditer(r'\busd\s*([\d.,]+)', chunk, re.I):
+        start = max(0, m.start() - 60)
+        context = chunk[start:m.start()].lower()
+        if 'anticipo' in context or 'cuota' in context:
+            continue
+        val = re.sub(r'[^\d]', '', m.group(1))
+        if val:
+            n = int(val)
+            if 1500 <= n <= 500000:
+                candidates.append(n)
 
-    # 3) Pesos $XXX.XXX.XXX (baja confianza, último recurso)
-    if not candidates:
-        for m in re.finditer(r'\$\s*([\d]{1,3}(?:\.[\d]{3}){2,})', chunk):
-            val = re.sub(r'[^\d]', '', m.group(1))
-            if val:
-                n = int(val)
-                if n > 1000000:
-                    candidates.append((round(n / BLUE_RATE), 'ars_text'))
+    # 3) Meta itemprop=price (a veces lo tienen, suele ser confiable si NO hay anticipo)
+    if not candidates and 'anticipo' not in chunk.lower():
+        for pat in [
+            r'itemprop="price"[^>]*content="([\d.,]+)"',
+            r'content="([\d.,]+)"[^>]*itemprop="price"',
+        ]:
+            for m in re.finditer(pat, chunk, re.I):
+                val = re.sub(r'[^\d]', '', m.group(1))
+                if val:
+                    n = int(val)
+                    if 1500 <= n <= 500000:
+                        candidates.append(n)
+                    elif n > 500000:
+                        candidates.append(round(n / BLUE_RATE))
 
     if not candidates:
         return 0
 
-    # Filtrar candidatos realistas y elegir la mediana
-    realistic = [c for c, _ in candidates if is_realistic_price(c, year)]
+    realistic = [c for c in candidates if is_realistic_price(c, year)]
     if not realistic:
         return 0
 
     realistic.sort()
-    return realistic[len(realistic) // 2]  # mediana
+    return realistic[len(realistic) // 2]
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
