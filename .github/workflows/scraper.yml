@@ -31,8 +31,9 @@ jobs:
           python scraper.py 2>&1 | tee scraper_log.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
         env:
-          ML_TOKEN: ${{ secrets.ML_TOKEN }}
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
 
       - name: Show summary
         if: always()
@@ -49,12 +50,11 @@ jobs:
           print(f'Total listings: {total}')
           print(f'Fuentes: {fuentes}')
           print(f'Actualizado: {updated}')
-          # Marcas encontradas
           listings = d.get('listings', [])
           marcas = {}
           for l in listings:
-              mk = l.get('model_key','').split('_')[0]
-              marcas[mk] = marcas.get(mk, 0) + 1
+              b = l.get('brand','other')
+              marcas[b] = marcas.get(b, 0) + 1
           print('Marcas:')
           for m, c in sorted(marcas.items(), key=lambda x: -x[1]):
               print(f'  {m}: {c}')
@@ -71,7 +71,6 @@ jobs:
           path: |
             scraper_log.txt
             listings.json
-            cca_precios.json
           retention-days: 7
 
       - name: Commit results
@@ -79,7 +78,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add listings.json cca_precios.json
+          git add listings.json
           git diff --cached --quiet && echo "No changes" && exit 0
           TOTAL=$(python3 -c "import json; d=json.load(open('listings.json')); print(d.get('total',0))" 2>/dev/null || echo "?")
           git commit -m "Update listings $(date -u +%Y-%m-%d) - ${TOTAL} autos"
