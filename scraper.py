@@ -1,12 +1,19 @@
 import json
+import os
 import re
 import time
 import random
 import urllib.request
+import urllib.parse
 from datetime import datetime
 
 BLUE_RATE = 1290
 OUTPUT_FILE = "listings.json"
+
+# Credenciales ML (vienen de GitHub Actions secrets)
+ML_CLIENT_ID = os.environ.get('ML_CLIENT_ID', '')
+ML_CLIENT_SECRET = os.environ.get('ML_CLIENT_SECRET', '')
+ML_REFRESH_TOKEN = os.environ.get('ML_REFRESH_TOKEN', '')
 
 HEADERS_LIST = [
     {
@@ -491,6 +498,179 @@ def _parse_ac_price(chunk, year):
     realistic.sort()
     return realistic[len(realistic) // 2]
 
+# ─── MERCADO LIBRE (API oficial) ──────────────────────────────────────────────
+
+ML_TOKEN_CACHE = {'access_token': None, 'expires_at': 0}
+
+def ml_get_access_token():
+    """Renueva access_token usando refresh_token. Cachea por 5 horas."""
+    if not ML_REFRESH_TOKEN or not ML_CLIENT_ID or not ML_CLIENT_SECRET:
+        print("  ML: faltan credenciales (skip)")
+        return None
+
+    if ML_TOKEN_CACHE['access_token'] and time.time() < ML_TOKEN_CACHE['expires_at']:
+        return ML_TOKEN_CACHE['access_token']
+
+    data = urllib.parse.urlencode({
+        'grant_type': 'refresh_token',
+        'client_id': ML_CLIENT_ID,
+        'client_secret': ML_CLIENT_SECRET,
+        'refresh_token': ML_REFRESH_TOKEN,
+    }).encode()
+
+    req = urllib.request.Request(
+        'https://api.mercadolibre.com/oauth/token',
+        data=data,
+        headers={
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            resp = json.loads(r.read())
+            token = resp.get('access_token')
+            expires = resp.get('expires_in', 21600)
+            if token:
+                ML_TOKEN_CACHE['access_token'] = token
+                ML_TOKEN_CACHE['expires_at'] = time.time() + expires - 300
+                print(f"  ML token OK (expira en {expires}s)")
+                return token
+    except Exception as e:
+        print(f"  ML token error: {e}")
+    return None
+
+def scrape_ml(marca, paginas=4, limit_por_pagina=50):
+    """
+    Scrape MercadoLibre vía API oficial.
+    Categoría MLA1744 = Autos y Camionetas en Argentina.
+    """
+    token = ml_get_access_token()
+    if not token:
+        return []
+
+    listings = []
+    headers = {'Authorization': f'Bearer {token}'}
+    query = urllib.parse.quote(marca)
+    offset = 0
+
+    for page in range(paginas):
+        url = (
+            f'https://api.mercadolibre.com/sites/MLA/search'
+            f'?category=MLA1744'
+            f'&q={query}'
+            f'&condition=used'
+            f'&limit={limit_por_pagina}'
+            f'&offset={offset}'
+        )
+
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                data = json.loads(r.read())
+        except Exception as e:
+            print(f"  ML {marca} p{page+1} error: {e}")
+            break
+
+        results = data.get('results', [])
+        parsed = 0
+        for item in results:
+            l = _parse_ml_item(item, marca)
+            if l:
+                listings.append(l)
+                parsed += 1
+
+        total = data.get('paging', {}).get('total', 0)
+        print(f"  ML {marca} p{page+1}: {parsed} (api total: {total})")
+
+        offset += limit_por_pagina
+        if not results or offset >= total:
+            break
+        time.sleep(random.uniform(0.5, 1.0))
+
+    return listings
+
+def _parse_ml_item(item, marca_search):
+    try:
+        item_id = item.get('id', '')
+        if not item_id:
+            return None
+        title = (item.get('title') or '')[:80]
+        permalink = item.get('permalink') or ''
+
+        # Extraer atributos estructurados
+        attrs = item.get('attributes', []) or []
+        year = 0
+        km = 0
+        trans = '?'
+        fuel = '?'
+        brand_attr = None
+        model_attr = None
+
+        for a in attrs:
+            aid = a.get('id', '')
+            val = a.get('value_name') or ''
+            if aid == 'VEHICLE_YEAR':
+                try:
+                    year = int(val)
+                except Exception:
+                    pass
+            elif aid == 'KILOMETERS':
+                km_str = re.sub(r'\D', '', str(val))
+                if km_str:
+                    km = int(km_str)
+            elif aid == 'TRANSMISSION':
+                trans = 'AT' if any(x in val.lower() for x in ['autom', 'cvt', 'tiptronic', 'dsg']) else 'MT'
+            elif aid == 'FUEL_TYPE':
+                fuel = val
+            elif aid == 'BRAND':
+                brand_attr = val.lower()
+            elif aid == 'MODEL':
+                model_attr = val.lower()
+
+        if not year:
+            ym = re.search(r'\b(20\d{2}|19[89]\d)\b', title)
+            if ym:
+                year = int(ym.group(1))
+        if year < 1990 or year > 2027:
+            return None
+        if km > 600000:
+            return None
+
+        # Precio
+        price = item.get('price') or 0
+        currency = item.get('currency_id', 'ARS')
+        if currency == 'USD':
+            precio_usd = int(price)
+        else:
+            if not price:
+                return None
+            precio_usd = round(price / BLUE_RATE)
+
+        if not is_realistic_price(precio_usd, year):
+            return None
+
+        brand = normalize_brand(brand_attr) if brand_attr else find_brand_in_text(title)
+        if not brand:
+            brand = normalize_brand(marca_search)
+        model = find_model_in_text(model_attr or '') or find_model_in_text(title)
+
+        return {
+            'id': f'ml_{item_id}',
+            'url': permalink,
+            'title': title,
+            'brand': brand,
+            'model': model,
+            'year': year, 'km': km,
+            'fuel': fuel, 'trans': trans,
+            'precio_usd': precio_usd,
+            'fuente': 'ml',
+            'model_key': make_model_key(brand, model, year),
+        }
+    except Exception:
+        return None
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def main():
@@ -503,7 +683,7 @@ def main():
         'citroen', 'jeep', 'mitsubishi', 'subaru', 'chery', 'haval', 'byd',
     ]
 
-    stats = {'rg': 0, 'ac': 0}
+    stats = {'rg': 0, 'ac': 0, 'ml': 0}
 
     print("=" * 50)
     print("Scraping RosarioGarage...")
@@ -525,7 +705,17 @@ def main():
         print(f"  >> AC {marca}: {len(results)} total")
         time.sleep(random.uniform(2.0, 4.0))
 
-    print(f"\nStats brutos: RG={stats['rg']} AC={stats['ac']}")
+    print("=" * 50)
+    print("Scraping MercadoLibre (API)...")
+    print("=" * 50)
+    for marca in marcas:
+        results = scrape_ml(marca, paginas=4)
+        all_listings.extend(results)
+        stats['ml'] += len(results)
+        print(f"  >> ML {marca}: {len(results)} total")
+        time.sleep(random.uniform(0.5, 1.5))
+
+    print(f"\nStats brutos: RG={stats['rg']} AC={stats['ac']} ML={stats['ml']}")
 
     # Dedup
     seen = set()
