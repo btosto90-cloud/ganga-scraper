@@ -7,7 +7,22 @@ import urllib.request
 import urllib.parse
 from datetime import datetime
 
-BLUE_RATE = 1290
+BLUE_RATE = 1400  # default, se sobreescribe abajo con valor real
+
+def fetch_blue_rate():
+    """Lee dólar blue (venta) desde dolarapi.com. Fallback a 1400."""
+    try:
+        with urllib.request.urlopen('https://dolarapi.com/v1/dolares/blue', timeout=10) as r:
+            data = json.loads(r.read())
+            rate = data.get('venta')
+            if rate and 1000 < rate < 5000:
+                print(f"BLUE_RATE actualizado: {rate} (dolarapi.com)")
+                return int(rate)
+    except Exception as e:
+        print(f"WARN: dolarapi falló ({e}), usando fallback 1400")
+    return 1400
+
+BLUE_RATE = fetch_blue_rate()
 OUTPUT_FILE = "listings.json"
 
 # Credenciales ML (vienen de GitHub Actions secrets)
