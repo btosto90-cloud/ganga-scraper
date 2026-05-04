@@ -213,8 +213,7 @@ def find_model_in_text(text):
 def make_model_key(brand, model, year):
     b = brand or 'other'
     m = model or 'other'
-    year_pair = (year // 2) * 2
-    return f"{b}_{m}_{year_pair}"
+    return f"{b}_{m}_{year}"
 
 # ─── ROSARIO GARAGE ───────────────────────────────────────────────────────────
 
