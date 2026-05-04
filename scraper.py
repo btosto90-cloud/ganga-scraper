@@ -210,10 +210,35 @@ def find_model_in_text(text):
             return m.replace(' ', '_').replace('-', '_')
     return None
 
-def make_model_key(brand, model, year):
+# Trims que afectan precio significativamente
+TRIMS = [
+    'amg line', 'm sport', 'm-sport', 'r line', 'r-line', 'n line', 'n-line',
+    'gt line', 'gt-line', 'st line', 'st-line', 's line', 's-line',
+    'sport', 'sportback', 'sportline', 'avantgarde', 'progressive', 'exclusive',
+    'gti', 'gtd', 'gts', 'rs', 'st', 'gt',
+    'highline', 'comfortline', 'trendline',
+    'titanium', 'limited', 'platinum', 'premium', 'luxury',
+    'ultimate', 'top', 'tope de gama',
+    'xei', 'xls', 'xlt',
+    'awd', '4x4', 'quattro', 'xdrive', '4motion', '4matic',
+    'cabrio', 'coupe', 'sedan', 'hatchback',
+]
+
+def find_trim(text):
+    if not text: return None
+    t = text.lower()
+    found = [trim for trim in TRIMS if trim in t]
+    if not found: return None
+    found.sort(key=len, reverse=True)
+    return found[0].replace(' ', '_').replace('-', '_')
+
+def make_model_key(brand, model, year, trim=None):
     b = brand or 'other'
     m = model or 'other'
-    return f"{b}_{m}_{year}"
+    base = f"{b}_{m}_{year}"
+    if trim:
+        base += f"_{trim}"
+    return base
 
 # ─── ROSARIO GARAGE ───────────────────────────────────────────────────────────
 
@@ -329,6 +354,7 @@ def _parse_rg_block(block, marca_search):
         # Marca + modelo: probar título primero, luego asumir marca de URL
         brand = find_brand_in_text(title) or normalize_brand(marca_search)
         model = find_model_in_text(title)
+        trim = find_trim(title)
 
         full_title = title[:80]
 
@@ -342,7 +368,8 @@ def _parse_rg_block(block, marca_search):
             'fuel': fuel, 'trans': trans,
             'precio_usd': precio_usd,
             'fuente': 'rg',
-            'model_key': make_model_key(brand, model, year),
+            'trim': trim,
+            'model_key': make_model_key(brand, model, year, trim),
         }
     except Exception:
         return None
@@ -474,6 +501,7 @@ def _parse_ac_block(block, marca_search):
         model = find_model_in_text(url_model or '') or find_model_in_text(full_title)
         if not model and url_model:
             model = url_model.split('-')[0].lower()
+        trim = find_trim(full_title)
 
         return {
             'id': item_id,
@@ -485,7 +513,8 @@ def _parse_ac_block(block, marca_search):
             'fuel': '?', 'trans': trans,
             'precio_usd': precio_usd,
             'fuente': 'ac',
-            'model_key': make_model_key(brand, model, year),
+            'trim': trim,
+            'model_key': make_model_key(brand, model, year, trim),
         }
     except Exception:
         return None
@@ -610,6 +639,22 @@ def load_kavak_listings():
 def main():
     all_listings = []
 
+    # Cargar histórico para preservar first_seen
+    import os
+    first_seen_map = {}
+    today_iso = datetime.utcnow().date().isoformat()
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+                prev = json.load(f)
+            for l in prev.get('listings', []):
+                lid = l.get('id')
+                if lid:
+                    first_seen_map[lid] = l.get('first_seen', today_iso)
+            print(f"  ↺ Cargado histórico: {len(first_seen_map)} listings con first_seen")
+        except Exception as e:
+            print(f"  (no pude leer histórico: {e})")
+
     marcas = [
         'audi', 'toyota', 'volkswagen', 'ford', 'chevrolet',
         'peugeot', 'renault', 'honda', 'fiat', 'bmw',
@@ -671,6 +716,10 @@ def main():
     before = len(unique)
     unique = [l for l in unique if is_realistic_price(l.get('precio_usd', 0), l.get('year', 0))]
     print(f"Post-filtro precio: {len(unique)} (descartados: {before - len(unique)})")
+
+    # Aplicar first_seen
+    for l in unique:
+        l['first_seen'] = first_seen_map.get(l.get('id'), today_iso)
 
     fuentes = {}
     marcas_count = {}
