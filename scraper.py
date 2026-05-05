@@ -639,9 +639,10 @@ def load_kavak_listings():
 def main():
     all_listings = []
 
-    # Cargar histórico para preservar first_seen
+    # Cargar histórico para preservar first_seen y price_history
     import os
     first_seen_map = {}
+    price_history_map = {}
     today_iso = datetime.utcnow().date().isoformat()
     if os.path.exists(OUTPUT_FILE):
         try:
@@ -651,7 +652,9 @@ def main():
                 lid = l.get('id')
                 if lid:
                     first_seen_map[lid] = l.get('first_seen', today_iso)
-            print(f"  ↺ Cargado histórico: {len(first_seen_map)} listings con first_seen")
+                    if l.get('price_history'):
+                        price_history_map[lid] = l['price_history']
+            print(f"  ↺ Cargado histórico: {len(first_seen_map)} listings, {len(price_history_map)} con price history")
         except Exception as e:
             print(f"  (no pude leer histórico: {e})")
 
@@ -717,9 +720,32 @@ def main():
     unique = [l for l in unique if is_realistic_price(l.get('precio_usd', 0), l.get('year', 0))]
     print(f"Post-filtro precio: {len(unique)} (descartados: {before - len(unique)})")
 
-    # Aplicar first_seen
+    # Aplicar first_seen y price_history
     for l in unique:
-        l['first_seen'] = first_seen_map.get(l.get('id'), today_iso)
+        lid = l.get('id')
+        l['first_seen'] = first_seen_map.get(lid, today_iso)
+
+        prev_history = price_history_map.get(lid, [])
+        precio = l.get('precio_usd', 0)
+        if not prev_history:
+            l['price_history'] = [{'fecha': today_iso, 'precio_usd': precio}]
+            l['price_changed'] = False
+            l['price_drops'] = 0
+            l['price_drop_pct'] = 0
+        else:
+            last_price = prev_history[-1]['precio_usd']
+            if precio != last_price:
+                l['price_history'] = prev_history + [{'fecha': today_iso, 'precio_usd': precio}]
+                l['price_changed'] = True
+            else:
+                l['price_history'] = prev_history
+                l['price_changed'] = False
+            # Drops y bajada total
+            hist = l['price_history']
+            drops = sum(1 for k in range(1, len(hist)) if hist[k]['precio_usd'] < hist[k-1]['precio_usd'])
+            l['price_drops'] = drops
+            initial = hist[0]['precio_usd']
+            l['price_drop_pct'] = round((1 - precio / initial) * 100, 1) if initial > 0 else 0
 
     fuentes = {}
     marcas_count = {}
