@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T02:21:40.920900+00:00",
+  "generated_at": "2026-05-08T02:45:26.649703+00:00",
   "total_flights": 8,
   "sources": {
     "promociones_aereas": {
@@ -90,7 +90,17 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>15% por encima del histórico</strong> · vuelo directo · sin equipaje"
+      "mainReason": "<strong>15% por encima del histórico</strong> · vuelo directo · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/fco/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Rome",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-FCO/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/EZE-FCO",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     },
     {
       "id": "f_4e9782016d83",
@@ -165,7 +175,17 @@
         "flags": []
       },
       "earlyAlert": true,
-      "mainReason": "<strong>33% debajo del histórico</strong> (avg ~USD 470) · vuelo directo · sin equipaje"
+      "mainReason": "<strong>33% debajo del histórico</strong> (avg ~USD 470) · vuelo directo · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/aep/bps/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Porto+Seguro",
+        "kayak": "https://www.kayak.com.ar/flights/AEP-BPS/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/AEP-BPS",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     },
     {
       "id": "f_e2a35619bb17",
@@ -240,7 +260,17 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>8% debajo del histórico</strong> (avg ~USD 1050) · una escala · sin equipaje"
+      "mainReason": "<strong>8% debajo del histórico</strong> (avg ~USD 1050) · una escala · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/lis/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Lisbon",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-LIS/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/EZE-LIS",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     },
     {
       "id": "f_371e607e1c47",
@@ -315,7 +345,17 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>25% debajo del histórico</strong> (avg ~USD 480) · vuelo directo · sin equipaje"
+      "mainReason": "<strong>25% debajo del histórico</strong> (avg ~USD 480) · vuelo directo · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/aep/lim/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Lima",
+        "kayak": "https://www.kayak.com.ar/flights/AEP-LIM/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/AEP-LIM",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     },
     {
       "id": "f_92469fdf36e0",
@@ -394,7 +434,17 @@
         "flags": []
       },
       "earlyAlert": true,
-      "mainReason": "<strong>27% debajo del histórico</strong> (avg ~USD 850) · vuelo directo · sin equipaje"
+      "mainReason": "<strong>27% debajo del histórico</strong> (avg ~USD 850) · vuelo directo · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/270115/270129/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2027-01-15+returning+2027-01-29",
+        "kayak": "https://www.kayak.com.ar/flights/COR-PUJ/2027-01-15/2027-01-29",
+        "momondo": "https://www.momondo.com/flight-search/COR-PUJ/2027-01-15/2027-01-29",
+        "guessed_dates": {
+          "depart": "2027-01-15",
+          "return": "2027-01-29"
+        }
+      }
     },
     {
       "id": "f_40752a350ab6",
@@ -469,7 +519,17 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>31% debajo del histórico</strong> (avg ~USD 750) · una escala · sin equipaje"
+      "mainReason": "<strong>31% debajo del histórico</strong> (avg ~USD 750) · una escala · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/cun/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Cancun",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-CUN/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/EZE-CUN",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     },
     {
       "id": "f_07833c331256",
@@ -548,7 +608,17 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>13% debajo del histórico</strong> (avg ~USD 1500) · vuelo directo · sin equipaje"
+      "mainReason": "<strong>13% debajo del histórico</strong> (avg ~USD 1500) · vuelo directo · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/tlv/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Tel+Aviv",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-TLV/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/EZE-TLV",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     },
     {
       "id": "f_9daf1499fa54",
@@ -627,7 +697,17 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>14% debajo del histórico</strong> (avg ~USD 800) · una escala · sin equipaje"
+      "mainReason": "<strong>14% debajo del histórico</strong> (avg ~USD 800) · una escala · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/adz/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+San+Andres",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-ADZ/anytime/anytime",
+        "momondo": "https://www.momondo.com/flight-search/EZE-ADZ",
+        "guessed_dates": {
+          "depart": null,
+          "return": null
+        }
+      }
     }
   ]
 }
