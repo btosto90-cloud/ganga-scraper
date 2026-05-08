@@ -8,8 +8,11 @@ For each flight we compute:
   - earlyAlert: true if it just dropped agressively
   - category: tier label + emoji
   - mainReason: human-readable summary
+  - searchLinks: deeplinks to Skyscanner / Google Flights / Kayak / Momondo
 """
 from __future__ import annotations
+
+from .deeplinks import build_search_links
 
 GANGA_THRESHOLD = 0.85
 SUPER_GANGA_THRESHOLD = 0.75
@@ -329,4 +332,5 @@ def enrich_flight(f: dict, baseline: dict, all_flights: list[dict], mode: str = 
         "errorFare": error_fare,
         "earlyAlert": early,
         "mainReason": main_reason,
+        "searchLinks": build_search_links(f),
     }
