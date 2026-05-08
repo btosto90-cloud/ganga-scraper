@@ -66,16 +66,75 @@ class PromocionesAereasSource(Source):
             self._fetch_html,
             self._fetch_via_jina,  # last-resort proxy
         )
+        offers: list[dict] = []
         for strategy in strategies:
             try:
                 offers = strategy()
                 if offers:
                     print(f"[{self.name}] strategy {strategy.__name__} → {len(offers)} raw offers")
-                    return self._filter_flights(offers)[: self.max_offers]
+                    break
             except Exception as e:
                 print(f"[{self.name}] {strategy.__name__} failed: {type(e).__name__}: {e}")
                 time.sleep(1.5)
-        return []
+        if not offers:
+            return []
+
+        offers = self._filter_flights(offers)[: self.max_offers]
+
+        # Backfill content_html for any offer that doesn't have one
+        # (REST API and HTML strategies don't return body — RSS does)
+        offers = self._backfill_post_bodies(offers)
+
+        return offers
+
+    # ------------------------------------------------------------------
+    def _backfill_post_bodies(self, offers: list[dict]) -> list[dict]:
+        """For each offer missing content_html, fetch the post page and extract the body.
+
+        We try the same cascade as the listing fetch (direct HTML → Jina proxy) per post.
+        We rate-limit (300ms between requests) to be polite. If a single fetch fails we
+        keep the offer with empty body — it will still work, just without parsed dates.
+        """
+        missing = [o for o in offers if not o.get("content_html")]
+        if not missing:
+            return offers
+        print(f"[{self.name}] backfilling {len(missing)} post bodies")
+        for i, o in enumerate(missing):
+            url = o.get("url", "")
+            if not url:
+                continue
+            try:
+                body = self._fetch_post_body(url)
+                if body:
+                    o["content_html"] = body
+            except Exception as e:
+                print(f"[{self.name}] backfill failed for {url[:60]}: {type(e).__name__}")
+            # polite pacing
+            if i < len(missing) - 1:
+                time.sleep(0.3)
+        return offers
+
+    def _fetch_post_body(self, url: str) -> str:
+        """Fetch one post's HTML, returning just the article body."""
+        # Try direct first
+        for attempt in range(2):
+            try:
+                fetch_url = url if attempt == 0 else f"https://r.jina.ai/{url}"
+                headers = HEADERS if attempt == 0 else {"Accept": "text/plain"}
+                r = self.session.get(fetch_url, headers=headers, timeout=20)
+                r.raise_for_status()
+                if attempt == 0:
+                    # Return just the article-like portion of the HTML to keep size sane
+                    soup = BeautifulSoup(r.text, "lxml")
+                    # WP usually wraps post content in <article> or div.entry-content
+                    article = soup.find("article") or soup.find(class_="entry-content") or soup.find("main")
+                    return str(article) if article else r.text[:50000]
+                else:
+                    # Jina returns markdown — wrap it in a synthetic <p> for the parser
+                    return f"<div>{r.text}</div>"
+            except Exception:
+                continue
+        return ""
 
     # ------------------------------------------------------------------
     # Strategy 4: r.jina.ai proxy — free, no auth, returns the page rendered.
@@ -114,11 +173,11 @@ class PromocionesAereasSource(Source):
         return offers
 
     # ------------------------------------------------------------------
-    # Strategy 1: WordPress REST API
+    # Strategy 1: WordPress REST API (no body — content field requires auth on this site)
     # ------------------------------------------------------------------
     def _fetch_rest_api(self) -> list[dict]:
         url = f"{BASE}/wp-json/wp/v2/posts"
-        params = {"per_page": POST_PER_PAGE, "_fields": "id,date,link,slug,title,excerpt,content"}
+        params = {"per_page": POST_PER_PAGE, "_fields": "id,date,link,slug,title,excerpt"}
         r = self.session.get(url, params=params, timeout=30)
         r.raise_for_status()
         data = r.json()
@@ -128,7 +187,6 @@ class PromocionesAereasSource(Source):
             slug = p.get("slug", "")
             title = unescape((p.get("title") or {}).get("rendered", "")).strip()
             posted = p.get("date") or None
-            content_html = (p.get("content") or {}).get("rendered", "")
             if not (link and slug and title):
                 continue
             out.append({
@@ -137,17 +195,18 @@ class PromocionesAereasSource(Source):
                 "url": link,
                 "slug": slug,
                 "posted_at": posted,
-                "content_html": content_html,
+                "content_html": "",  # REST API doesn't give us body without auth
             })
         return out
 
     # ------------------------------------------------------------------
-    # Strategy 2: RSS feed
+    # Strategy 2: RSS feed (includes content:encoded with full body)
     # ------------------------------------------------------------------
     def _fetch_rss(self) -> list[dict]:
         r = self.session.get(f"{BASE}/feed/", timeout=20)
         r.raise_for_status()
-        # WP RSS is application/rss+xml — namespaces aren't needed for what we read
+        # WP RSS uses the namespace http://purl.org/rss/1.0/modules/content/ for the body
+        ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
         root = ET.fromstring(r.content)
         items = root.findall(".//item")
         out = []
@@ -155,6 +214,9 @@ class PromocionesAereasSource(Source):
             link = (item.findtext("link") or "").strip()
             title = unescape(item.findtext("title") or "").strip()
             posted = item.findtext("pubDate") or None
+            # Extract the full body from content:encoded
+            content_node = item.find("content:encoded", ns)
+            content_html = (content_node.text or "") if content_node is not None else ""
             slug = ""
             if link:
                 slug = link.rstrip("/").rsplit("/", 1)[-1].replace(".html", "")
@@ -166,6 +228,7 @@ class PromocionesAereasSource(Source):
                 "url": link,
                 "slug": slug,
                 "posted_at": posted,
+                "content_html": content_html,
             })
         return out
 
