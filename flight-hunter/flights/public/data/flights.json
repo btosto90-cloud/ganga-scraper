@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T20:54:01.520086+00:00",
+  "generated_at": "2026-05-08T20:57:24.491169+00:00",
   "total_flights": 6,
   "sources": {
     "promociones_aereas": {
@@ -135,12 +135,293 @@
       "raw_title": "¡Muy bueno! 🏰 Vuelos a Orlando a partir de U$D 710 🔥🔥 desde Buenos Aires",
       "posted_at": "Fri, 08 May 2026 17:00:00 +0000",
       "last_checked": "2026-05-08",
-      "confidence": 0.85,
-      "departure_date": null,
-      "return_date": null,
-      "dates_available": [],
-      "total_dates": 0,
-      "direct_booking_url": null,
+      "confidence": 0.92,
+      "departure_date": "2026-05-20",
+      "return_date": "2026-06-05",
+      "dates_available": [
+        {
+          "depart": "2026-05-20",
+          "return": "2026-06-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-05-20&inboundDate=2026-06-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-05-29",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-05-29&inboundDate=2026-06-14&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-05-31",
+          "return": "2026-06-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-05-31&inboundDate=2026-06-10&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-07-10",
+          "return": "2026-07-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-07-10&inboundDate=2026-07-17&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-02",
+          "return": "2026-08-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-02&inboundDate=2026-08-18&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-07",
+          "return": "2026-08-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-07&inboundDate=2026-08-16&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-09",
+          "return": "2026-08-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-09&inboundDate=2026-08-23&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-09",
+          "return": "2026-08-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-09&inboundDate=2026-08-25&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-14",
+          "return": "2026-08-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-14&inboundDate=2026-08-23&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-14",
+          "return": "2026-08-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-14&inboundDate=2026-08-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-09-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-15&inboundDate=2026-09-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-08-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-15&inboundDate=2026-08-23&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-08-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-15&inboundDate=2026-08-25&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-08-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-08-15&inboundDate=2026-08-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-09-05",
+          "return": "2026-09-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-09-05&inboundDate=2026-09-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-09-13",
+          "return": "2026-09-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-09-13&inboundDate=2026-09-27&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-10-16",
+          "return": "2026-10-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-10-16&inboundDate=2026-10-27&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-10-16",
+          "return": "2026-11-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-10-16&inboundDate=2026-11-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-10-17",
+          "return": "2026-11-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-10-17&inboundDate=2026-11-03&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-10-24",
+          "return": "2026-11-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-10-24&inboundDate=2026-11-10&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-06",
+          "return": "2026-11-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-06&inboundDate=2026-11-20&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-09",
+          "return": "2026-11-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-09&inboundDate=2026-11-20&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-14",
+          "return": "2026-12-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-14&inboundDate=2026-12-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-16",
+          "return": "2026-12-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-16&inboundDate=2026-12-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-16",
+          "return": "2026-11-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-16&inboundDate=2026-11-27&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-12-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-23&inboundDate=2026-12-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-27",
+          "return": "2026-12-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-27&inboundDate=2026-12-11&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-27",
+          "return": "2026-12-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-11-27&inboundDate=2026-12-08&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-04",
+          "return": "2026-12-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-12-04&inboundDate=2026-12-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-04",
+          "return": "2026-12-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-12-04&inboundDate=2026-12-13&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-18",
+          "return": "2027-01-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-12-18&inboundDate=2027-01-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-15",
+          "return": "2027-03-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-02-15&inboundDate=2027-03-02&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-19",
+          "return": "2027-03-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-02-19&inboundDate=2027-03-07&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-19",
+          "return": "2027-03-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-02-19&inboundDate=2027-03-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-02-24&inboundDate=2027-03-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-26",
+          "return": "2027-03-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-02-26&inboundDate=2027-03-09&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-26",
+          "return": "2027-03-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-02-26&inboundDate=2027-03-16&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-03-12",
+          "return": "2027-03-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-03-12&inboundDate=2027-03-26&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-03-12",
+          "return": "2027-03-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-03-12&inboundDate=2027-03-21&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-03-13",
+          "return": "2027-03-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2027-03-13&inboundDate=2027-03-21&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        }
+      ],
+      "total_dates": 40,
+      "direct_booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=ORLB&outboundDate=2026-05-20&inboundDate=2026-06-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas",
       "route": {
         "historical_avg": 880,
         "historical_min": 600,
@@ -151,14 +432,14 @@
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 73,
+      "dealScore": 74,
       "dealScoreByMode": {
-        "viaje_personal": 73,
-        "maximo_ahorro": 72,
-        "error_fare": 70,
+        "viaje_personal": 74,
+        "maximo_ahorro": 73,
+        "error_fare": 71,
         "ejecutivo": 76,
-        "escapadas": 73,
-        "flexible_total": 72
+        "escapadas": 74,
+        "flexible_total": 73
       },
       "dealBreakdown": {
         "hist": 84,
@@ -166,7 +447,7 @@
         "qual": 86,
         "rare": 60,
         "cond": 65,
-        "conf": 85
+        "conf": 92
       },
       "qualScore": 86,
       "qualReasons": [
@@ -192,14 +473,14 @@
       "earlyAlert": false,
       "mainReason": "<strong>19% debajo del histórico</strong> (avg ~USD 880) · una escala · sin equipaje",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mco/?adults=1",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Orlando",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-MCO/anytime/anytime",
-        "momondo": "https://www.momondo.com/flight-search/EZE-MCO",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mco/260520/260605/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Orlando+on+2026-05-20+returning+2026-06-05",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-MCO/2026-05-20/2026-06-05",
+        "momondo": "https://www.momondo.com/flight-search/EZE-MCO/2026-05-20/2026-06-05",
         "guessed_dates": {
-          "depart": null,
-          "return": null,
-          "source": "none"
+          "depart": "2026-05-20",
+          "return": "2026-06-05",
+          "source": "post_table"
         }
       }
     },
@@ -216,7 +497,7 @@
       "currency": "USD",
       "price_usd": 898.0,
       "price_ars": 1158420,
-      "stops": 1,
+      "stops": 0,
       "stops_detail": [],
       "duration_minutes": 0,
       "baggage_included": false,
@@ -225,17 +506,130 @@
       "cabin": "economy",
       "booking_url": "https://promociones-aereas.com.ar/2026/05/vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p.html",
       "trip_type": "md",
-      "is_direct": false,
+      "is_direct": true,
       "is_partial_direct": false,
       "raw_title": "Vuelos Aruba con regreso desde Curazao 🍹 a Buenos Aires a partir de U$D 898 🔥",
       "posted_at": "Fri, 08 May 2026 16:30:00 +0000",
       "last_checked": "2026-05-08",
-      "confidence": 0.85,
-      "departure_date": null,
+      "confidence": 0.92,
+      "departure_date": "2026-06-04",
       "return_date": null,
-      "dates_available": [],
-      "total_dates": 0,
-      "direct_booking_url": null,
+      "dates_available": [
+        {
+          "depart": "2026-06-04",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-11",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-11&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-14",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-23",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-24",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-24&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-25",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-06-26",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-07-02",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-07-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-08-11",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-08-11&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-08-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-08-25",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-08-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-09-19",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-09-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        },
+        {
+          "depart": "2026-09-26",
+          "return": null,
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-09-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p"
+        }
+      ],
+      "total_dates": 16,
+      "direct_booking_url": "https://almundo.com.ar/flights/results?from=AUA&to=CUR&date=2026-06-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-vuelos-aruba-con-regreso-desde-curazao-a-buenos-aires-copa-airlines-md-p",
       "route": {
         "historical_avg": 850,
         "historical_min": 580,
@@ -246,28 +640,28 @@
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 57,
+      "dealScore": 59,
       "dealScoreByMode": {
-        "viaje_personal": 57,
-        "maximo_ahorro": 51,
-        "error_fare": 43,
-        "ejecutivo": 68,
-        "escapadas": 59,
-        "flexible_total": 54
+        "viaje_personal": 59,
+        "maximo_ahorro": 52,
+        "error_fare": 44,
+        "ejecutivo": 72,
+        "escapadas": 61,
+        "flexible_total": 55
       },
       "dealBreakdown": {
         "hist": 44,
         "mkt": 50,
-        "qual": 92,
+        "qual": 100,
         "rare": 20,
         "cond": 65,
-        "conf": 85
+        "conf": 92
       },
-      "qualScore": 92,
+      "qualScore": 100,
       "qualReasons": [
         {
-          "kind": "neutral",
-          "text": "1 escala"
+          "kind": "good",
+          "text": "Vuelo directo"
         }
       ],
       "category": {
@@ -281,16 +675,16 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>6% por encima del histórico</strong> · una escala · sin equipaje",
+      "mainReason": "<strong>6% por encima del histórico</strong> · vuelo directo · sin equipaje",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/aua/?adults=1",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Aruba",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-AUA/anytime/anytime",
-        "momondo": "https://www.momondo.com/flight-search/EZE-AUA",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/aua/260604/?adults=1",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Aruba+on+2026-06-04",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-AUA/2026-06-04",
+        "momondo": "https://www.momondo.com/flight-search/EZE-AUA/2026-06-04",
         "guessed_dates": {
-          "depart": null,
+          "depart": "2026-06-04",
           "return": null,
-          "source": "none"
+          "source": "post_table"
         }
       }
     },
@@ -321,12 +715,566 @@
       "raw_title": "¡Vuelos a Recife en Verano Directos!🌴 a partir de U$D 408 🔥 desde Aeroparque",
       "posted_at": "Fri, 08 May 2026 15:30:00 +0000",
       "last_checked": "2026-05-08",
-      "confidence": 0.85,
-      "departure_date": null,
-      "return_date": null,
-      "dates_available": [],
-      "total_dates": 0,
-      "direct_booking_url": null,
+      "confidence": 0.92,
+      "departure_date": "2026-05-11",
+      "return_date": "2026-05-18",
+      "dates_available": [
+        {
+          "depart": "2026-05-11",
+          "return": "2026-05-18",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-11/2026-05-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-12",
+          "return": "2026-05-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-12/2026-05-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-19",
+          "return": "2026-05-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-19/2026-05-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-21",
+          "return": "2026-05-31",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-21/2026-05-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-23",
+          "return": "2026-05-31",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-23/2026-05-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-24",
+          "return": "2026-06-06",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-24/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-06",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-26/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-13",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-26/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-07",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-26/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-16",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-26/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-27",
+          "return": "2026-06-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-27/2026-06-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-28/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-05-29",
+          "return": "2026-06-05",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-29/2026-06-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-01/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-07",
+          "return": "2026-06-13",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-07/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-09/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-15",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-09/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-09/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-09/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-09/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-17",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-09/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-17",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-10/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-10/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-12/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-13/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-07-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-15/2026-07-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-07-10",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-15/2026-07-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-22",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-28",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-16/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-28",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-17/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-17/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-17/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-17/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-18",
+          "return": "2026-06-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-18/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-18",
+          "return": "2026-06-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-18/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-19",
+          "return": "2026-06-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-19/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-28",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-29",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-11-04",
+          "return": "2026-11-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-04&inboundDate=2026-11-11&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-04",
+          "return": "2026-11-10",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-04&inboundDate=2026-11-10&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-06",
+          "return": "2026-11-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-06&inboundDate=2026-11-14&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-10",
+          "return": "2026-11-17",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-10&inboundDate=2026-11-17&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-10",
+          "return": "2026-11-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-10&inboundDate=2026-11-20&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-11",
+          "return": "2026-11-17",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-11&inboundDate=2026-11-17&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-11",
+          "return": "2026-11-18",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-11&inboundDate=2026-11-18&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-11",
+          "return": "2026-11-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-11&inboundDate=2026-11-21&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-13",
+          "return": "2026-11-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-13&inboundDate=2026-11-20&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-13",
+          "return": "2026-12-05",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-13&inboundDate=2026-12-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-17",
+          "return": "2026-11-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-17&inboundDate=2026-11-24&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-11-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-18&inboundDate=2026-11-24&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-11-28",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-18&inboundDate=2026-11-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-12-05",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-18&inboundDate=2026-12-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-12-06",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-18&inboundDate=2026-12-06&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-20",
+          "return": "2026-12-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-20&inboundDate=2026-12-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-24",
+          "return": "2026-12-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-24&inboundDate=2026-12-11&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-24",
+          "return": "2026-12-12",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-24&inboundDate=2026-12-12&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-11-27",
+          "return": "2026-12-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-11-27&inboundDate=2026-12-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-01",
+          "return": "2026-12-08",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-01&inboundDate=2026-12-08&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-04",
+          "return": "2026-12-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-04&inboundDate=2026-12-19&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-04",
+          "return": "2026-12-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-04&inboundDate=2026-12-11&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-08",
+          "return": "2026-12-18",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-08&inboundDate=2026-12-18&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-08",
+          "return": "2026-12-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-08&inboundDate=2026-12-20&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-08",
+          "return": "2026-12-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-08&inboundDate=2026-12-19&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-09",
+          "return": "2026-12-16",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-09&inboundDate=2026-12-16&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2026-12-11",
+          "return": "2026-12-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2026-12-11&inboundDate=2026-12-19&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-01-25",
+          "return": "2027-02-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2027-01-25&inboundDate=2027-02-03&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        },
+        {
+          "depart": "2027-02-23",
+          "return": "2027-03-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=RECA&outboundDate=2027-02-23&inboundDate=2027-03-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
+        }
+      ],
+      "total_dates": 79,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-11/2026-05-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-recife-en-verano-directos-desde-aeroparque-jetsmart-rt-p",
       "route": null,
       "marketAvgUSD": null,
       "dealScore": 60,
@@ -335,7 +1283,7 @@
         "maximo_ahorro": 55,
         "error_fare": 49,
         "ejecutivo": 71,
-        "escapadas": 62,
+        "escapadas": 63,
         "flexible_total": 57
       },
       "dealBreakdown": {
@@ -344,7 +1292,7 @@
         "qual": 94,
         "rare": 30,
         "cond": 65,
-        "conf": 85
+        "conf": 92
       },
       "qualScore": 94,
       "qualReasons": [
@@ -370,14 +1318,14 @@
       "earlyAlert": false,
       "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/aep/rec/270115/270129/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+REC+on+2027-01-15+returning+2027-01-29",
-        "kayak": "https://www.kayak.com.ar/flights/AEP-REC/2027-01-15/2027-01-29",
-        "momondo": "https://www.momondo.com/flight-search/AEP-REC/2027-01-15/2027-01-29",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/aep/rec/260511/260518/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+REC+on+2026-05-11+returning+2026-05-18",
+        "kayak": "https://www.kayak.com.ar/flights/AEP-REC/2026-05-11/2026-05-18",
+        "momondo": "https://www.momondo.com/flight-search/AEP-REC/2026-05-11/2026-05-18",
         "guessed_dates": {
-          "depart": "2027-01-15",
-          "return": "2027-01-29",
-          "source": "title_guess"
+          "depart": "2026-05-11",
+          "return": "2026-05-18",
+          "source": "post_table"
         }
       }
     },
@@ -408,12 +1356,433 @@
       "raw_title": "¡Excelente! Vuelos a Nueva York 🗽 a partir de U$D 751 🔥🔥 desde Buenos Aires",
       "posted_at": "Fri, 08 May 2026 15:00:00 +0000",
       "last_checked": "2026-05-08",
-      "confidence": 0.85,
-      "departure_date": null,
-      "return_date": null,
-      "dates_available": [],
-      "total_dates": 0,
-      "direct_booking_url": null,
+      "confidence": 0.92,
+      "departure_date": "2026-05-14",
+      "return_date": "2026-05-25",
+      "dates_available": [
+        {
+          "depart": "2026-05-14",
+          "return": "2026-05-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-14/2026-05-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-25",
+          "return": "2026-06-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-25/2026-06-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-25",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-25/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-26/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-26/2026-06-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-27",
+          "return": "2026-06-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-27/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-28/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-28/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-30",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-30/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-30",
+          "return": "2026-06-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-30/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-31",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-31/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-31",
+          "return": "2026-06-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-31/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-31",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-31/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-05-31",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-31/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-01/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-01/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-01/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-01/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-01/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-02/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-02/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-02/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-03/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-03/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-04/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-05/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-06",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-06/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-06",
+          "return": "2026-06-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-06/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-07",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-07/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-08",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-08/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-09/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-09/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-09/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-09/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-09/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-09/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-10/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-07-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-10/2026-07-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-11",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-11/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-12/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-12/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-12/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-12/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-13/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-13/2026-06-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-13/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-13/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-13/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-14",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-14/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-07-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-06-15/2026-07-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-07",
+          "return": "2026-07-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-07-07/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-02",
+          "return": "2026-08-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-08-02/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-02",
+          "return": "2026-08-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-08-02/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p"
+        }
+      ],
+      "total_dates": 60,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-14/2026-05-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-nueva-york-desde-buenos-aires-latam-rt-p",
       "route": {
         "historical_avg": 950,
         "historical_min": 650,
@@ -427,7 +1796,7 @@
       "dealScore": 76,
       "dealScoreByMode": {
         "viaje_personal": 76,
-        "maximo_ahorro": 74,
+        "maximo_ahorro": 75,
         "error_fare": 72,
         "ejecutivo": 79,
         "escapadas": 76,
@@ -439,7 +1808,7 @@
         "qual": 92,
         "rare": 60,
         "cond": 65,
-        "conf": 85
+        "conf": 92
       },
       "qualScore": 92,
       "qualReasons": [
@@ -465,14 +1834,14 @@
       "earlyAlert": false,
       "mainReason": "<strong>21% debajo del histórico</strong> (avg ~USD 950) · una escala · sin equipaje",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/jfk/?adults=1",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+New+York",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-JFK/anytime/anytime",
-        "momondo": "https://www.momondo.com/flight-search/EZE-JFK",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/jfk/260514/260525/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+New+York+on+2026-05-14+returning+2026-05-25",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-JFK/2026-05-14/2026-05-25",
+        "momondo": "https://www.momondo.com/flight-search/EZE-JFK/2026-05-14/2026-05-25",
         "guessed_dates": {
-          "depart": null,
-          "return": null,
-          "source": "none"
+          "depart": "2026-05-14",
+          "return": "2026-05-25",
+          "source": "post_table"
         }
       }
     },
@@ -503,12 +1872,139 @@
       "raw_title": "Barcelona a partir de U$D 1.037 desde Córdoba 🪭¡Opciones en verano de allá!",
       "posted_at": "Fri, 08 May 2026 14:30:00 +0000",
       "last_checked": "2026-05-08",
-      "confidence": 0.85,
-      "departure_date": null,
-      "return_date": null,
-      "dates_available": [],
-      "total_dates": 0,
-      "direct_booking_url": null,
+      "confidence": 0.92,
+      "departure_date": "2026-06-29",
+      "return_date": "2026-08-26",
+      "dates_available": [
+        {
+          "depart": "2026-06-29",
+          "return": "2026-08-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-06-29/2026-08-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-15",
+          "return": "2026-08-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-15/2026-08-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-19",
+          "return": "2026-08-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-19/2026-08-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-19",
+          "return": "2026-09-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-19/2026-09-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-22",
+          "return": "2026-08-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-22/2026-08-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-22",
+          "return": "2026-08-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-22/2026-08-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-27",
+          "return": "2026-08-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-27/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-07-30",
+          "return": "2026-08-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-07-30/2026-08-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-03",
+          "return": "2026-08-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-08-03/2026-08-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-03",
+          "return": "2026-08-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-08-03/2026-08-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-03",
+          "return": "2026-08-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-08-03/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-05",
+          "return": "2026-08-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-08-05/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-10-20",
+          "return": "2026-11-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-10-20/2026-11-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-11-25",
+          "return": "2027-03-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-11-25/2027-03-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2026-12-07",
+          "return": "2027-03-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-12-07/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2027-02-12",
+          "return": "2027-03-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2027-02-12/2027-03-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2027-03-01",
+          "return": "2027-03-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2027-03-01/2027-03-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        },
+        {
+          "depart": "2027-03-03",
+          "return": "2027-03-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2027-03-03/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p"
+        }
+      ],
+      "total_dates": 18,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/BCN/2026-06-29/2026-08-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-barcelona-desde-cordoba-en-verano-latam-rt-p",
       "route": null,
       "marketAvgUSD": null,
       "dealScore": 60,
@@ -526,7 +2022,7 @@
         "qual": 92,
         "rare": 30,
         "cond": 65,
-        "conf": 85
+        "conf": 92
       },
       "qualScore": 92,
       "qualReasons": [
@@ -552,14 +2048,14 @@
       "earlyAlert": false,
       "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/bcn/270115/270129/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Barcelona+on+2027-01-15+returning+2027-01-29",
-        "kayak": "https://www.kayak.com.ar/flights/COR-BCN/2027-01-15/2027-01-29",
-        "momondo": "https://www.momondo.com/flight-search/COR-BCN/2027-01-15/2027-01-29",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/bcn/260629/260826/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Barcelona+on+2026-06-29+returning+2026-08-26",
+        "kayak": "https://www.kayak.com.ar/flights/COR-BCN/2026-06-29/2026-08-26",
+        "momondo": "https://www.momondo.com/flight-search/COR-BCN/2026-06-29/2026-08-26",
         "guessed_dates": {
-          "depart": "2027-01-15",
-          "return": "2027-01-29",
-          "source": "title_guess"
+          "depart": "2026-06-29",
+          "return": "2026-08-26",
+          "source": "post_table"
         }
       }
     }
