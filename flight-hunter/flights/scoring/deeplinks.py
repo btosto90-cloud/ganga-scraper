@@ -91,7 +91,23 @@ def build_search_links(flight: dict) -> dict:
     dest = flight["destination"]
     trip_type = flight.get("trip_type", "rt")
     raw = flight.get("raw_title", "")
-    depart, ret = _guess_dates(raw)
+
+    # Priority 1: dates parsed from the post body table (most accurate)
+    departure_date = flight.get("departure_date")
+    return_date = flight.get("return_date")
+
+    if departure_date:
+        try:
+            depart = date.fromisoformat(departure_date)
+            ret = date.fromisoformat(return_date) if return_date else None
+            date_source = "post_table"
+        except (ValueError, TypeError):
+            depart, ret = _guess_dates(raw)
+            date_source = "title_guess" if depart else "none"
+    else:
+        # Priority 2: best-effort guess from the title
+        depart, ret = _guess_dates(raw)
+        date_source = "title_guess" if depart else "none"
 
     skys = _skyscanner(origin, dest, trip_type, depart, ret)
     google = _google_flights(origin, dest, trip_type, depart, ret)
@@ -106,6 +122,7 @@ def build_search_links(flight: dict) -> dict:
         "guessed_dates": {
             "depart": depart.isoformat() if depart else None,
             "return": ret.isoformat() if ret else None,
+            "source": date_source,
         },
     }
 
