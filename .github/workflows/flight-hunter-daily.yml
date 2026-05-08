@@ -2,18 +2,17 @@ name: Flight Hunter — Daily
 
 on:
   schedule:
-    # 11:00 UTC = 08:00 ART (Argentina is UTC-3 year-round)
     - cron: "0 11 * * *"
-  workflow_dispatch:  # allow manual runs from the Actions tab
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # needed to commit updated data files
+      contents: write
     defaults:
       run:
-        working-directory: flights
+        working-directory: flight-hunter/flights
 
     steps:
       - name: Checkout
@@ -24,7 +23,7 @@ jobs:
         with:
           python-version: "3.11"
           cache: pip
-          cache-dependency-path: flights/requirements.txt
+          cache-dependency-path: flight-hunter/flights/requirements.txt
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -42,10 +41,10 @@ jobs:
 
       - name: Commit changes
         run: |
-          cd ..
+          cd ../..
           git config user.name "flight-hunter-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add flights/public/data/flights.json flights/data/price_history.json
+          git add flight-hunter/flights/public/data/flights.json flight-hunter/flights/data/price_history.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
