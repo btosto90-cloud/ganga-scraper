@@ -118,8 +118,8 @@ class PromocionesAereasSource(Source):
     # ------------------------------------------------------------------
     def _fetch_rest_api(self) -> list[dict]:
         url = f"{BASE}/wp-json/wp/v2/posts"
-        params = {"per_page": POST_PER_PAGE, "_fields": "id,date,link,slug,title,excerpt"}
-        r = self.session.get(url, params=params, timeout=20)
+        params = {"per_page": POST_PER_PAGE, "_fields": "id,date,link,slug,title,excerpt,content"}
+        r = self.session.get(url, params=params, timeout=30)
         r.raise_for_status()
         data = r.json()
         out = []
@@ -128,6 +128,7 @@ class PromocionesAereasSource(Source):
             slug = p.get("slug", "")
             title = unescape((p.get("title") or {}).get("rendered", "")).strip()
             posted = p.get("date") or None
+            content_html = (p.get("content") or {}).get("rendered", "")
             if not (link and slug and title):
                 continue
             out.append({
@@ -136,6 +137,7 @@ class PromocionesAereasSource(Source):
                 "url": link,
                 "slug": slug,
                 "posted_at": posted,
+                "content_html": content_html,
             })
         return out
 
