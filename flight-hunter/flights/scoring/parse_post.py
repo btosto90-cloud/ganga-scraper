@@ -62,7 +62,11 @@ def parse_post_body(html: str) -> dict:
         seen_keys.add(key)
         rows.append(row)
 
-    # Fallback: parse div-based layouts by scanning the text + linked anchors
+    # Also try markdown-style tables (each line: | date | date | days | direct/conexiones | link |)
+    if not rows:
+        rows = _parse_markdown_table(soup.get_text("\n"))
+
+    # Last resort fallback: scan paragraph text for date pairs
     if not rows:
         rows = _parse_text_fallback(soup)
 
@@ -132,6 +136,42 @@ def _parse_row(tr) -> Optional[dict]:
         "days": days,
         "booking_url": booking,
     }
+
+
+def _parse_markdown_table(text: str) -> list[dict]:
+    """Parse Jina/markdown-rendered tables. Each line of interest looks roughly like:
+       | Dom 24/05/2026 | Sab 06/06/2026 | 13 | Conexiones | [Ver oferta](http://...) |
+    """
+    rows: list[dict] = []
+    seen: set[tuple] = set()
+    for line in text.splitlines():
+        if not line.strip().startswith("|"):
+            continue
+        matches = list(DATE_RE.finditer(line))
+        if not matches:
+            continue
+        depart = _to_iso(matches[0])
+        if not depart:
+            continue
+        ret = _to_iso(matches[1]) if len(matches) >= 2 else None
+        text_lc = line.lower()
+        is_direct = "directo" in text_lc and "conexion" not in text_lc
+        days = _extract_days(line)
+        # markdown link [text](url)
+        link_match = re.search(r"\((https?://[^)]+)\)", line)
+        booking = link_match.group(1) if link_match else None
+        key = (depart, ret)
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append({
+            "depart": depart,
+            "return": ret,
+            "is_direct": is_direct,
+            "days": days,
+            "booking_url": booking,
+        })
+    return rows
 
 
 def _parse_text_fallback(soup) -> list[dict]:
