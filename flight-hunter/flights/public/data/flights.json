@@ -1,0 +1,1099 @@
+{
+  "generated_at": "2026-05-08T02:05:33.223176+00:00",
+  "total_flights": 14,
+  "sources": {
+    "promociones_aereas": {
+      "ok": true,
+      "count": 14
+    }
+  },
+  "stats": {
+    "total": 14,
+    "ganga_extraordinaria": 0,
+    "emitir_urgente": 3,
+    "top_oportunidades": 3,
+    "error_fares": 0,
+    "alertas_tempranas": 3,
+    "score_promedio": 71
+  },
+  "flights": [
+    {
+      "id": "f_dc0e16376fe9",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "FCO",
+      "route_key": "EZE-FCO",
+      "airline": "Aerolíneas Argentinas",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 1269.0,
+      "currency": "USD",
+      "price_usd": 1269.0,
+      "price_ars": 1637010,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/vuelos-directos-a-roma-con-regreso-desde-madrid-desde-buenos-aires-aerolineas-argentinas-iberia-air-europa-md-p.html",
+      "trip_type": "md",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "Vuelos DIRECTOS a Roma 🛵 con regreso desde Madrid a partir de U$D 1.269 🔥 desde Buenos Aires",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 1100,
+        "historical_min": 700,
+        "expected_low": 880,
+        "exceptional_threshold": 750,
+        "avg_duration_min": 900,
+        "region": "Europa",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 55,
+      "dealScoreByMode": {
+        "viaje_personal": 55,
+        "maximo_ahorro": 48,
+        "error_fare": 41,
+        "ejecutivo": 69,
+        "escapadas": 58,
+        "flexible_total": 51
+      },
+      "dealBreakdown": {
+        "hist": 35,
+        "mkt": 50,
+        "qual": 100,
+        "rare": 20,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 100,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        }
+      ],
+      "category": {
+        "tier": "MIRAR PERO NO CORRER",
+        "emoji": "👁",
+        "cls": "mirar"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>15% por encima del histórico</strong> · vuelo directo · sin equipaje"
+    },
+    {
+      "id": "f_4e9782016d83",
+      "source": "promociones_aereas",
+      "origin": "AEP",
+      "destination": "BPS",
+      "route_key": "AEP-BPS",
+      "airline": "Desconocida",
+      "airline_quality": 6,
+      "is_low_cost": false,
+      "price": 317.0,
+      "currency": "USD",
+      "price_usd": 317.0,
+      "price_ars": 408930,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/excelente-tarifa-porto-seguro-directo-desde-aeroparque-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "¡Excelente tarifa! Porto Seguro 🌴 Directo a partir de U$D 317 🔥🔥 desde Aeroparque",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 470,
+        "historical_min": 280,
+        "expected_low": 360,
+        "exceptional_threshold": 310,
+        "avg_duration_min": 240,
+        "region": "Brasil",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 81,
+      "dealScoreByMode": {
+        "viaje_personal": 81,
+        "maximo_ahorro": 79,
+        "error_fare": 75,
+        "ejecutivo": 84,
+        "escapadas": 81,
+        "flexible_total": 80
+      },
+      "dealBreakdown": {
+        "hist": 97,
+        "mkt": 50,
+        "qual": 100,
+        "rare": 60,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 100,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        }
+      ],
+      "category": {
+        "tier": "EMITIR URGENTE",
+        "emoji": "⚡",
+        "cls": "urgente"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": true,
+      "mainReason": "<strong>33% debajo del histórico</strong> (avg ~USD 470) · vuelo directo · sin equipaje"
+    },
+    {
+      "id": "f_e2a35619bb17",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "LIS",
+      "route_key": "EZE-LIS",
+      "airline": "GOL",
+      "airline_quality": 6,
+      "is_low_cost": false,
+      "price": 964.0,
+      "currency": "USD",
+      "price_usd": 964.0,
+      "price_ars": 1243560,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/lindos-vuelos-a-lisboa-desde-buenos-aires-opcion-de-pago-en-cuotas-gol-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Lindos vuelos a Lisboa 🚃 a partir de U$D 964 desde Buenos Aires ¡Opción de pago en cuotas!",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 1050,
+        "historical_min": 700,
+        "expected_low": 850,
+        "exceptional_threshold": 730,
+        "avg_duration_min": 850,
+        "region": "Europa",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 63,
+      "dealScoreByMode": {
+        "viaje_personal": 63,
+        "maximo_ahorro": 60,
+        "error_fare": 49,
+        "ejecutivo": 72,
+        "escapadas": 65,
+        "flexible_total": 61
+      },
+      "dealBreakdown": {
+        "hist": 64,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 20,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>8% debajo del histórico</strong> (avg ~USD 1050) · una escala · sin equipaje"
+    },
+    {
+      "id": "f_371e607e1c47",
+      "source": "promociones_aereas",
+      "origin": "AEP",
+      "destination": "LIM",
+      "route_key": "AEP-LIM",
+      "airline": "Aerolíneas Argentinas",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 359.0,
+      "currency": "USD",
+      "price_usd": 359.0,
+      "price_ars": 463110,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/muy-buenos-vuelos-a-lima-directos-desde-aeroparque-aerolineas-argentinas-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "¡Muy buenos vuelos a Lima! Directos a partir de U$D 359 🤩 desde Aeroparque",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 480,
+        "historical_min": 290,
+        "expected_low": 380,
+        "exceptional_threshold": 310,
+        "avg_duration_min": 290,
+        "region": "Sudamérica",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 80,
+      "dealScoreByMode": {
+        "viaje_personal": 80,
+        "maximo_ahorro": 79,
+        "error_fare": 75,
+        "ejecutivo": 84,
+        "escapadas": 80,
+        "flexible_total": 79
+      },
+      "dealBreakdown": {
+        "hist": 95,
+        "mkt": 50,
+        "qual": 100,
+        "rare": 60,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 100,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        }
+      ],
+      "category": {
+        "tier": "EMITIR URGENTE",
+        "emoji": "⚡",
+        "cls": "urgente"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>25% debajo del histórico</strong> (avg ~USD 480) · vuelo directo · sin equipaje"
+    },
+    {
+      "id": "f_92469fdf36e0",
+      "source": "promociones_aereas",
+      "origin": "COR",
+      "destination": "PUJ",
+      "route_key": "COR-PUJ",
+      "airline": "Arajet",
+      "airline_quality": 5,
+      "is_low_cost": true,
+      "price": 622.0,
+      "currency": "USD",
+      "price_usd": 622.0,
+      "price_ars": 802380,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/vuelos-directos-a-punta-cana-desde-cordoba-o-rosario-opciones-en-verano-arajet-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "Vuelos DIRECTOS a Punta Cana 🏖️ a partir de U$D 622 🔥🔥 desde Córdoba o Rosario (Opciones en verano)",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 850,
+        "historical_min": 580,
+        "expected_low": 700,
+        "exceptional_threshold": 620,
+        "avg_duration_min": 700,
+        "region": "Caribe",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 79,
+      "dealScoreByMode": {
+        "viaje_personal": 79,
+        "maximo_ahorro": 78,
+        "error_fare": 75,
+        "ejecutivo": 81,
+        "escapadas": 79,
+        "flexible_total": 78
+      },
+      "dealBreakdown": {
+        "hist": 95,
+        "mkt": 50,
+        "qual": 94,
+        "rare": 60,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 94,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        },
+        {
+          "kind": "neutral",
+          "text": "Aerolínea low-cost"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": true,
+      "mainReason": "<strong>27% debajo del histórico</strong> (avg ~USD 850) · vuelo directo · sin equipaje"
+    },
+    {
+      "id": "f_40752a350ab6",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "CUN",
+      "route_key": "EZE-CUN",
+      "airline": "Avianca",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 518.0,
+      "currency": "USD",
+      "price_usd": 518.0,
+      "price_ars": 668220,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/tarifas-imperdibles-a-cancun-vuelos-desde-buenos-aires-avianca-arajet-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "¡Tarifas IMPERDIBLES a Cancún! 🌴 Vuelos a partir de U$D 518 🔥🔥 desde Buenos Aires",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 750,
+        "historical_min": 450,
+        "expected_low": 580,
+        "exceptional_threshold": 500,
+        "avg_duration_min": 720,
+        "region": "Caribe",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 79,
+      "dealScoreByMode": {
+        "viaje_personal": 79,
+        "maximo_ahorro": 78,
+        "error_fare": 75,
+        "ejecutivo": 81,
+        "escapadas": 79,
+        "flexible_total": 78
+      },
+      "dealBreakdown": {
+        "hist": 96,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 60,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>31% debajo del histórico</strong> (avg ~USD 750) · una escala · sin equipaje"
+    },
+    {
+      "id": "f_07833c331256",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "TLV",
+      "route_key": "EZE-TLV",
+      "airline": "El Al",
+      "airline_quality": 8,
+      "is_low_cost": false,
+      "price": 1307.0,
+      "currency": "USD",
+      "price_usd": 1307.0,
+      "price_ars": 1686030,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/vuelos-directos-a-tel-aviv-desde-bs-as-el-al-israel-airlines-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "Vuelos Directos a Tel Aviv a partir de £960.00‬ (U$D 1.307 aprox) desde Bs. As.",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 1500,
+        "historical_min": 1100,
+        "expected_low": 1280,
+        "exceptional_threshold": 1180,
+        "avg_duration_min": 1080,
+        "region": "Asia",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 70,
+      "dealScoreByMode": {
+        "viaje_personal": 70,
+        "maximo_ahorro": 67,
+        "error_fare": 62,
+        "ejecutivo": 78,
+        "escapadas": 72,
+        "flexible_total": 68
+      },
+      "dealBreakdown": {
+        "hist": 71,
+        "mkt": 50,
+        "qual": 100,
+        "rare": 45,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 100,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        },
+        {
+          "kind": "good",
+          "text": "El Al: aerolínea sólida"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>13% debajo del histórico</strong> (avg ~USD 1500) · vuelo directo · sin equipaje"
+    },
+    {
+      "id": "f_64fdae627e39",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "AUA",
+      "route_key": "EZE-AUA",
+      "airline": "Copa Airlines",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 681.0,
+      "currency": "USD",
+      "price_usd": 681.0,
+      "price_ars": 878490,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": true,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/aruba-en-verano-enero-y-febrero-y-con-carry-on-desde-bs-as-copa-airlines-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Aruba 🏝️ en Verano (enero y febrero 2027) y con Carry On 🧳 a partir de £ 499 (U$D 681) desde Bs. As.",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 850,
+        "historical_min": 580,
+        "expected_low": 700,
+        "exceptional_threshold": 620,
+        "avg_duration_min": 750,
+        "region": "Caribe",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 77,
+      "dealScoreByMode": {
+        "viaje_personal": 77,
+        "maximo_ahorro": 75,
+        "error_fare": 72,
+        "ejecutivo": 82,
+        "escapadas": 78,
+        "flexible_total": 75
+      },
+      "dealBreakdown": {
+        "hist": 85,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 60,
+        "cond": 90,
+        "conf": 85
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "Equipaje incluido"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>20% debajo del histórico</strong> (avg ~USD 850) · una escala · equipaje incluido"
+    },
+    {
+      "id": "f_b22b4c21a702",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "JFK",
+      "route_key": "EZE-JFK",
+      "airline": "United",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 933.0,
+      "currency": "USD",
+      "price_usd": 933.0,
+      "price_ars": 1203570,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/muy-bueno-vuelos-a-nueva-york-miami-con-tramos-directos-desde-bs-as-latam-delta-united-md-p.html",
+      "trip_type": "md",
+      "is_direct": false,
+      "is_partial_direct": true,
+      "raw_title": "¡Muy bueno! Vuelos a Nueva York 🗽+ Miami 🛍️ con 2 de 3 tramos directos a partir de U$D 933 🔥 desde Bs. As.",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 950,
+        "historical_min": 650,
+        "expected_low": 780,
+        "exceptional_threshold": 680,
+        "avg_duration_min": 700,
+        "region": "USA",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 60,
+      "dealScoreByMode": {
+        "viaje_personal": 60,
+        "maximo_ahorro": 55,
+        "error_fare": 46,
+        "ejecutivo": 71,
+        "escapadas": 62,
+        "flexible_total": 57
+      },
+      "dealBreakdown": {
+        "hist": 53,
+        "mkt": 50,
+        "qual": 95,
+        "rare": 20,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 95,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "Un tramo directo, otro con escala"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>2% debajo del histórico</strong> (avg ~USD 950) · un tramo directo · sin equipaje"
+    },
+    {
+      "id": "f_5257e4ac940a",
+      "source": "promociones_aereas",
+      "origin": "AEP",
+      "destination": "MCZ",
+      "route_key": "AEP-MCZ",
+      "airline": "GOL",
+      "airline_quality": 6,
+      "is_low_cost": false,
+      "price": 349.0,
+      "currency": "USD",
+      "price_usd": 349.0,
+      "price_ars": 450210,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/vuelos-a-maceio-con-un-tramo-directo-desde-aeroparque-gol-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": true,
+      "raw_title": "¡Vuelos a Maceió! 😎 ¡Con un tramo directo! A partir de U$D 349 🔥🔥 desde Aeroparque",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 550,
+        "historical_min": 320,
+        "expected_low": 420,
+        "exceptional_threshold": 360,
+        "avg_duration_min": 420,
+        "region": "Brasil",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 82,
+      "dealScoreByMode": {
+        "viaje_personal": 82,
+        "maximo_ahorro": 82,
+        "error_fare": 85,
+        "ejecutivo": 83,
+        "escapadas": 82,
+        "flexible_total": 82
+      },
+      "dealBreakdown": {
+        "hist": 97,
+        "mkt": 50,
+        "qual": 95,
+        "rare": 85,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 95,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "Un tramo directo, otro con escala"
+        }
+      ],
+      "category": {
+        "tier": "EMITIR URGENTE",
+        "emoji": "⚡",
+        "cls": "urgente"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": true,
+      "mainReason": "<strong>37% debajo del histórico</strong> (avg ~USD 550) · un tramo directo · sin equipaje"
+    },
+    {
+      "id": "f_60549cdd301b",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "FLN",
+      "route_key": "EZE-FLN",
+      "airline": "JetSMART",
+      "airline_quality": 5,
+      "is_low_cost": true,
+      "price": 264.0,
+      "currency": "USD",
+      "price_usd": 264.0,
+      "price_ars": 340560,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/vuelos-a-florianopolis-en-verano-desde-bs-as-opcion-de-pago-en-cuotas-jetsmart-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Vuelos a Florianópolis en VERANO😎 a partir de U$D 264 🔥🔥 desde Bs. As. ¡Opción de pago en cuotas!",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 380,
+        "historical_min": 220,
+        "expected_low": 280,
+        "exceptional_threshold": 240,
+        "avg_duration_min": 200,
+        "region": "Brasil",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 78,
+      "dealScoreByMode": {
+        "viaje_personal": 78,
+        "maximo_ahorro": 78,
+        "error_fare": 74,
+        "ejecutivo": 78,
+        "escapadas": 77,
+        "flexible_total": 77
+      },
+      "dealBreakdown": {
+        "hist": 96,
+        "mkt": 50,
+        "qual": 86,
+        "rare": 60,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 86,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "neutral",
+          "text": "Aerolínea low-cost"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>31% debajo del histórico</strong> (avg ~USD 380) · una escala · sin equipaje"
+    },
+    {
+      "id": "f_1efac0aa3aec",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "CDG",
+      "route_key": "EZE-CDG",
+      "airline": "LATAM",
+      "airline_quality": 8,
+      "is_low_cost": false,
+      "price": 1043.0,
+      "currency": "USD",
+      "price_usd": 1043.0,
+      "price_ars": 1345470,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/paris-desde-buenos-aires-latam-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "París a partir de U$D 1.043 desde Buenos Aires",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 1050,
+        "historical_min": 680,
+        "expected_low": 850,
+        "exceptional_threshold": 720,
+        "avg_duration_min": 870,
+        "region": "Europa",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 59,
+      "dealScoreByMode": {
+        "viaje_personal": 59,
+        "maximo_ahorro": 54,
+        "error_fare": 45,
+        "ejecutivo": 70,
+        "escapadas": 61,
+        "flexible_total": 56
+      },
+      "dealBreakdown": {
+        "hist": 51,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 20,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "LATAM: aerolínea sólida"
+        }
+      ],
+      "category": {
+        "tier": "MIRAR PERO NO CORRER",
+        "emoji": "👁",
+        "cls": "mirar"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>1% debajo del histórico</strong> (avg ~USD 1050) · una escala · sin equipaje"
+    },
+    {
+      "id": "f_3771ecff6e93",
+      "source": "promociones_aereas",
+      "origin": "COR",
+      "destination": "MAD",
+      "route_key": "COR-MAD",
+      "airline": "LATAM",
+      "airline_quality": 8,
+      "is_low_cost": false,
+      "price": 991.0,
+      "currency": "USD",
+      "price_usd": 991.0,
+      "price_ars": 1278390,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/madrid-desde-cordoba-latam-rt-p-4.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Madrid a partir de U$D 991 desde Córdoba 🪭",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 1100,
+        "historical_min": 750,
+        "expected_low": 900,
+        "exceptional_threshold": 800,
+        "avg_duration_min": 900,
+        "region": "Europa",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 64,
+      "dealScoreByMode": {
+        "viaje_personal": 64,
+        "maximo_ahorro": 61,
+        "error_fare": 50,
+        "ejecutivo": 73,
+        "escapadas": 66,
+        "flexible_total": 62
+      },
+      "dealBreakdown": {
+        "hist": 67,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 20,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "LATAM: aerolínea sólida"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>10% debajo del histórico</strong> (avg ~USD 1100) · una escala · sin equipaje"
+    },
+    {
+      "id": "f_9daf1499fa54",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "ADZ",
+      "route_key": "EZE-ADZ",
+      "airline": "LATAM",
+      "airline_quality": 8,
+      "is_low_cost": false,
+      "price": 688.0,
+      "currency": "USD",
+      "price_usd": 688.0,
+      "price_ars": 887520,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hermosos-vuelos-a-la-isla-de-san-andres-desde-buenos-aires-latam-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Hermosos Vuelos a la Isla de San Andrés 🏝️ a partir de U$D 688 🔥desde Buenos Aires",
+      "posted_at": "2026-05-07T12:00:00",
+      "last_checked": "2026-05-08",
+      "confidence": 0.85,
+      "route": {
+        "historical_avg": 800,
+        "historical_min": 550,
+        "expected_low": 680,
+        "exceptional_threshold": 600,
+        "avg_duration_min": 600,
+        "region": "Caribe",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 69,
+      "dealScoreByMode": {
+        "viaje_personal": 69,
+        "maximo_ahorro": 67,
+        "error_fare": 62,
+        "ejecutivo": 75,
+        "escapadas": 70,
+        "flexible_total": 68
+      },
+      "dealBreakdown": {
+        "hist": 73,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 45,
+        "cond": 65,
+        "conf": 85
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "LATAM: aerolínea sólida"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>14% debajo del histórico</strong> (avg ~USD 800) · una escala · sin equipaje"
+    }
+  ]
+}

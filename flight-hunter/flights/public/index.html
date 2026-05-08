@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flight Hunter · Radar de gangas aéreas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #07090f;
+    --bg-2: #0d1119;
+    --surface: #131826;
+    --surface-2: #1a2030;
+    --border: #232a3d;
+    --border-soft: #1c2233;
+    --text: #e7ecf5;
+    --text-2: #9aa3b9;
+    --text-3: #5c6580;
+
+    --gold: #f5b942;
+    --gold-soft: rgba(245,185,66,0.12);
+    --emerald: #34d399;
+    --emerald-soft: rgba(52,211,153,0.12);
+    --cyan: #22d3ee;
+    --cyan-soft: rgba(34,211,238,0.10);
+    --orange: #fb923c;
+    --orange-soft: rgba(251,146,60,0.12);
+    --rose: #f43f5e;
+    --rose-soft: rgba(244,63,94,0.12);
+    --violet: #a78bfa;
+    --violet-soft: rgba(167,139,250,0.12);
+
+    --fs-display: 'Syne', system-ui, sans-serif;
+    --fs-body: 'Manrope', system-ui, sans-serif;
+    --fs-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--fs-body);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(34,211,238,0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 10%, rgba(245,185,66,0.05) 0%, transparent 35%),
+      linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  .wrap { max-width: 1400px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    padding-bottom: 20px; border-bottom: 1px solid var(--border-soft);
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, #d97706 100%);
+    display: grid; place-items: center;
+    box-shadow: 0 4px 24px rgba(245,185,66,0.25);
+    position: relative; overflow: hidden;
+  }
+  .brand-mark svg { width: 24px; height: 24px; color: #0b0d12; }
+  .brand h1 {
+    font-family: var(--fs-display);
+    font-weight: 800;
+    font-size: 22px; letter-spacing: -0.02em;
+    margin: 0; line-height: 1;
+  }
+  .brand .tag {
+    font-family: var(--fs-mono); font-size: 10.5px; color: var(--text-3);
+    margin-top: 4px; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  .topbar-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .btn {
+    font-family: var(--fs-body); font-weight: 600; font-size: 13px;
+    border: 1px solid var(--border); background: var(--surface);
+    color: var(--text); padding: 9px 14px; border-radius: 8px;
+    cursor: pointer; transition: all 0.15s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn:hover { background: var(--surface-2); border-color: #2e364c; }
+  .btn-primary {
+    background: var(--gold); color: #0b0d12; border-color: var(--gold);
+  }
+  .btn-primary:hover { background: #ffc955; border-color: #ffc955; }
+  .btn-ghost { background: transparent; }
+  .btn svg { width: 14px; height: 14px; }
+
+  /* ---------- Mode selector ---------- */
+  .modes {
+    margin-top: 24px;
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 14px;
+    background: linear-gradient(180deg, var(--surface) 0%, var(--bg-2) 100%);
+    border: 1px solid var(--border-soft); border-radius: 14px;
+  }
+  .modes-label {
+    font-family: var(--fs-mono); font-size: 10.5px; color: var(--text-3);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 8px 12px 8px 4px; align-self: center;
+  }
+  .mode {
+    font-family: var(--fs-body); font-size: 13px; font-weight: 600;
+    padding: 9px 14px; border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--bg-2); color: var(--text-2);
+    cursor: pointer; transition: all 0.15s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .mode:hover { color: var(--text); border-color: #2e364c; }
+  .mode.active {
+    background: var(--gold-soft);
+    color: var(--gold);
+    border-color: rgba(245,185,66,0.4);
+  }
+  .mode .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor; opacity: 0.6;
+  }
+  .mode.active .dot { opacity: 1; box-shadow: 0 0 8px currentColor; }
+
+  /* ---------- Stats strip ---------- */
+  .stats {
+    margin-top: 16px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    position: relative; overflow: hidden;
+  }
+  .stat::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--accent, var(--cyan));
+  }
+  .stat-label {
+    font-family: var(--fs-mono); font-size: 10.5px;
+    color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .stat-value {
+    font-family: var(--fs-display); font-size: 26px; font-weight: 700;
+    line-height: 1; letter-spacing: -0.01em;
+  }
+  .stat-sub { font-size: 11px; color: var(--text-3); margin-top: 4px; }
+
+  /* ---------- Filters & tabs ---------- */
+  .filter-bar {
+    margin-top: 24px;
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+    padding: 12px 14px;
+    background: var(--surface); border: 1px solid var(--border-soft);
+    border-radius: 12px;
+  }
+  .filter-bar label {
+    font-family: var(--fs-mono); font-size: 10.5px; color: var(--text-3);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .filter-bar select, .filter-bar input {
+    font-family: var(--fs-body); font-size: 13px; font-weight: 500;
+    background: var(--bg-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 7px;
+    padding: 6px 10px; outline: none;
+  }
+  .filter-bar select:focus, .filter-bar input:focus { border-color: var(--gold); }
+  .filter-bar input[type=number] { width: 90px; }
+
+  .tabs {
+    display: flex; gap: 4px; flex-wrap: wrap; margin-top: 22px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .tab {
+    font-family: var(--fs-body); font-size: 13px; font-weight: 600;
+    padding: 11px 14px; border: none; background: transparent;
+    color: var(--text-3); cursor: pointer; transition: all 0.15s;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--text-2); }
+  .tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .tab .count {
+    margin-left: 6px; padding: 1px 7px; font-size: 11px; font-family: var(--fs-mono);
+    border-radius: 4px; background: var(--surface-2); color: var(--text-2);
+  }
+  .tab.active .count { background: var(--gold-soft); color: var(--gold); }
+
+  /* ---------- Cards grid ---------- */
+  .grid {
+    margin-top: 20px;
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 18px;
+    position: relative; overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .card:hover {
+    border-color: #2e364c; transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .card.tier-extraordinaria {
+    border-color: rgba(245,185,66,0.5);
+    background: linear-gradient(180deg, rgba(245,185,66,0.04) 0%, var(--surface) 60%);
+  }
+  .card.tier-extraordinaria::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 0% 0%, rgba(245,185,66,0.12), transparent 50%);
+    pointer-events: none;
+  }
+  .card.tier-urgente {
+    border-color: rgba(52,211,153,0.4);
+  }
+
+  .card-head {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px; margin-bottom: 14px;
+  }
+  .route {
+    font-family: var(--fs-display);
+    display: flex; align-items: center; gap: 10px;
+    font-size: 22px; font-weight: 800; letter-spacing: 0.02em;
+  }
+  .route .arrow { color: var(--text-3); font-weight: 400; font-family: var(--fs-mono); font-size: 18px; }
+  .route .city { font-family: var(--fs-mono); font-size: 11px; color: var(--text-3); font-weight: 500; display: block; letter-spacing: 0.05em; }
+  .route .pair { display: flex; flex-direction: column; align-items: flex-start; }
+
+  .deal-badge {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    padding: 8px 12px; border-radius: 10px;
+    background: var(--bg-2); border: 1px solid var(--border);
+    min-width: 70px;
+  }
+  .deal-badge .num {
+    font-family: var(--fs-display); font-size: 22px; font-weight: 800;
+    line-height: 1; color: var(--accent);
+  }
+  .deal-badge .lbl {
+    font-family: var(--fs-mono); font-size: 9px;
+    letter-spacing: 0.1em; color: var(--text-3); text-transform: uppercase;
+  }
+  .card.tier-extraordinaria .deal-badge { background: var(--gold-soft); border-color: rgba(245,185,66,0.3); }
+
+  .tier-strip {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 12px; border-radius: 8px;
+    background: var(--bg-2); border: 1px solid var(--border-soft);
+    margin-bottom: 14px;
+    font-family: var(--fs-mono); font-size: 11px; letter-spacing: 0.05em;
+  }
+  .tier-strip .tier {
+    font-weight: 700; color: var(--accent); text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .tier-strip .qual { color: var(--text-3); }
+  .tier-strip .qual b { color: var(--text-2); font-weight: 700; }
+
+  .price-row {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 10px; margin-bottom: 14px;
+  }
+  .price-main {
+    font-family: var(--fs-display);
+    font-size: 30px; font-weight: 800; line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .price-main .cur { font-size: 14px; color: var(--text-3); margin-right: 4px; font-weight: 700; }
+  .price-main .alt {
+    display: block; font-family: var(--fs-mono); font-size: 11px;
+    color: var(--text-3); font-weight: 400; margin-top: 4px; letter-spacing: 0.02em;
+  }
+  .price-vs {
+    text-align: right; font-family: var(--fs-mono); font-size: 11px;
+    color: var(--text-3); line-height: 1.5;
+  }
+  .price-vs .normal { text-decoration: line-through; }
+  .price-vs .save { color: var(--emerald); font-weight: 700; }
+
+  .specs {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+    margin-bottom: 12px;
+    font-family: var(--fs-mono); font-size: 11.5px;
+  }
+  .spec { display: flex; align-items: center; gap: 8px; color: var(--text-2); }
+  .spec svg { width: 13px; height: 13px; color: var(--text-3); flex-shrink: 0; }
+  .spec.bad { color: var(--rose); }
+  .spec.good { color: var(--emerald); }
+
+  .reasons {
+    background: var(--bg-2); border-radius: 8px;
+    padding: 10px 12px; margin-bottom: 12px;
+    border-left: 2px solid var(--accent);
+    font-size: 12.5px; line-height: 1.55; color: var(--text-2);
+  }
+  .reasons strong { color: var(--text); font-weight: 600; }
+
+  .alerts { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .alert {
+    display: flex; gap: 8px; align-items: flex-start;
+    padding: 8px 10px; border-radius: 7px;
+    font-size: 12px; line-height: 1.45;
+  }
+  .alert svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; }
+  .alert.error-fare { background: var(--rose-soft); color: #fda4af; border: 1px solid rgba(244,63,94,0.25); }
+  .alert.early { background: var(--cyan-soft); color: #67e8f9; border: 1px solid rgba(34,211,238,0.25); }
+  .alert.warn { background: var(--orange-soft); color: #fdba74; border: 1px solid rgba(251,146,60,0.25); }
+
+  .card-actions {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    border-top: 1px solid var(--border-soft); padding-top: 12px;
+  }
+  .card-actions .btn { font-size: 11.5px; padding: 7px 11px; }
+
+  .source-line {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 10px; font-family: var(--fs-mono); font-size: 10.5px;
+    color: var(--text-3); letter-spacing: 0.04em;
+  }
+  .source-line .source { text-transform: uppercase; }
+
+  /* ---------- Empty / drawer ---------- */
+  .empty {
+    text-align: center; padding: 80px 20px;
+    color: var(--text-3); font-size: 14px;
+  }
+  .empty h3 { font-family: var(--fs-display); color: var(--text-2); margin: 0 0 10px; }
+
+  .drawer-bg {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px); z-index: 50;
+    display: none; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .drawer-bg.open { display: flex; }
+  .drawer {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; max-width: 640px; width: 100%;
+    max-height: 85vh; overflow-y: auto;
+    padding: 22px;
+  }
+  .drawer h2 {
+    font-family: var(--fs-display); margin: 0 0 16px;
+    font-weight: 800; letter-spacing: -0.01em;
+  }
+  .drawer textarea {
+    width: 100%; min-height: 220px;
+    background: var(--bg-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    font-family: var(--fs-mono); font-size: 12px;
+    padding: 12px; outline: none; resize: vertical;
+  }
+  .drawer textarea:focus { border-color: var(--gold); }
+  .drawer .hint {
+    font-size: 12px; color: var(--text-3); margin: 8px 0 14px;
+    line-height: 1.5;
+  }
+  .drawer-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 14px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .form-row.full { grid-template-columns: 1fr; }
+  .form-row label {
+    font-family: var(--fs-mono); font-size: 10.5px;
+    letter-spacing: 0.08em; color: var(--text-3); text-transform: uppercase;
+    display: block; margin-bottom: 4px;
+  }
+  .form-row input, .form-row select {
+    width: 100%; background: var(--bg-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: 7px;
+    padding: 8px 10px; font-size: 13px; font-family: var(--fs-body);
+    outline: none;
+  }
+  .form-row input:focus, .form-row select:focus { border-color: var(--gold); }
+  .checkbox-row {
+    display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 10px;
+    font-size: 13px; color: var(--text-2);
+  }
+  .checkbox-row label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+  /* Toast */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); padding: 12px 16px; border-radius: 10px;
+    font-size: 13px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transform: translateY(120%); transition: transform 0.25s ease;
+    z-index: 100; max-width: 320px;
+  }
+  .toast.show { transform: translateY(0); }
+  .toast.ok { border-left: 3px solid var(--emerald); }
+  .toast.err { border-left: 3px solid var(--rose); }
+
+  .footer-note {
+    margin-top: 60px; padding-top: 20px;
+    border-top: 1px solid var(--border-soft);
+    text-align: center; font-family: var(--fs-mono); font-size: 11px;
+    color: var(--text-3); letter-spacing: 0.05em;
+  }
+
+  /* ---------- Tier color helpers ---------- */
+  .acc-extraordinaria { --accent: var(--gold); }
+  .acc-urgente { --accent: var(--emerald); }
+  .acc-muy-buena { --accent: var(--cyan); }
+  .acc-buen-precio { --accent: var(--violet); }
+  .acc-mirar { --accent: var(--orange); }
+  .acc-no-priorizar { --accent: var(--text-3); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 18px 14px 60px; }
+    .grid { grid-template-columns: 1fr; }
+    .modes { padding: 10px; }
+    .modes-label { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Flight Hunter</h1>
+        <div class="tag">Radar de gangas aéreas · v1.0</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span id="lastUpdated" style="font-family: var(--fs-mono); font-size: 11px; color: var(--text-3); letter-spacing: 0.04em;">Cargando…</span>
+      <button class="btn btn-ghost" id="refreshBtn" title="Recargar datos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+        Refrescar
+      </button>
+    </div>
+  </header>
+
+  <!-- Modes -->
+  <div class="modes" id="modes">
+    <span class="modes-label">Modo</span>
+    <!-- modes injected -->
+  </div>
+
+  <!-- Stats -->
+  <div class="stats" id="stats">
+    <!-- injected -->
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-bar">
+    <label>Origen</label>
+    <select id="fOrigin"><option value="">Todos</option></select>
+    <label>Destino</label>
+    <select id="fDest"><option value="">Todos</option></select>
+    <label>Max escalas</label>
+    <select id="fStops"><option value="">—</option><option value="0">Directo</option><option value="1">≤ 1</option><option value="2">≤ 2</option></select>
+    <label>Equipaje</label>
+    <select id="fBag"><option value="">—</option><option value="1">Sí</option><option value="0">Sin</option></select>
+    <label>Score min</label>
+    <input type="number" id="fScore" min="0" max="100" value="0" />
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs" id="tabs">
+    <!-- injected -->
+  </div>
+
+  <!-- Cards grid -->
+  <div class="grid" id="grid"></div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   FLIGHT HUNTER — v2 (live data from scraper)
+   Reads data/flights.json generated by the daily Python pipeline.
+   ============================================================ */
+
+/* ----------- Constantes ----------- */
+const USD_TO_ARS = 1290;
+const FLIGHTS_URL = "./data/flights.json";  // local path; override via ?src= for remote testing
+
+/* ----------- IATA → ciudad ----------- */
+const AIRPORT_CITY = {
+  EZE: "Buenos Aires", AEP: "Buenos Aires", COR: "Córdoba", ROS: "Rosario", MDZ: "Mendoza",
+  MIA: "Miami", JFK: "Nueva York", EWR: "Nueva York", LAX: "Los Ángeles", MCO: "Orlando",
+  ORD: "Chicago", SFO: "San Francisco", LAS: "Las Vegas", HNL: "Honolulu", BOS: "Boston",
+  IAH: "Houston", DFW: "Dallas", ATL: "Atlanta", IAD: "Washington",
+  YYZ: "Toronto", YUL: "Montreal", YVR: "Vancouver",
+  MAD: "Madrid", BCN: "Barcelona", FCO: "Roma", MXP: "Milán",
+  CDG: "París", LHR: "Londres", AMS: "Ámsterdam", LIS: "Lisboa", OPO: "Oporto",
+  FRA: "Frankfurt", MUC: "Múnich", FLR: "Florencia", VCE: "Venecia",
+  ATH: "Atenas", IST: "Estambul", VIE: "Viena", PRG: "Praga", BER: "Berlín",
+  DUB: "Dublín", EDI: "Edimburgo",
+  CUN: "Cancún", MEX: "México DF", PUJ: "Punta Cana", AUA: "Aruba",
+  CUR: "Curazao", ADZ: "San Andrés", CTG: "Cartagena", SJO: "San José",
+  PTY: "Panamá", HAV: "La Habana", CZM: "Cozumel", SDQ: "Santo Domingo", SJU: "San Juan",
+  GRU: "São Paulo", GIG: "Río de Janeiro", FLN: "Florianópolis", BPS: "Porto Seguro",
+  SSA: "Salvador", NAT: "Natal", REC: "Recife", FOR: "Fortaleza", MCZ: "Maceió",
+  BZC: "Búzios", JJD: "Jericoacoara",
+  SCL: "Santiago", LIM: "Lima", BOG: "Bogotá", MDE: "Medellín",
+  CUZ: "Cusco", ASU: "Asunción", PDP: "Punta del Este", MVD: "Montevideo",
+  GPS: "Galápagos", UIO: "Quito", GYE: "Guayaquil",
+  HND: "Tokio", KIX: "Osaka", BKK: "Bangkok", DXB: "Dubai", TLV: "Tel Aviv",
+  HKG: "Hong Kong", PVG: "Shanghai", PEK: "Beijing", DEL: "Delhi", AUH: "Abu Dhabi",
+  SYD: "Sídney", AKL: "Auckland", MEL: "Melbourne", PPT: "Papeete",
+  CAI: "El Cairo", JNB: "Johannesburgo", CPT: "Ciudad del Cabo",
+  BRC: "Bariloche", IGR: "Iguazú", USH: "Ushuaia", FTE: "El Calafate",
+  PMY: "Puerto Madryn", NQN: "Neuquén", MDQ: "Mar del Plata",
+  JUJ: "Jujuy", SLA: "Salta", TUC: "Tucumán",
+};
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const state = {
+  flights: [],
+  enriched: [],
+  mode: "viaje_personal",  // currently informational; deal score precomputed server-side
+  tab: "todas",
+  filters: { origin: "", dest: "", stops: "", baggage: "", minScore: 0 },
+  feedback: JSON.parse(localStorage.getItem("fh_feedback") || "{}"),
+};
+
+const MODES = [
+  { key: "viaje_personal", label: "Viaje personal", desc: "Balance precio + calidad" },
+  { key: "maximo_ahorro", label: "Máximo ahorro", desc: "Precio agresivo prioridad" },
+  { key: "error_fare", label: "Error fare hunter", desc: "Rarezas extremas" },
+  { key: "ejecutivo", label: "Ejecutivo", desc: "Calidad y horarios" },
+  { key: "escapadas", label: "Escapadas", desc: "Cortos baratos" },
+  { key: "flexible_total", label: "Flexible total", desc: "Cualquier destino barato" },
+];
+
+const TABS = [
+  { key: "todas", label: "Todas", filter: () => true },
+  { key: "internacional", label: "Top Internacional", filter: f => f.route?.region && f.route.region !== "Doméstico" },
+  { key: "domestico", label: "Top Doméstico", filter: f => f.route?.region === "Doméstico" },
+  { key: "europa", label: "Top Europa", filter: f => f.route?.region === "Europa" },
+  { key: "usa", label: "Top USA", filter: f => f.route?.region === "USA" },
+  { key: "brasil", label: "Brasil/Caribe", filter: f => ["Brasil", "Caribe", "México"].includes(f.route?.region) },
+  { key: "directos", label: "Directos baratos", filter: f => f.stops === 0 && f.dealScore >= 60 },
+  { key: "con_calidad", label: "Baratos c/ calidad", filter: f => f.dealScore >= 60 && f.qualScore >= 70 },
+  { key: "alerta", label: "Alerta temprana", filter: f => f.earlyAlert },
+  { key: "error_fare", label: "Posible error fare", filter: f => f.errorFare.is_error_fare },
+  { key: "evitar", label: "A evitar", filter: f => f.dealScore >= 50 && f.qualScore < 50 },
+];
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function fmtPrice(amount, currency) {
+  if (currency === "ARS") return "$" + Math.round(amount).toLocaleString("es-AR");
+  if (currency === "USD") return "USD " + amount.toFixed(0);
+  return currency + " " + amount.toFixed(0);
+}
+function fmtDur(min) {
+  const h = Math.floor(min / 60), m = Math.round(min % 60);
+  return `${h}h ${m > 0 ? m + "m" : ""}`.trim();
+}
+function fmtDate(s) {
+  if (!s) return "—";
+  const d = new Date(s + "T12:00:00");
+  return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short" });
+}
+
+function renderModes() {
+  const wrap = document.getElementById("modes");
+  wrap.innerHTML = '<span class="modes-label">Modo</span>' +
+    MODES.map(m => `
+      <button class="mode ${state.mode === m.key ? "active" : ""}" data-mode="${m.key}" title="${m.desc}">
+        <span class="dot"></span>${m.label}
+      </button>
+    `).join("");
+  wrap.querySelectorAll("[data-mode]").forEach(b => {
+    b.onclick = () => { state.mode = b.dataset.mode; recalc(); };
+  });
+}
+
+function renderStats() {
+  const f = state.enriched;
+  const totalUSD = f.reduce((s, x) => s + x.price_usd, 0);
+  const avgScore = f.length ? Math.round(f.reduce((s, x) => s + x.dealScore, 0) / f.length) : 0;
+  const top = f.filter(x => x.dealScore >= 80).length;
+  const errorFares = f.filter(x => x.errorFare.is_error_fare).length;
+  const alerts = f.filter(x => x.earlyAlert).length;
+
+  document.getElementById("stats").innerHTML = `
+    <div class="stat" style="--accent: var(--gold)">
+      <div class="stat-label">Vuelos en radar</div>
+      <div class="stat-value">${f.length}</div>
+      <div class="stat-sub">Modo: <b>${MODES.find(m => m.key === state.mode)?.label}</b></div>
+    </div>
+    <div class="stat" style="--accent: var(--emerald)">
+      <div class="stat-label">Top oportunidades</div>
+      <div class="stat-value">${top}</div>
+      <div class="stat-sub">Score ≥ 80</div>
+    </div>
+    <div class="stat" style="--accent: var(--cyan)">
+      <div class="stat-label">Score promedio</div>
+      <div class="stat-value">${avgScore}</div>
+      <div class="stat-sub">de 100</div>
+    </div>
+    <div class="stat" style="--accent: var(--rose)">
+      <div class="stat-label">Posibles error fares</div>
+      <div class="stat-value">${errorFares}</div>
+      <div class="stat-sub">Verificar antes de comprar</div>
+    </div>
+    <div class="stat" style="--accent: var(--violet)">
+      <div class="stat-label">Alertas tempranas</div>
+      <div class="stat-value">${alerts}</div>
+      <div class="stat-sub">Precio recién bajó</div>
+    </div>
+  `;
+}
+
+function renderFilters() {
+  const origins = [...new Set(state.flights.map(f => f.origin))].sort();
+  const dests = [...new Set(state.flights.map(f => f.destination))].sort();
+  const oSel = document.getElementById("fOrigin");
+  const dSel = document.getElementById("fDest");
+  const cur = { o: oSel.value, d: dSel.value };
+  oSel.innerHTML = '<option value="">Todos</option>' + origins.map(x => `<option ${cur.o === x ? "selected" : ""}>${x}</option>`).join("");
+  dSel.innerHTML = '<option value="">Todos</option>' + dests.map(x => `<option ${cur.d === x ? "selected" : ""}>${x}</option>`).join("");
+}
+
+function renderTabs() {
+  const counts = {};
+  TABS.forEach(t => counts[t.key] = state.enriched.filter(t.filter).length);
+  document.getElementById("tabs").innerHTML = TABS.map(t => `
+    <button class="tab ${state.tab === t.key ? "active" : ""}" data-tab="${t.key}">
+      ${t.label} <span class="count">${counts[t.key]}</span>
+    </button>
+  `).join("");
+  document.querySelectorAll("[data-tab]").forEach(b => {
+    b.onclick = () => { state.tab = b.dataset.tab; renderGrid(); renderTabs(); };
+  });
+}
+
+function applyFilters(list) {
+  const f = state.filters;
+  return list.filter(x => {
+    if (f.origin && x.origin !== f.origin) return false;
+    if (f.dest && x.destination !== f.dest) return false;
+    if (f.stops !== "" && x.stops > +f.stops) return false;
+    if (f.baggage === "1" && !x.baggage_included) return false;
+    if (f.baggage === "0" && x.baggage_included) return false;
+    if (f.minScore > 0 && x.dealScore < f.minScore) return false;
+    return true;
+  });
+}
+
+function renderCard(f) {
+  const cat = f.category;
+  const route = f.route;
+
+  const histAvgUSD = route ? (route.currency === "ARS" ? toUSD(route.historical_avg, "ARS") : route.historical_avg) : null;
+  const saveUSD = histAvgUSD ? Math.round(histAvgUSD - f.price_usd) : null;
+
+  // alertas
+  const alerts = [];
+  if (f.errorFare.level === "likely") {
+    alerts.push(`<div class="alert error-fare">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+      <div><strong>Posible tarifa error.</strong> Verificá disponibilidad antes de reservar hoteles no reembolsables.</div>
+    </div>`);
+  } else if (f.errorFare.level === "possible") {
+    alerts.push(`<div class="alert warn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+      <div>Precio sospechosamente bajo. Confirmá total final y disponibilidad real.</div>
+    </div>`);
+  }
+  if (f.earlyAlert) {
+    alerts.push(`<div class="alert early">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <div><strong>Alerta temprana.</strong> Precio agresivo recién detectado. Emitir rápido si las fechas te sirven.</div>
+    </div>`);
+  }
+  if (!f.tax_included) {
+    alerts.push(`<div class="alert warn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+      <div>Precio sin impuestos finales. Verificar total real antes de comparar.</div>
+    </div>`);
+  }
+
+  const fbBadge = f.feedback ? `<div class="alert warn" style="background: var(--surface-2); color: var(--text-2); border-color: var(--border);">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+    <div>Marcado como: <strong>${f.feedback}</strong></div>
+  </div>` : "";
+
+  return `
+    <div class="card tier-${cat.cls} acc-${cat.cls}" data-id="${f.id}">
+      <div class="card-head">
+        <div class="route">
+          <div class="pair">
+            <span>${f.origin}</span>
+            <span class="city">${AIRPORT_CITY[f.origin] || ""}</span>
+          </div>
+          <span class="arrow">→</span>
+          <div class="pair">
+            <span>${f.destination}</span>
+            <span class="city">${AIRPORT_CITY[f.destination] || ""}</span>
+          </div>
+        </div>
+        <div class="deal-badge">
+          <div class="num">${f.dealScore}</div>
+          <div class="lbl">Deal Score</div>
+        </div>
+      </div>
+
+      <div class="tier-strip">
+        <span class="tier">${cat.emoji} ${cat.tier}</span>
+        <span class="qual">Calidad: <b>${f.qualScore}</b>/100</span>
+      </div>
+
+      <div class="price-row">
+        <div class="price-main">
+          <span class="cur">${f.currency}</span>${f.price.toLocaleString("es-AR")}
+          <span class="alt">≈ USD ${f.price_usd.toFixed(0)} · ARS ${f.price_ars.toLocaleString("es-AR")}</span>
+        </div>
+        ${histAvgUSD ? `<div class="price-vs">
+          Normal: <span class="normal">USD ${Math.round(histAvgUSD)}</span><br/>
+          ${saveUSD > 0 ? `<span class="save">Ahorro ~USD ${saveUSD}</span>` : `<span style="color:var(--text-3)">Sin ahorro</span>`}
+        </div>` : '<div class="price-vs" style="color:var(--text-3)">Sin histórico</div>'}
+      </div>
+
+      <div class="specs">
+        <div class="spec">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          ${fmtDate(f.departure_date)}${f.return_date ? ` → ${fmtDate(f.return_date)}` : ""}
+        </div>
+        <div class="spec">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          ${fmtDur(f.duration_minutes)}
+        </div>
+        <div class="spec ${f.stops === 0 ? "good" : f.stops >= 2 ? "bad" : ""}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3"/></svg>
+          ${f.stops === 0 ? "Directo" : f.stops + (f.stops === 1 ? " escala" : " escalas")}${f.stops > 0 && f.stops_detail.length ? " · " + f.stops_detail.map(s => s.airport).join(", ") : ""}
+        </div>
+        <div class="spec ${f.baggage_included ? "good" : f.duration_minutes > 240 ? "bad" : ""}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="14" rx="2"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+          ${f.baggage_included ? "Equipaje incluido" : "Sin equipaje"}
+        </div>
+      </div>
+
+      <div class="reasons">${f.mainReason}</div>
+
+      ${alerts.join("")}
+      ${fbBadge}
+
+      <div class="card-actions">
+        ${f.booking_url ? `<a href="${f.booking_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none">Ver vuelo →</a>` : ""}
+        <button class="btn" data-act="copy" data-id="${f.id}">Copiar resumen</button>
+        <button class="btn" data-act="false-positive" data-id="${f.id}">Marcar falso positivo</button>
+        <button class="btn" data-act="watch" data-id="${f.id}">Seguir</button>
+      </div>
+      <div class="source-line">
+        <span class="source">${f.source}</span>
+        <span>${f.airline} · conf. ${(f.confidence * 100).toFixed(0)}%</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderGrid() {
+  const tab = TABS.find(t => t.key === state.tab) || TABS[0];
+  let list = state.enriched.filter(tab.filter);
+  list = applyFilters(list);
+  list.sort((a, b) => b.dealScore - a.dealScore);
+
+  const grid = document.getElementById("grid");
+  if (list.length === 0) {
+    grid.innerHTML = `<div class="empty" style="grid-column: 1/-1">
+      <h3>Sin vuelos en este filtro</h3>
+      <div>Probá otra pestaña, ajustá filtros o cargá más vuelos.</div>
+    </div>`;
+  } else {
+    grid.innerHTML = list.map(renderCard).join("");
+    grid.querySelectorAll("[data-act]").forEach(b => {
+      b.onclick = () => handleCardAction(b.dataset.act, b.dataset.id);
+    });
+  }
+}
+
+/* ============================================================
+   ACCIONES DE CARD
+   ============================================================ */
+function handleCardAction(act, id) {
+  const f = state.enriched.find(x => x.id === id);
+  if (!f) return;
+
+  if (act === "copy") {
+    const summary = `✈️ ${f.origin} → ${f.destination} (${AIRPORT_CITY[f.origin] || ""} → ${AIRPORT_CITY[f.destination] || ""})
+${f.airline} · ${fmtDate(f.departure_date)}${f.return_date ? " → " + fmtDate(f.return_date) : ""}
+${f.stops === 0 ? "Directo" : f.stops + " escala" + (f.stops > 1 ? "s" : "")} · ${fmtDur(f.duration_minutes)} · ${f.baggage_included ? "Con equipaje" : "Sin equipaje"}
+Precio: ${fmtPrice(f.price, f.currency)} (≈ USD ${f.price_usd.toFixed(0)})
+Score: ${f.dealScore}/100 — ${f.category.tier}
+Razón: ${f.mainReason.replace(/<[^>]+>/g, "")}
+Fuente: ${f.source}${f.booking_url ? "\n" + f.booking_url : ""}`;
+    navigator.clipboard.writeText(summary).then(() => toast("Resumen copiado", "ok"));
+  }
+  if (act === "false-positive") {
+    state.feedback[id] = "falso_positivo";
+    localStorage.setItem("fh_feedback", JSON.stringify(state.feedback));
+    toast("Marcado como falso positivo", "ok");
+    recalc();
+  }
+  if (act === "watch") {
+    state.feedback[id] = "en_seguimiento";
+    localStorage.setItem("fh_feedback", JSON.stringify(state.feedback));
+    toast("Agregado al seguimiento", "ok");
+    recalc();
+  }
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+let toastTimer;
+function toast(msg, kind = "ok") {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.className = "toast show " + kind;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.className = "toast " + kind, 2400);
+}
+
+/* ============================================================
+   DATA LOADING
+   ============================================================ */
+async function loadFlights() {
+  const params = new URLSearchParams(location.search);
+  const url = params.get("src") || FLIGHTS_URL;
+  setLastUpdated("Cargando…");
+  try {
+    const r = await fetch(url, { cache: "no-cache" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const data = await r.json();
+    state.flights = (data.flights || []).map(f => ({
+      ...f,
+      // Re-attach feedback if any
+      feedback: state.feedback[f.id] || null,
+    }));
+    state.metadata = {
+      generated_at: data.generated_at,
+      sources: data.sources || {},
+      stats: data.stats || {},
+    };
+    setLastUpdated(formatLastUpdated(data.generated_at, data.flights?.length || 0));
+    recalc();  // initial render derives scores for current mode
+    if (!data.flights || data.flights.length === 0) {
+      document.getElementById("grid").innerHTML = `<div class="empty" style="grid-column: 1/-1">
+        <h3>Sin vuelos en este momento</h3>
+        <div>${data.error || "El scraper no devolvió ofertas. Revisá los logs del último run."}</div>
+      </div>`;
+    }
+  } catch (e) {
+    console.error(e);
+    setLastUpdated("Error al cargar");
+    document.getElementById("grid").innerHTML = `<div class="empty" style="grid-column: 1/-1">
+      <h3>No se pudo cargar flights.json</h3>
+      <div>${e.message}<br/>Verificá que <code>./data/flights.json</code> exista.</div>
+    </div>`;
+  }
+}
+
+function setLastUpdated(text) {
+  const el = document.getElementById("lastUpdated");
+  if (el) el.textContent = text;
+}
+
+function formatLastUpdated(iso, count) {
+  if (!iso) return `${count} vuelos`;
+  const d = new Date(iso);
+  const ago = Math.round((Date.now() - d.getTime()) / 60000);
+  let when;
+  if (ago < 60) when = `hace ${ago} min`;
+  else if (ago < 1440) when = `hace ${Math.round(ago/60)} h`;
+  else when = `hace ${Math.round(ago/1440)} d`;
+  return `${count} vuelos · actualizado ${when}`;
+}
+
+/* ============================================================
+   RECÁLCULO MASTER (re-render on mode/filter change)
+   Note: scoring is done by the Python pipeline — here we only
+   re-categorize when the mode changes (since mode weights live
+   in the JSON's dealBreakdown). For v1, we simply re-render.
+   ============================================================ */
+function recalc() {
+  // When mode changes: recompute each flight's effective dealScore + category
+  // from the precomputed dealScoreByMode in the JSON. No network call needed.
+  const m = state.mode;
+  state.enriched = state.flights.map(f => {
+    const score = (f.dealScoreByMode && f.dealScoreByMode[m] != null) ? f.dealScoreByMode[m] : f.dealScore;
+    return { ...f, dealScore: score, category: categorize(score) };
+  });
+  renderModes();
+  renderStats();
+  renderFilters();
+  renderTabs();
+  renderGrid();
+}
+
+function categorize(score) {
+  if (score >= 90) return { tier: "GANGA EXTRAORDINARIA", emoji: "🔥", cls: "extraordinaria" };
+  if (score >= 80) return { tier: "EMITIR URGENTE", emoji: "⚡", cls: "urgente" };
+  if (score >= 70) return { tier: "MUY BUENA OPORTUNIDAD", emoji: "⭐", cls: "muy-buena" };
+  if (score >= 60) return { tier: "BUEN PRECIO", emoji: "✓", cls: "buen-precio" };
+  if (score >= 50) return { tier: "MIRAR PERO NO CORRER", emoji: "👁", cls: "mirar" };
+  return { tier: "NO PRIORIZAR", emoji: "—", cls: "no-priorizar" };
+}
+
+/* ============================================================
+   EVENT WIRING + INIT
+   ============================================================ */
+document.getElementById("refreshBtn").onclick = () => loadFlights();
+
+["fOrigin", "fDest", "fStops", "fBag", "fScore"].forEach(id => {
+  document.getElementById(id).onchange = () => {
+    state.filters = {
+      origin: document.getElementById("fOrigin").value,
+      dest: document.getElementById("fDest").value,
+      stops: document.getElementById("fStops").value,
+      baggage: document.getElementById("fBag").value,
+      minScore: +document.getElementById("fScore").value || 0,
+    };
+    renderGrid();
+    renderTabs();
+  };
+});
+document.getElementById("fScore").oninput = e => {
+  state.filters.minScore = +e.target.value || 0;
+  renderGrid();
+  renderTabs();
+};
+
+/* GO */
+loadFlights();
+</script>
+</body>
+</html>
