@@ -97,8 +97,10 @@ class PromocionesAereasSource(Source):
         """
         missing = [o for o in offers if not o.get("content_html")]
         if not missing:
+            print(f"[{self.name}] all {len(offers)} offers already have body — no backfill needed")
             return offers
-        print(f"[{self.name}] backfilling {len(missing)} post bodies")
+        print(f"[{self.name}] backfilling {len(missing)} post bodies (out of {len(offers)} offers)")
+        success = 0
         for i, o in enumerate(missing):
             url = o.get("url", "")
             if not url:
@@ -107,15 +109,24 @@ class PromocionesAereasSource(Source):
                 body = self._fetch_post_body(url)
                 if body:
                     o["content_html"] = body
+                    # Quick sanity: does this body have anything that looks like a date table?
+                    has_table = "<table" in body or "<tr" in body
+                    has_dates = bool(re.search(r"\d{1,2}/\d{1,2}/20\d{2}", body))
+                    print(f"[{self.name}] backfill OK [{i+1}/{len(missing)}]: {len(body)} bytes, table={has_table}, dates_in_body={has_dates}, slug={o.get('slug', '')[:50]}")
+                    success += 1
+                else:
+                    print(f"[{self.name}] backfill EMPTY [{i+1}/{len(missing)}]: slug={o.get('slug', '')[:50]}")
             except Exception as e:
-                print(f"[{self.name}] backfill failed for {url[:60]}: {type(e).__name__}")
+                print(f"[{self.name}] backfill FAILED [{i+1}/{len(missing)}]: {type(e).__name__}: {e}")
             # polite pacing
             if i < len(missing) - 1:
                 time.sleep(0.3)
+        print(f"[{self.name}] backfill summary: {success}/{len(missing)} bodies retrieved")
         return offers
 
     def _fetch_post_body(self, url: str) -> str:
         """Fetch one post's HTML, returning just the article body."""
+        last_err = None
         # Try direct first
         for attempt in range(2):
             try:
@@ -124,16 +135,18 @@ class PromocionesAereasSource(Source):
                 r = self.session.get(fetch_url, headers=headers, timeout=20)
                 r.raise_for_status()
                 if attempt == 0:
-                    # Return just the article-like portion of the HTML to keep size sane
                     soup = BeautifulSoup(r.text, "lxml")
-                    # WP usually wraps post content in <article> or div.entry-content
                     article = soup.find("article") or soup.find(class_="entry-content") or soup.find("main")
                     return str(article) if article else r.text[:50000]
                 else:
-                    # Jina returns markdown — wrap it in a synthetic <p> for the parser
                     return f"<div>{r.text}</div>"
-            except Exception:
+            except Exception as e:
+                last_err = f"{type(e).__name__}: {str(e)[:100]}"
+                if attempt == 0:
+                    print(f"[{self.name}]   direct fetch failed for {url[-50:]}: {last_err}")
                 continue
+        if last_err:
+            print(f"[{self.name}]   jina fallback also failed for {url[-50:]}: {last_err}")
         return ""
 
     # ------------------------------------------------------------------
@@ -210,6 +223,7 @@ class PromocionesAereasSource(Source):
         root = ET.fromstring(r.content)
         items = root.findall(".//item")
         out = []
+        diag_logged = False
         for item in items:
             link = (item.findtext("link") or "").strip()
             title = unescape(item.findtext("title") or "").strip()
@@ -217,11 +231,21 @@ class PromocionesAereasSource(Source):
             # Extract the full body from content:encoded
             content_node = item.find("content:encoded", ns)
             content_html = (content_node.text or "") if content_node is not None else ""
+            # Some sites use <description> with full HTML instead
+            if not content_html:
+                desc_node = item.find("description")
+                content_html = (desc_node.text or "") if desc_node is not None else ""
             slug = ""
             if link:
                 slug = link.rstrip("/").rsplit("/", 1)[-1].replace(".html", "")
             if not (link and title):
                 continue
+            # Diagnostic on first item: what does the RSS actually contain?
+            if not diag_logged:
+                has_table = "<table" in content_html or "<tr" in content_html
+                has_dates = bool(re.search(r"\d{1,2}/\d{1,2}/20\d{2}", content_html))
+                print(f"[{self.name}] RSS first item: title='{title[:60]}', body={len(content_html)}b, table={has_table}, dates={has_dates}")
+                diag_logged = True
             out.append({
                 "source": self.name,
                 "title": title,
