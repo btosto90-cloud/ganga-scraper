@@ -275,9 +275,16 @@ def normalize_offer(raw: dict) -> Optional[dict]:
     airline, airline_quality, is_low_cost = _parse_airline(slug)
     trip_type = _parse_trip_type(slug)
 
+    # Parse the post body for dates and booking URLs (only available from REST API strategy)
+    post_data = _parse_body_if_present(raw.get("content_html", ""))
+
     # Heuristics for the rest of the schema
     is_direct = bool(DIRECTO_RE.search(title)) and not TRAMO_DIRECTO_RE.search(title)
     is_partial_direct = bool(TRAMO_DIRECTO_RE.search(title)) or "un tramo directo" in title.lower()
+
+    # If the post table tells us the first row is direct, trust that over the title heuristic
+    if post_data and post_data["total_dates"] > 0:
+        is_direct = post_data["first_is_direct"] or is_direct
 
     if is_direct:
         stops = 0
@@ -287,12 +294,11 @@ def normalize_offer(raw: dict) -> Optional[dict]:
         # Without info, assume 1 stop for international (long routes), 0 for very short
         stops = 1
 
-    # Crude duration heuristic — only used if we don't have it. Mostly placeholder
-    # so the quality scorer can still run. The frontend hides it if zero.
     duration_minutes = 0
-
-    # Confidence: source curates the offer, so high-ish; but no live data → not 1.0
     confidence = 0.85
+    # Higher confidence when we have parsed dates from the post (less guessing)
+    if post_data and post_data["total_dates"] > 0:
+        confidence = 0.92
 
     price_usd = round(to_usd(price, currency), 2)
     price_ars = round(price_usd * USD_TO_ARS)
@@ -325,7 +331,26 @@ def normalize_offer(raw: dict) -> Optional[dict]:
         "posted_at": raw.get("posted_at"),
         "last_checked": datetime.now(timezone.utc).date().isoformat(),
         "confidence": confidence,
+        # Parsed dates from the post table — used by deeplinks & frontend
+        "departure_date": post_data["first_depart"] if post_data else None,
+        "return_date": post_data["first_return"] if post_data else None,
+        "dates_available": post_data["dates_available"] if post_data else [],
+        "total_dates": post_data["total_dates"] if post_data else 0,
+        # If the post table has a direct affiliate booking URL, surface it
+        "direct_booking_url": post_data["direct_booking_url"] if post_data else None,
     }
+
+
+def _parse_body_if_present(content_html: str) -> Optional[dict]:
+    """Lazy import to avoid circular references and to skip cleanly if no body."""
+    if not content_html:
+        return None
+    try:
+        from .parse_post import parse_post_body
+        return parse_post_body(content_html)
+    except Exception as e:
+        print(f"[normalize] post body parse failed: {e}")
+        return None
 
 
 def _guess_baggage(title: str) -> bool:
