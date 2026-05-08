@@ -51,7 +51,7 @@ def parse_post_body(html: str) -> dict:
     rows: list[dict] = []
     seen_keys: set[tuple] = set()
 
-    # Look at every <tr> first (most reliable)
+    # Strategy 1: HTML tables (most reliable when the source has them)
     for tr in soup.find_all("tr"):
         row = _parse_row(tr)
         if not row:
@@ -62,11 +62,15 @@ def parse_post_body(html: str) -> dict:
         seen_keys.add(key)
         rows.append(row)
 
-    # Also try markdown-style tables (each line: | date | date | days | direct/conexiones | link |)
+    # Strategy 2: Markdown table rows (when Jina returned markdown)
     if not rows:
         rows = _parse_markdown_table(soup.get_text("\n"))
 
-    # Last resort fallback: scan paragraph text for date pairs
+    # Strategy 3: Aggressive scan for adjacent date pairs anywhere in the text
+    if not rows:
+        rows = _parse_adjacent_date_pairs(soup.get_text("\n"))
+
+    # Strategy 4: Last resort — paragraph fallback (loose)
     if not rows:
         rows = _parse_text_fallback(soup)
 
@@ -87,6 +91,68 @@ def parse_post_body(html: str) -> dict:
         "direct_booking_url": booking,
         "total_dates": len(rows),
     }
+
+
+def _parse_adjacent_date_pairs(text: str) -> list[dict]:
+    """Walk the text and pair up consecutive dates that look like depart/return pairs.
+
+    A "pair" is two DD/MM/YYYY dates within a reasonable proximity (~200 chars apart),
+    where the second date is at most 60 days after the first.
+
+    This handles formats where Jina renders tables/lists in unpredictable ways. We're
+    looking for the typical Argentine flight-deal pattern: depart → return separated
+    by 7-21 days, repeated for several rows.
+    """
+    rows: list[dict] = []
+    seen: set[tuple] = set()
+
+    matches = list(DATE_RE.finditer(text))
+    used: set[int] = set()
+
+    for i, m in enumerate(matches):
+        if i in used:
+            continue
+        d1 = _to_iso(m)
+        if not d1:
+            continue
+        # Look for the next match within ~300 chars
+        for j in range(i + 1, len(matches)):
+            if j in used:
+                continue
+            mn = matches[j]
+            char_distance = mn.start() - m.end()
+            if char_distance > 300:
+                break  # too far, abandon pairing
+            d2 = _to_iso(mn)
+            if not d2 or d2 < d1:
+                continue
+            # Sane trip duration: 1-90 days
+            days_between = (date.fromisoformat(d2) - date.fromisoformat(d1)).days
+            if 1 <= days_between <= 90:
+                # Pair found
+                key = (d1, d2)
+                if key not in seen:
+                    seen.add(key)
+                    # Sniff the surrounding text for a "directo" flag and a URL
+                    snippet_start = max(0, m.start() - 50)
+                    snippet_end = min(len(text), mn.end() + 200)
+                    snippet = text[snippet_start:snippet_end].lower()
+                    is_direct = "directo" in snippet and "conexion" not in snippet
+                    url_match = re.search(r"https?://\S+", text[m.end():mn.end() + 200])
+                    booking = url_match.group(0).rstrip(").,") if url_match else None
+                    rows.append({
+                        "depart": d1,
+                        "return": d2,
+                        "is_direct": is_direct,
+                        "days": days_between,
+                        "booking_url": booking,
+                    })
+                used.add(i)
+                used.add(j)
+                break
+
+    # Cap at 30 to avoid runaway extraction (one post should have at most ~20 date pairs)
+    return rows[:30]
 
 
 def _empty() -> dict:
