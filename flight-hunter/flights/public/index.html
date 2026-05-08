@@ -586,6 +586,12 @@ function fmtDate(s) {
   return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short" });
 }
 
+function fmtPrettyDate(s) {
+  if (!s) return "—";
+  const d = new Date(s + "T12:00:00");
+  return d.toLocaleDateString("es-AR", { day: "2-digit", month: "short", year: "2-digit" }).replace(".", "");
+}
+
 function renderModes() {
   const wrap = document.getElementById("modes");
   wrap.innerHTML = '<span class="modes-label">Modo</span>' +
@@ -771,10 +777,11 @@ function renderCard(f) {
       ${fbBadge}
 
       <div class="card-actions">
-        ${f.searchLinks?.skyscanner ? `<a href="${f.searchLinks.skyscanner}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="Buscar esta ruta en Skyscanner${f.searchLinks.guessed_dates?.depart ? ` (fechas estimadas: ${f.searchLinks.guessed_dates.depart})` : " (vista calendario, elegí día)"}">🔍 Buscar en Skyscanner</a>` : ""}
+        ${f.direct_booking_url ? `<a href="${f.direct_booking_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="Ir directo al motor con esta tarifa cargada">💰 Ver esta tarifa</a>` : (f.searchLinks?.skyscanner ? `<a href="${f.searchLinks.skyscanner}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="${f.departure_date ? `Skyscanner ${f.departure_date}${f.return_date ? ` → ${f.return_date}` : ''}` : 'Vista calendario en Skyscanner'}">🔍 Buscar en Skyscanner</a>` : "")}
         <div class="more-engines" style="position:relative; display:inline-block">
           <button class="btn" data-act="toggle-engines" data-id="${f.id}">Más motores ▾</button>
-          <div class="engines-menu" data-menu-for="${f.id}" style="display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--bg-1); border:1px solid var(--border); border-radius:8px; padding:6px; z-index:20; min-width:180px; box-shadow:0 8px 24px rgba(0,0,0,0.4)">
+          <div class="engines-menu" data-menu-for="${f.id}" style="display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--bg-1); border:1px solid var(--border); border-radius:8px; padding:6px; z-index:20; min-width:200px; box-shadow:0 8px 24px rgba(0,0,0,0.4)">
+            ${f.direct_booking_url && f.searchLinks?.skyscanner ? `<a href="${f.searchLinks.skyscanner}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Skyscanner${f.departure_date ? ' (' + f.departure_date.slice(5) + ')' : ''}</a>` : ""}
             ${f.searchLinks?.google_flights ? `<a href="${f.searchLinks.google_flights}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Google Flights</a>` : ""}
             ${f.searchLinks?.kayak ? `<a href="${f.searchLinks.kayak}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Kayak</a>` : ""}
             ${f.searchLinks?.momondo ? `<a href="${f.searchLinks.momondo}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Momondo</a>` : ""}
@@ -784,6 +791,11 @@ function renderCard(f) {
         <button class="btn" data-act="copy" data-id="${f.id}">Copiar</button>
         <button class="btn" data-act="watch" data-id="${f.id}">Seguir</button>
       </div>
+      ${f.total_dates > 0 ? `<div class="dates-line" style="margin-top:6px; font-family:var(--fs-mono); font-size:10px; color:var(--text-3); letter-spacing:0.04em">
+        ${f.total_dates === 1
+          ? `📅 ${fmtPrettyDate(f.departure_date)}${f.return_date ? ` → ${fmtPrettyDate(f.return_date)}` : ''}`
+          : `📅 ${f.total_dates} fechas disponibles · primera ${fmtPrettyDate(f.departure_date)}`}
+      </div>` : ""}
       <div class="source-line">
         <span class="source">${f.source}</span>
         <span>${f.airline} · conf. ${(f.confidence * 100).toFixed(0)}%</span>
