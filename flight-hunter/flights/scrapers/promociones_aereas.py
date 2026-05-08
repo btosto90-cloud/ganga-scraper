@@ -89,15 +89,23 @@ class PromocionesAereasSource(Source):
 
     # ------------------------------------------------------------------
     def _backfill_post_bodies(self, offers: list[dict]) -> list[dict]:
-        """For each offer missing content_html, fetch the post page and extract the body.
+        """For each offer with a missing/useless body, fetch the full post.
 
-        We try the same cascade as the listing fetch (direct HTML → Jina proxy) per post.
-        We rate-limit (300ms between requests) to be polite. If a single fetch fails we
-        keep the offer with empty body — it will still work, just without parsed dates.
+        The RSS feed only gives us a 200-500b summary — too small to contain the
+        dates table. We re-fetch the full post for any offer where the body is
+        smaller than 2KB or doesn't contain a date pattern.
         """
-        missing = [o for o in offers if not o.get("content_html")]
+        def _is_useful_body(body: str) -> bool:
+            if not body or len(body) < 2000:
+                return False
+            # A post body without a date pattern in DD/MM/YYYY form is not useful
+            if not re.search(r"\d{1,2}/\d{1,2}/20\d{2}", body):
+                return False
+            return True
+
+        missing = [o for o in offers if not _is_useful_body(o.get("content_html", ""))]
         if not missing:
-            print(f"[{self.name}] all {len(offers)} offers already have body — no backfill needed")
+            print(f"[{self.name}] all {len(offers)} offers already have useful body — no backfill needed")
             return offers
         print(f"[{self.name}] backfilling {len(missing)} post bodies (out of {len(offers)} offers)")
         success = 0
@@ -109,44 +117,52 @@ class PromocionesAereasSource(Source):
                 body = self._fetch_post_body(url)
                 if body:
                     o["content_html"] = body
-                    # Quick sanity: does this body have anything that looks like a date table?
                     has_table = "<table" in body or "<tr" in body
                     has_dates = bool(re.search(r"\d{1,2}/\d{1,2}/20\d{2}", body))
-                    print(f"[{self.name}] backfill OK [{i+1}/{len(missing)}]: {len(body)} bytes, table={has_table}, dates_in_body={has_dates}, slug={o.get('slug', '')[:50]}")
+                    print(f"[{self.name}] backfill OK [{i+1}/{len(missing)}]: {len(body)}b, table={has_table}, dates={has_dates}, slug={o.get('slug', '')[:50]}")
                     success += 1
                 else:
                     print(f"[{self.name}] backfill EMPTY [{i+1}/{len(missing)}]: slug={o.get('slug', '')[:50]}")
             except Exception as e:
                 print(f"[{self.name}] backfill FAILED [{i+1}/{len(missing)}]: {type(e).__name__}: {e}")
-            # polite pacing
             if i < len(missing) - 1:
-                time.sleep(0.3)
+                time.sleep(0.4)  # be polite to Jina
         print(f"[{self.name}] backfill summary: {success}/{len(missing)} bodies retrieved")
         return offers
 
     def _fetch_post_body(self, url: str) -> str:
-        """Fetch one post's HTML, returning just the article body."""
-        last_err = None
-        # Try direct first
-        for attempt in range(2):
-            try:
-                fetch_url = url if attempt == 0 else f"https://r.jina.ai/{url}"
-                headers = HEADERS if attempt == 0 else {"Accept": "text/plain"}
-                r = self.session.get(fetch_url, headers=headers, timeout=20)
-                r.raise_for_status()
-                if attempt == 0:
-                    soup = BeautifulSoup(r.text, "lxml")
-                    article = soup.find("article") or soup.find(class_="entry-content") or soup.find("main")
-                    return str(article) if article else r.text[:50000]
-                else:
-                    return f"<div>{r.text}</div>"
-            except Exception as e:
-                last_err = f"{type(e).__name__}: {str(e)[:100]}"
-                if attempt == 0:
-                    print(f"[{self.name}]   direct fetch failed for {url[-50:]}: {last_err}")
-                continue
-        if last_err:
-            print(f"[{self.name}]   jina fallback also failed for {url[-50:]}: {last_err}")
+        """Fetch one post's full content. Strategy:
+          1. Try Jina proxy first — it renders JS and bypasses Cloudflare blocks
+          2. If that fails, try the direct URL (less likely to work from CI but worth trying)
+        Returns the body as HTML-ish (Jina returns markdown wrapped in a div).
+        """
+        # Strategy 1: Jina proxy (most reliable from datacenter IPs)
+        try:
+            jina_url = f"https://r.jina.ai/{url}"
+            r = self.session.get(
+                jina_url,
+                headers={"Accept": "text/plain", "X-Return-Format": "markdown"},
+                timeout=25,
+            )
+            r.raise_for_status()
+            text = r.text
+            if len(text) > 1000:
+                # Wrap markdown in a div so the parser can BeautifulSoup-it
+                return f"<div>{text}</div>"
+            print(f"[{self.name}]   jina returned only {len(text)} bytes for {url[-50:]}")
+        except Exception as e:
+            print(f"[{self.name}]   jina failed for {url[-50:]}: {type(e).__name__}: {str(e)[:80]}")
+
+        # Strategy 2: Direct fetch (rarely works from CI, but free to try)
+        try:
+            r = self.session.get(url, headers=HEADERS, timeout=15)
+            r.raise_for_status()
+            soup = BeautifulSoup(r.text, "lxml")
+            article = soup.find("article") or soup.find(class_="entry-content") or soup.find("main")
+            return str(article) if article else r.text[:50000]
+        except Exception as e:
+            print(f"[{self.name}]   direct also failed for {url[-50:]}: {type(e).__name__}")
+
         return ""
 
     # ------------------------------------------------------------------
