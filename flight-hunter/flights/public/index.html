@@ -771,9 +771,17 @@ function renderCard(f) {
       ${fbBadge}
 
       <div class="card-actions">
-        ${f.booking_url ? `<a href="${f.booking_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none">Ver vuelo →</a>` : ""}
-        <button class="btn" data-act="copy" data-id="${f.id}">Copiar resumen</button>
-        <button class="btn" data-act="false-positive" data-id="${f.id}">Marcar falso positivo</button>
+        ${f.searchLinks?.skyscanner ? `<a href="${f.searchLinks.skyscanner}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="Buscar esta ruta en Skyscanner${f.searchLinks.guessed_dates?.depart ? ` (fechas estimadas: ${f.searchLinks.guessed_dates.depart})` : " (vista calendario, elegí día)"}">🔍 Buscar en Skyscanner</a>` : ""}
+        <div class="more-engines" style="position:relative; display:inline-block">
+          <button class="btn" data-act="toggle-engines" data-id="${f.id}">Más motores ▾</button>
+          <div class="engines-menu" data-menu-for="${f.id}" style="display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--bg-1); border:1px solid var(--border); border-radius:8px; padding:6px; z-index:20; min-width:180px; box-shadow:0 8px 24px rgba(0,0,0,0.4)">
+            ${f.searchLinks?.google_flights ? `<a href="${f.searchLinks.google_flights}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Google Flights</a>` : ""}
+            ${f.searchLinks?.kayak ? `<a href="${f.searchLinks.kayak}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Kayak</a>` : ""}
+            ${f.searchLinks?.momondo ? `<a href="${f.searchLinks.momondo}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-1); text-decoration:none; font-size:12px; border-radius:4px">Momondo</a>` : ""}
+            ${f.booking_url ? `<a href="${f.booking_url}" target="_blank" rel="noopener" class="engine-link" style="display:block; padding:6px 10px; color:var(--text-3); text-decoration:none; font-size:11px; border-top:1px solid var(--border); margin-top:4px; padding-top:8px">Ver post original ↗</a>` : ""}
+          </div>
+        </div>
+        <button class="btn" data-act="copy" data-id="${f.id}">Copiar</button>
         <button class="btn" data-act="watch" data-id="${f.id}">Seguir</button>
       </div>
       <div class="source-line">
@@ -811,14 +819,23 @@ function handleCardAction(act, id) {
   const f = state.enriched.find(x => x.id === id);
   if (!f) return;
 
+  if (act === "toggle-engines") {
+    // close any other open menu
+    document.querySelectorAll('.engines-menu').forEach(m => {
+      if (m.dataset.menuFor !== id) m.style.display = 'none';
+    });
+    const menu = document.querySelector(`.engines-menu[data-menu-for="${id}"]`);
+    if (menu) menu.style.display = (menu.style.display === 'none' ? 'block' : 'none');
+    return;
+  }
   if (act === "copy") {
     const summary = `✈️ ${f.origin} → ${f.destination} (${AIRPORT_CITY[f.origin] || ""} → ${AIRPORT_CITY[f.destination] || ""})
-${f.airline} · ${fmtDate(f.departure_date)}${f.return_date ? " → " + fmtDate(f.return_date) : ""}
-${f.stops === 0 ? "Directo" : f.stops + " escala" + (f.stops > 1 ? "s" : "")} · ${fmtDur(f.duration_minutes)} · ${f.baggage_included ? "Con equipaje" : "Sin equipaje"}
+${f.airline}
+${f.stops === 0 ? "Directo" : f.stops + " escala" + (f.stops > 1 ? "s" : "")} · ${f.baggage_included ? "Con equipaje" : "Sin equipaje"}
 Precio: ${fmtPrice(f.price, f.currency)} (≈ USD ${f.price_usd.toFixed(0)})
 Score: ${f.dealScore}/100 — ${f.category.tier}
 Razón: ${f.mainReason.replace(/<[^>]+>/g, "")}
-Fuente: ${f.source}${f.booking_url ? "\n" + f.booking_url : ""}`;
+Buscar: ${f.searchLinks?.skyscanner || f.booking_url || ""}`;
     navigator.clipboard.writeText(summary).then(() => toast("Resumen copiado", "ok"));
   }
   if (act === "false-positive") {
@@ -834,6 +851,25 @@ Fuente: ${f.source}${f.booking_url ? "\n" + f.booking_url : ""}`;
     recalc();
   }
 }
+
+// Close engine dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.more-engines')) {
+    document.querySelectorAll('.engines-menu').forEach(m => m.style.display = 'none');
+  }
+});
+
+// Hover state for engine links
+document.addEventListener('mouseover', (e) => {
+  if (e.target.classList?.contains('engine-link')) {
+    e.target.style.background = 'var(--bg-2)';
+  }
+});
+document.addEventListener('mouseout', (e) => {
+  if (e.target.classList?.contains('engine-link')) {
+    e.target.style.background = 'transparent';
+  }
+});
 
 /* ============================================================
    TOAST
