@@ -61,18 +61,33 @@ def parse_post_body(html: str) -> dict:
             continue
         seen_keys.add(key)
         rows.append(row)
+    s1_count = len(rows)
 
     # Strategy 2: Markdown table rows (when Jina returned markdown)
     if not rows:
         rows = _parse_markdown_table(soup.get_text("\n"))
+    s2_count = len(rows) - s1_count
 
     # Strategy 3: Aggressive scan for adjacent date pairs anywhere in the text
     if not rows:
         rows = _parse_adjacent_date_pairs(soup.get_text("\n"))
+    s3_count = len(rows) - s1_count - s2_count
 
     # Strategy 4: Last resort — paragraph fallback (loose)
     if not rows:
         rows = _parse_text_fallback(soup)
+    s4_count = len(rows) - s1_count - s2_count - s3_count
+
+    # Diagnostic: log strategy counts and a sample of the body when we found nothing
+    body_size = len(html)
+    text_for_log = soup.get_text("\n")[:400] if not rows else ""
+    print(f"[parse_post] body={body_size}b strategies: html_tr={s1_count}, "
+          f"md_table={s2_count}, adjacent={s3_count}, fallback={s4_count}, total={len(rows)}")
+    if not rows and text_for_log:
+        # Show what the body actually looks like
+        # Replace newlines with marker so the log is one line
+        sample = text_for_log.replace("\n", " ¶ ")
+        print(f"[parse_post] no dates found. body sample: {sample[:300]}")
 
     if not rows:
         return _empty()
