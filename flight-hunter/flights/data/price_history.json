@@ -58,6 +58,11 @@
       "date": "2026-05-08",
       "price_usd": 898.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-09",
+      "price_usd": 898.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-JFK": [
@@ -68,6 +73,11 @@
     },
     {
       "date": "2026-05-08",
+      "price_usd": 751.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-09",
       "price_usd": 751.0,
       "airline": "LATAM"
     }
@@ -112,11 +122,21 @@
       "date": "2026-05-08",
       "price_usd": 754.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-09",
+      "price_usd": 754.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-MCO": [
     {
       "date": "2026-05-08",
+      "price_usd": 710.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-09",
       "price_usd": 710.0,
       "airline": "Arajet"
     }
@@ -126,11 +146,21 @@
       "date": "2026-05-08",
       "price_usd": 408.0,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-09",
+      "price_usd": 408.0,
+      "airline": "JetSMART"
     }
   ],
   "COR-BCN": [
     {
       "date": "2026-05-08",
+      "price_usd": 1037.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-09",
       "price_usd": 1037.0,
       "airline": "LATAM"
     }
