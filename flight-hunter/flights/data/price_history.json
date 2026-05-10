@@ -63,6 +63,11 @@
       "date": "2026-05-09",
       "price_usd": 898.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-10",
+      "price_usd": 898.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-JFK": [
@@ -127,6 +132,11 @@
       "date": "2026-05-09",
       "price_usd": 754.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-10",
+      "price_usd": 754.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-MCO": [
@@ -137,6 +147,16 @@
     },
     {
       "date": "2026-05-09",
+      "price_usd": 710.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-10",
+      "price_usd": 780.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-10",
       "price_usd": 710.0,
       "airline": "Arajet"
     }
@@ -163,6 +183,13 @@
       "date": "2026-05-09",
       "price_usd": 1037.0,
       "airline": "LATAM"
+    }
+  ],
+  "AEP-CTG": [
+    {
+      "date": "2026-05-10",
+      "price_usd": 620.0,
+      "airline": "JetSMART"
     }
   ]
 }
