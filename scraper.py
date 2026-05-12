@@ -724,6 +724,7 @@ def main():
     for l in unique:
         lid = l.get('id')
         l['first_seen'] = first_seen_map.get(lid, today_iso)
+        l['is_new'] = (l['first_seen'] == today_iso)
 
         prev_history = price_history_map.get(lid, [])
         precio = l.get('precio_usd', 0)
@@ -732,6 +733,8 @@ def main():
             l['price_changed'] = False
             l['price_drops'] = 0
             l['price_drop_pct'] = 0
+            l['recent_price_drop'] = False
+            l['recent_drop_pct'] = 0
         else:
             last_price = prev_history[-1]['precio_usd']
             if precio != last_price:
@@ -746,6 +749,10 @@ def main():
             l['price_drops'] = drops
             initial = hist[0]['precio_usd']
             l['price_drop_pct'] = round((1 - precio / initial) * 100, 1) if initial > 0 else 0
+            # Movimiento del último run: solo cuenta si bajó (no subió)
+            is_drop = precio > 0 and last_price > 0 and precio < last_price
+            l['recent_price_drop'] = is_drop
+            l['recent_drop_pct'] = round((1 - precio / last_price) * 100, 1) if is_drop else 0
 
     fuentes = {}
     marcas_count = {}
@@ -754,9 +761,14 @@ def main():
         b = l.get('brand', 'other')
         marcas_count[b] = marcas_count.get(b, 0) + 1
 
+    nuevas_hoy = sum(1 for l in unique if l.get('is_new'))
+    bajaron_hoy = sum(1 for l in unique if l.get('recent_price_drop'))
+
     output = {
         'updated': datetime.utcnow().isoformat() + 'Z',
         'total': len(unique),
+        'nuevas_hoy': nuevas_hoy,
+        'bajaron_hoy': bajaron_hoy,
         'fuentes': fuentes,
         'marcas': marcas_count,
         'listings': unique,
@@ -767,6 +779,7 @@ def main():
 
     print(f"\n✓ listings.json: {len(unique)} autos")
     print(f"  Fuentes: {fuentes}")
+    print(f"  Nuevas hoy: {nuevas_hoy} · Bajaron hoy: {bajaron_hoy}")
     print(f"  Top marcas: {dict(sorted(marcas_count.items(), key=lambda x: -x[1])[:10])}")
 
 
