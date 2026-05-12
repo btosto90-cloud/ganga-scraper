@@ -301,15 +301,24 @@ function renderTab(tab) {
     }
     el.innerHTML = html || `<div class="empty"><div class="icon">😔</div><p>No se encontraron gangas.</p></div>`;
   } else if (tab === 'movimientos') {
-    const nuevas = items.filter(i => i.is_new);
-    const drops = items.filter(i => i.recent_price_drop)
-                       .sort((a, b) => (b.recent_drop_pct || 0) - (a.recent_drop_pct || 0));
+    const isGanga = i => i.tag === 'super_ganga' || i.tag === 'ganga';
+    const byDrop = (a, b) => (b.recent_drop_pct || 0) - (a.recent_drop_pct || 0);
+    const nuevasGanga = items.filter(i => i.is_new && isGanga(i));
+    const nuevasOtras = items.filter(i => i.is_new && !isGanga(i));
+    const dropsGanga = items.filter(i => i.recent_price_drop && isGanga(i)).sort(byDrop);
+    const dropsOtras = items.filter(i => i.recent_price_drop && !isGanga(i)).sort(byDrop);
     let html = '';
-    if (nuevas.length) {
-      html += `<div class="section-title">🆕 Nuevas publicaciones (${nuevas.length})</div><div class="grid">${nuevas.map(renderCard).join('')}</div>`;
+    if (nuevasGanga.length) {
+      html += `<div class="section-title">🔥 Gangas nuevas (${nuevasGanga.length})</div><div class="grid">${nuevasGanga.map(renderCard).join('')}</div>`;
     }
-    if (drops.length) {
-      html += `<div class="section-title">📉 Bajaron de precio (${drops.length})</div><div class="grid">${drops.map(renderCard).join('')}</div>`;
+    if (dropsGanga.length) {
+      html += `<div class="section-title">🔥 Gangas que bajaron (${dropsGanga.length})</div><div class="grid">${dropsGanga.map(renderCard).join('')}</div>`;
+    }
+    if (nuevasOtras.length) {
+      html += `<div class="section-title">🆕 Otras publicaciones nuevas (${nuevasOtras.length})</div><div class="grid">${nuevasOtras.map(renderCard).join('')}</div>`;
+    }
+    if (dropsOtras.length) {
+      html += `<div class="section-title">📉 Otras bajadas (${dropsOtras.length})</div><div class="grid">${dropsOtras.map(renderCard).join('')}</div>`;
     }
     el.innerHTML = html || `<div class="empty"><div class="icon">🌙</div><p>Sin movimientos detectados desde el último run.</p></div>`;
   } else {
