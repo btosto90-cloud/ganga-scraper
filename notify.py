@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Telegram notifier para Ganga Hunter.
+"""Telegram notifier para Ganga Hunter (v2).
 
-Lee listings.json + cca_precios.json y manda un digest diario por Telegram:
-  - Super gangas (>=25% bajo CCA) que aparecieron hoy por primera vez
-  - Listings ganga-grade (>=15% bajo CCA) que bajaron >=10% desde el run previo
+Lee listings.json (con scoring v2 pre-computado) y manda un digest diario:
+  - Super gangas v2 (ganga_confidence >= 80) que aparecieron hoy
+  - Cualquier listing ganga_v2/super_ganga_v2 que bajó >=10% desde el run previo
 
-Estado persistido en notified.json para no re-notificar lo mismo.
+Si listings.json no tiene ganga_confidence (scraper viejo o fallo de scoring),
+hace fallback al criterio anterior basado en CCA solo.
 
-Env vars:
-  TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+Estado en notified.json para no repetir notificaciones.
 
-Si faltan, exit 0 (no rompe la pipeline).
+Env vars: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID — sin ellas exit 0.
 """
 
 import json
@@ -24,10 +24,16 @@ LISTINGS_FILE = 'listings.json'
 CCA_FILE = 'cca_precios.json'
 STATE_FILE = 'notified.json'
 
-GANGA_RATIO = 0.85          # <=85% del CCA = ganga
-SUPER_GANGA_RATIO = 0.75    # <=75% del CCA = super ganga
-MIN_DROP_PCT = 10           # solo bajadas >=10% disparan notificación
+# Thresholds v2 (basados en ganga_confidence)
+SUPER_CONFIDENCE_MIN = 80   # super_ganga_v2 → notificar como nueva
+GANGA_CONFIDENCE_MIN = 65   # ganga_v2+ → notificar si baja
+MIN_DROP_PCT = 10
 MAX_PER_SECTION = 5
+
+# Fallback thresholds (si no hay ganga_confidence)
+SUPER_GANGA_RATIO = 0.75    # <=75% del CCA = super ganga
+GANGA_RATIO = 0.85
+
 
 def fmt_num(n):
     try:
@@ -35,27 +41,38 @@ def fmt_num(n):
     except (TypeError, ValueError):
         return str(n)
 
-def market_price(l, cca):
-    return cca.get(l.get('model_key'))
 
-def discount_pct(l, cca):
-    m = market_price(l, cca)
-    if not m or m <= 0:
-        return None
-    return round((1 - l['precio_usd'] / m) * 100, 1)
+def has_v2_scoring(listings):
+    """Detecta si listings.json incluye scoring v2 (ganga_confidence)."""
+    return any('ganga_confidence' in l for l in listings[:50])
 
-def tag(l, cca):
-    m = market_price(l, cca)
+
+def is_super_ganga_v2(l):
+    score = l.get('ganga_confidence')
+    return score is not None and score >= SUPER_CONFIDENCE_MIN
+
+
+def is_ganga_or_better_v2(l):
+    score = l.get('ganga_confidence')
+    return score is not None and score >= GANGA_CONFIDENCE_MIN
+
+
+def is_super_ganga_fallback(l, cca):
+    """Fallback cuando no hay ganga_confidence (scraper viejo)."""
+    m = cca.get(l.get('model_key'))
     if not m or m <= 0 or not l.get('precio_usd'):
-        return None
-    ratio = l['precio_usd'] / m
-    if ratio <= SUPER_GANGA_RATIO:
-        return 'super_ganga'
-    if ratio <= GANGA_RATIO:
-        return 'ganga'
-    return None
+        return False
+    return l['precio_usd'] / m <= SUPER_GANGA_RATIO
 
-def fmt_listing(l, cca, show_drop=False):
+
+def is_ganga_or_better_fallback(l, cca):
+    m = cca.get(l.get('model_key'))
+    if not m or m <= 0 or not l.get('precio_usd'):
+        return False
+    return l['precio_usd'] / m <= GANGA_RATIO
+
+
+def fmt_listing(l, cca, show_drop=False, show_score=True):
     title = (l.get('title') or '?')[:60]
     km_raw = l.get('km') or 0
     km = f"{km_raw//1000}k km" if km_raw else "0 km"
@@ -63,19 +80,34 @@ def fmt_listing(l, cca, show_drop=False):
     fuel = l.get('fuel') or '?'
     fuente = (l.get('fuente') or '').upper()
     precio = l['precio_usd']
-    m = market_price(l, cca)
-    pct = discount_pct(l, cca)
+
     lines = [f"<b>{title}</b>",
-             f"  USD {fmt_num(precio)} · {km} · {trans} · {fuel} · {fuente}"]
+             f"  {fmt_num(precio)} USD · {km} · {trans} · {fuel} · {fuente}"]
+
     if show_drop:
         hist = l.get('price_history') or []
         prev = hist[-2]['precio_usd'] if len(hist) >= 2 else None
         if prev:
             lines.append(f"  📉 USD {fmt_num(prev)} → USD {fmt_num(precio)} (-{l.get('recent_drop_pct', 0)}%)")
-    if pct is not None and m:
-        lines.append(f"  ↓ {pct}% vs CCA (USD {fmt_num(m)})")
+
+    # Anchors (CCA + bucket)
+    cca_price = l.get('precio_cca') or cca.get(l.get('model_key'))
+    if cca_price:
+        cca_pct = l.get('descuento_cca_pct')
+        if cca_pct is None and l.get('precio_usd'):
+            cca_pct = round((1 - l['precio_usd'] / cca_price) * 100, 1)
+        if cca_pct is not None and cca_pct > 0:
+            lines.append(f"  ↓ {cca_pct}% vs CCA (USD {fmt_num(cca_price)})")
+    if l.get('bucket_n'):
+        lines.append(f"  📊 {l['bucket_n']} comparables · z={l.get('bucket_z_score')}")
+
+    # Score
+    if show_score and l.get('ganga_confidence') is not None:
+        lines.append(f"  🎯 Confianza: {l['ganga_confidence']}/100")
+
     lines.append(f"  {l.get('url', '')}")
     return '\n'.join(lines)
+
 
 def send_telegram(token, chat_id, text):
     url = f'https://api.telegram.org/bot{token}/sendMessage'
@@ -91,6 +123,7 @@ def send_telegram(token, chat_id, text):
         if r.status != 200:
             raise RuntimeError(f"telegram {r.status}: {body[:200]}")
 
+
 def main():
     token = os.environ.get('TELEGRAM_BOT_TOKEN', '').strip()
     chat_id = os.environ.get('TELEGRAM_CHAT_ID', '').strip()
@@ -104,16 +137,28 @@ def main():
 
     listings = json.load(open(LISTINGS_FILE)).get('listings', [])
     cca = json.load(open(CCA_FILE)).get('prices', {}) if os.path.exists(CCA_FILE) else {}
-    if not cca:
-        print('cca_precios.json no disponible — no puedo clasificar gangas')
-        return 0
+
+    use_v2 = has_v2_scoring(listings)
+    if use_v2:
+        is_super = is_super_ganga_v2
+        is_ganga_plus = is_ganga_or_better_v2
+        mode_label = 'v2 (ganga_confidence)'
+    else:
+        if not cca:
+            print('No hay scoring v2 ni cca_precios.json — no puedo clasificar gangas')
+            return 0
+        is_super = lambda l: is_super_ganga_fallback(l, cca)
+        is_ganga_plus = lambda l: is_ganga_or_better_fallback(l, cca)
+        mode_label = 'fallback (CCA solo)'
+    print(f'Notifier mode: {mode_label}')
 
     bootstrap = not os.path.exists(STATE_FILE)
     if bootstrap:
         seed_new = sorted({l['id'] for l in listings if l.get('is_new')})
         seed_drops = {l['id']: l['precio_usd'] for l in listings if l.get('recent_price_drop')}
         json.dump({'new_seen': seed_new, 'drop_notified_price': seed_drops,
-                   'last_run': datetime.utcnow().isoformat() + 'Z'},
+                   'last_run': datetime.utcnow().isoformat() + 'Z',
+                   'mode': mode_label},
                   open(STATE_FILE, 'w'), indent=2)
         print(f'Bootstrap: estado inicial ({len(seed_new)} ids semilla), sin notificar')
         return 0
@@ -124,13 +169,12 @@ def main():
 
     new_gangas, drop_gangas = [], []
     for l in listings:
-        t = tag(l, cca)
-        if not t:
+        lid = l.get('id')
+        if not lid:
             continue
-        lid = l['id']
-        if l.get('is_new') and t == 'super_ganga' and lid not in seen_ids:
+        if l.get('is_new') and is_super(l) and lid not in seen_ids:
             new_gangas.append(l)
-        if l.get('recent_price_drop') and l.get('recent_drop_pct', 0) >= MIN_DROP_PCT:
+        if l.get('recent_price_drop') and l.get('recent_drop_pct', 0) >= MIN_DROP_PCT and is_ganga_plus(l):
             last = drop_prices.get(lid)
             if last is None or l['precio_usd'] < last:
                 drop_gangas.append(l)
@@ -142,7 +186,7 @@ def main():
     today = datetime.utcnow().date().isoformat()
     parts = [f"🔥 <b>Ganga Hunter · {today}</b>", ""]
     if new_gangas:
-        new_gangas.sort(key=lambda l: discount_pct(l, cca) or 0, reverse=True)
+        new_gangas.sort(key=lambda l: l.get('ganga_confidence', 0) or 0, reverse=True)
         top = new_gangas[:MAX_PER_SECTION]
         parts.append(f"🆕 <b>Super gangas nuevas ({len(top)}/{len(new_gangas)})</b>")
         parts.extend(fmt_listing(l, cca) for l in top)
@@ -162,9 +206,11 @@ def main():
         drop_prices[l['id']] = l['precio_usd']
     json.dump({'new_seen': sorted(seen_ids),
                'drop_notified_price': drop_prices,
-               'last_run': datetime.utcnow().isoformat() + 'Z'},
+               'last_run': datetime.utcnow().isoformat() + 'Z',
+               'mode': mode_label},
               open(STATE_FILE, 'w'), indent=2)
     return 0
+
 
 if __name__ == '__main__':
     sys.exit(main())
