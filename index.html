@@ -64,6 +64,8 @@
   .badge { font-size: 0.72rem; padding: 2px 7px; border-radius: 4px; background: #f0f2f5; color: #555; }
   .badge.at { background: #e3f2fd; color: #1565c0; }
   .badge.mt { background: #fafafa; color: #888; }
+  .badge.nueva { background: #fce4ec; color: #ad1457; font-weight: 700; }
+  .badge.drop { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
 
   .card-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
   .price-block { background: #f8f9fa; border-radius: 6px; padding: 8px 10px; }
@@ -169,6 +171,8 @@
   <div class="stat">Total: <span class="stat-val" id="s-total">-</span></div>
   <div class="stat">Gangas: <span class="stat-val" id="s-gangas">-</span></div>
   <div class="stat">Con precio CCA: <span class="stat-val" id="s-cca">-</span></div>
+  <div class="stat">🆕 Nuevas: <span class="stat-val" id="s-nuevas">-</span></div>
+  <div class="stat">📉 Bajaron: <span class="stat-val" id="s-bajaron">-</span></div>
   <div class="stat">
     Fuentes:
     <span class="stat-val" id="s-fuentes">-</span>
@@ -178,6 +182,7 @@
 
 <div class="tabs">
   <div class="tab" onclick="showTab(&#39;gangas&#39;, this)">🔥 Gangas</div>
+  <div class="tab" onclick="showTab(&#39;movimientos&#39;, this)">✨ Hoy</div>
   <div class="tab active" onclick="showTab(&#39;normales&#39;, this)">📋 Todos</div>
 </div>
 
@@ -188,6 +193,7 @@
   </div>
   <div id="error" class="error-msg" style="display: block;">Pocas publicaciones</div>
   <div id="tab-gangas" style="display: none;"></div>
+  <div id="tab-movimientos" style="display: none;"></div>
   <div id="tab-normales" style=""></div>
 </div>
 
@@ -248,6 +254,7 @@ function showTab(tab, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
   document.getElementById('tab-gangas').style.display = tab === 'gangas' ? '' : 'none';
+  document.getElementById('tab-movimientos').style.display = tab === 'movimientos' ? '' : 'none';
   document.getElementById('tab-normales').style.display = tab === 'normales' ? '' : 'none';
   if (currentData) renderTab(tab);
 }
@@ -257,6 +264,11 @@ function renderStats(data) {
   document.getElementById('s-total').textContent = m.total;
   document.getElementById('s-gangas').textContent = m.gangas;
   document.getElementById('s-cca').textContent = m.con_cca || 0;
+  const all = data.normales || [];
+  const nuevas = m.nuevas_hoy != null ? m.nuevas_hoy : all.filter(i => i.is_new).length;
+  const bajaron = m.bajaron_hoy != null ? m.bajaron_hoy : all.filter(i => i.recent_price_drop).length;
+  document.getElementById('s-nuevas').textContent = nuevas;
+  document.getElementById('s-bajaron').textContent = bajaron;
   const f = m.fuentes || {};
   document.getElementById('s-fuentes').textContent =
     `RG: ${f.rg||0} | AC: ${f.ac||0}`;
@@ -288,6 +300,27 @@ function renderTab(tab) {
       html += `<div class="section-title">✅ Gangas (${gangas.length})</div><div class="grid">${gangas.map(renderCard).join('')}</div>`;
     }
     el.innerHTML = html || `<div class="empty"><div class="icon">😔</div><p>No se encontraron gangas.</p></div>`;
+  } else if (tab === 'movimientos') {
+    const isGanga = i => i.tag === 'super_ganga' || i.tag === 'ganga';
+    const byDrop = (a, b) => (b.recent_drop_pct || 0) - (a.recent_drop_pct || 0);
+    const nuevasGanga = items.filter(i => i.is_new && isGanga(i));
+    const nuevasOtras = items.filter(i => i.is_new && !isGanga(i));
+    const dropsGanga = items.filter(i => i.recent_price_drop && isGanga(i)).sort(byDrop);
+    const dropsOtras = items.filter(i => i.recent_price_drop && !isGanga(i)).sort(byDrop);
+    let html = '';
+    if (nuevasGanga.length) {
+      html += `<div class="section-title">🔥 Gangas nuevas (${nuevasGanga.length})</div><div class="grid">${nuevasGanga.map(renderCard).join('')}</div>`;
+    }
+    if (dropsGanga.length) {
+      html += `<div class="section-title">🔥 Gangas que bajaron (${dropsGanga.length})</div><div class="grid">${dropsGanga.map(renderCard).join('')}</div>`;
+    }
+    if (nuevasOtras.length) {
+      html += `<div class="section-title">🆕 Otras publicaciones nuevas (${nuevasOtras.length})</div><div class="grid">${nuevasOtras.map(renderCard).join('')}</div>`;
+    }
+    if (dropsOtras.length) {
+      html += `<div class="section-title">📉 Otras bajadas (${dropsOtras.length})</div><div class="grid">${dropsOtras.map(renderCard).join('')}</div>`;
+    }
+    el.innerHTML = html || `<div class="empty"><div class="icon">🌙</div><p>Sin movimientos detectados desde el último run.</p></div>`;
   } else {
     el.innerHTML = `<div class="section-title">Todos los autos (${items.length})</div><div class="grid">${items.map(renderCard).join('')}</div>`;
   }
@@ -303,6 +336,8 @@ function renderCard(l) {
   const fuelBadge = l.fuel && l.fuel !== '?' ? `<span class="badge">${l.fuel}</span>` : '';
   const transBadge = l.trans && l.trans !== '?' ? `<span class="badge ${transClass}">${l.trans}</span>` : '';
   const fuenteBadge = `<span class="fuente-badge ${l.fuente}">${l.fuente.toUpperCase()}</span>`;
+  const nuevaBadge = l.is_new ? '<span class="badge nueva">🆕 NUEVA</span>' : '';
+  const dropBadge = l.recent_price_drop && l.recent_drop_pct ? `<span class="badge drop">📉 -${l.recent_drop_pct}%</span>` : '';
 
   const precioMercado = l.precio_mercado ? `<div class="price-block"><div class="price-label">Precio mercado</div><div class="price-val market">USD ${l.precio_mercado.toLocaleString('es-AR')}</div></div>` : '';
   const precioCca = l.precio_cca ? `<div class="price-block"><div class="price-label">CCA</div><div class="price-val">USD ${l.precio_cca.toLocaleString('es-AR')}</div></div>` : '';
@@ -320,6 +355,8 @@ function renderCard(l) {
         ${tagLabel ? `<span class="tag ${l.tag}">${tagLabel}</span>` : ''}
       </div>
       <div class="card-meta">
+        ${nuevaBadge}
+        ${dropBadge}
         <span class="badge">${l.year}</span>
         <span class="badge">${kmFmt}</span>
         ${transBadge}

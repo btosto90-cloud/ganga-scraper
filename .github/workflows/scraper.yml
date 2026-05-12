@@ -63,6 +63,13 @@ jobs:
             echo "listings.json no generado"
           fi
 
+      - name: Notify Telegram
+        if: success()
+        run: python notify.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
       - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -79,6 +86,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add listings.json
+          [ -f notified.json ] && git add notified.json || true
           git diff --cached --quiet && echo "No changes" && exit 0
           TOTAL=$(python3 -c "import json; d=json.load(open('listings.json')); print(d.get('total',0))" 2>/dev/null || echo "?")
           git commit -m "Update listings $(date -u +%Y-%m-%d) - ${TOTAL} autos"
