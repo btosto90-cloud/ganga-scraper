@@ -223,6 +223,30 @@
       "date": "2026-05-11",
       "price_usd": 825.0,
       "airline": "Aerolíneas Argentinas"
+    },
+    {
+      "date": "2026-05-12",
+      "price_usd": 1100.0,
+      "airline": "Iberia"
+    },
+    {
+      "date": "2026-05-12",
+      "price_usd": 990.0,
+      "airline": "Desconocida"
+    }
+  ],
+  "EZE-FOR": [
+    {
+      "date": "2026-05-12",
+      "price_usd": 345.0,
+      "airline": "GOL"
+    }
+  ],
+  "EZE-MIA": [
+    {
+      "date": "2026-05-12",
+      "price_usd": 531.0,
+      "airline": "Desconocida"
     }
   ]
 }
