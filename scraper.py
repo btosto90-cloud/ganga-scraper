@@ -5,7 +5,7 @@ import time
 import random
 import urllib.request
 import urllib.parse
-from datetime import datetime
+from datetime import datetime, timedelta
 
 BLUE_RATE = 1400  # default, se sobreescribe abajo con valor real
 
@@ -643,6 +643,8 @@ def main():
     import os
     first_seen_map = {}
     price_history_map = {}
+    prev = {}
+    prev_by_id = {}
     today_iso = datetime.utcnow().date().isoformat()
     if os.path.exists(OUTPUT_FILE):
         try:
@@ -654,6 +656,7 @@ def main():
                     first_seen_map[lid] = l.get('first_seen', today_iso)
                     if l.get('price_history'):
                         price_history_map[lid] = l['price_history']
+                    prev_by_id[lid] = l
             print(f"  ↺ Cargado histórico: {len(first_seen_map)} listings, {len(price_history_map)} con price history")
         except Exception as e:
             print(f"  (no pude leer histórico: {e})")
@@ -764,11 +767,141 @@ def main():
     nuevas_hoy = sum(1 for l in unique if l.get('is_new'))
     bajaron_hoy = sum(1 for l in unique if l.get('recent_price_drop'))
 
+    # ─── Detectar listings desaparecidos → fast_sales.json ──────────────────
+    # Un listing que estuvo en el run anterior pero no en éste probablemente se vendió.
+    # Si vivió poco (<=30 días), es señal de buen precio.
+    current_ids = {l['id'] for l in unique}
+    disappeared = [l for l in prev_by_id.values() if l['id'] not in current_ids]
+
+    # Sanity check: si desapareció >30% del catálogo, fue scraper hiccup, no ventas
+    prev_count = len(prev_by_id)
+    skip_fast_sales = (
+        prev_count > 0 and len(disappeared) / prev_count > 0.30
+    )
+    if skip_fast_sales:
+        print(f"  ⚠️  {len(disappeared)} desaparecieron ({100*len(disappeared)/prev_count:.0f}% del catálogo previo) — probable scraper hiccup, no se registran fast_sales este run")
+
+    FAST_SALES_FILE = 'fast_sales.json'
+    fast_sales = []
+    if os.path.exists(FAST_SALES_FILE):
+        try:
+            with open(FAST_SALES_FILE, 'r', encoding='utf-8') as f:
+                fast_sales = json.load(f).get('events', [])
+        except Exception as e:
+            print(f"  (no pude leer fast_sales.json: {e})")
+
+    new_events = 0
+    if not skip_fast_sales:
+        existing_ids = {e['id'] for e in fast_sales}
+        today_dt = datetime.utcnow().date()
+        for d in disappeared:
+            lid = d.get('id')
+            if not lid or lid in existing_ids:
+                continue
+            first_seen = d.get('first_seen')
+            if not first_seen:
+                continue
+            try:
+                days_lived = (today_dt - datetime.fromisoformat(first_seen).date()).days
+            except Exception:
+                continue
+            # Skip: just appeared today (likely scraper miss), or stale (>30d = not a fast sale)
+            if days_lived < 1 or days_lived > 30:
+                continue
+            if not d.get('precio_usd') or not d.get('model_key'):
+                continue
+            fast_sales.append({
+                'id': lid,
+                'model_key': d.get('model_key'),
+                'brand': d.get('brand'),
+                'model': d.get('model'),
+                'year': d.get('year'),
+                'last_price_usd': d.get('precio_usd'),
+                'first_seen': first_seen,
+                'last_seen_at': prev.get('updated', today_iso),
+                'days_lived': days_lived,
+                'fuente': d.get('fuente'),
+            })
+            new_events += 1
+
+    # Prune: rolling 90 días
+    cutoff = datetime.utcnow().date() - timedelta(days=90)
+    def _keep(e):
+        last = (e.get('last_seen_at') or '')
+        try:
+            return datetime.fromisoformat(last.replace('Z', '+00:00')).date() >= cutoff
+        except Exception:
+            return True
+    fast_sales = [e for e in fast_sales if _keep(e)]
+
+    with open(FAST_SALES_FILE, 'w', encoding='utf-8') as f:
+        json.dump({
+            'updated': datetime.utcnow().isoformat() + 'Z',
+            'count': len(fast_sales),
+            'events': fast_sales,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"  Fast sales: +{new_events} nuevas, {len(fast_sales)} total (rolling 90d)")
+
+    # ─── velocity_stats.json: estadísticas por model_key ────────────────────
+    # Per modelo: cuántos vendieron rápido, mediana de días vividos, mediana del precio de venta.
+    # El Worker usa esto como prior bayesiano para mejorar la detección.
+    by_model = {}
+    for e in fast_sales:
+        mk = e.get('model_key')
+        if mk:
+            by_model.setdefault(mk, []).append(e)
+
+    def _median(arr):
+        s = sorted(arr)
+        return s[len(s) // 2]
+
+    velocity_stats = {}
+    for mk, events in by_model.items():
+        if len(events) < 3:
+            continue
+        days = [e['days_lived'] for e in events]
+        prices = [e['last_price_usd'] for e in events if e.get('last_price_usd')]
+        velocity_stats[mk] = {
+            'n': len(events),
+            'median_days_lived': _median(days),
+            'p25_days_lived': sorted(days)[max(0, len(days) // 4)],
+            'median_sale_price_usd': _median(prices) if prices else None,
+        }
+
+    with open('velocity_stats.json', 'w', encoding='utf-8') as f:
+        json.dump({
+            'updated': datetime.utcnow().isoformat() + 'Z',
+            'count': len(velocity_stats),
+            'stats': velocity_stats,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"  Velocity stats: {len(velocity_stats)} model_keys con ≥3 fast sales")
+
+    # ─── Pre-computar ganga_confidence (CCA + bucket outlier + velocity) ────
+    # Esto pre-procesa el scoring que antes hacía solo el Worker. Cada listing
+    # queda anotado con ganga_confidence (0-100), ganga_tag (super_ganga_v2/...),
+    # precio_cca, bucket_z_score. Ver SCORING.md para detalles.
+    try:
+        import scoring
+        cca_prices = {}
+        if os.path.exists('cca_precios.json'):
+            with open('cca_precios.json', 'r', encoding='utf-8') as f:
+                cca_prices = json.load(f).get('prices', {})
+        scoring_stats = scoring.annotate_listings(unique, cca_prices, velocity_stats)
+        print(f"  Scoring: with_cca={scoring_stats['with_cca']} with_bucket={scoring_stats['with_bucket']} "
+              f"with_velocity={scoring_stats['with_velocity']}")
+        print(f"  Tags: super_ganga_v2={scoring_stats['super_ganga_v2']} ganga_v2={scoring_stats['ganga_v2']} "
+              f"interesante={scoring_stats['interesante']} sin_ref={scoring_stats['sin_referencia']}")
+    except Exception as e:
+        print(f"  ⚠️  Scoring falló: {e} — sigo sin ganga_confidence")
+        scoring_stats = {}
+
     output = {
         'updated': datetime.utcnow().isoformat() + 'Z',
         'total': len(unique),
         'nuevas_hoy': nuevas_hoy,
         'bajaron_hoy': bajaron_hoy,
+        'super_ganga_v2': scoring_stats.get('super_ganga_v2', 0),
+        'ganga_v2': scoring_stats.get('ganga_v2', 0),
         'fuentes': fuentes,
         'marcas': marcas_count,
         'listings': unique,

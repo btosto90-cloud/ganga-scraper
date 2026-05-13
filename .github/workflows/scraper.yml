@@ -87,6 +87,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add listings.json
           [ -f notified.json ] && git add notified.json || true
+          [ -f fast_sales.json ] && git add fast_sales.json || true
+          [ -f velocity_stats.json ] && git add velocity_stats.json || true
           git diff --cached --quiet && echo "No changes" && exit 0
           TOTAL=$(python3 -c "import json; d=json.load(open('listings.json')); print(d.get('total',0))" 2>/dev/null || echo "?")
           git commit -m "Update listings $(date -u +%Y-%m-%d) - ${TOTAL} autos"
