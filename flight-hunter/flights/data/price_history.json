@@ -104,6 +104,11 @@
       "date": "2026-05-08",
       "price_usd": 264.0,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-13",
+      "price_usd": 301.0,
+      "airline": "GOL"
     }
   ],
   "EZE-CDG": [
@@ -247,6 +252,18 @@
       "date": "2026-05-12",
       "price_usd": 531.0,
       "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-13",
+      "price_usd": 424.0,
+      "airline": "Arajet"
+    }
+  ],
+  "EZE-BOG": [
+    {
+      "date": "2026-05-13",
+      "price_usd": 450.0,
+      "airline": "Avianca"
     }
   ]
 }
