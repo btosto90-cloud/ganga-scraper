@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-13T02:29:01.703048Z",
-  "count": 53,
+  "updated": "2026-05-13T10:35:02.609908Z",
+  "count": 60,
   "stats": {
     "toyota_yaris_2019": {
       "n": 4,
@@ -188,6 +188,18 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 5000
     },
+    "mercedes_other_2017": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 34000
+    },
+    "mercedes_a200_2018": {
+      "n": 6,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 26000
+    },
     "kia_other_2026_gt_line": {
       "n": 4,
       "median_days_lived": 1,
@@ -319,6 +331,36 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5571
+    },
+    "mercedes_a200_2019": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 32143
+    },
+    "mercedes_gla_2017": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 25500
+    },
+    "mercedes_gla_2018": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 29500
+    },
+    "mercedes_other_2013": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 16429
+    },
+    "mercedes_c200_2012": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 18000
     }
   }
 }
