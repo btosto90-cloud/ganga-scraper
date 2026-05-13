@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-13T00:45:21.581480Z",
-  "count": 581,
+  "updated": "2026-05-13T02:29:01.697292Z",
+  "count": 591,
   "events": [
     {
       "id": "5597212",
@@ -6971,6 +6971,126 @@
       "last_price_usd": 6214,
       "first_seen": "2026-05-04",
       "last_seen_at": "2026-05-13T00:39:11.596691Z",
+      "days_lived": 9,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_volkswagen_voyage_16_comfortline_bca2a",
+      "model_key": "volkswagen_voyage_2013_comfortline",
+      "brand": "volkswagen",
+      "model": "voyage",
+      "year": 2013,
+      "last_price_usd": 4929,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 9,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_ford_fiesta_5p_ambiente_plus_d1c629330",
+      "model_key": "ford_fiesta_2004_st",
+      "brand": "ford",
+      "model": "fiesta",
+      "year": 2004,
+      "last_price_usd": 4643,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 9,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_ford_ka_16l_top_pulse_6e1cda5c30c44280",
+      "model_key": "ford_pulse_2013_top",
+      "brand": "ford",
+      "model": "pulse",
+      "year": 2013,
+      "last_price_usd": 7000,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 9,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_chevrolet_corsa_4p_gl_be7d42484d8748f2",
+      "model_key": "chevrolet_corsa_2004_rs",
+      "brand": "chevrolet",
+      "model": "corsa",
+      "year": 2004,
+      "last_price_usd": 2143,
+      "first_seen": "2026-05-11",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 2,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_chevrolet_monza_gl_20_1f95a5aeaed746fd",
+      "model_key": "chevrolet_monza_1993",
+      "brand": "chevrolet",
+      "model": "monza",
+      "year": 1993,
+      "last_price_usd": 3000,
+      "first_seen": "2026-05-11",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 2,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_peugeot_306_sedan_xr_boreal_4p_29397b3",
+      "model_key": "peugeot_306_1998_sedan",
+      "brand": "peugeot",
+      "model": "306",
+      "year": 1998,
+      "last_price_usd": 2143,
+      "first_seen": "2026-05-12",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 1,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_peugeot_206_16_xr_3p_4e9503fea4e9466d9",
+      "model_key": "peugeot_206_2000",
+      "brand": "peugeot",
+      "model": "206",
+      "year": 2000,
+      "last_price_usd": 3214,
+      "first_seen": "2026-05-11",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 2,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_fiat_uno_5p_13_s_mpi_a866ae8a6d414a34a",
+      "model_key": "fiat_uno_2006",
+      "brand": "fiat",
+      "model": "uno",
+      "year": 2006,
+      "last_price_usd": 4714,
+      "first_seen": "2026-05-05",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 8,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_fiat_punto_5p_14_elx_20c910c2f8644b29a",
+      "model_key": "fiat_punto_2011",
+      "brand": "fiat",
+      "model": "punto",
+      "year": 2011,
+      "last_price_usd": 6429,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
+      "days_lived": 9,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_citroen_c3_feel_fe7b7903d743467aa16ef9",
+      "model_key": "citroen_c3_2016",
+      "brand": "citroen",
+      "model": "c3",
+      "year": 2016,
+      "last_price_usd": 9929,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-13T00:45:21.716593Z",
       "days_lived": 9,
       "fuente": "ac"
     }
