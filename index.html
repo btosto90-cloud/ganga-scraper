@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)file:///C:/Users/btosto/Downloads/index_2.html -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="es">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganga Hunter 🔍</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #1a1a2e; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f6f8; color: #1a1a2e; }
 
   header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
   header h1 { font-size: 1.4rem; font-weight: 700; }
-  header span { font-size: 1.6rem; }
-  .subtitle { font-size: 0.8rem; opacity: 0.6; margin-top: 2px; }
+  header span.logo { font-size: 1.6rem; }
+  .subtitle { font-size: 0.78rem; opacity: 0.6; margin-top: 2px; }
+  .updated-time { margin-left: auto; font-size: 0.72rem; opacity: 0.6; }
 
   .filters { background: white; padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; border-bottom: 1px solid #e0e0e0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
   .filter-group { display: flex; flex-direction: column; gap: 4px; }
-  .filter-group label { font-size: 0.72rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+  .filter-group label { font-size: 0.7rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
   .filter-group select, .filter-group input { padding: 7px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.88rem; background: #fafafa; outline: none; transition: border 0.2s; }
   .filter-group select:focus, .filter-group input:focus { border-color: #e63946; }
   .filter-group input[type="number"] { width: 110px; }
 
-  .btn { padding: 8px 20px; background: #e63946; color: white; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.1s; align-self: flex-end; }
+  .btn { padding: 8px 18px; background: #e63946; color: white; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
   .btn:hover { background: #c1121f; }
-  .btn:active { transform: scale(0.97); }
   .btn-secondary { background: #457b9d; }
   .btn-secondary:hover { background: #1d6891; }
 
-  .stats-bar { background: #1a1a2e; color: white; padding: 0.6rem 1.5rem; display: flex; gap: 20px; font-size: 0.8rem; flex-wrap: wrap; }
+  .stats-bar { background: #1a1a2e; color: white; padding: 0.6rem 1.5rem; display: flex; gap: 20px; font-size: 0.8rem; flex-wrap: wrap; align-items: center; }
   .stat { display: flex; align-items: center; gap: 5px; }
   .stat-val { font-weight: 700; color: #a8dadc; }
-  .stat-updated { margin-left: auto; opacity: 0.5; font-size: 0.72rem; }
+  .stat-val.v2 { color: #c4b5fd; }
 
   .tabs { display: flex; gap: 0; background: white; border-bottom: 2px solid #e0e0e0; padding: 0 1.5rem; }
   .tab { padding: 10px 18px; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: #888; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
@@ -39,62 +39,238 @@
   .content { padding: 1rem 1.5rem; max-width: 1400px; margin: 0 auto; }
 
   .loading { text-align: center; padding: 3rem; color: #888; }
-  .loading .spinner { width: 40px; height: 40px; border: 4px solid #e0e0e0; border-top-color: #e63946; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+  .loading .spinner { width: 36px; height: 36px; border: 4px solid #e0e0e0; border-top-color: #e63946; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
   .error-msg { background: #fff0f0; border: 1px solid #ffcdd2; padding: 1rem 1.5rem; border-radius: 8px; color: #c62828; margin: 1rem 0; }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 14px; }
 
   .card { background: white; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 1px solid #e8e8e8; transition: transform 0.15s, box-shadow 0.15s; cursor: pointer; }
   .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
   .card.ganga { border-left: 4px solid #2a9d8f; }
   .card.super_ganga { border-left: 4px solid #e63946; background: #fff8f8; }
+  .card.v2-super { border-left: 4px solid #7c3aed; background: linear-gradient(135deg, #faf5ff 0%, #fff 100%); }
+  .tag.oportunidad { background: #b2dfdb; color: #00564a; font-weight: 700; }
+
+  /* ─── Razón principal ─── */
+  .razon-block {
+    margin-top: 10px; padding: 10px 12px; background: #fff8e1;
+    border-radius: 6px; border-left: 3px solid #ff9800;
+  }
+  .razon-label { font-size: 0.65rem; font-weight: 700; color: #e65100; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .razon-text { font-size: 0.84rem; color: #5d4037; line-height: 1.4; }
+
+  /* ─── Badges nuevos ─── */
+  .badge.drops { background: #ffebee; color: #c62828; font-weight: 700; }
+  .badge.v-particular { background: #e1f5fe; color: #01579b; }
+  .badge.v-agencia { background: #f3e5f5; color: #6a1b9a; }
+  .badge.v-oficial { background: #fff8e1; color: #ff6f00; }
+  .badge.v-revendedor { background: #efebe9; color: #4e342e; }
+
+  /* ─── Ganga Confidence v2 ─── */
+  .gc-badge {
+    font-size: 0.74rem; font-weight: 700; padding: 3px 8px; border-radius: 12px;
+    white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;
+  }
+  .gc-badge.super { background: #ede9fe; color: #5b21b6; border: 1px solid #7c3aed; }
+  .gc-badge.ganga { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
+  .gc-badge.interesante { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
+  .gc-badge.normal { background: #f3f4f6; color: #6b7280; }
+  .gc-summary {
+    margin-top: 8px; padding: 8px 12px; background: #f5f3ff;
+    border-radius: 6px; border-left: 3px solid #7c3aed;
+    font-size: 0.78rem; color: #4c1d95;
+  }
+  .gc-summary-title { font-size: 0.65rem; font-weight: 700; color: #5b21b6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .gc-comp { display: inline-block; margin-right: 10px; }
+  .gc-comp .v { font-weight: 700; color: #5b21b6; }
+  .gc-comp .v.na { color: #9ca3af; font-weight: 400; font-style: italic; }
+  .gc-ancla {
+    margin-top: 6px; font-size: 0.74rem; color: #6d28d9;
+    padding-top: 6px; border-top: 1px dashed #c4b5fd;
+  }
+  .gc-ancla strong { color: #4c1d95; }
+
+  /* ─── Margen escenarios ─── */
+  .margen-header { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+  .margen-escenarios { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 4px; }
+  .esc { display: flex; flex-direction: column; padding: 5px 6px; background: rgba(255,255,255,0.5); border-radius: 4px; text-align: center; }
+  .esc.probable { background: rgba(255,255,255,0.85); font-weight: 700; }
+  .esc-lbl { font-size: 0.62rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.4px; }
+  .esc-val { font-size: 0.85rem; font-weight: 600; }
+
+  /* ─── GHS - Ganga Hunter Score ─── */
+  .ghs-block {
+    margin-top: 12px; padding: 12px 14px; border-radius: 8px;
+    display: flex; align-items: center; gap: 14px;
+    background: #f5f5f5; border-left: 4px solid #999;
+  }
+  .ghs-block.extraord { background: linear-gradient(135deg, #ffd700, #ffaa00); border-left-color: #b8860b; color: #000; }
+  .ghs-block.high { background: linear-gradient(135deg, #c8e6c9, #81c784); border-left-color: #2e7d32; color: #1b5e20; }
+  .ghs-block.good { background: #e8f5e9; border-left-color: #43a047; color: #1b5e20; }
+  .ghs-block.mid { background: #fff9c4; border-left-color: #f9a825; color: #5d4037; }
+  .ghs-block.low { background: #f5f5f5; border-left-color: #999; color: #555; }
+  .ghs-score { font-size: 2.4rem; font-weight: 900; line-height: 1; min-width: 70px; text-align: center; }
+  .ghs-meta { flex: 1; }
+  .ghs-cat { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; }
+  .ghs-label { font-size: 0.7rem; opacity: 0.75; text-transform: uppercase; margin-top: 2px; }
+
+  /* ─── Valor real ─── */
+  .valor-real {
+    margin-top: 10px; padding: 10px 12px; background: #f8fafc; border-radius: 6px; border: 1px solid #e0e7ee;
+  }
+  .valor-label { font-size: 0.7rem; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+  .valor-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .valor-grid > div { display: flex; flex-direction: column; padding: 4px; }
+  .valor-grid > div.probable { background: #e3f2fd; border-radius: 4px; }
+  .valor-grid .vl { font-size: 0.65rem; color: #666; text-transform: uppercase; }
+  .valor-grid .vv { font-size: 0.92rem; font-weight: 700; color: #333; }
+  .valor-grid .probable .vv { color: #1565c0; }
+
+  /* ─── Negociación ─── */
+  .neg-block {
+    margin-top: 10px; padding: 10px 12px; background: linear-gradient(135deg, #e0f7fa 0%, #b2dfdb 100%);
+    border-radius: 6px; border-left: 3px solid #00897b;
+  }
+  .neg-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; padding: 2px 0; color: #00564a; }
+  .neg-key { font-weight: 600; }
+  .neg-val { font-weight: 600; color: #00564a; }
+  .neg-val.strong { font-size: 1rem; font-weight: 800; color: #00564a; }
+
+  /* ─── Margen ─── */
+  .margen-block {
+    margin-top: 10px; padding: 10px 12px; border-radius: 6px;
+    font-size: 0.85rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .margen-block.high { background: #e8f5e9; border-left: 3px solid #2e7d32; color: #1b5e20; }
+  .margen-block.mid { background: #fff9c4; border-left: 3px solid #f9a825; color: #5d4037; }
+  .margen-block.low { background: #ffebee; border-left: 3px solid #c62828; color: #c62828; }
+  .margen-block strong { font-size: 1.1rem; }
+  .margen-pct { opacity: 0.8; font-size: 0.82rem; }
+
+  /* ─── Indicadores (urgencia, riesgo, reventa) ─── */
+  .indicadores { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .ind { font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; cursor: help; }
+  .ind.high { background: #ffebee; color: #c62828; }
+  .ind.mid { background: #fff8e1; color: #f57c00; }
+  .ind.low { background: #f5f5f5; color: #666; }
+  .ind.high-risk { background: #ffebee; color: #c62828; }
+  .ind.mid-risk { background: #fff8e1; color: #f57c00; }
+  .ind.low-risk { background: #e8f5e9; color: #2e7d32; }
+
+  /* ─── Argumentos ─── */
+  .args-block {
+    margin-top: 10px; padding: 8px 12px; background: #f1f8e9; border-radius: 6px;
+    border-left: 3px solid #689f38; font-size: 0.78rem; color: #33691e;
+  }
+  .args-title { font-weight: 700; margin-bottom: 4px; }
+  .arg-item { padding: 1px 0; }
+
+  /* ─── Red flags ─── */
+  .red-flags { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+  .red-flag {
+    font-size: 0.74rem; padding: 6px 10px; border-radius: 4px; line-height: 1.3;
+  }
+  .red-flag.critical { background: #ffebee; color: #c62828; border-left: 2px solid #c62828; }
+  .red-flag.warning  { background: #fff8e1; color: #5d4037; border-left: 2px solid #f9a825; }
+  .red-flag.positive { background: #e8f5e9; color: #2e7d32; border-left: 2px solid #2e7d32; }
+
+  /* Card oportunidad highlight */
+  .card.oportunidad { border-left: 4px solid #00897b; box-shadow: 0 4px 12px rgba(0,137,123,0.12); }
+  .card.oportunidad:hover { box-shadow: 0 6px 16px rgba(0,137,123,0.20); }
   .card.caro { border-left: 4px solid #aaa; opacity: 0.85; }
 
-  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; gap: 8px; }
   .card-title { font-weight: 700; font-size: 0.95rem; color: #1a1a2e; line-height: 1.3; flex: 1; }
-  .tag { font-size: 0.68rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; white-space: nowrap; margin-left: 8px; }
+  .card-header-tags { display: flex; flex-direction: column; gap: 4px; align-items: flex-end; }
+  .tag { font-size: 0.66rem; font-weight: 700; padding: 3px 8px; border-radius: 20px; white-space: nowrap; }
   .tag.super_ganga { background: #ffebee; color: #c62828; }
   .tag.ganga { background: #e8f5e9; color: #2e7d32; }
   .tag.normal { background: #f5f5f5; color: #757575; }
   .tag.caro { background: #f5f5f5; color: #aaa; }
 
-  .card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-  .badge { font-size: 0.72rem; padding: 2px 7px; border-radius: 4px; background: #f0f2f5; color: #555; }
+  .card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .badge { font-size: 0.7rem; padding: 2px 7px; border-radius: 4px; background: #f0f2f5; color: #555; }
   .badge.at { background: #e3f2fd; color: #1565c0; }
-  .badge.mt { background: #fafafa; color: #888; }
-  .badge.nueva { background: #fce4ec; color: #ad1457; font-weight: 700; }
-  .badge.drop { background: #e8f5e9; color: #1b5e20; font-weight: 700; }
+  .badge.trim { background: #f3e5f5; color: #6a1b9a; font-weight: 600; }
+  .badge.dias-old { background: #ffebee; color: #c62828; font-weight: 600; }
+  .badge.dias-mid { background: #fff8e1; color: #f57c00; }
+  .badge.dias-new { background: #e8f5e9; color: #2e7d32; }
+  .conf { font-size: 0.55rem; letter-spacing: 1px; vertical-align: middle; margin-left: 4px; cursor: help; }
+  .conf.high { color: #2e7d32; }
+  .conf.mid { color: #f57c00; }
+  .conf.low { color: #c62828; }
 
   .card-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
   .price-block { background: #f8f9fa; border-radius: 6px; padding: 8px 10px; }
-  .price-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 2px; }
+  .price-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 2px; }
   .price-val { font-size: 1.05rem; font-weight: 700; color: #1a1a2e; }
   .price-val.highlight { color: #e63946; }
   .price-val.market { color: #457b9d; }
+  .price-meta { font-size: 0.62rem; color: #999; margin-top: 1px; }
 
   .discount-bar { margin-top: 8px; }
-  .discount-label { font-size: 0.72rem; color: #888; margin-bottom: 4px; display: flex; justify-content: space-between; }
-  .discount-label span { font-weight: 600; }
+  .discount-label { font-size: 0.72rem; color: #555; margin-bottom: 4px; font-weight: 600; }
+
+  .alt-warning {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 10px;
+    background: #fff8e1;
+    border-left: 3px solid #f9a825;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    color: #5d4037;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+    cursor: pointer;
+  }
+  .alt-warning:hover { background: #ffecb3; transform: translateY(-1px); }
+  .alt-warning strong { color: #c0392b; }
+  .alt-warning .alt-link { color: #1976d2; font-weight: 600; }
+  .card.super_ganga .alt-warning,
+  .card.ganga .alt-warning { background: #fff3cd; }
+  .card.super_ganga .alt-warning:hover,
+  .card.ganga .alt-warning:hover { background: #ffe082; }
+
+  .alt-cheaper {
+    display: block;
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: #e0f7fa;
+    border-left: 3px solid #00838f;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    color: #00444a;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+    cursor: pointer;
+  }
+  .alt-cheaper:hover { background: #b2ebf2; transform: translateY(-1px); }
+  .alt-cheaper strong { color: #00838f; }
+  .alt-cheaper .alt-link { color: #1976d2; font-weight: 600; }
   .bar-track { height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden; }
   .bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
   .bar-fill.good { background: #2a9d8f; }
   .bar-fill.great { background: #e63946; }
-  .bar-fill.bad { background: #ccc; }
 
   .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 8px; border-top: 1px solid #f0f0f0; }
-  .score { font-size: 0.75rem; color: #888; }
+  .score { font-size: 0.72rem; color: #888; }
   .score strong { color: #333; }
-  .link-btn { font-size: 0.75rem; color: #e63946; text-decoration: none; font-weight: 600; }
+  .link-btn { font-size: 0.74rem; color: #e63946; text-decoration: none; font-weight: 600; }
   .link-btn:hover { text-decoration: underline; }
 
-  .fuente-badge { font-size: 0.65rem; padding: 1px 5px; border-radius: 3px; }
+  .fuente-badge { font-size: 0.62rem; padding: 1px 5px; border-radius: 3px; }
   .fuente-badge.rg { background: #fff3e0; color: #e65100; }
   .fuente-badge.ac { background: #e8eaf6; color: #283593; }
-  .fuente-badge.dm { background: #e8f5e9; color: #1b5e20; }
+  .fuente-badge.ml { background: #fff9c4; color: #827717; }
+  .fuente-badge.kv { background: #e1f5fe; color: #01579b; }
 
-  .section-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 1rem 0 0.6rem; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; }
+  .section-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 1rem 0 0.6rem; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; }
+  .section-title.v2 { color: #5b21b6; border-bottom-color: #c4b5fd; }
 
   .empty { text-align: center; padding: 3rem; color: #aaa; }
   .empty .icon { font-size: 3rem; margin-bottom: 0.5rem; }
@@ -103,45 +279,58 @@
     .filters { padding: 0.8rem 1rem; }
     .content { padding: 0.8rem 1rem; }
     .grid { grid-template-columns: 1fr; }
-    .stats-bar { padding: 0.6rem 1rem; gap: 12px; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <span>🔍</span>
+  <span class="logo">🔍</span>
   <div>
     <h1>Ganga Hunter</h1>
     <div class="subtitle">Detector de autos subvaluados en Argentina</div>
   </div>
+  <div class="updated-time" id="updated-time"></div>
 </header>
 
 <div class="filters">
+  <div class="filter-group" style="min-width: 180px;">
+    <label>🎯 Estrategia</label>
+    <select id="f-estrategia" onchange="buscar()">
+      <option value="default">Balanceada</option>
+      <option value="personal">🚗 Compra personal</option>
+      <option value="reventa">💼 Reventa</option>
+      <option value="premium">💎 Premium inteligente</option>
+      <option value="bajo_riesgo">🛡 Bajo riesgo</option>
+      <option value="max_margen">💰 Máximo margen</option>
+    </select>
+  </div>
   <div class="filter-group">
     <label>Marca</label>
     <select id="f-marca">
-      <option value="todas">Todas las marcas</option>
+      <option value="todas">Todas</option>
       <option value="audi">Audi</option>
       <option value="bmw">BMW</option>
+      <option value="byd">BYD</option>
+      <option value="chery">Chery</option>
       <option value="chevrolet">Chevrolet</option>
       <option value="citroen">Citroën</option>
       <option value="fiat">Fiat</option>
       <option value="ford">Ford</option>
+      <option value="haval">Haval</option>
       <option value="honda">Honda</option>
       <option value="hyundai">Hyundai</option>
       <option value="jeep">Jeep</option>
       <option value="kia">Kia</option>
       <option value="mazda">Mazda</option>
       <option value="mercedes">Mercedes-Benz</option>
+      <option value="mitsubishi">Mitsubishi</option>
       <option value="nissan">Nissan</option>
       <option value="peugeot">Peugeot</option>
       <option value="renault">Renault</option>
+      <option value="subaru">Subaru</option>
       <option value="toyota">Toyota</option>
       <option value="volkswagen">Volkswagen</option>
-      <option value="chery">Chery</option>
-      <option value="haval">Haval</option>
-      <option value="byd">BYD</option>
     </select>
   </div>
   <div class="filter-group">
@@ -153,8 +342,12 @@
     <input type="number" id="f-km" placeholder="ej: 120000" value="">
   </div>
   <div class="filter-group">
-    <label>Precio máx (USD)</label>
-    <input type="number" id="f-precio" placeholder="Sin límite" value="">
+    <label>Precio mín USD</label>
+    <input type="number" id="f-precio-min" placeholder="" value="">
+  </div>
+  <div class="filter-group">
+    <label>Precio máx USD</label>
+    <input type="number" id="f-precio-max" placeholder="" value="">
   </div>
   <div class="filter-group">
     <label>Transmisión</label>
@@ -163,60 +356,101 @@
       <option value="1">Solo AT</option>
     </select>
   </div>
+  <div class="filter-group">
+    <label>Ordenar por</label>
+    <select id="f-orden" onchange="aplicarOrden()">
+      <option value="confidence" selected>🎯 Confidence v2</option>
+      <option value="oportunidad">💎 Score Oportunidad</option>
+      <option value="negociacion">🤝 Poder Negociación</option>
+      <option value="dias_desc">🕒 Más días publicado</option>
+      <option value="score">Score (legacy)</option>
+      <option value="precio_asc">Precio: menor a mayor</option>
+      <option value="precio_desc">Precio: mayor a menor</option>
+      <option value="anio_desc">Año: más nuevo</option>
+      <option value="anio_asc">Año: más viejo</option>
+      <option value="km_asc">Km: menor a mayor</option>
+      <option value="km_desc">Km: mayor a menor</option>
+      <option value="descuento">Descuento %</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Solo</label>
+    <select id="f-solo" onchange="aplicarOrden()">
+      <option value="">Todos (sin fakes)</option>
+      <option value="v2_super">🎯 Solo super_ganga_v2</option>
+      <option value="v2_ganga_plus">🎯 super_ganga_v2 + ganga_v2</option>
+      <option value="oportunidad">💎 Solo oportunidades</option>
+      <option value="alta_neg">🤝 Solo ALTA negociación</option>
+      <option value="60d">🕒 +30 días publicado</option>
+      <option value="show_fakes">🚫 Mostrar fakes filtrados</option>
+    </select>
+  </div>
   <button class="btn" onclick="buscar()">🔍 Buscar</button>
   <button class="btn btn-secondary" onclick="resetFiltros()">↺ Reset</button>
+  <div class="filter-group" style="min-width: 180px;">
+    <label>Búsquedas guardadas</label>
+    <select id="f-saved" onchange="cargarBusquedaGuardada()">
+      <option value="">— ninguna —</option>
+    </select>
+  </div>
+  <button class="btn btn-secondary" onclick="guardarBusqueda()" title="Guardar filtros actuales">⭐ Guardar</button>
+  <button class="btn btn-secondary" onclick="borrarBusquedaGuardada()" title="Borrar la búsqueda seleccionada">🗑</button>
 </div>
 
 <div class="stats-bar" id="stats-bar" style="display:none">
   <div class="stat">Total: <span class="stat-val" id="s-total">-</span></div>
+  <div class="stat">Con referencia: <span class="stat-val" id="s-ref">-</span></div>
   <div class="stat">Gangas: <span class="stat-val" id="s-gangas">-</span></div>
-  <div class="stat">Con precio CCA: <span class="stat-val" id="s-cca">-</span></div>
-  <div class="stat">🆕 Nuevas: <span class="stat-val" id="s-nuevas">-</span></div>
-  <div class="stat">📉 Bajaron: <span class="stat-val" id="s-bajaron">-</span></div>
-  <div class="stat">
-    Fuentes:
-    <span class="stat-val" id="s-fuentes">-</span>
-  </div>
-  <div class="stat-updated" id="s-updated"></div>
+  <div class="stat">Super: <span class="stat-val" id="s-super">-</span></div>
+  <div class="stat">🎯 Confidence v2: <span class="stat-val v2" id="s-v2">-</span></div>
+  <div class="stat">🚫 Fakes: <span class="stat-val" id="s-fakes">-</span></div>
+  <div class="stat">Fuentes: <span class="stat-val" id="s-fuentes">-</span></div>
 </div>
 
 <div class="tabs">
-  <div class="tab" onclick="showTab(&#39;gangas&#39;, this)">🔥 Gangas</div>
-  <div class="tab" onclick="showTab(&#39;movimientos&#39;, this)">✨ Hoy</div>
-  <div class="tab active" onclick="showTab(&#39;normales&#39;, this)">📋 Todos</div>
+  <div class="tab active" onclick="showTab('v2', this)">🎯 Confidence v2</div>
+  <div class="tab" onclick="showTab('oportunidades', this)">💎 Oportunidades</div>
+  <div class="tab" onclick="showTab('gangas', this)">🔥 Gangas</div>
+  <div class="tab" onclick="showTab('todos', this)">🔍 Todos</div>
+  <div class="tab" onclick="showTab('normales', this)">📋 Resto</div>
 </div>
 
 <div class="content">
-  <div id="loading" class="loading" style="display: none;">
+  <div id="loading" class="loading" style="display:none">
     <div class="spinner"></div>
-    Buscando autos...
+    Buscando...
   </div>
-  <div id="error" class="error-msg" style="display: block;">Pocas publicaciones</div>
-  <div id="tab-gangas" style="display: none;"></div>
-  <div id="tab-movimientos" style="display: none;"></div>
-  <div id="tab-normales" style=""></div>
+  <div id="error" class="error-msg" style="display:none"></div>
+  <div id="tab-v2"></div>
+  <div id="tab-oportunidades" style="display:none"></div>
+  <div id="tab-gangas" style="display:none"></div>
+  <div id="tab-todos" style="display:none"></div>
+  <div id="tab-normales" style="display:none"></div>
 </div>
 
 <script>
 const WORKER_URL = 'https://misty-sun-f8e0.b-tosto90.workers.dev';
 
 let currentData = null;
-let currentTab = 'gangas';
+let currentTab = 'v2';
 
 async function buscar() {
   const marca = document.getElementById('f-marca').value;
   const anio = document.getElementById('f-anio').value;
   const km = document.getElementById('f-km').value;
-  const precio = document.getElementById('f-precio').value;
+  const precioMin = document.getElementById('f-precio-min').value;
+  const precioMax = document.getElementById('f-precio-max').value;
   const soloAt = document.getElementById('f-trans').value;
+  const estrategia = document.getElementById('f-estrategia').value;
 
   const params = new URLSearchParams();
   params.set('marca', marca);
-  params.set('fuente', 'ambos');
   if (anio) params.set('anio_min', anio);
   if (km) params.set('km_max', km);
-  if (precio) params.set('precio_max', precio);
+  if (precioMin) params.set('precio_min', precioMin);
+  if (precioMax) params.set('precio_max', precioMax);
   if (soloAt === '1') params.set('solo_at', '1');
+  if (estrategia && estrategia !== 'default') params.set('estrategia', estrategia);
 
   showLoading(true);
   hideError();
@@ -224,18 +458,16 @@ async function buscar() {
   try {
     const res = await fetch(`${WORKER_URL}?${params}`);
     const data = await res.json();
-
     if (!data.ok) {
       showError(data.error || 'Error desconocido');
       return;
     }
-
     currentData = data;
     renderStats(data);
     renderTab(currentTab);
     document.getElementById('stats-bar').style.display = 'flex';
-  } catch(e) {
-    showError('Error conectando al servidor: ' + e.message);
+  } catch (e) {
+    showError('Error: ' + e.message);
   } finally {
     showLoading(false);
   }
@@ -245,154 +477,524 @@ function resetFiltros() {
   document.getElementById('f-marca').value = 'todas';
   document.getElementById('f-anio').value = '';
   document.getElementById('f-km').value = '';
-  document.getElementById('f-precio').value = '';
+  document.getElementById('f-precio-min').value = '';
+  document.getElementById('f-precio-max').value = '';
   document.getElementById('f-trans').value = '0';
+  document.getElementById('f-orden').value = 'confidence';
+  document.getElementById('f-solo').value = '';
+  document.getElementById('f-saved').value = '';
+  buscar();
+}
+
+// ─── BÚSQUEDAS GUARDADAS (localStorage) ─────────────────────────────────────
+function getSavedSearches() {
+  try { return JSON.parse(localStorage.getItem('gh_saved_searches') || '{}'); }
+  catch { return {}; }
+}
+
+function setSavedSearches(obj) {
+  localStorage.setItem('gh_saved_searches', JSON.stringify(obj));
+}
+
+function refreshSavedDropdown() {
+  const sel = document.getElementById('f-saved');
+  const saved = getSavedSearches();
+  const current = sel.value;
+  sel.innerHTML = '<option value="">— ninguna —</option>';
+  for (const name of Object.keys(saved).sort()) {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    sel.appendChild(opt);
+  }
+  if (saved[current]) sel.value = current;
+}
+
+function guardarBusqueda() {
+  const nombre = prompt('Nombre para esta búsqueda (ej. "Mercedes C250 hasta 40k"):');
+  if (!nombre || !nombre.trim()) return;
+
+  const filtros = {
+    marca: document.getElementById('f-marca').value,
+    anio: document.getElementById('f-anio').value,
+    km: document.getElementById('f-km').value,
+    precio_min: document.getElementById('f-precio-min').value,
+    precio_max: document.getElementById('f-precio-max').value,
+    trans: document.getElementById('f-trans').value,
+    orden: document.getElementById('f-orden').value,
+  };
+  const saved = getSavedSearches();
+  saved[nombre.trim()] = filtros;
+  setSavedSearches(saved);
+  refreshSavedDropdown();
+  document.getElementById('f-saved').value = nombre.trim();
+}
+
+function cargarBusquedaGuardada() {
+  const name = document.getElementById('f-saved').value;
+  if (!name) return;
+  const saved = getSavedSearches();
+  const f = saved[name];
+  if (!f) return;
+  document.getElementById('f-marca').value = f.marca || 'todas';
+  document.getElementById('f-anio').value = f.anio || '';
+  document.getElementById('f-km').value = f.km || '';
+  document.getElementById('f-precio-min').value = f.precio_min || '';
+  document.getElementById('f-precio-max').value = f.precio_max || '';
+  document.getElementById('f-trans').value = f.trans || '0';
+  document.getElementById('f-orden').value = f.orden || 'confidence';
+  buscar();
+}
+
+function borrarBusquedaGuardada() {
+  const name = document.getElementById('f-saved').value;
+  if (!name) {
+    alert('Seleccioná primero una búsqueda guardada para borrar');
+    return;
+  }
+  if (!confirm(`¿Borrar "${name}"?`)) return;
+  const saved = getSavedSearches();
+  delete saved[name];
+  setSavedSearches(saved);
+  refreshSavedDropdown();
+  document.getElementById('f-saved').value = '';
 }
 
 function showTab(tab, el) {
   currentTab = tab;
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
+  document.getElementById('tab-v2').style.display = tab === 'v2' ? '' : 'none';
+  document.getElementById('tab-oportunidades').style.display = tab === 'oportunidades' ? '' : 'none';
   document.getElementById('tab-gangas').style.display = tab === 'gangas' ? '' : 'none';
-  document.getElementById('tab-movimientos').style.display = tab === 'movimientos' ? '' : 'none';
+  document.getElementById('tab-todos').style.display = tab === 'todos' ? '' : 'none';
   document.getElementById('tab-normales').style.display = tab === 'normales' ? '' : 'none';
   if (currentData) renderTab(tab);
 }
 
 function renderStats(data) {
   const m = data.meta;
+  const all = [...(data.gangas || []), ...(data.normales || [])];
   document.getElementById('s-total').textContent = m.total;
+  document.getElementById('s-ref').textContent = m.con_referencia;
   document.getElementById('s-gangas').textContent = m.gangas;
-  document.getElementById('s-cca').textContent = m.con_cca || 0;
-  const all = data.normales || [];
-  const nuevas = m.nuevas_hoy != null ? m.nuevas_hoy : all.filter(i => i.is_new).length;
-  const bajaron = m.bajaron_hoy != null ? m.bajaron_hoy : all.filter(i => i.recent_price_drop).length;
-  document.getElementById('s-nuevas').textContent = nuevas;
-  document.getElementById('s-bajaron').textContent = bajaron;
+  document.getElementById('s-super').textContent = m.super_gangas;
+  const v2Super = all.filter(i => i.ganga_tag === 'super_ganga_v2').length;
+  const v2Ganga = all.filter(i => i.ganga_tag === 'ganga_v2').length;
+  const fakes = all.filter(i => i.ganga_tag === 'fake').length;
+  document.getElementById('s-v2').textContent = `${v2Super} super · ${v2Ganga} ganga`;
+  document.getElementById('s-fakes').textContent = fakes;
   const f = m.fuentes || {};
-  document.getElementById('s-fuentes').textContent =
-    `RG: ${f.rg||0} | AC: ${f.ac||0}`;
-  if (m.updated || data.updated) {
-    const d = new Date(m.updated || data.updated);
-    document.getElementById('s-updated').textContent =
-      'Actualizado: ' + d.toLocaleDateString('es-AR') + ' ' + d.toLocaleTimeString('es-AR', {hour:'2-digit',minute:'2-digit'});
+  document.getElementById('s-fuentes').textContent = `RG ${f.rg || 0} · AC ${f.ac || 0}` + (f.ml ? ` · ML ${f.ml}` : '') + (f.kv ? ` · KV ${f.kv}` : '');
+  if (data.updated) {
+    const d = new Date(data.updated);
+    document.getElementById('updated-time').textContent = 'Datos: ' + d.toLocaleDateString('es-AR') + ' ' + d.toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
   }
+}
+
+function sortItems(items) {
+  const orden = document.getElementById('f-orden').value;
+  const solo = (document.getElementById('f-solo') || {}).value || '';
+
+  let filtered = items;
+
+  // Filtrar fakes salvo que el user explícitamente quiera verlos
+  if (solo !== 'show_fakes') {
+    filtered = filtered.filter(i => i.ganga_tag !== 'fake');
+  }
+
+  // Filtros adicionales
+  if (solo === 'v2_super') filtered = filtered.filter(i => i.ganga_tag === 'super_ganga_v2');
+  else if (solo === 'v2_ganga_plus') filtered = filtered.filter(i => i.ganga_tag === 'super_ganga_v2' || i.ganga_tag === 'ganga_v2');
+  else if (solo === 'oportunidad') filtered = filtered.filter(i => i.es_oportunidad === true);
+  else if (solo === 'alta_neg') filtered = filtered.filter(i => i.poder_negociacion === 'ALTA');
+  else if (solo === '60d') filtered = filtered.filter(i => (i.days_published || 0) >= 30);
+  else if (solo === 'show_fakes') filtered = filtered.filter(i => i.ganga_tag === 'fake');
+
+  const sorted = [...filtered];
+  switch (orden) {
+    case 'confidence':   sorted.sort((a, b) => (b.ganga_confidence || 0) - (a.ganga_confidence || 0)); break;
+    case 'oportunidad':  sorted.sort((a, b) => (b.score_oportunidad || 0) - (a.score_oportunidad || 0)); break;
+    case 'negociacion':  sorted.sort((a, b) => (b.poder_negociacion_score || 0) - (a.poder_negociacion_score || 0)); break;
+    case 'dias_desc':    sorted.sort((a, b) => (b.days_published || 0) - (a.days_published || 0)); break;
+    case 'precio_asc':   sorted.sort((a, b) => a.precio_usd - b.precio_usd); break;
+    case 'precio_desc':  sorted.sort((a, b) => b.precio_usd - a.precio_usd); break;
+    case 'anio_desc':    sorted.sort((a, b) => b.year - a.year || b.score - a.score); break;
+    case 'anio_asc':     sorted.sort((a, b) => a.year - b.year || b.score - a.score); break;
+    case 'km_asc':       sorted.sort((a, b) => (a.km || 999999) - (b.km || 999999)); break;
+    case 'km_desc':      sorted.sort((a, b) => (b.km || 0) - (a.km || 0)); break;
+    case 'descuento':    sorted.sort((a, b) => (b.descuento_pct || 0) - (a.descuento_pct || 0)); break;
+    case 'score':
+    default:             sorted.sort((a, b) => (b.score || 0) - (a.score || 0));
+  }
+  return sorted;
+}
+
+function aplicarOrden() {
+  if (!currentData) return;
+  renderTab(currentTab);
 }
 
 function renderTab(tab) {
   if (!currentData) return;
   const el = document.getElementById(`tab-${tab}`);
-  const items = tab === 'gangas' ? currentData.gangas : currentData.normales;
+
+  // Universo completo
+  const allItems = [...(currentData.gangas || []), ...(currentData.normales || [])];
+
+  let items;
+  if (tab === 'v2') {
+    // Tab dedicado al scoring v2: solo listings con ganga_confidence >= 65 (ganga_v2 o super_ganga_v2)
+    items = allItems.filter(i => i.ganga_tag === 'super_ganga_v2' || i.ganga_tag === 'ganga_v2');
+  } else if (tab === 'oportunidades') {
+    items = allItems.filter(i => i.es_oportunidad === true);
+  } else if (tab === 'todos') {
+    items = allItems;
+  } else {
+    items = tab === 'gangas' ? currentData.gangas : currentData.normales;
+  }
 
   if (!items || items.length === 0) {
-    el.innerHTML = `<div class="empty"><div class="icon">🔍</div><p>${tab === 'gangas' ? 'No se encontraron gangas con los filtros actuales.' : 'No hay resultados.'}</p></div>`;
+    const msg = tab === 'v2' ? 'No hay listings con Ganga Confidence ≥ 65 con estos filtros. Probá ampliar marca/precio.' :
+                tab === 'oportunidades' ? 'No hay oportunidades reales con estos filtros. Probá ampliar.' :
+                tab === 'gangas' ? 'No se encontraron gangas.' : 'No hay resultados.';
+    el.innerHTML = `<div class="empty"><div class="icon">📭</div><p>${msg}</p></div>`;
     return;
   }
 
-  if (tab === 'gangas') {
-    const superGangas = items.filter(i => i.tag === 'super_ganga');
-    const gangas = items.filter(i => i.tag === 'ganga');
-    let html = '';
-    if (superGangas.length) {
-      html += `<div class="section-title">🔥 Super Gangas (${superGangas.length})</div><div class="grid">${superGangas.map(renderCard).join('')}</div>`;
+  if (tab === 'v2') {
+    // Filtrar fakes y dividir por nivel
+    const noFakes = items.filter(i => i.ganga_tag !== 'fake');
+    const supers = noFakes.filter(i => i.ganga_tag === 'super_ganga_v2')
+                          .sort((a, b) => (b.ganga_confidence || 0) - (a.ganga_confidence || 0));
+    const gangas = noFakes.filter(i => i.ganga_tag === 'ganga_v2')
+                          .sort((a, b) => (b.ganga_confidence || 0) - (a.ganga_confidence || 0));
+    let html = `<div style="background:#f5f3ff;border-left:3px solid #7c3aed;padding:10px 14px;border-radius:6px;margin-bottom:14px;font-size:0.85rem;color:#4c1d95;">
+      💡 <strong>Ganga Confidence v2</strong> combina cuatro señales independientes: precio bajo CCA, outlier dentro del segmento (modelo+año±1+km±20%), velocity del modelo, y novedad. Score ≥80 = super_ganga_v2 · ≥65 = ganga_v2.
+    </div>`;
+    if (supers.length) {
+      html += `<div class="section-title v2">🎯 Super Gangas v2 (${supers.length}) · confidence ≥ 80</div><div class="grid">${supers.map(renderCard).join('')}</div>`;
     }
     if (gangas.length) {
-      html += `<div class="section-title">✅ Gangas (${gangas.length})</div><div class="grid">${gangas.map(renderCard).join('')}</div>`;
+      html += `<div class="section-title v2">🎯 Gangas v2 (${gangas.length}) · confidence 65-79</div><div class="grid">${gangas.map(renderCard).join('')}</div>`;
     }
-    el.innerHTML = html || `<div class="empty"><div class="icon">😔</div><p>No se encontraron gangas.</p></div>`;
-  } else if (tab === 'movimientos') {
-    const isGanga = i => i.tag === 'super_ganga' || i.tag === 'ganga';
-    const byDrop = (a, b) => (b.recent_drop_pct || 0) - (a.recent_drop_pct || 0);
-    const nuevasGanga = items.filter(i => i.is_new && isGanga(i));
-    const nuevasOtras = items.filter(i => i.is_new && !isGanga(i));
-    const dropsGanga = items.filter(i => i.recent_price_drop && isGanga(i)).sort(byDrop);
-    const dropsOtras = items.filter(i => i.recent_price_drop && !isGanga(i)).sort(byDrop);
+    el.innerHTML = html;
+  } else if (tab === 'oportunidades') {
+    const sorted = sortItems(items);
+    const top = sorted.slice(0, 12);
+    const resto = sorted.slice(12);
     let html = '';
-    if (nuevasGanga.length) {
-      html += `<div class="section-title">🔥 Gangas nuevas (${nuevasGanga.length})</div><div class="grid">${nuevasGanga.map(renderCard).join('')}</div>`;
+    if (top.length) {
+      html += `<div class="section-title">💎 Top Oportunidades del Día (${top.length}) · mayor ${ordenLabel()}</div><div class="grid">${top.map(renderCard).join('')}</div>`;
     }
-    if (dropsGanga.length) {
-      html += `<div class="section-title">🔥 Gangas que bajaron (${dropsGanga.length})</div><div class="grid">${dropsGanga.map(renderCard).join('')}</div>`;
+    if (resto.length) {
+      html += `<div class="section-title">Otras oportunidades (${resto.length})</div><div class="grid">${resto.map(renderCard).join('')}</div>`;
     }
-    if (nuevasOtras.length) {
-      html += `<div class="section-title">🆕 Otras publicaciones nuevas (${nuevasOtras.length})</div><div class="grid">${nuevasOtras.map(renderCard).join('')}</div>`;
-    }
-    if (dropsOtras.length) {
-      html += `<div class="section-title">📉 Otras bajadas (${dropsOtras.length})</div><div class="grid">${dropsOtras.map(renderCard).join('')}</div>`;
-    }
-    el.innerHTML = html || `<div class="empty"><div class="icon">🌙</div><p>Sin movimientos detectados desde el último run.</p></div>`;
+    el.innerHTML = html;
+  } else if (tab === 'gangas') {
+    const sup = sortItems(items.filter(i => i.tag === 'super_ganga'));
+    const gan = sortItems(items.filter(i => i.tag === 'ganga'));
+    let html = '';
+    if (sup.length) html += `<div class="section-title">🔥 Super Gangas (${sup.length}) · 30%+ bajo mediana del modelo</div><div class="grid">${sup.map(renderCard).join('')}</div>`;
+    if (gan.length) html += `<div class="section-title">✅ Gangas (${gan.length}) · 15-30% bajo mediana</div><div class="grid">${gan.map(renderCard).join('')}</div>`;
+    el.innerHTML = html;
+  } else if (tab === 'todos') {
+    const sorted = sortItems(items);
+    el.innerHTML = `<div class="section-title">Todos (${sorted.length}) · ordenados por ${ordenLabel()}</div><div class="grid">${sorted.map(renderCard).join('')}</div>`;
   } else {
-    el.innerHTML = `<div class="section-title">Todos los autos (${items.length})</div><div class="grid">${items.map(renderCard).join('')}</div>`;
+    const sorted = sortItems(items);
+    el.innerHTML = `<div class="section-title">Resto (${sorted.length})</div><div class="grid">${sorted.map(renderCard).join('')}</div>`;
   }
 }
 
+function ordenLabel() {
+  const sel = document.getElementById('f-orden');
+  return sel.options[sel.selectedIndex].text.toLowerCase();
+}
+
 function renderCard(l) {
-  const descPct = l.descuento_pct || 0;
-  const barWidth = Math.min(100, Math.max(0, descPct));
-  const barClass = descPct >= 25 ? 'great' : descPct >= 10 ? 'good' : 'bad';
-  const transClass = l.trans === 'AT' ? 'at' : l.trans === 'MT' ? 'mt' : '';
-  const tagLabel = l.tag === 'super_ganga' ? '🔥 Super Ganga' : l.tag === 'ganga' ? '✅ Ganga' : l.tag === 'caro' ? 'Caro' : '';
+  const desc = l.descuento_pct || 0;
   const kmFmt = l.km ? l.km.toLocaleString('es-AR') + ' km' : '0 km';
+  const transBadge = l.trans && l.trans !== '?' ? `<span class="badge ${l.trans === 'AT' ? 'at' : ''}">${l.trans}</span>` : '';
   const fuelBadge = l.fuel && l.fuel !== '?' ? `<span class="badge">${l.fuel}</span>` : '';
-  const transBadge = l.trans && l.trans !== '?' ? `<span class="badge ${transClass}">${l.trans}</span>` : '';
   const fuenteBadge = `<span class="fuente-badge ${l.fuente}">${l.fuente.toUpperCase()}</span>`;
-  const nuevaBadge = l.is_new ? '<span class="badge nueva">🆕 NUEVA</span>' : '';
-  const dropBadge = l.recent_price_drop && l.recent_drop_pct ? `<span class="badge drop">📉 -${l.recent_drop_pct}%</span>` : '';
+  const trimBadge = l.trim ? `<span class="badge trim">${l.trim.replace(/_/g, ' ').toUpperCase()}</span>` : '';
 
-  const precioMercado = l.precio_mercado ? `<div class="price-block"><div class="price-label">Precio mercado</div><div class="price-val market">USD ${l.precio_mercado.toLocaleString('es-AR')}</div></div>` : '';
-  const precioCca = l.precio_cca ? `<div class="price-block"><div class="price-label">CCA</div><div class="price-val">USD ${l.precio_cca.toLocaleString('es-AR')}</div></div>` : '';
+  // Días publicado
+  let dias = null;
+  if (typeof l.days_published === 'number') dias = l.days_published;
+  else if (typeof l.days_published_estimated === 'number') dias = l.days_published_estimated;
+  else if (l.first_seen) dias = Math.floor((Date.now() - new Date(l.first_seen).getTime()) / 86400000);
+  let diasBadge = '';
+  if (dias !== null) {
+    if (dias >= 60) diasBadge = `<span class="badge dias-old" title="Hace ${dias}d publicado">🕒 ${dias}d</span>`;
+    else if (dias >= 30) diasBadge = `<span class="badge dias-mid" title="Hace ${dias}d publicado">🕒 ${dias}d</span>`;
+    else if (dias <= 3) diasBadge = `<span class="badge dias-new" title="Nueva (${dias}d)">✨ ${dias}d</span>`;
+    else diasBadge = `<span class="badge">🕒 ${dias}d</span>`;
+  }
 
-  const discountBar = l.precio_mercado ? `
-    <div class="discount-bar">
-      <div class="discount-label"><span>${descPct > 0 ? descPct + '% bajo mercado' : Math.abs(descPct) + '% sobre mercado'}</span></div>
-      <div class="bar-track"><div class="bar-fill ${barClass}" style="width:${barWidth}%"></div></div>
-    </div>` : '';
+  // Vendedor (estimado por título/URL)
+  let vendedorBadge = '';
+  if (l.vendedor && l.vendedor.tipo && l.vendedor.tipo !== 'desconocido') {
+    const map = {
+      particular: { lbl: '👤 Particular', cls: 'v-particular' },
+      agencia: { lbl: '🏢 Agencia', cls: 'v-agencia' },
+      oficial: { lbl: '🏛 Oficial', cls: 'v-oficial' },
+      revendedor: { lbl: '🔄 Revendedor', cls: 'v-revendedor' },
+    };
+    const v = map[l.vendedor.tipo];
+    if (v) vendedorBadge = `<span class="badge ${v.cls}" title="Tipo de vendedor estimado (${Math.round((l.vendedor.confianza || 0) * 100)}% confianza)">${v.lbl}</span>`;
+  }
+
+  // Bajadas de precio
+  let dropsBadge = '';
+  if (l.price_drops && l.price_drops > 0) {
+    const pct = l.price_drop_pct || 0;
+    dropsBadge = `<span class="badge drops" title="Bajó precio ${l.price_drops} ${l.price_drops === 1 ? 'vez' : 'veces'}">📉 -${pct}%</span>`;
+  }
+
+  // ─── Ganga Confidence v2 badge (card-header) ───
+  let v2Badge = '';
+  const conf = l.ganga_confidence;
+  const v2Tag = l.ganga_tag || '';
+  if (conf !== null && conf !== undefined) {
+    let cls = 'normal';
+    let label = `${conf}/100`;
+    if (v2Tag === 'super_ganga_v2') { cls = 'super'; label = `🔥 ${conf}/100`; }
+    else if (v2Tag === 'ganga_v2') { cls = 'ganga'; label = `✓ ${conf}/100`; }
+    else if (v2Tag === 'interesante') { cls = 'interesante'; label = `${conf}/100`; }
+    else if (v2Tag === 'fake') { cls = 'normal'; label = `🚫 fake`; }
+    v2Badge = `<span class="gc-badge ${cls}" title="Ganga Confidence v2 · ${v2Tag}">🎯 ${label}</span>`;
+  }
+
+  // ─── Confidence breakdown (solo si es ganga_v2 o super_ganga_v2) ───
+  let v2Block = '';
+  if (l.ganga_breakdown && (v2Tag === 'super_ganga_v2' || v2Tag === 'ganga_v2')) {
+    const b = l.ganga_breakdown;
+    const fmt = (k, val) => {
+      if (val === null || val === undefined) return `<span class="gc-comp">${k}: <span class="v na">N/A</span></span>`;
+      return `<span class="gc-comp">${k}: <span class="v">${val}</span></span>`;
+    };
+    let ancla = '';
+    if (l.precio_cca && l.descuento_cca_pct != null) {
+      const pct = l.descuento_cca_pct;
+      const sign = pct > 0 ? '-' : '+';
+      ancla += `<div class="gc-ancla">📐 <strong>CCA</strong>: USD ${l.precio_cca.toLocaleString('es-AR')} (${sign}${Math.abs(pct)}% vs pedido)</div>`;
+    }
+    if (l.bucket_n && l.bucket_median_usd) {
+      ancla += `<div class="gc-ancla">📊 <strong>Bucket</strong>: ${l.bucket_n} comparables · mediana USD ${l.bucket_median_usd.toLocaleString('es-AR')} · z=${l.bucket_z_score}</div>`;
+    }
+    v2Block = `
+      <div class="gc-summary">
+        <div class="gc-summary-title">🎯 Confidence v2 · Desglose</div>
+        ${fmt('CCA', b.cca)}${fmt('Outlier', b.outlier)}${fmt('Velocity', b.velocity)}${fmt('Freshness', b.freshness)}
+        ${ancla}
+      </div>`;
+  }
+
+  // Razón principal (lenguaje natural)
+  let razonBlock = '';
+  if (l.razon_principal) {
+    razonBlock = `
+      <div class="razon-block">
+        <div class="razon-label">¿Por qué aparece?</div>
+        <div class="razon-text">${escapeHtml(l.razon_principal)}</div>
+      </div>`;
+  }
+
+  // GHS - Ganga Hunter Score (Worker)
+  const ghs = l.ganga_hunter_score || 0;
+  const ghsCat = l.ganga_hunter_categoria || '';
+  let ghsClass = 'low';
+  if (ghs >= 80) ghsClass = 'extraord';
+  else if (ghs >= 70) ghsClass = 'high';
+  else if (ghs >= 60) ghsClass = 'good';
+  else if (ghs >= 50) ghsClass = 'mid';
+
+  const ghsBlock = `
+    <div class="ghs-block ${ghsClass}">
+      <div class="ghs-score">${ghs}</div>
+      <div class="ghs-meta">
+        <div class="ghs-cat">${ghsCat}</div>
+        <div class="ghs-label">Ganga Hunter Score (Worker)</div>
+      </div>
+    </div>`;
+
+  // Valor real (3 puntos)
+  let valorBlock = '';
+  if (l.valor_real) {
+    const v = l.valor_real;
+    valorBlock = `
+      <div class="valor-real">
+        <div class="valor-label">Valor real de mercado</div>
+        <div class="valor-grid">
+          <div><span class="vl">Conserv.</span><span class="vv">USD ${v.conservador.toLocaleString('es-AR')}</span></div>
+          <div class="probable"><span class="vl">Probable</span><span class="vv">USD ${v.probable.toLocaleString('es-AR')}</span></div>
+          <div><span class="vl">Optim.</span><span class="vv">USD ${v.optimista.toLocaleString('es-AR')}</span></div>
+        </div>
+      </div>`;
+  }
+
+  // Negociación
+  let negBlock = '';
+  if (l.negociacion) {
+    const n = l.negociacion;
+    negBlock = `
+      <div class="neg-block">
+        <div class="neg-row"><span class="neg-key">🎯 Oferta inicial:</span><span class="neg-val strong">USD ${n.oferta_inicial.toLocaleString('es-AR')}</span></div>
+        <div class="neg-row"><span class="neg-key">Cierre probable:</span><span class="neg-val">USD ${n.cierre_min.toLocaleString('es-AR')} – ${n.cierre_max.toLocaleString('es-AR')}</span></div>
+        <div class="neg-row"><span class="neg-key">Máx. recomendable:</span><span class="neg-val">USD ${n.maximo_recomendable.toLocaleString('es-AR')}</span></div>
+      </div>`;
+  }
+
+  // Margen
+  let margenBlock = '';
+  if (l.margen) {
+    const m = l.margen;
+    const mClass = m.margen_neto > 1500 ? 'high' : m.margen_neto > 500 ? 'mid' : 'low';
+    if (m.pesimista && m.probable && m.optimista) {
+      margenBlock = `
+        <div class="margen-block ${mClass}">
+          <div class="margen-header">
+            <span>💰 Margen neto estimado:</span>
+            <strong>USD ${m.margen_neto.toLocaleString('es-AR')}</strong>
+            <span class="margen-pct">(${m.margen_pct}%)</span>
+          </div>
+          <div class="margen-escenarios">
+            <div class="esc"><span class="esc-lbl">Pesimista</span><span class="esc-val">USD ${m.pesimista.margen_neto.toLocaleString('es-AR')}</span></div>
+            <div class="esc probable"><span class="esc-lbl">Probable</span><span class="esc-val">USD ${m.probable.margen_neto.toLocaleString('es-AR')}</span></div>
+            <div class="esc"><span class="esc-lbl">Optimista</span><span class="esc-val">USD ${m.optimista.margen_neto.toLocaleString('es-AR')}</span></div>
+          </div>
+        </div>`;
+    } else {
+      margenBlock = `
+        <div class="margen-block ${mClass}">
+          <span>💰 Margen neto estimado:</span>
+          <strong>USD ${m.margen_neto.toLocaleString('es-AR')}</strong>
+          <span class="margen-pct">(${m.margen_pct}%)</span>
+        </div>`;
+    }
+  }
+
+  // Indicadores secundarios
+  const urg = l.urgencia_vendedor;
+  const riesgo = l.riesgo;
+  const reventa = l.reventa;
+  let indicadores = '';
+  if (urg || riesgo || reventa) {
+    indicadores = '<div class="indicadores">';
+    if (urg) {
+      const cls = urg.nivel === 'MUY ALTA' ? 'high' : urg.nivel === 'ALTA' ? 'mid' : 'low';
+      indicadores += `<span class="ind ${cls}" title="${(urg.argumentos || []).join('. ')}">⏱ Urgencia: <strong>${urg.nivel}</strong></span>`;
+    }
+    if (riesgo) {
+      const cls = riesgo.nivel === 'BAJO' ? 'low-risk' : riesgo.nivel === 'MEDIO' ? 'mid-risk' : 'high-risk';
+      indicadores += `<span class="ind ${cls}" title="${(riesgo.argumentos || []).join('. ')}">🛡 Riesgo: <strong>${riesgo.nivel}</strong></span>`;
+    }
+    if (reventa) {
+      const cls = reventa.clase === 'RAPIDA' ? 'low-risk' : reventa.clase === 'MEDIA' ? 'mid-risk' : 'high-risk';
+      indicadores += `<span class="ind ${cls}">🔁 Reventa: <strong>${reventa.clase}</strong></span>`;
+    }
+    indicadores += '</div>';
+  }
+
+  // Argumentos para negociación
+  let argsBlock = '';
+  if (urg && urg.argumentos && urg.argumentos.length) {
+    argsBlock = `
+      <div class="args-block">
+        <div class="args-title">📌 Argumentos para negociar</div>
+        ${urg.argumentos.map(a => `<div class="arg-item">• ${a}</div>`).join('')}
+      </div>`;
+  }
+
+  // Red flags
+  let redFlagsBlock = '';
+  if (l.red_flags && l.red_flags.length) {
+    const flagsHtml = l.red_flags.map(f => {
+      const cls = f.tipo === 'precio_sospechoso' || f.tipo === 'km_cero' || f.tipo === 'riesgo_alto' ? 'critical' :
+                  f.tipo === 'pegado_mucho' || f.tipo === 'pegado' ? 'positive' : 'warning';
+      const icon = cls === 'critical' ? '🚨' : cls === 'positive' ? '✅' : '⚠️';
+      return `<div class="red-flag ${cls}">${icon} ${f.texto}</div>`;
+    }).join('');
+    redFlagsBlock = `<div class="red-flags">${flagsHtml}</div>`;
+  }
+
+  // Si el listing es fake según v2, mostrar warning
+  let fakeWarning = '';
+  if (v2Tag === 'fake') {
+    fakeWarning = `<div class="red-flag critical">🚫 v2 detectó posible fake: ${escapeHtml(l.fake_reason || 'precio sospechoso')}</div>`;
+  }
+
+  // Alertas legacy (mejor alternativa, gemelo más barato)
+  let altWarning = '';
+  const alt = l.mejor_alternativa;
+  if (alt) {
+    const altYear = l.year + alt.years_newer;
+    const kmStr = alt.km ? alt.km.toLocaleString('es-AR') + ' km' : '0 km';
+    altWarning = `<a class="alt-warning" href="${alt.url || '#'}" target="_blank" rel="noopener" onclick="event.stopPropagation()">⚠️ Por solo <strong>USD ${alt.premium_usd.toLocaleString('es-AR')} más</strong> hay un <strong>${altYear}</strong> con ${kmStr} en USD ${alt.precio_usd.toLocaleString('es-AR')} <span class="alt-link">→ Ver</span></a>`;
+  }
+  let cheaperWarning = '';
+  const cheap = l.alternativa_mismo_anio;
+  if (cheap) {
+    const kmStr = cheap.km ? cheap.km.toLocaleString('es-AR') + ' km' : '0 km';
+    cheaperWarning = `<a class="alt-cheaper" href="${cheap.url || '#'}" target="_blank" rel="noopener" onclick="event.stopPropagation()">💰 Hay otro <strong>${cheap.year}</strong> con ${kmStr} a <strong>USD ${cheap.precio_usd.toLocaleString('es-AR')}</strong> — ahorrás USD ${cheap.savings_usd.toLocaleString('es-AR')} <span class="alt-link">→ Ver</span></a>`;
+  }
+
+  // Card class: prioriza v2-super si aplica
+  let cardClass;
+  if (v2Tag === 'super_ganga_v2') cardClass = 'v2-super';
+  else if (ghs >= 70) cardClass = 'oportunidad';
+  else cardClass = (l.tag || 'normal');
 
   return `
-    <div class="card ${l.tag}" onclick="window.open('${l.url}','_blank')">
+    <div class="card ${cardClass}" onclick="window.open('${l.url}','_blank')">
       <div class="card-header">
-        <div class="card-title">${l.title}</div>
-        ${tagLabel ? `<span class="tag ${l.tag}">${tagLabel}</span>` : ''}
+        <div class="card-title">${escapeHtml(l.title)}</div>
+        <div class="card-header-tags">${v2Badge}</div>
       </div>
       <div class="card-meta">
-        ${nuevaBadge}
-        ${dropBadge}
         <span class="badge">${l.year}</span>
         <span class="badge">${kmFmt}</span>
-        ${transBadge}
-        ${fuelBadge}
-        ${fuenteBadge}
+        ${transBadge}${fuelBadge}${trimBadge}${diasBadge}${dropsBadge}${vendedorBadge}${fuenteBadge}
       </div>
+      ${fakeWarning}
+      ${v2Block}
+      ${razonBlock}
+      ${ghsBlock}
       <div class="card-prices">
         <div class="price-block">
-          <div class="price-label">Precio pedido</div>
+          <div class="price-label">Precio publicado</div>
           <div class="price-val highlight">USD ${l.precio_usd.toLocaleString('es-AR')}</div>
+          <div class="price-meta">${desc > 0 ? desc + '% bajo' : Math.abs(desc) + '% sobre'} mediana · ${l.n_referencia || 0} similares</div>
         </div>
-        ${precioMercado || precioCca}
       </div>
-      ${discountBar}
+      ${valorBlock}
+      ${negBlock}
+      ${margenBlock}
+      ${indicadores}
+      ${argsBlock}
+      ${redFlagsBlock}
+      ${altWarning}
+      ${cheaperWarning}
       <div class="card-footer">
-        <div class="score">Score: <strong>${l.score_combinado}</strong></div>
         <a class="link-btn" href="${l.url}" target="_blank" onclick="event.stopPropagation()">Ver publicación →</a>
       </div>
     </div>`;
 }
 
-function showLoading(v) {
-  document.getElementById('loading').style.display = v ? 'block' : 'none';
-}
-function showError(msg) {
-  const el = document.getElementById('error');
-  el.textContent = msg;
-  el.style.display = 'block';
-}
-function hideError() {
-  document.getElementById('error').style.display = 'none';
+function escapeHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s || '';
+  return d.innerHTML;
 }
 
-// Auto-buscar al cargar
+function showLoading(v) { document.getElementById('loading').style.display = v ? 'block' : 'none'; }
+function showError(m) { const e = document.getElementById('error'); e.textContent = m; e.style.display = 'block'; }
+function hideError() { document.getElementById('error').style.display = 'none'; }
+
+refreshSavedDropdown();
 buscar();
 </script>
-
-
-</body></html>
+</body>
+</html>
