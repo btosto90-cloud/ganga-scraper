@@ -43,14 +43,21 @@ def show(l):
     print()
 
     # Anclas
-    print("  ── ANCLAS ──")
+    print("  ── ANCLAS DE PRECIO ──")
+    print(f"  Kavak:      {fmt_money(l.get('precio_kavak'))} "
+          f"({'-' + str(l['descuento_kavak_pct']) + '%' if l.get('descuento_kavak_pct') is not None else 'sin match'})")
     print(f"  CCA:        {fmt_money(l.get('precio_cca'))} "
           f"({'-' + str(l['descuento_cca_pct']) + '%' if l.get('descuento_cca_pct') is not None else 'sin match'})")
+    print(f"  ML p25:     {fmt_money(l.get('precio_ml_p25'))} "
+          f"({'-' + str(l['descuento_ml_p25_pct']) + '%' if l.get('descuento_ml_p25_pct') is not None else 'sin match'})")
     if l.get('bucket_n'):
         print(f"  Bucket:     {l['bucket_n']} comparables · mediana {fmt_money(l['bucket_median_usd'])} "
               f"· z-score {l['bucket_z_score']}")
     else:
         print(f"  Bucket:     sin comparables suficientes")
+    cn = l.get('ganga_consensus')
+    if cn is not None:
+        print(f"  Consensus:  {cn}/3 anchors de precio agree (Kavak/CCA/ML p25)")
 
     # Movimientos
     print()
@@ -76,7 +83,21 @@ def show(l):
         bar = '█' * (score // 5) + '░' * (20 - score // 5)
         print(f"  Score: {score}/100  [{bar}]  → {tag}")
     breakdown = l.get('ganga_breakdown') or {}
+    # Mostrar en orden importante: anclas de precio primero
+    order = ['kavak', 'cca', 'ml_p25', 'outlier', 'velocity', 'freshness']
+    for k in order:
+        if k not in breakdown:
+            continue
+        v = breakdown[k]
+        if v is None:
+            print(f"    {k:<10}: N/A")
+        else:
+            mini = '▆' * (v // 10) + '·' * (10 - v // 10)
+            print(f"    {k:<10}: {v:>3}/100 [{mini}]")
+    # Cualquier componente no contemplada en el orden
     for k, v in breakdown.items():
+        if k in order:
+            continue
         if v is None:
             print(f"    {k:<10}: N/A")
         else:

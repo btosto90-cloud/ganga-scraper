@@ -90,20 +90,32 @@ def fmt_listing(l, cca, show_drop=False, show_score=True):
         if prev:
             lines.append(f"  📉 USD {fmt_num(prev)} → USD {fmt_num(precio)} (-{l.get('recent_drop_pct', 0)}%)")
 
-    # Anchors (CCA + bucket)
+    # Anchors de precio (Kavak / CCA / ML p25)
+    kavak_price = l.get('precio_kavak')
+    if kavak_price:
+        pct = l.get('descuento_kavak_pct')
+        if pct is not None and pct > 0:
+            lines.append(f"  🏢 Kavak USD {fmt_num(kavak_price)} (-{pct}%)")
     cca_price = l.get('precio_cca') or cca.get(l.get('model_key'))
     if cca_price:
         cca_pct = l.get('descuento_cca_pct')
-        if cca_pct is None and l.get('precio_usd'):
-            cca_pct = round((1 - l['precio_usd'] / cca_price) * 100, 1)
+        if cca_pct is None and precio:
+            cca_pct = round((1 - precio / cca_price) * 100, 1)
         if cca_pct is not None and cca_pct > 0:
-            lines.append(f"  ↓ {cca_pct}% vs CCA (USD {fmt_num(cca_price)})")
+            lines.append(f"  📐 CCA USD {fmt_num(cca_price)} (-{cca_pct}%)")
+    ml_p25 = l.get('precio_ml_p25')
+    if ml_p25:
+        pct = l.get('descuento_ml_p25_pct')
+        if pct is not None and pct > 0:
+            lines.append(f"  🛒 ML p25 USD {fmt_num(ml_p25)} (-{pct}%)")
     if l.get('bucket_n'):
-        lines.append(f"  📊 {l['bucket_n']} comparables · z={l.get('bucket_z_score')}")
+        lines.append(f"  📊 Bucket {l['bucket_n']} comparables · z={l.get('bucket_z_score')}")
 
-    # Score
+    # Score + consensus
     if show_score and l.get('ganga_confidence') is not None:
-        lines.append(f"  🎯 Confianza: {l['ganga_confidence']}/100")
+        cn = l.get('ganga_consensus', 0)
+        consensus_marker = '✓✓' if cn >= 2 else '✓' if cn == 1 else '–'
+        lines.append(f"  🎯 Confianza: {l['ganga_confidence']}/100 · {consensus_marker} {cn} anchors agree")
 
     lines.append(f"  {l.get('url', '')}")
     return '\n'.join(lines)
@@ -186,13 +198,20 @@ def main():
     today = datetime.utcnow().date().isoformat()
     parts = [f"🔥 <b>Ganga Hunter · {today}</b>", ""]
     if new_gangas:
-        new_gangas.sort(key=lambda l: l.get('ganga_confidence', 0) or 0, reverse=True)
+        # Priorizar consenso fuerte sobre solo score
+        new_gangas.sort(
+            key=lambda l: ((l.get('ganga_consensus') or 0), (l.get('ganga_confidence') or 0)),
+            reverse=True,
+        )
         top = new_gangas[:MAX_PER_SECTION]
         parts.append(f"🆕 <b>Super gangas nuevas ({len(top)}/{len(new_gangas)})</b>")
         parts.extend(fmt_listing(l, cca) for l in top)
         parts.append("")
     if drop_gangas:
-        drop_gangas.sort(key=lambda l: l.get('recent_drop_pct', 0), reverse=True)
+        drop_gangas.sort(
+            key=lambda l: ((l.get('ganga_consensus') or 0), l.get('recent_drop_pct', 0)),
+            reverse=True,
+        )
         top = drop_gangas[:MAX_PER_SECTION]
         parts.append(f"📉 <b>Bajaron de precio ({len(top)}/{len(drop_gangas)})</b>")
         parts.extend(fmt_listing(l, cca, show_drop=True) for l in top)

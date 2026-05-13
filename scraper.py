@@ -887,10 +887,14 @@ def main():
             with open('cca_precios.json', 'r', encoding='utf-8') as f:
                 cca_prices = json.load(f).get('prices', {})
         scoring_stats = scoring.annotate_listings(unique, cca_prices, velocity_stats)
-        print(f"  Scoring: with_cca={scoring_stats['with_cca']} with_bucket={scoring_stats['with_bucket']} "
-              f"with_velocity={scoring_stats['with_velocity']}")
-        print(f"  Tags: super_ganga_v2={scoring_stats['super_ganga_v2']} ganga_v2={scoring_stats['ganga_v2']} "
-              f"interesante={scoring_stats['interesante']} sin_ref={scoring_stats['sin_referencia']}")
+        print(f"  Scoring anchors:")
+        print(f"    CCA:    {scoring_stats['with_cca']:>5} listings con match")
+        print(f"    Kavak:  {scoring_stats['with_kavak']:>5} listings (en {scoring_stats['kavak_models']} modelos)")
+        print(f"    ML p25: {scoring_stats['with_ml_p25']:>5} listings (en {scoring_stats['ml_p25_models']} modelos)")
+        print(f"    Bucket: {scoring_stats['with_bucket']:>5} listings con bucket")
+        print(f"  Tags v2: super={scoring_stats['super_ganga_v2']} ganga={scoring_stats['ganga_v2']} "
+              f"interesante={scoring_stats['interesante']} sin_ref={scoring_stats['sin_referencia']} fake={scoring_stats['fake']}")
+        print(f"  Consensus: {scoring_stats['consensus_2_plus']} listings con ≥2 anchors agree (señal fuerte)")
     except Exception as e:
         print(f"  ⚠️  Scoring falló: {e} — sigo sin ganga_confidence")
         scoring_stats = {}

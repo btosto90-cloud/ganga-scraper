@@ -343,5 +343,166 @@ class TestComputeGangaConfidenceWithFakes:
         assert result['fake_reason'] is not None
 
 
+# ─── Kavak component ─────────────────────────────────────────────────────────
+
+class TestKavakComponent:
+    def test_no_kavak_match(self):
+        assert scoring.kavak_component(make_listing(), {}) is None
+
+    def test_above_kavak(self):
+        # Precio sobre Kavak: no es ganga
+        assert scoring.kavak_component(
+            make_listing(precio_usd=20000),
+            {'toyota_corolla_2020': 18000},
+        ) == 0
+
+    def test_10pct_below_kavak(self):
+        # 10% bajo Kavak: 10/20 * 100 = 50
+        assert scoring.kavak_component(
+            make_listing(precio_usd=18000),
+            {'toyota_corolla_2020': 20000},
+        ) == 50
+
+    def test_20pct_below_kavak_caps_at_100(self):
+        assert scoring.kavak_component(
+            make_listing(precio_usd=16000),
+            {'toyota_corolla_2020': 20000},
+        ) == 100
+
+
+# ─── ML p25 component ────────────────────────────────────────────────────────
+
+class TestMlP25Component:
+    def test_no_match(self):
+        assert scoring.ml_p25_component(make_listing(), {}) is None
+
+    def test_ml_listing_against_ml_returns_none(self):
+        # Circular: un listing de ML no se compara contra p25 de ML
+        assert scoring.ml_p25_component(
+            make_listing(fuente='ml'),
+            {'toyota_corolla_2020': 15000},
+        ) is None
+
+    def test_rg_listing_works(self):
+        # 15% bajo p25 = 100
+        assert scoring.ml_p25_component(
+            make_listing(fuente='rg', precio_usd=12750),
+            {'toyota_corolla_2020': 15000},
+        ) == 100
+
+    def test_above_p25_returns_zero(self):
+        assert scoring.ml_p25_component(
+            make_listing(fuente='rg', precio_usd=16000),
+            {'toyota_corolla_2020': 15000},
+        ) == 0
+
+
+# ─── Build indexes ───────────────────────────────────────────────────────────
+
+class TestBuildKavakIndex:
+    def test_requires_at_least_2(self):
+        # Solo 1 Kavak del modelo, no es señal
+        listings = [make_listing(fuente='kv', precio_usd=18000)]
+        idx = scoring.build_kavak_index(listings)
+        assert 'toyota_corolla_2020' not in idx
+
+    def test_computes_median(self):
+        listings = [
+            make_listing(id=f'kv-{i}', fuente='kv', precio_usd=p)
+            for i, p in enumerate([17000, 18000, 19000])
+        ]
+        idx = scoring.build_kavak_index(listings)
+        assert idx['toyota_corolla_2020'] == 18000
+
+    def test_skips_non_kavak(self):
+        listings = [
+            make_listing(id='kv-1', fuente='kv', precio_usd=18000),
+            make_listing(id='ml-1', fuente='ml', precio_usd=22000),
+            make_listing(id='kv-2', fuente='kv', precio_usd=19000),
+        ]
+        idx = scoring.build_kavak_index(listings)
+        # Mediana de [18000, 19000] = 19000 (kavak only)
+        assert idx['toyota_corolla_2020'] == 19000
+
+
+class TestBuildMlP25Index:
+    def test_requires_at_least_4(self):
+        listings = [
+            make_listing(id=f'ml-{i}', fuente='ml', precio_usd=p)
+            for i, p in enumerate([15000, 16000, 17000])
+        ]
+        idx = scoring.build_ml_p25_index(listings)
+        assert 'toyota_corolla_2020' not in idx
+
+    def test_computes_p25(self):
+        listings = [
+            make_listing(id=f'ml-{i}', fuente='ml', precio_usd=p)
+            for i, p in enumerate([14000, 15000, 16000, 17000, 18000, 19000, 20000, 22000])
+        ]
+        idx = scoring.build_ml_p25_index(listings)
+        # p25 de [14000..22000] sorted, idx=8//4=2 → 16000
+        assert idx['toyota_corolla_2020'] == 16000
+
+
+# ─── Consensus + cross-check ─────────────────────────────────────────────────
+
+class TestConsensus:
+    def _bucket_listings(self):
+        return [
+            make_listing(id=f'c-{i}', precio_usd=p, km=80000)
+            for i, p in enumerate([18000, 18500, 19000, 19500, 20000, 20500, 21000, 21500, 22000, 23000])
+        ]
+
+    def test_two_anchors_agree_strong(self):
+        # CCA y Kavak ambos dicen barato → consensus 2, super_ganga_v2 firme
+        buckets = scoring.build_buckets(self._bucket_listings())
+        target = make_listing(id='target', precio_usd=14000, km=80000, is_new=True)
+        result = scoring.compute_ganga_confidence(
+            target,
+            cca_prices={'toyota_corolla_2020': 20000},
+            buckets=buckets,
+            velocity_stats={},
+            kavak_index={'toyota_corolla_2020': 18500},
+            ml_p25_index={},
+        )
+        assert result['consensus'] >= 2
+        assert result['tag'] == 'super_ganga_v2'
+
+    def test_only_outlier_no_price_anchor(self):
+        # Solo bucket outlier, sin CCA/Kavak/ML → no es super_ganga_v2
+        buckets = scoring.build_buckets(self._bucket_listings())
+        target = make_listing(id='target', model_key='unknown_x', precio_usd=14000, km=80000)
+        result = scoring.compute_ganga_confidence(
+            target,
+            cca_prices={},
+            buckets=buckets,
+            velocity_stats={},
+            kavak_index={},
+            ml_p25_index={},
+        )
+        # Bucket fuerte pero ningún price anchor → no debería ser super
+        assert result['tag'] != 'super_ganga_v2'
+
+    def test_cca_outdated_but_kavak_confirms(self):
+        # CCA dice "muy bajo" pero Kavak confirma que es precio razonable → no fake
+        is_fake, reason = scoring.is_likely_fake(
+            make_listing(precio_usd=6000, year=2010),
+            cca_prices={'toyota_corolla_2020': 20000},  # CCA pifio
+            kavak_index={'toyota_corolla_2020': 8000},  # Kavak confirma rango similar
+            ml_p25_index={},
+        )
+        assert is_fake is False
+
+    def test_no_cca_but_kavak_says_fake(self):
+        # Sin CCA, pero Kavak claramente dice fake
+        is_fake, reason = scoring.is_likely_fake(
+            make_listing(precio_usd=4000, year=2018),
+            cca_prices={},
+            kavak_index={'toyota_corolla_2020': 15000},  # precio 27% del kavak
+            ml_p25_index={},
+        )
+        assert is_fake is True
+
+
 if __name__ == '__main__':
     sys.exit(pytest.main([__file__, '-v']))

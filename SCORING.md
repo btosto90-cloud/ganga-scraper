@@ -33,9 +33,24 @@ listings raw (RG + AC + ML + KV)
          └─→ listings.json
 ```
 
-## Las cuatro componentes (cada una 0-100)
+## Las componentes (cada una 0-100)
 
-### 1. CCA discount (peso 0.50) — **la señal más confiable cuando existe**
+### 1. Kavak discount (peso 0.35) — **la señal más cercana a transacción real**
+
+```
+kavak_score = clip( (1 - precio/kavak_median) × 500 , 0 , 100 )
+```
+
+- 20% bajo Kavak → **100**
+- 10% bajo Kavak → **50**
+- Sobre Kavak → **0**
+- Sin match en Kavak → **None**
+
+Kavak es reseller profesional. Sus precios incluyen el margen del intermediario, pero son los más cercanos al **precio real de transacción** que tenemos en Argentina sin acceso a cotizaciones privadas. Threshold más agresivo que CCA (20% vs 30%) porque todo lo significativamente bajo Kavak es ganga real.
+
+**Estado actual**: 0 listings con match (necesitás subir `kavak_listings.json` corriendo `kavak_local.py` en tu Mac).
+
+### 2. CCA discount (peso 0.25) — **guía oficial, segunda en confianza**
 
 ```
 cca_score = clip( (1 - precio/precio_cca) × 350 , 0 , 100 )
@@ -48,7 +63,19 @@ cca_score = clip( (1 - precio/precio_cca) × 350 , 0 , 100 )
 
 CCA = Cámara del Comercio Automotor. Es ground truth porque viene de transacciones reales, no de pretensiones de venta. Tu `cca_precios.json` tiene 501 modelos. Cuando el listing tiene match (`model_key`), esto reemplaza al "descuento vs mediana inflada" del Worker viejo.
 
-### 2. Outlier z-score (peso 0.30) — **señal local dentro del segmento**
+### 3. ML p25 discount (peso 0.15) — **piso de mercado público, máxima cobertura**
+
+```
+ml_p25_score = clip( (1 - precio/ml_p25) × 666 , 0 , 100 )
+```
+
+- 15% bajo ML p25 → **100**
+- Sobre ML p25 → **0**
+- Listing de ML mismo o sin match → **None**
+
+El **percentil 25** de precios ML por modelo+año captura el piso del mercado público sin confundirse con concesionarias que listan caro para negociar abajo. Necesita ≥4 listings ML del modelo. Cubre la mayoría del catálogo (479 modelos cubiertos, 3640 listings) porque ML es la fuente con más volumen.
+
+### 4. Outlier z-score (peso 0.15) — **señal local dentro del segmento**
 
 ```
 bucket = listings con misma marca/modelo, año ±1, km ±20% (excluye self)
@@ -63,7 +90,7 @@ outlier_score = clip( -z × 40 , 0 , 100 )
 
 Captura gangas dentro del segmento: un Corolla 2020 con 50k km a USD 14k cuando el bucket promedia USD 19k, aunque CCA no exista para ese año exacto.
 
-### 3. Velocity (peso 0.10) — **demanda real, basada en ventas pasadas**
+### 5. Velocity (peso 0.05) — **demanda real, basada en ventas pasadas**
 
 ```
 velocity_score = f(median_days_lived del modelo en fast_sales)
@@ -81,7 +108,7 @@ velocity_score = f(median_days_lived del modelo en fast_sales)
 
 **Esta señal arranca vacía** y mejora a medida que pasan los runs. ~14 días después de empezar a trackear desaparecidos, va a tener data útil para los modelos populares.
 
-### 4. Freshness (peso 0.10) — **modificador de oportunidad temporal**
+### 6. Freshness (peso 0.05) — **modificador de oportunidad temporal**
 
 | Estado | Score |
 |---|---|
@@ -93,7 +120,7 @@ velocity_score = f(median_days_lived del modelo en fast_sales)
 
 Listings nuevos o con bajadas recientes son más accionables (todavía no fueron vistos por todo el mundo).
 
-## Combinación final
+## Combinación final + Consensus
 
 ```
 score_bruto = sum(componente × peso) / sum(pesos disponibles)
@@ -105,7 +132,32 @@ score_final = score_bruto × quality_multiplier
 - × 0.8 si falta `km`
 - × 0.5 si falta `model`
 
-**Si no hay CCA NI outlier disponibles**, `ganga_confidence = None` y `ganga_tag = sin_referencia`. Honestamente no podemos opinar.
+**Si no hay ningún anchor disponible**, `ganga_confidence = None` y `ganga_tag = sin_referencia`. Honestamente no podemos opinar.
+
+### Consensus (la clave para "verdaderas gangas")
+
+Tres anchors de precio (Kavak, CCA, ML p25) son **independientes** entre sí. Si uno solo dice "barato" puede ser ruido o un dato desactualizado. Si dos o más coinciden, la señal es fuerte.
+
+```
+consensus = count(anchor.score ≥ 60 for anchor in [kavak, cca, ml_p25])
+```
+
+- **consensus = 0**: ninguna ancla confirma. Probablemente no es ganga.
+- **consensus = 1**: una ancla dice "barato" — sospechoso, verificar.
+- **consensus ≥ 2**: dos o más anclas independientes confirman — **señal fuerte de ganga real**.
+- **consensus = 3**: las tres anclas confirman — ganga extraordinaria.
+
+**Regla dura**: para clasificar como `super_ganga_v2`, exigimos `consensus ≥ 1`. Si el score es ≥80 pero ninguna ancla de precio agrees (solo outlier), se degrada a `ganga_v2`. Esto evita que un listing barato dentro de un bucket "raro" suba al tope sin confirmación externa.
+
+### Fake detection con cross-check
+
+`is_likely_fake` detecta:
+- Keywords de plan ("plan de ahorro", "cuotas", "anticipo", etc.)
+- Año reciente con precio absurdo (2022+ < USD 7500, 2020+ < USD 5500)
+- Precio <40% de CCA **siempre que** Kavak/ML no lo confirmen como razonable
+- Sin CCA pero <35% de Kavak o <40% del p25 ML
+
+El cross-check con Kavak/ML evita falsos positivos cuando CCA está desactualizado: si CCA dice "imposible" pero Kavak/ML dicen "es razonable para ese modelo", confiamos en Kavak/ML.
 
 ## Tags resultantes
 
@@ -133,10 +185,12 @@ Editás en `scoring.py`:
 
 ```python
 WEIGHTS = {
-    'cca': 0.50,
-    'outlier': 0.30,
-    'velocity': 0.10,
-    'freshness': 0.10,
+    'kavak': 0.35,
+    'cca': 0.25,
+    'ml_p25': 0.15,
+    'outlier': 0.15,
+    'velocity': 0.05,
+    'freshness': 0.05,
 }
 ```
 

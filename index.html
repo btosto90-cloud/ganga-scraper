@@ -77,6 +77,14 @@
   .gc-badge.ganga { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
   .gc-badge.interesante { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
   .gc-badge.normal { background: #f3f4f6; color: #6b7280; }
+  .consensus-badge {
+    display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px;
+    border-radius: 12px; font-size: 0.7rem; font-weight: 700; white-space: nowrap;
+  }
+  .consensus-badge.c0 { background: #f3f4f6; color: #9ca3af; }
+  .consensus-badge.c1 { background: #fef3c7; color: #92400e; }
+  .consensus-badge.c2 { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
+  .consensus-badge.c3 { background: linear-gradient(135deg, #fef3c7 0%, #d1fae5 100%); color: #064e3b; border: 1px solid #059669; font-weight: 900; }
   .gc-summary {
     margin-top: 8px; padding: 8px 12px; background: #f5f3ff;
     border-radius: 6px; border-left: 3px solid #7c3aed;
@@ -377,6 +385,7 @@
     <label>Solo</label>
     <select id="f-solo" onchange="aplicarOrden()">
       <option value="">Todos (sin fakes)</option>
+      <option value="consensus_2">✓✓ Consensus ≥2 (señal fuerte)</option>
       <option value="v2_super">🎯 Solo super_ganga_v2</option>
       <option value="v2_ganga_plus">🎯 super_ganga_v2 + ganga_v2</option>
       <option value="oportunidad">💎 Solo oportunidades</option>
@@ -402,7 +411,8 @@
   <div class="stat">Con referencia: <span class="stat-val" id="s-ref">-</span></div>
   <div class="stat">Gangas: <span class="stat-val" id="s-gangas">-</span></div>
   <div class="stat">Super: <span class="stat-val" id="s-super">-</span></div>
-  <div class="stat">🎯 Confidence v2: <span class="stat-val v2" id="s-v2">-</span></div>
+  <div class="stat">🎯 v2: <span class="stat-val v2" id="s-v2">-</span></div>
+  <div class="stat">✓✓ Consensus ≥2: <span class="stat-val v2" id="s-consensus">-</span></div>
   <div class="stat">🚫 Fakes: <span class="stat-val" id="s-fakes">-</span></div>
   <div class="stat">Fuentes: <span class="stat-val" id="s-fuentes">-</span></div>
 </div>
@@ -581,8 +591,10 @@ function renderStats(data) {
   document.getElementById('s-super').textContent = m.super_gangas;
   const v2Super = all.filter(i => i.ganga_tag === 'super_ganga_v2').length;
   const v2Ganga = all.filter(i => i.ganga_tag === 'ganga_v2').length;
+  const consensus2 = all.filter(i => (i.ganga_consensus || 0) >= 2).length;
   const fakes = all.filter(i => i.ganga_tag === 'fake').length;
   document.getElementById('s-v2').textContent = `${v2Super} super · ${v2Ganga} ganga`;
+  document.getElementById('s-consensus').textContent = consensus2;
   document.getElementById('s-fakes').textContent = fakes;
   const f = m.fuentes || {};
   document.getElementById('s-fuentes').textContent = `RG ${f.rg || 0} · AC ${f.ac || 0}` + (f.ml ? ` · ML ${f.ml}` : '') + (f.kv ? ` · KV ${f.kv}` : '');
@@ -604,7 +616,8 @@ function sortItems(items) {
   }
 
   // Filtros adicionales
-  if (solo === 'v2_super') filtered = filtered.filter(i => i.ganga_tag === 'super_ganga_v2');
+  if (solo === 'consensus_2') filtered = filtered.filter(i => (i.ganga_consensus || 0) >= 2);
+  else if (solo === 'v2_super') filtered = filtered.filter(i => i.ganga_tag === 'super_ganga_v2');
   else if (solo === 'v2_ganga_plus') filtered = filtered.filter(i => i.ganga_tag === 'super_ganga_v2' || i.ganga_tag === 'ganga_v2');
   else if (solo === 'oportunidad') filtered = filtered.filter(i => i.es_oportunidad === true);
   else if (solo === 'alta_neg') filtered = filtered.filter(i => i.poder_negociacion === 'ALTA');
@@ -663,20 +676,34 @@ function renderTab(tab) {
   }
 
   if (tab === 'v2') {
-    // Filtrar fakes y dividir por nivel
+    // Filtrar fakes y dividir por nivel + consensus
     const noFakes = items.filter(i => i.ganga_tag !== 'fake');
-    const supers = noFakes.filter(i => i.ganga_tag === 'super_ganga_v2')
-                          .sort((a, b) => (b.ganga_confidence || 0) - (a.ganga_confidence || 0));
-    const gangas = noFakes.filter(i => i.ganga_tag === 'ganga_v2')
-                          .sort((a, b) => (b.ganga_confidence || 0) - (a.ganga_confidence || 0));
+    const supers = noFakes.filter(i => i.ganga_tag === 'super_ganga_v2');
+    const gangas = noFakes.filter(i => i.ganga_tag === 'ganga_v2');
+    // Sort por consensus (desc) y luego por confidence (desc)
+    const bySignal = (a, b) => {
+      const cd = (b.ganga_consensus || 0) - (a.ganga_consensus || 0);
+      return cd !== 0 ? cd : (b.ganga_confidence || 0) - (a.ganga_confidence || 0);
+    };
+    supers.sort(bySignal);
+    gangas.sort(bySignal);
+    const consensusStrong = supers.filter(l => (l.ganga_consensus || 0) >= 2)
+      .concat(gangas.filter(l => (l.ganga_consensus || 0) >= 2));
+    const supersWeak = supers.filter(l => (l.ganga_consensus || 0) < 2);
+    const gangasWeak = gangas.filter(l => (l.ganga_consensus || 0) < 2);
+
     let html = `<div style="background:#f5f3ff;border-left:3px solid #7c3aed;padding:10px 14px;border-radius:6px;margin-bottom:14px;font-size:0.85rem;color:#4c1d95;">
-      💡 <strong>Ganga Confidence v2</strong> combina cuatro señales independientes: precio bajo CCA, outlier dentro del segmento (modelo+año±1+km±20%), velocity del modelo, y novedad. Score ≥80 = super_ganga_v2 · ≥65 = ganga_v2.
+      💡 <strong>Ganga Confidence v2</strong> combina seis señales: <strong>Kavak</strong> (reseller pro), <strong>CCA</strong> (guía oficial), <strong>ML p25</strong> (piso de mercado), outlier de bucket, velocity y novedad. <strong>Consensus ≥2</strong> = al menos 2 anchors de precio independientes confirman que es barato.
     </div>`;
-    if (supers.length) {
-      html += `<div class="section-title v2">🎯 Super Gangas v2 (${supers.length}) · confidence ≥ 80</div><div class="grid">${supers.map(renderCard).join('')}</div>`;
+
+    if (consensusStrong.length) {
+      html += `<div class="section-title v2">✓✓ Gangas con consenso fuerte (${consensusStrong.length}) · 2+ anchors agree — la señal más confiable</div><div class="grid">${consensusStrong.map(renderCard).join('')}</div>`;
     }
-    if (gangas.length) {
-      html += `<div class="section-title v2">🎯 Gangas v2 (${gangas.length}) · confidence 65-79</div><div class="grid">${gangas.map(renderCard).join('')}</div>`;
+    if (supersWeak.length) {
+      html += `<div class="section-title v2">🎯 Super Gangas v2 sin consenso (${supersWeak.length}) · solo 1 anchor — verificar</div><div class="grid">${supersWeak.map(renderCard).join('')}</div>`;
+    }
+    if (gangasWeak.length) {
+      html += `<div class="section-title v2">🎯 Gangas v2 sin consenso (${gangasWeak.length})</div><div class="grid">${gangasWeak.map(renderCard).join('')}</div>`;
     }
     el.innerHTML = html;
   } else if (tab === 'oportunidades') {
@@ -768,6 +795,15 @@ function renderCard(l) {
   }
 
   // ─── Confidence breakdown (solo si es ganga_v2 o super_ganga_v2) ───
+  // Consensus badge — cuántas anchors agree (alta confianza = múltiples agree)
+  let consensusBadge = '';
+  const cn = l.ganga_consensus;
+  if (cn !== null && cn !== undefined && (v2Tag === 'super_ganga_v2' || v2Tag === 'ganga_v2')) {
+    const cls = `c${Math.min(cn, 3)}`;
+    const lbl = cn >= 2 ? `✓✓ ${cn} anchors agree` : cn === 1 ? `✓ 1 anchor` : `– sin consenso`;
+    consensusBadge = `<span class="consensus-badge ${cls}" title="Número de anchors de precio (Kavak/CCA/ML p25) que coinciden en marcar el listing como barato. 2+ = señal fuerte.">${lbl}</span>`;
+  }
+
   let v2Block = '';
   if (l.ganga_breakdown && (v2Tag === 'super_ganga_v2' || v2Tag === 'ganga_v2')) {
     const b = l.ganga_breakdown;
@@ -776,10 +812,20 @@ function renderCard(l) {
       return `<span class="gc-comp">${k}: <span class="v">${val}</span></span>`;
     };
     let ancla = '';
+    if (l.precio_kavak && l.descuento_kavak_pct != null) {
+      const pct = l.descuento_kavak_pct;
+      const sign = pct > 0 ? '-' : '+';
+      ancla += `<div class="gc-ancla">🏢 <strong>Kavak</strong> (reseller pro): USD ${l.precio_kavak.toLocaleString('es-AR')} (${sign}${Math.abs(pct)}% vs pedido)</div>`;
+    }
     if (l.precio_cca && l.descuento_cca_pct != null) {
       const pct = l.descuento_cca_pct;
       const sign = pct > 0 ? '-' : '+';
-      ancla += `<div class="gc-ancla">📐 <strong>CCA</strong>: USD ${l.precio_cca.toLocaleString('es-AR')} (${sign}${Math.abs(pct)}% vs pedido)</div>`;
+      ancla += `<div class="gc-ancla">📐 <strong>CCA</strong> (guía oficial): USD ${l.precio_cca.toLocaleString('es-AR')} (${sign}${Math.abs(pct)}% vs pedido)</div>`;
+    }
+    if (l.precio_ml_p25 && l.descuento_ml_p25_pct != null) {
+      const pct = l.descuento_ml_p25_pct;
+      const sign = pct > 0 ? '-' : '+';
+      ancla += `<div class="gc-ancla">🛒 <strong>ML p25</strong> (piso de mercado): USD ${l.precio_ml_p25.toLocaleString('es-AR')} (${sign}${Math.abs(pct)}% vs pedido)</div>`;
     }
     if (l.bucket_n && l.bucket_median_usd) {
       ancla += `<div class="gc-ancla">📊 <strong>Bucket</strong>: ${l.bucket_n} comparables · mediana USD ${l.bucket_median_usd.toLocaleString('es-AR')} · z=${l.bucket_z_score}</div>`;
@@ -787,7 +833,7 @@ function renderCard(l) {
     v2Block = `
       <div class="gc-summary">
         <div class="gc-summary-title">🎯 Confidence v2 · Desglose</div>
-        ${fmt('CCA', b.cca)}${fmt('Outlier', b.outlier)}${fmt('Velocity', b.velocity)}${fmt('Freshness', b.freshness)}
+        ${fmt('Kavak', b.kavak)}${fmt('CCA', b.cca)}${fmt('ML p25', b.ml_p25)}${fmt('Outlier', b.outlier)}${fmt('Velocity', b.velocity)}${fmt('Freshness', b.freshness)}
         ${ancla}
       </div>`;
   }
@@ -951,7 +997,7 @@ function renderCard(l) {
     <div class="card ${cardClass}" onclick="window.open('${l.url}','_blank')">
       <div class="card-header">
         <div class="card-title">${escapeHtml(l.title)}</div>
-        <div class="card-header-tags">${v2Badge}</div>
+        <div class="card-header-tags">${v2Badge}${consensusBadge}</div>
       </div>
       <div class="card-meta">
         <span class="badge">${l.year}</span>
