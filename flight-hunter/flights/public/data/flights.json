@@ -1,326 +1,312 @@
 {
-  "generated_at": "2026-05-13T13:10:31.762313+00:00",
-  "total_flights": 3,
+  "generated_at": "2026-05-14T12:24:19.036134+00:00",
+  "total_flights": 2,
   "sources": {
     "promociones_aereas": {
       "ok": true,
-      "count": 5
+      "count": 3
     }
   },
   "stats": {
-    "total": 3,
+    "total": 2,
     "ganga_extraordinaria": 0,
     "emitir_urgente": 1,
     "top_oportunidades": 1,
-    "error_fares": 1,
+    "error_fares": 0,
     "alertas_tempranas": 1,
-    "score_promedio": 75
+    "score_promedio": 78
   },
   "flights": [
     {
-      "id": "f_8b38d31f4999",
+      "id": "f_498399690169",
       "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "FLN",
-      "route_key": "EZE-FLN",
-      "airline": "GOL",
-      "airline_quality": 6,
+      "origin": "COR",
+      "destination": "MAD",
+      "route_key": "COR-MAD",
+      "airline": "Avianca",
+      "airline_quality": 7,
       "is_low_cost": false,
-      "price": 301.0,
+      "price": 904.0,
       "currency": "USD",
-      "price_usd": 301.0,
-      "price_ars": 388290,
-      "stops": 0,
+      "price_usd": 904.0,
+      "price_ars": 1166160,
+      "stops": 1,
       "stops_detail": [],
       "duration_minutes": 0,
       "baggage_included": false,
       "tax_included": true,
       "refundable": false,
       "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p.html",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p.html",
       "trip_type": "rt",
-      "is_direct": true,
+      "is_direct": false,
       "is_partial_direct": false,
-      "raw_title": "Hot Sale: Vuelos a Florianópolis en Verano 🌞  Directos a partir de U$D 301🔥desde Bs. As. ¡Opción de pago en cuotas!",
-      "posted_at": "Wed, 13 May 2026 12:50:07 +0000",
-      "last_checked": "2026-05-13",
+      "raw_title": "Hot Sale: Vuelos a Madrid a partir de U$D 904 🔥🔥🔥 desde Córdoba ✈️",
+      "posted_at": "Wed, 13 May 2026 18:47:52 +0000",
+      "last_checked": "2026-05-14",
       "confidence": 0.92,
-      "departure_date": "2026-12-01",
-      "return_date": "2026-12-09",
+      "departure_date": "2026-07-22",
+      "return_date": "2026-08-25",
       "dates_available": [
         {
-          "depart": "2026-12-01",
-          "return": "2026-12-09",
-          "is_direct": true,
+          "depart": "2026-07-22",
+          "return": "2026-08-25",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-01/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-07-22/2026-08-25/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-01",
-          "return": "2026-12-14",
-          "is_direct": true,
+          "depart": "2026-07-22",
+          "return": "2026-08-23",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-01/2026-12-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-07-22/2026-08-23/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-04",
-          "return": "2026-12-16",
-          "is_direct": true,
+          "depart": "2026-10-07",
+          "return": "2026-10-24",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-04/2026-12-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-07/2026-10-24/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-04",
-          "return": "2026-12-15",
-          "is_direct": true,
+          "depart": "2026-10-11",
+          "return": "2026-10-24",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-04/2026-12-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-11/2026-10-24/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-05",
-          "return": "2026-12-18",
-          "is_direct": true,
+          "depart": "2026-10-11",
+          "return": "2026-11-10",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-05/2026-12-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-11/2026-11-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-07",
-          "return": "2026-12-16",
-          "is_direct": true,
+          "depart": "2026-10-13",
+          "return": "2026-11-09",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-07/2026-12-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-13/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-07",
-          "return": "2026-12-18",
-          "is_direct": true,
+          "depart": "2026-10-15",
+          "return": "2026-11-09",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-07/2026-12-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-07",
-          "return": "2026-12-22",
-          "is_direct": true,
+          "depart": "2026-10-15",
+          "return": "2026-11-12",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-07/2026-12-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-12/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-08",
-          "return": "2026-12-23",
-          "is_direct": true,
+          "depart": "2026-10-15",
+          "return": "2026-11-14",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-08/2026-12-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-14/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-09",
-          "return": "2026-12-24",
-          "is_direct": true,
+          "depart": "2026-10-15",
+          "return": "2026-11-07",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-09/2026-12-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-07/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-10",
-          "return": "2026-12-25",
-          "is_direct": true,
+          "depart": "2026-10-18",
+          "return": "2026-11-02",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-10/2026-12-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-18/2026-11-02/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-10",
-          "return": "2026-12-20",
-          "is_direct": true,
+          "depart": "2026-10-18",
+          "return": "2026-11-09",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-10/2026-12-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-18/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-11",
-          "return": "2026-12-21",
-          "is_direct": true,
+          "depart": "2026-10-18",
+          "return": "2026-11-10",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-11/2026-12-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-18/2026-11-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-12",
-          "return": "2026-12-19",
-          "is_direct": true,
+          "depart": "2026-10-22",
+          "return": "2026-11-09",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-12/2026-12-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-22/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-13",
-          "return": "2026-12-22",
-          "is_direct": true,
+          "depart": "2026-10-22",
+          "return": "2026-11-22",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-13/2026-12-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-22/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-14",
-          "return": "2026-12-23",
-          "is_direct": true,
+          "depart": "2026-10-22",
+          "return": "2026-11-14",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-14/2026-12-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-22/2026-11-14/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-17",
-          "return": "2027-01-01",
-          "is_direct": true,
+          "depart": "2026-10-23",
+          "return": "2026-11-15",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-17/2027-01-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-23/2026-11-15/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-21",
-          "return": "2027-01-05",
-          "is_direct": true,
+          "depart": "2026-10-23",
+          "return": "2026-11-06",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-21/2027-01-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-23/2026-11-06/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-23",
-          "return": "2027-01-03",
-          "is_direct": true,
+          "depart": "2026-10-24",
+          "return": "2026-11-15",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-23/2027-01-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-24/2026-11-15/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-24",
-          "return": "2027-01-06",
-          "is_direct": true,
+          "depart": "2026-10-27",
+          "return": "2026-11-10",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-24/2027-01-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-27/2026-11-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2026-12-24",
-          "return": "2027-01-01",
-          "is_direct": true,
+          "depart": "2026-10-28",
+          "return": "2026-11-22",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-24/2027-01-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-28/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-01-05",
-          "return": "2027-01-13",
-          "is_direct": true,
+          "depart": "2026-10-31",
+          "return": "2026-11-15",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-01-05/2027-01-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-31/2026-11-15/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-01-21",
-          "return": "2027-01-30",
-          "is_direct": true,
+          "depart": "2026-11-01",
+          "return": "2026-11-29",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-01-21/2027-01-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-01/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-01-26",
-          "return": "2027-02-06",
-          "is_direct": true,
+          "depart": "2026-11-02",
+          "return": "2026-11-29",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-01-26/2027-02-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-02/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-01-27",
-          "return": "2027-02-04",
-          "is_direct": true,
+          "depart": "2026-11-03",
+          "return": "2026-11-21",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-01-27/2027-02-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-03/2026-11-21/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-01-28",
-          "return": "2027-02-06",
-          "is_direct": true,
+          "depart": "2026-11-03",
+          "return": "2026-11-22",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-01-28/2027-02-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-03/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-02-02",
-          "return": "2027-02-16",
-          "is_direct": true,
+          "depart": "2026-11-07",
+          "return": "2026-11-22",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-02/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-07/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-02-10",
-          "return": "2027-02-17",
-          "is_direct": true,
+          "depart": "2026-11-09",
+          "return": "2026-11-29",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-10/2027-02-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-09/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-02-11",
-          "return": "2027-02-22",
-          "is_direct": true,
+          "depart": "2026-11-12",
+          "return": "2026-11-22",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-11/2027-02-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-12/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-02-12",
-          "return": "2027-02-25",
-          "is_direct": true,
+          "depart": "2026-11-14",
+          "return": "2026-11-29",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-12/2027-02-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-14/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-02-13",
-          "return": "2027-02-27",
-          "is_direct": true,
+          "depart": "2026-11-18",
+          "return": "2026-11-29",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-13/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-18/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         },
         {
-          "depart": "2027-02-13",
-          "return": "2027-02-25",
-          "is_direct": true,
+          "depart": "2026-11-19",
+          "return": "2026-11-29",
+          "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-13/2027-02-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
-        },
-        {
-          "depart": "2027-02-16",
-          "return": "2027-02-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-16/2027-02-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
-        },
-        {
-          "depart": "2027-02-18",
-          "return": "2027-02-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2027-02-18/2027-02-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-19/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
         }
       ],
-      "total_dates": 34,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/FLN/2026-12-01/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-florianopolis-en-verano-directos-desde-bs-as-opcion-de-pago-en-cuotas-gol-rt-p",
+      "total_dates": 32,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-07-22/2026-08-25/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p",
       "route": {
-        "historical_avg": 380,
-        "historical_min": 220,
-        "expected_low": 280,
-        "exceptional_threshold": 240,
-        "avg_duration_min": 200,
-        "region": "Brasil",
+        "historical_avg": 1100,
+        "historical_min": 750,
+        "expected_low": 900,
+        "exceptional_threshold": 800,
+        "avg_duration_min": 900,
+        "region": "Europa",
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 73,
+      "dealScore": 72,
       "dealScoreByMode": {
-        "viaje_personal": 73,
-        "maximo_ahorro": 71,
-        "error_fare": 57,
-        "ejecutivo": 80,
-        "escapadas": 74,
-        "flexible_total": 72
+        "viaje_personal": 72,
+        "maximo_ahorro": 70,
+        "error_fare": 64,
+        "ejecutivo": 77,
+        "escapadas": 73,
+        "flexible_total": 71
       },
       "dealBreakdown": {
-        "hist": 87,
+        "hist": 81,
         "mkt": 50,
-        "qual": 100,
-        "rare": 20,
+        "qual": 92,
+        "rare": 45,
         "cond": 65,
         "conf": 92
       },
-      "qualScore": 100,
+      "qualScore": 92,
       "qualReasons": [
         {
-          "kind": "good",
-          "text": "Vuelo directo"
+          "kind": "neutral",
+          "text": "1 escala"
         }
       ],
       "category": {
@@ -334,32 +320,32 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>21% debajo del histórico</strong> (avg ~USD 380) · vuelo directo · sin equipaje",
+      "mainReason": "<strong>18% debajo del histórico</strong> (avg ~USD 1100) · una escala · sin equipaje",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/fln/261201/261209/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Florianopolis+on+2026-12-01+returning+2026-12-09",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-FLN/2026-12-01/2026-12-09",
-        "momondo": "https://www.momondo.com/flight-search/EZE-FLN/2026-12-01/2026-12-09",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/mad/260722/260825/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Madrid+on+2026-07-22+returning+2026-08-25",
+        "kayak": "https://www.kayak.com.ar/flights/COR-MAD/2026-07-22/2026-08-25",
+        "momondo": "https://www.momondo.com/flight-search/COR-MAD/2026-07-22/2026-08-25",
         "guessed_dates": {
-          "depart": "2026-12-01",
-          "return": "2026-12-09",
+          "depart": "2026-07-22",
+          "return": "2026-08-25",
           "source": "post_table"
         }
       }
     },
     {
-      "id": "f_dee0ce1a9ea9",
+      "id": "f_71d786853d3b",
       "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "BOG",
-      "route_key": "EZE-BOG",
-      "airline": "Avianca",
-      "airline_quality": 7,
+      "origin": "COR",
+      "destination": "PUJ",
+      "route_key": "COR-PUJ",
+      "airline": "Desconocida",
+      "airline_quality": 6,
       "is_low_cost": false,
-      "price": 450.0,
+      "price": 619.0,
       "currency": "USD",
-      "price_usd": 450.0,
-      "price_ars": 580500,
+      "price_usd": 619.0,
+      "price_ars": 798510,
       "stops": 0,
       "stops_detail": [],
       "duration_minutes": 0,
@@ -367,268 +353,331 @@
       "tax_included": true,
       "refundable": false,
       "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p.html",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p.html",
       "trip_type": "rt",
       "is_direct": true,
       "is_partial_direct": false,
-      "raw_title": "Hot Sale: Muy buenos Vuelos a Bogotá directos a partir de AR$ 638.840 (U$D 450) 🔥 desde Bs. As. ✈️",
-      "posted_at": "Wed, 13 May 2026 12:15:06 +0000",
-      "last_checked": "2026-05-13",
+      "raw_title": "Hot Sale: Tremendos Vuelos DIRECTOS a Punta Cana 🏖️ a partir de U$D 619 🔥🔥 desde Córdoba ¡Fechas en verano!",
+      "posted_at": "Wed, 13 May 2026 18:01:40 +0000",
+      "last_checked": "2026-05-14",
       "confidence": 0.92,
-      "departure_date": "2026-05-20",
-      "return_date": "2026-06-09",
+      "departure_date": "2026-05-29",
+      "return_date": "2026-06-06",
       "dates_available": [
         {
-          "depart": "2026-05-20",
-          "return": "2026-06-09",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-20/2026-06-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
-        },
-        {
-          "depart": "2026-05-21",
-          "return": "2026-05-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-21/2026-05-27/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
-        },
-        {
-          "depart": "2026-05-21",
+          "depart": "2026-05-29",
           "return": "2026-06-06",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-21/2026-06-06/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-05-29/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-05-22",
-          "return": "2026-05-28",
+          "depart": "2026-06-03",
+          "return": "2026-06-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-22/2026-05-28/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-03/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-05-25",
-          "return": "2026-06-01",
+          "depart": "2026-06-10",
+          "return": "2026-06-18",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-25/2026-06-01/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-10/2026-06-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-05-27",
-          "return": "2026-06-03",
+          "depart": "2026-06-17",
+          "return": "2026-06-25",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-27/2026-06-03/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-17/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-05-28",
-          "return": "2026-06-02",
+          "depart": "2026-06-19",
+          "return": "2026-06-27",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-28/2026-06-02/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-19/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-05-28",
-          "return": "2026-06-03",
+          "depart": "2026-07-24",
+          "return": "2026-08-08",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-28/2026-06-03/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-07-24/2026-08-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-05-31",
-          "return": "2026-06-28",
+          "depart": "2026-07-28",
+          "return": "2026-08-04",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-31/2026-06-28/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-07-28/2026-08-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-06-18",
-          "return": "2026-06-29",
+          "depart": "2026-07-29",
+          "return": "2026-08-04",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-06-18/2026-06-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-07-29/2026-08-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-06-23",
-          "return": "2026-06-30",
+          "depart": "2026-09-08",
+          "return": "2026-09-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-06-23/2026-06-30/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-08/2026-09-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-06-27",
-          "return": "2026-07-04",
+          "depart": "2026-09-21",
+          "return": "2026-09-28",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-06-27/2026-07-04/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-21/2026-09-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-24",
+          "depart": "2026-09-23",
+          "return": "2026-10-03",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-24/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-23/2026-10-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-21",
+          "depart": "2026-09-25",
+          "return": "2026-10-03",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-21/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-25/2026-10-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-12",
+          "depart": "2026-09-27",
+          "return": "2026-10-04",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-12/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-27/2026-10-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-13",
+          "depart": "2026-09-27",
+          "return": "2026-10-10",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-13/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-27/2026-10-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-18",
+          "depart": "2026-10-18",
+          "return": "2026-10-25",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-18/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-10-18/2026-10-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-19",
+          "depart": "2026-10-27",
+          "return": "2026-11-07",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-19/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-10-27/2026-11-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-03",
-          "return": "2026-08-20",
+          "depart": "2026-11-01",
+          "return": "2026-11-08",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-03/2026-08-20/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-01/2026-11-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-04",
-          "return": "2026-08-19",
+          "depart": "2026-11-01",
+          "return": "2026-11-09",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-04/2026-08-19/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-01/2026-11-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-04",
-          "return": "2026-08-10",
+          "depart": "2026-11-01",
+          "return": "2026-11-10",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-04/2026-08-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-01/2026-11-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-05",
-          "return": "2026-08-18",
+          "depart": "2026-11-08",
+          "return": "2026-11-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-05/2026-08-18/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-08/2026-11-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-05",
-          "return": "2026-08-11",
+          "depart": "2026-11-08",
+          "return": "2026-11-16",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-05/2026-08-11/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-08/2026-11-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-05",
-          "return": "2026-08-10",
+          "depart": "2026-11-09",
+          "return": "2026-11-16",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-05/2026-08-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-09/2026-11-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-06",
-          "return": "2026-08-13",
+          "depart": "2026-11-11",
+          "return": "2026-11-21",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-06/2026-08-13/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-11/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-06",
-          "return": "2026-08-12",
+          "depart": "2026-11-15",
+          "return": "2026-11-28",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-06/2026-08-12/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-15/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-06",
-          "return": "2026-08-11",
+          "depart": "2026-11-17",
+          "return": "2026-11-24",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-06/2026-08-11/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-17/2026-11-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-07",
-          "return": "2026-08-25",
+          "depart": "2026-11-22",
+          "return": "2026-12-05",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-07/2026-08-25/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-22/2026-12-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-07",
-          "return": "2026-08-24",
+          "depart": "2026-11-23",
+          "return": "2026-12-01",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-07/2026-08-24/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-23/2026-12-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-10",
-          "return": "2026-08-18",
+          "depart": "2026-12-15",
+          "return": "2026-12-22",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-10/2026-08-18/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-12-15/2026-12-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-10",
-          "return": "2026-08-20",
+          "depart": "2026-12-16",
+          "return": "2026-12-31",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-10/2026-08-20/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-12-16/2026-12-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         },
         {
-          "depart": "2026-08-12",
-          "return": "2026-08-25",
+          "depart": "2027-01-01",
+          "return": "2027-01-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-08-12/2026-08-25/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-01-01/2027-01-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-02-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-17/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-03-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-22/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-03-09",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-22/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-23",
+          "return": "2027-03-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-23/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-23",
+          "return": "2027-03-06",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-23/2027-03-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-24/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-02-25",
+          "return": "2027-03-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-25/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-03-01",
+          "return": "2027-03-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-01/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-03-01",
+          "return": "2027-03-09",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-01/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-03-01",
+          "return": "2027-03-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-01/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
+        },
+        {
+          "depart": "2027-03-02",
+          "return": "2027-03-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-02/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
         }
       ],
-      "total_dates": 32,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/BOG/2026-05-20/2026-06-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-muy-buenos-vuelos-a-bogota-desde-bs-as-avianca-rt-p",
+      "total_dates": 41,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-05-29/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p",
       "route": {
-        "historical_avg": 520,
-        "historical_min": 320,
-        "expected_low": 410,
-        "exceptional_threshold": 350,
-        "avg_duration_min": 360,
-        "region": "Sudamérica",
+        "historical_avg": 850,
+        "historical_min": 580,
+        "expected_low": 700,
+        "exceptional_threshold": 620,
+        "avg_duration_min": 700,
+        "region": "Caribe",
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 68,
+      "dealScore": 83,
       "dealScoreByMode": {
-        "viaje_personal": 68,
-        "maximo_ahorro": 65,
-        "error_fare": 53,
-        "ejecutivo": 77,
-        "escapadas": 70,
-        "flexible_total": 66
+        "viaje_personal": 83,
+        "maximo_ahorro": 82,
+        "error_fare": 85,
+        "ejecutivo": 85,
+        "escapadas": 83,
+        "flexible_total": 82
       },
       "dealBreakdown": {
-        "hist": 72,
+        "hist": 95,
         "mkt": 50,
         "qual": 100,
-        "rare": 20,
+        "rare": 85,
         "cond": 65,
         "conf": 92
       },
@@ -640,817 +689,25 @@
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
+        "tier": "EMITIR URGENTE",
+        "emoji": "⚡",
+        "cls": "urgente"
       },
       "errorFare": {
         "is_error_fare": false,
         "level": "none",
         "flags": []
       },
-      "earlyAlert": false,
-      "mainReason": "<strong>13% debajo del histórico</strong> (avg ~USD 520) · vuelo directo · sin equipaje",
-      "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/bog/260520/260609/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Bogota+on+2026-05-20+returning+2026-06-09",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-BOG/2026-05-20/2026-06-09",
-        "momondo": "https://www.momondo.com/flight-search/EZE-BOG/2026-05-20/2026-06-09",
-        "guessed_dates": {
-          "depart": "2026-05-20",
-          "return": "2026-06-09",
-          "source": "post_table"
-        }
-      }
-    },
-    {
-      "id": "f_bce8ffb45fe8",
-      "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "MIA",
-      "route_key": "EZE-MIA",
-      "airline": "Arajet",
-      "airline_quality": 5,
-      "is_low_cost": true,
-      "price": 424.0,
-      "currency": "USD",
-      "price_usd": 424.0,
-      "price_ars": 546960,
-      "stops": 0,
-      "stops_detail": [],
-      "duration_minutes": 0,
-      "baggage_included": false,
-      "tax_included": true,
-      "refundable": false,
-      "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p.html",
-      "trip_type": "rt",
-      "is_direct": true,
-      "is_partial_direct": false,
-      "raw_title": "Hot Sale: Siguen estos tremendos Vuelos a MIAMI a partir de U$D 424 🔥🔥 desde Bs. As. (+ Directos a partir de U$D 700)",
-      "posted_at": "Wed, 13 May 2026 12:10:07 +0000",
-      "last_checked": "2026-05-13",
-      "confidence": 0.92,
-      "departure_date": "2026-05-26",
-      "return_date": "2026-06-09",
-      "dates_available": [
-        {
-          "depart": "2026-05-26",
-          "return": "2026-06-09",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-05-26/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-05-28",
-          "return": "2026-06-14",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-05-28/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-05-29",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-05-29&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-01",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-01&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-01",
-          "return": "2026-06-17",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-01/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-03",
-          "return": "2026-06-19",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-03&inboundDate=2026-06-19&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-03",
-          "return": "2026-06-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-03/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-04",
-          "return": "2026-06-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-04/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-05",
-          "return": "2026-06-19",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-05&inboundDate=2026-06-19&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-05",
-          "return": "2026-06-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-05/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-07",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-07&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-07",
-          "return": "2026-06-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-07/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-07",
-          "return": "2026-06-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-07/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-08",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-08&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-08",
-          "return": "2026-06-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-08/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-09",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-09&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-10",
-          "return": "2026-06-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-10/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-11",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-11&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-11",
-          "return": "2026-06-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-11/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-11",
-          "return": "2026-06-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-11/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-11",
-          "return": "2026-06-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-11/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-11",
-          "return": "2026-06-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-11/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-12",
-          "return": "2026-06-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-12/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-13",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-13/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-15",
-          "return": "2026-06-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-06-15&inboundDate=2026-06-22&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-06-18",
-          "return": "2026-07-07",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-18/2026-07-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-19",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-19/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-20",
-          "return": "2026-06-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-20/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-06-27",
-          "return": "2026-07-07",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-06-27/2026-07-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-07-06",
-          "return": "2026-07-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-07-06/2026-07-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-07-07",
-          "return": "2026-07-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-07-07/2026-07-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-03",
-          "return": "2026-08-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-03/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-04",
-          "return": "2026-08-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-04/2026-08-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-08",
-          "return": "2026-08-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-08/2026-08-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-08",
-          "return": "2026-08-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-08/2026-08-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-09",
-          "return": "2026-08-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-09/2026-08-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-10",
-          "return": "2026-08-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-10/2026-08-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-12",
-          "return": "2026-08-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-12/2026-08-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-12",
-          "return": "2026-08-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-12/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-12",
-          "return": "2026-08-31",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-12/2026-08-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-13",
-          "return": "2026-08-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-13/2026-08-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-17",
-          "return": "2026-08-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-17/2026-08-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-18",
-          "return": "2026-09-04",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-18&inboundDate=2026-09-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-18",
-          "return": "2026-08-23",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-18&inboundDate=2026-08-23&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-18",
-          "return": "2026-09-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-18/2026-09-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-18",
-          "return": "2026-09-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-18/2026-09-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-18",
-          "return": "2026-09-01",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-18/2026-09-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-09-04",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-19&inboundDate=2026-09-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-09-06",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-19&inboundDate=2026-09-06&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-09-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-19&inboundDate=2026-09-10&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-08-31",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-19&inboundDate=2026-08-31&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-08-26",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-19&inboundDate=2026-08-26&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-08-27",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-19&inboundDate=2026-08-27&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-08-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-19/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-20",
-          "return": "2026-09-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-20/2026-09-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-20",
-          "return": "2026-09-07",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-20/2026-09-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-20",
-          "return": "2026-09-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-20/2026-09-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-21",
-          "return": "2026-09-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-21/2026-09-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-21",
-          "return": "2026-09-05",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-21/2026-09-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-22",
-          "return": "2026-08-31",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-22&inboundDate=2026-08-31&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-22",
-          "return": "2026-08-30",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-22&inboundDate=2026-08-30&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-22",
-          "return": "2026-09-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-22&inboundDate=2026-09-02&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-23",
-          "return": "2026-08-28",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-23&inboundDate=2026-08-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-24",
-          "return": "2026-09-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-24&inboundDate=2026-09-10&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-24",
-          "return": "2026-08-30",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-24&inboundDate=2026-08-30&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-24",
-          "return": "2026-09-01",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-24&inboundDate=2026-09-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-25",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-25&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-26",
-          "return": "2026-09-05",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-26&inboundDate=2026-09-05&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-28",
-          "return": "2026-09-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-28/2026-09-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-29",
-          "return": "2026-09-06",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-29&inboundDate=2026-09-06&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-29",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-29&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-29",
-          "return": "2026-09-07",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-29&inboundDate=2026-09-07&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-30",
-          "return": "2026-09-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-30/2026-09-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-30",
-          "return": "2026-09-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-30/2026-09-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-31",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-08-31&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-08-31",
-          "return": "2026-09-05",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-31/2026-09-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-31",
-          "return": "2026-09-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-31/2026-09-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-31",
-          "return": "2026-09-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-31/2026-09-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-08-31",
-          "return": "2026-09-10",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-08-31/2026-09-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p"
-        },
-        {
-          "depart": "2026-09-01",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-01&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-01",
-          "return": "2026-09-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-01&inboundDate=2026-09-10&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-01",
-          "return": "2026-09-07",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-01&inboundDate=2026-09-07&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-05",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-05&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-05",
-          "return": "2026-09-17",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-05&inboundDate=2026-09-17&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-07",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-07&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-08",
-          "return": "2026-09-15",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-08&inboundDate=2026-09-15&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-09",
-          "return": "2026-09-24",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-09&inboundDate=2026-09-24&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-12",
-          "return": "2026-09-28",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-12&inboundDate=2026-09-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-15",
-          "return": "2026-09-24",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-15&inboundDate=2026-09-24&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-15",
-          "return": "2026-10-01",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-15&inboundDate=2026-10-01&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-16",
-          "return": "2026-09-25",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-16&inboundDate=2026-09-25&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-19",
-          "return": "2026-10-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-19&inboundDate=2026-10-02&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-19",
-          "return": "2026-09-28",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-19&inboundDate=2026-09-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-19",
-          "return": "2026-10-04",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-19&inboundDate=2026-10-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-19",
-          "return": "2026-10-08",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-19&inboundDate=2026-10-08&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-23",
-          "return": "2026-10-09",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-23&inboundDate=2026-10-09&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-23",
-          "return": "2026-10-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-23&inboundDate=2026-10-02&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-23",
-          "return": "2026-10-04",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-23&inboundDate=2026-10-04&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
-        {
-          "depart": "2026-09-23",
-          "return": "2026-10-08",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=BUEA&destination=MIAA&outboundDate=2026-09-23&inboundDate=2026-10-08&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        }
-      ],
-      "total_dates": 99,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MIA/2026-05-26/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-siguen-estos-tremendos-vuelos-a-miami-desde-bs-as-o-directos-arajet-rt-p",
-      "route": {
-        "historical_avg": 850,
-        "historical_min": 580,
-        "expected_low": 700,
-        "exceptional_threshold": 600,
-        "avg_duration_min": 660,
-        "region": "USA",
-        "_learned": false
-      },
-      "marketAvgUSD": null,
-      "dealScore": 85,
-      "dealScoreByMode": {
-        "viaje_personal": 85,
-        "maximo_ahorro": 85,
-        "error_fare": 92,
-        "ejecutivo": 84,
-        "escapadas": 85,
-        "flexible_total": 84
-      },
-      "dealBreakdown": {
-        "hist": 100,
-        "mkt": 50,
-        "qual": 94,
-        "rare": 100,
-        "cond": 65,
-        "conf": 92
-      },
-      "qualScore": 94,
-      "qualReasons": [
-        {
-          "kind": "good",
-          "text": "Vuelo directo"
-        },
-        {
-          "kind": "neutral",
-          "text": "Aerolínea low-cost"
-        }
-      ],
-      "category": {
-        "tier": "EMITIR URGENTE",
-        "emoji": "⚡",
-        "cls": "urgente"
-      },
-      "errorFare": {
-        "is_error_fare": true,
-        "level": "likely",
-        "flags": [
-          "price_40pct_below_avg",
-          "below_historical_min"
-        ]
-      },
       "earlyAlert": true,
-      "mainReason": "<strong>50% debajo del histórico</strong> (avg ~USD 850) · vuelo directo · sin equipaje · posible tarifa error",
+      "mainReason": "<strong>27% debajo del histórico</strong> (avg ~USD 850) · vuelo directo · sin equipaje",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mia/260526/260609/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Miami+on+2026-05-26+returning+2026-06-09",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-MIA/2026-05-26/2026-06-09",
-        "momondo": "https://www.momondo.com/flight-search/EZE-MIA/2026-05-26/2026-06-09",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/260529/260606/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2026-05-29+returning+2026-06-06",
+        "kayak": "https://www.kayak.com.ar/flights/COR-PUJ/2026-05-29/2026-06-06",
+        "momondo": "https://www.momondo.com/flight-search/COR-PUJ/2026-05-29/2026-06-06",
         "guessed_dates": {
-          "depart": "2026-05-26",
-          "return": "2026-06-09",
+          "depart": "2026-05-29",
+          "return": "2026-06-06",
           "source": "post_table"
         }
       }
