@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-14T10:25:05.939772Z",
-  "count": 102,
+  "updated": "2026-05-15T10:31:15.970440Z",
+  "count": 128,
   "stats": {
     "toyota_yaris_2019": {
       "n": 4,
@@ -26,6 +26,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 16429
     },
+    "toyota_corolla_2016": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 15357
+    },
     "toyota_etios_2016": {
       "n": 3,
       "median_days_lived": 1,
@@ -39,28 +45,34 @@
       "median_sale_price_usd": 26071
     },
     "peugeot_other_2010": {
-      "n": 5,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6000
     },
     "peugeot_308_2015": {
-      "n": 4,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 11429
-    },
-    "peugeot_other_2017": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 11786
-    },
-    "peugeot_308_2017": {
       "n": 5,
       "median_days_lived": 1,
       "p25_days_lived": 1,
+      "median_sale_price_usd": 10714
+    },
+    "peugeot_other_2017": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
       "median_sale_price_usd": 11786
+    },
+    "peugeot_208_2022": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 16357
+    },
+    "peugeot_308_2017": {
+      "n": 7,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12071
     },
     "peugeot_2008_2019": {
       "n": 3,
@@ -68,8 +80,14 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 14571
     },
+    "peugeot_308_2022": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 22857
+    },
     "peugeot_208_2014": {
-      "n": 9,
+      "n": 14,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9286
@@ -81,13 +99,19 @@
       "median_sale_price_usd": 5679
     },
     "peugeot_308_2014": {
+      "n": 8,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10000
+    },
+    "peugeot_other_2005": {
       "n": 3,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9643
+      "median_sale_price_usd": 4643
     },
     "peugeot_208_2023": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 17500
@@ -99,46 +123,94 @@
       "median_sale_price_usd": 16714
     },
     "peugeot_208_2024": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 18357
+    },
+    "peugeot_308_2012": {
       "n": 3,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 18214
+      "median_sale_price_usd": 9500
     },
     "peugeot_other_2012": {
-      "n": 6,
+      "n": 9,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7071
     },
+    "peugeot_408_2014": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10000
+    },
     "peugeot_other_2011": {
+      "n": 9,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 7000
+    },
+    "peugeot_208_2015": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10000
+    },
+    "peugeot_208_2023_st": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 17786
+    },
+    "peugeot_other_2016": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8214
+    },
+    "peugeot_208_2019": {
       "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6786
-    },
-    "peugeot_208_2015": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 10929
+      "median_sale_price_usd": 13929
     },
     "peugeot_2008_2016": {
-      "n": 3,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11071
     },
     "peugeot_208_2017": {
-      "n": 3,
+      "n": 5,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11429
     },
     "peugeot_208_2016": {
-      "n": 4,
+      "n": 5,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11750
+      "median_sale_price_usd": 11357
+    },
+    "peugeot_308_2014_sport": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9500
+    },
+    "peugeot_408_2016": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9929
+    },
+    "peugeot_308_2018": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12000
     },
     "peugeot_other_2004": {
       "n": 3,
@@ -147,7 +219,7 @@
       "median_sale_price_usd": 5000
     },
     "peugeot_208_2018": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12000
@@ -261,7 +333,7 @@
       "median_sale_price_usd": 38000
     },
     "citroen_c3_2017": {
-      "n": 6,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11786
@@ -273,7 +345,7 @@
       "median_sale_price_usd": 10000
     },
     "citroen_c3_2019": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12357
@@ -284,35 +356,71 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 14143
     },
+    "citroen_c4_2015": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10000
+    },
+    "citroen_c3_2011_exclusive": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 6071
+    },
+    "citroen_c3_2013_exclusive": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9643
+    },
     "citroen_c3_2016": {
-      "n": 7,
+      "n": 9,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10000
     },
     "citroen_c3_2014": {
-      "n": 5,
+      "n": 9,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8571
     },
     "citroen_c3_2013": {
-      "n": 5,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8200
+      "median_sale_price_usd": 7857
+    },
+    "citroen_c3_2018": {
+      "n": 6,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12071
+    },
+    "citroen_c3_2012_exclusive": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9214
     },
     "citroen_c4_2018": {
-      "n": 7,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12143
     },
     "citroen_c4_2017": {
-      "n": 4,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11214
+      "median_sale_price_usd": 11071
+    },
+    "citroen_c4_2010": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 6357
     },
     "chery_tiggo_2026": {
       "n": 7,
@@ -333,10 +441,16 @@
       "median_sale_price_usd": 18571
     },
     "peugeot_other_2013": {
-      "n": 5,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7000
+    },
+    "peugeot_other_2007": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 6357
     },
     "bmw_x1_2011": {
       "n": 3,
@@ -374,6 +488,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 7143
     },
+    "citroen_other_2019": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11786
+    },
     "citroen_c4_2011": {
       "n": 4,
       "median_days_lived": 1,
@@ -385,6 +505,18 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5571
+    },
+    "citroen_c4_2013": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9929
+    },
+    "citroen_c3_2015": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8929
     },
     "mercedes_a200_2019": {
       "n": 3,
@@ -560,6 +692,24 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 10500
     },
+    "peugeot_2008_2026": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 27643
+    },
+    "peugeot_3008_2018_gt_line": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 21000
+    },
+    "peugeot_308_2013": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8929
+    },
     "honda_hrv_2017": {
       "n": 7,
       "median_days_lived": 1,
@@ -613,6 +763,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12000
+    },
+    "hyundai_other_2011": {
+      "n": 6,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8400
     }
   }
 }
