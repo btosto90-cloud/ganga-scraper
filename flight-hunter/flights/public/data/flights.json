@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-05-14T12:24:19.036134+00:00",
+  "generated_at": "2026-05-15T12:52:13.017665+00:00",
   "total_flights": 2,
   "sources": {
     "promociones_aereas": {
       "ok": true,
-      "count": 3
+      "count": 6
     }
   },
   "stats": {
     "total": 2,
     "ganga_extraordinaria": 0,
-    "emitir_urgente": 1,
-    "top_oportunidades": 1,
+    "emitir_urgente": 0,
+    "top_oportunidades": 0,
     "error_fares": 0,
-    "alertas_tempranas": 1,
-    "score_promedio": 78
+    "alertas_tempranas": 0,
+    "score_promedio": 59
   },
   "flights": [
     {
-      "id": "f_498399690169",
+      "id": "f_f7fdfa63c480",
       "source": "promociones_aereas",
       "origin": "COR",
-      "destination": "MAD",
-      "route_key": "COR-MAD",
-      "airline": "Avianca",
-      "airline_quality": 7,
+      "destination": "AUA",
+      "route_key": "COR-AUA",
+      "airline": "LATAM",
+      "airline_quality": 8,
       "is_low_cost": false,
-      "price": 904.0,
+      "price": 611.0,
       "currency": "USD",
-      "price_usd": 904.0,
-      "price_ars": 1166160,
+      "price_usd": 611.0,
+      "price_ars": 788190,
       "stops": 1,
       "stops_detail": [],
       "duration_minutes": 0,
@@ -37,268 +37,783 @@
       "tax_included": true,
       "refundable": false,
       "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p.html",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p.html",
       "trip_type": "rt",
       "is_direct": false,
       "is_partial_direct": false,
-      "raw_title": "Hot Sale: Vuelos a Madrid a partir de U$D 904 🔥🔥🔥 desde Córdoba ✈️",
-      "posted_at": "Wed, 13 May 2026 18:47:52 +0000",
-      "last_checked": "2026-05-14",
+      "raw_title": "Hot Sale: Muy buenos Vuelos a Aruba a partir de U$D 611 🔥 desde Córdoba ✈️",
+      "posted_at": "Thu, 14 May 2026 20:21:09 +0000",
+      "last_checked": "2026-05-15",
       "confidence": 0.92,
-      "departure_date": "2026-07-22",
-      "return_date": "2026-08-25",
+      "departure_date": "2026-06-10",
+      "return_date": "2026-06-18",
       "dates_available": [
         {
-          "depart": "2026-07-22",
-          "return": "2026-08-25",
+          "depart": "2026-06-10",
+          "return": "2026-06-18",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-07-22/2026-08-25/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-10%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-07-22",
-          "return": "2026-08-23",
+          "depart": "2026-06-11",
+          "return": "2026-06-18",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-07-22/2026-08-23/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-11%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-07",
-          "return": "2026-10-24",
+          "depart": "2026-06-17",
+          "return": "2026-06-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-07/2026-10-24/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-17%2C2026-06-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-11",
-          "return": "2026-10-24",
+          "depart": "2026-06-17",
+          "return": "2026-06-23",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-11/2026-10-24/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-17%2C2026-06-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-11",
-          "return": "2026-11-10",
+          "depart": "2026-06-17",
+          "return": "2026-06-30",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-11/2026-11-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-17%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-13",
-          "return": "2026-11-09",
+          "depart": "2026-06-21",
+          "return": "2026-07-02",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-13/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-21%2C2026-07-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-15",
-          "return": "2026-11-09",
+          "depart": "2026-06-21",
+          "return": "2026-07-03",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-21%2C2026-07-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-15",
-          "return": "2026-11-12",
+          "depart": "2026-06-23",
+          "return": "2026-07-02",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-12/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-23%2C2026-07-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-15",
-          "return": "2026-11-14",
+          "depart": "2026-06-23",
+          "return": "2026-07-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-14/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-23%2C2026-07-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-15",
-          "return": "2026-11-07",
+          "depart": "2026-06-24",
+          "return": "2026-06-30",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-15/2026-11-07/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-24%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-08-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-18%2C2026-08-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-20",
+          "return": "2026-08-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-20%2C2026-08-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-20",
+          "return": "2026-09-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-20%2C2026-09-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-25",
+          "return": "2026-09-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-25%2C2026-09-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-29",
+          "return": "2026-09-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-29%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-29",
+          "return": "2026-09-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-29%2C2026-09-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-08-30",
+          "return": "2026-09-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-30%2C2026-09-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-01",
+          "return": "2026-09-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-01%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-03",
+          "return": "2026-09-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-03%2C2026-09-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-14",
+          "return": "2026-09-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-14%2C2026-09-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-25",
+          "return": "2026-10-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-25%2C2026-10-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-26",
+          "return": "2026-10-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-26%2C2026-10-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-27",
+          "return": "2026-10-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-27%2C2026-10-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-27",
+          "return": "2026-10-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-27%2C2026-10-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-28",
+          "return": "2026-10-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-28%2C2026-10-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-09-29",
+          "return": "2026-10-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-29%2C2026-10-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-10-17",
+          "return": "2026-10-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-17%2C2026-10-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-10-17",
+          "return": "2026-10-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-17%2C2026-10-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+        },
+        {
+          "depart": "2026-10-17",
+          "return": "2026-10-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-17%2C2026-10-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-10-18",
-          "return": "2026-11-02",
+          "return": "2026-10-26",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-18/2026-11-02/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-18%2C2026-10-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-10-18",
-          "return": "2026-11-09",
+          "return": "2026-10-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-18/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-18%2C2026-10-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-18",
-          "return": "2026-11-10",
+          "depart": "2026-10-19",
+          "return": "2026-10-26",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-18/2026-11-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-19%2C2026-10-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-22",
-          "return": "2026-11-09",
+          "depart": "2026-10-20",
+          "return": "2026-10-28",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-22/2026-11-09/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-10-22",
-          "return": "2026-11-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-22/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-10-22",
-          "return": "2026-11-14",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-22/2026-11-14/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-20%2C2026-10-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-10-23",
-          "return": "2026-11-15",
+          "return": "2026-11-04",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-23/2026-11-15/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-10-23",
-          "return": "2026-11-06",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-23/2026-11-06/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-23%2C2026-11-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-10-24",
-          "return": "2026-11-15",
+          "return": "2026-11-02",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-24/2026-11-15/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-24%2C2026-11-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-27",
-          "return": "2026-11-10",
+          "depart": "2026-10-25",
+          "return": "2026-11-02",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-27/2026-11-10/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-25%2C2026-11-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-10-28",
-          "return": "2026-11-22",
+          "return": "2026-11-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-28/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-28%2C2026-11-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-10-31",
-          "return": "2026-11-15",
+          "depart": "2026-10-29",
+          "return": "2026-11-06",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-10-31/2026-11-15/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-29%2C2026-11-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-11-01",
-          "return": "2026-11-29",
+          "return": "2026-11-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-01/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-01%2C2026-11-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-11-02",
-          "return": "2026-11-29",
+          "depart": "2026-11-01",
+          "return": "2026-11-10",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-02/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-01%2C2026-11-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-11-03",
-          "return": "2026-11-21",
+          "depart": "2026-11-06",
+          "return": "2026-11-13",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-03/2026-11-21/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-11-03",
-          "return": "2026-11-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-03/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-11-07",
-          "return": "2026-11-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-07/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-11-09",
-          "return": "2026-11-29",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-09/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-11-12",
-          "return": "2026-11-22",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-12/2026-11-22/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-06%2C2026-11-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
           "depart": "2026-11-14",
-          "return": "2026-11-29",
+          "return": "2026-11-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-14/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-14%2C2026-11-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         },
         {
-          "depart": "2026-11-18",
-          "return": "2026-11-29",
+          "depart": "2026-11-14",
+          "return": "2026-11-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-18/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
-        },
-        {
-          "depart": "2026-11-19",
-          "return": "2026-11-29",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-11-19/2026-11-29/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-14%2C2026-11-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
         }
       ],
-      "total_dates": 32,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/MAD/2026-07-22/2026-08-25/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-a-madrid-desde-cordoba-avianca-rt-p",
+      "total_dates": 43,
+      "direct_booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-10%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p",
+      "route": null,
+      "marketAvgUSD": null,
+      "dealScore": 60,
+      "dealScoreByMode": {
+        "viaje_personal": 60,
+        "maximo_ahorro": 55,
+        "error_fare": 49,
+        "ejecutivo": 70,
+        "escapadas": 62,
+        "flexible_total": 57
+      },
+      "dealBreakdown": {
+        "hist": 50,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 30,
+        "cond": 65,
+        "conf": 92
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "LATAM: aerolínea sólida"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/aua/260610/260618/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Aruba+on+2026-06-10+returning+2026-06-18",
+        "kayak": "https://www.kayak.com.ar/flights/COR-AUA/2026-06-10/2026-06-18",
+        "momondo": "https://www.momondo.com/flight-search/COR-AUA/2026-06-10/2026-06-18",
+        "guessed_dates": {
+          "depart": "2026-06-10",
+          "return": "2026-06-18",
+          "source": "post_table"
+        }
+      }
+    },
+    {
+      "id": "f_f90720ec118c",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "MAD",
+      "route_key": "EZE-MAD",
+      "airline": "Desconocida",
+      "airline_quality": 6,
+      "is_low_cost": false,
+      "price": 990.0,
+      "currency": "USD",
+      "price_usd": 990.0,
+      "price_ars": 1277100,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Hot Sale: Lindos Vuelos a Madrid con dos equipajes despachados 🧳 a partir de U$D 990 🔥🔥 desde Buenos Aires",
+      "posted_at": "Thu, 14 May 2026 19:10:33 +0000",
+      "last_checked": "2026-05-15",
+      "confidence": 0.92,
+      "departure_date": "2027-03-04",
+      "return_date": "2027-03-24",
+      "dates_available": [
+        {
+          "depart": "2027-03-04",
+          "return": "2027-03-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-04/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-08",
+          "return": "2027-03-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-08",
+          "return": "2027-03-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-09",
+          "return": "2027-03-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-09",
+          "return": "2027-04-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-09",
+          "return": "2027-04-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-09",
+          "return": "2027-03-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-13",
+          "return": "2027-03-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-13/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-15",
+          "return": "2027-03-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-15/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-15",
+          "return": "2027-03-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-15/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-15",
+          "return": "2027-04-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-15/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-16",
+          "return": "2027-03-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-16/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-16",
+          "return": "2027-04-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-16/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-18",
+          "return": "2027-04-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-18/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-18",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-18/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-18",
+          "return": "2027-04-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-18/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-20",
+          "return": "2027-03-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-20/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-20",
+          "return": "2027-04-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-20/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-22",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-22",
+          "return": "2027-04-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-22",
+          "return": "2027-04-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-22",
+          "return": "2027-04-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-22",
+          "return": "2027-04-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-23",
+          "return": "2027-04-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-23",
+          "return": "2027-04-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-23",
+          "return": "2027-04-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-23",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-23",
+          "return": "2027-04-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-23",
+          "return": "2027-04-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-25",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-25",
+          "return": "2027-04-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-25",
+          "return": "2027-04-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-25",
+          "return": "2027-04-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-29",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-29/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-03-30",
+          "return": "2027-04-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-30/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-01",
+          "return": "2027-04-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-01",
+          "return": "2027-04-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-01",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-01",
+          "return": "2027-04-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-01",
+          "return": "2027-04-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-01",
+          "return": "2027-04-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-05",
+          "return": "2027-04-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-05/2027-04-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-05",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-05/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-06",
+          "return": "2027-04-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-06/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-06",
+          "return": "2027-04-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-06/2027-04-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-06",
+          "return": "2027-04-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-06/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-08",
+          "return": "2027-04-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-08/2027-04-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-08",
+          "return": "2027-04-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-08/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-10",
+          "return": "2027-04-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-10/2027-04-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        },
+        {
+          "depart": "2027-04-10",
+          "return": "2027-04-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-10/2027-04-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+        }
+      ],
+      "total_dates": 50,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-04/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p",
       "route": {
-        "historical_avg": 1100,
-        "historical_min": 750,
-        "expected_low": 900,
-        "exceptional_threshold": 800,
-        "avg_duration_min": 900,
+        "historical_avg": 950,
+        "historical_min": 580,
+        "expected_low": 780,
+        "exceptional_threshold": 650,
+        "avg_duration_min": 780,
         "region": "Europa",
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 72,
+      "dealScore": 58,
       "dealScoreByMode": {
-        "viaje_personal": 72,
-        "maximo_ahorro": 70,
-        "error_fare": 64,
-        "ejecutivo": 77,
-        "escapadas": 73,
-        "flexible_total": 71
+        "viaje_personal": 58,
+        "maximo_ahorro": 52,
+        "error_fare": 44,
+        "ejecutivo": 69,
+        "escapadas": 60,
+        "flexible_total": 54
       },
       "dealBreakdown": {
-        "hist": 81,
+        "hist": 46,
         "mkt": 50,
         "qual": 92,
-        "rare": 45,
+        "rare": 20,
         "cond": 65,
         "conf": 92
       },
@@ -310,9 +825,9 @@
         }
       ],
       "category": {
-        "tier": "MUY BUENA OPORTUNIDAD",
-        "emoji": "⭐",
-        "cls": "muy-buena"
+        "tier": "MIRAR PERO NO CORRER",
+        "emoji": "👁",
+        "cls": "mirar"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -320,394 +835,15 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "<strong>18% debajo del histórico</strong> (avg ~USD 1100) · una escala · sin equipaje",
+      "mainReason": "precio en línea con el histórico · una escala · sin equipaje",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/mad/260722/260825/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Madrid+on+2026-07-22+returning+2026-08-25",
-        "kayak": "https://www.kayak.com.ar/flights/COR-MAD/2026-07-22/2026-08-25",
-        "momondo": "https://www.momondo.com/flight-search/COR-MAD/2026-07-22/2026-08-25",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mad/270304/270324/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Madrid+on+2027-03-04+returning+2027-03-24",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-MAD/2027-03-04/2027-03-24",
+        "momondo": "https://www.momondo.com/flight-search/EZE-MAD/2027-03-04/2027-03-24",
         "guessed_dates": {
-          "depart": "2026-07-22",
-          "return": "2026-08-25",
-          "source": "post_table"
-        }
-      }
-    },
-    {
-      "id": "f_71d786853d3b",
-      "source": "promociones_aereas",
-      "origin": "COR",
-      "destination": "PUJ",
-      "route_key": "COR-PUJ",
-      "airline": "Desconocida",
-      "airline_quality": 6,
-      "is_low_cost": false,
-      "price": 619.0,
-      "currency": "USD",
-      "price_usd": 619.0,
-      "price_ars": 798510,
-      "stops": 0,
-      "stops_detail": [],
-      "duration_minutes": 0,
-      "baggage_included": false,
-      "tax_included": true,
-      "refundable": false,
-      "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p.html",
-      "trip_type": "rt",
-      "is_direct": true,
-      "is_partial_direct": false,
-      "raw_title": "Hot Sale: Tremendos Vuelos DIRECTOS a Punta Cana 🏖️ a partir de U$D 619 🔥🔥 desde Córdoba ¡Fechas en verano!",
-      "posted_at": "Wed, 13 May 2026 18:01:40 +0000",
-      "last_checked": "2026-05-14",
-      "confidence": 0.92,
-      "departure_date": "2026-05-29",
-      "return_date": "2026-06-06",
-      "dates_available": [
-        {
-          "depart": "2026-05-29",
-          "return": "2026-06-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-05-29/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-06-03",
-          "return": "2026-06-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-03/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-06-10",
-          "return": "2026-06-18",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-10/2026-06-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-06-17",
-          "return": "2026-06-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-17/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-06-19",
-          "return": "2026-06-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-19/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-07-24",
-          "return": "2026-08-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-07-24/2026-08-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-07-28",
-          "return": "2026-08-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-07-28/2026-08-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-07-29",
-          "return": "2026-08-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-07-29/2026-08-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-09-08",
-          "return": "2026-09-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-08/2026-09-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-09-21",
-          "return": "2026-09-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-21/2026-09-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-09-23",
-          "return": "2026-10-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-23/2026-10-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-09-25",
-          "return": "2026-10-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-25/2026-10-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-09-27",
-          "return": "2026-10-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-27/2026-10-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-09-27",
-          "return": "2026-10-10",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-09-27/2026-10-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-10-18",
-          "return": "2026-10-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-10-18/2026-10-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-10-27",
-          "return": "2026-11-07",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-10-27/2026-11-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-01",
-          "return": "2026-11-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-01/2026-11-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-01",
-          "return": "2026-11-09",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-01/2026-11-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-01",
-          "return": "2026-11-10",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-01/2026-11-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-08",
-          "return": "2026-11-17",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-08/2026-11-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-08",
-          "return": "2026-11-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-08/2026-11-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-09",
-          "return": "2026-11-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-09/2026-11-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-11",
-          "return": "2026-11-21",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-11/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-15",
-          "return": "2026-11-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-15/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-17",
-          "return": "2026-11-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-17/2026-11-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-22",
-          "return": "2026-12-05",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-22/2026-12-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-11-23",
-          "return": "2026-12-01",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-11-23/2026-12-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-12-15",
-          "return": "2026-12-22",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-12-15/2026-12-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2026-12-16",
-          "return": "2026-12-31",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-12-16/2026-12-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-01-01",
-          "return": "2027-01-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-01-01/2027-01-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-17",
-          "return": "2027-02-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-17/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-22",
-          "return": "2027-03-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-22/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-22",
-          "return": "2027-03-09",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-22/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-23",
-          "return": "2027-03-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-23/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-23",
-          "return": "2027-03-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-23/2027-03-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-24",
-          "return": "2027-03-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-24/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-02-25",
-          "return": "2027-03-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-02-25/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-03-01",
-          "return": "2027-03-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-01/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-03-01",
-          "return": "2027-03-09",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-01/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-03-01",
-          "return": "2027-03-14",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-01/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        },
-        {
-          "depart": "2027-03-02",
-          "return": "2027-03-14",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2027-03-02/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p"
-        }
-      ],
-      "total_dates": 41,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-05-29/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p",
-      "route": {
-        "historical_avg": 850,
-        "historical_min": 580,
-        "expected_low": 700,
-        "exceptional_threshold": 620,
-        "avg_duration_min": 700,
-        "region": "Caribe",
-        "_learned": false
-      },
-      "marketAvgUSD": null,
-      "dealScore": 83,
-      "dealScoreByMode": {
-        "viaje_personal": 83,
-        "maximo_ahorro": 82,
-        "error_fare": 85,
-        "ejecutivo": 85,
-        "escapadas": 83,
-        "flexible_total": 82
-      },
-      "dealBreakdown": {
-        "hist": 95,
-        "mkt": 50,
-        "qual": 100,
-        "rare": 85,
-        "cond": 65,
-        "conf": 92
-      },
-      "qualScore": 100,
-      "qualReasons": [
-        {
-          "kind": "good",
-          "text": "Vuelo directo"
-        }
-      ],
-      "category": {
-        "tier": "EMITIR URGENTE",
-        "emoji": "⚡",
-        "cls": "urgente"
-      },
-      "errorFare": {
-        "is_error_fare": false,
-        "level": "none",
-        "flags": []
-      },
-      "earlyAlert": true,
-      "mainReason": "<strong>27% debajo del histórico</strong> (avg ~USD 850) · vuelo directo · sin equipaje",
-      "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/260529/260606/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2026-05-29+returning+2026-06-06",
-        "kayak": "https://www.kayak.com.ar/flights/COR-PUJ/2026-05-29/2026-06-06",
-        "momondo": "https://www.momondo.com/flight-search/COR-PUJ/2026-05-29/2026-06-06",
-        "guessed_dates": {
-          "depart": "2026-05-29",
-          "return": "2026-06-06",
+          "depart": "2027-03-04",
+          "return": "2027-03-24",
           "source": "post_table"
         }
       }
