@@ -50,6 +50,37 @@ HEADERS_LIST = [
     },
 ]
 
+# ─── HEALTH CHECKS ─────────────────────────────────────────────────────────────
+
+# Una fuente con menos de este número de listings en el run previo no se chequea
+# (no hay baseline suficiente, ej: primer run o fuente que arrancamos a scrapear hoy)
+SOURCE_MIN_BASELINE = 100
+
+# Si una fuente cae bajo este % de su valor previo, es señal probable de parser roto
+# o bloqueo total. 0.50 = caída del 50% o más.
+SOURCE_DROP_THRESHOLD = 0.50
+
+
+def detect_source_drops(prev_sources, curr_sources,
+                        min_baseline=SOURCE_MIN_BASELINE,
+                        drop_threshold=SOURCE_DROP_THRESHOLD):
+    """Detecta fuentes que cayeron catastróficamente vs el run anterior.
+
+    Devuelve dict {source: (prev_n, curr_n, drop_pct)} con sólo las fuentes
+    que vienen con baseline suficiente y cayeron al o por debajo del threshold.
+    Fuentes nuevas (no estaban antes) o con baseline insuficiente se ignoran.
+    """
+    drops = {}
+    for src, prev_n in prev_sources.items():
+        if prev_n < min_baseline:
+            continue
+        curr_n = curr_sources.get(src, 0)
+        if curr_n <= prev_n * drop_threshold:
+            drop_pct = round((1 - curr_n / prev_n) * 100, 1)
+            drops[src] = (prev_n, curr_n, drop_pct)
+    return drops
+
+
 # ─── HTTP ──────────────────────────────────────────────────────────────────────
 
 def fetch(url, headers=None, retries=3, delay=2):
@@ -921,8 +952,13 @@ def main():
     print(f"  Nuevas hoy: {nuevas_hoy} · Bajaron hoy: {bajaron_hoy}")
     print(f"  Top marcas: {dict(sorted(marcas_count.items(), key=lambda x: -x[1])[:10])}")
 
-    # ─── Resumen de salud del run (errores HTTP, fallbacks) ─────────────────
-    has_warnings = FETCH_ERRORS['count'] > 0 or BLUE_RATE_FALLBACK
+    # ─── Resumen de salud del run (errores HTTP, fallbacks, fuentes) ────────
+    source_drops = detect_source_drops(prev.get('fuentes', {}), fuentes)
+    has_warnings = (
+        FETCH_ERRORS['count'] > 0
+        or BLUE_RATE_FALLBACK
+        or bool(source_drops)
+    )
     print("\n" + ("⚠️  " if has_warnings else "✓  ") + "Run health:")
     if BLUE_RATE_FALLBACK:
         print(f"  ⚠️  dolarapi falló — USD/ARS calculado con fallback BLUE_RATE={BLUE_RATE}")
@@ -930,8 +966,11 @@ def main():
         print(f"  ⚠️  {FETCH_ERRORS['count']} URLs fallaron después de reintentos. Primeras:")
         for u in FETCH_ERRORS['urls'][:10]:
             print(f"     - {u}")
+    for src, (prev_n, curr_n, drop_pct) in source_drops.items():
+        print(f"  ⚠️  Fuente '{src}': {prev_n} → {curr_n} listings (-{drop_pct}%). "
+              f"¿Parser roto o bloqueo? Revisar HTML.")
     if not has_warnings:
-        print("  Sin errores HTTP ni fallbacks")
+        print("  Sin errores HTTP ni fallbacks · todas las fuentes estables")
 
 
 if __name__ == '__main__':

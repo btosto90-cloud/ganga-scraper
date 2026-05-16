@@ -148,6 +148,60 @@ class TestVelocityStats:
         assert p25 == 7  # index 2 of 8 sorted
 
 
+# ─── detect_source_drops (health check) ──────────────────────────────────────
+
+class TestDetectSourceDrops:
+    def test_no_drops_returns_empty(self):
+        prev = {'rg': 1500, 'ac': 2000, 'ml': 3000}
+        curr = {'rg': 1480, 'ac': 2050, 'ml': 2900}
+        assert scraper.detect_source_drops(prev, curr) == {}
+
+    def test_catastrophic_drop_flagged(self):
+        # AC cayó de 2000 a 100 = 95% drop, debe flaggearse
+        prev = {'rg': 1500, 'ac': 2000}
+        curr = {'rg': 1500, 'ac': 100}
+        drops = scraper.detect_source_drops(prev, curr)
+        assert 'ac' in drops
+        assert 'rg' not in drops
+        prev_n, curr_n, pct = drops['ac']
+        assert prev_n == 2000
+        assert curr_n == 100
+        assert pct == 95.0
+
+    def test_source_missing_today_flagged_as_full_drop(self):
+        # RG no apareció hoy = 0 listings
+        prev = {'rg': 1500, 'ac': 2000}
+        curr = {'ac': 2000}
+        drops = scraper.detect_source_drops(prev, curr)
+        assert 'rg' in drops
+        assert drops['rg'][1] == 0
+        assert drops['rg'][2] == 100.0
+
+    def test_baseline_too_small_ignored(self):
+        # KV con sólo 50 listings previos no se chequea (no es baseline confiable)
+        prev = {'rg': 1500, 'kv': 50}
+        curr = {'rg': 1500, 'kv': 0}
+        drops = scraper.detect_source_drops(prev, curr)
+        assert 'kv' not in drops
+
+    def test_new_source_ignored(self):
+        # ML aparece por primera vez (no estaba en prev) — no es un drop
+        prev = {'rg': 1500}
+        curr = {'rg': 1500, 'ml': 3000}
+        assert scraper.detect_source_drops(prev, curr) == {}
+
+    def test_first_run_no_prev_sources(self):
+        # Primer run: prev vacío, nada que comparar
+        assert scraper.detect_source_drops({}, {'rg': 1500}) == {}
+
+    def test_borderline_at_threshold(self):
+        # Exactamente 50% se considera drop (threshold es <=)
+        prev = {'rg': 1000}
+        curr = {'rg': 500}
+        drops = scraper.detect_source_drops(prev, curr)
+        assert 'rg' in drops
+
+
 if __name__ == '__main__':
     import pytest
     sys.exit(pytest.main([__file__, '-v']))
