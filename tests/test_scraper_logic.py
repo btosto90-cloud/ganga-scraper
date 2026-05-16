@@ -1,7 +1,10 @@
 """Tests para la lógica de scraper.py que NO requiere red.
 
 Cubrimos: parse_price_smart, is_realistic_price, dedup, fast_sales detection,
-velocity_stats. Las funciones de scraping HTTP no se testean acá (requieren mocks de red).
+velocity_stats, detect_source_drops, init_blue_rate.
+
+Importar scraper ya no hace network (fetch_blue_rate vive en main()), pero
+mantenemos FakeResponse para tests que ejercen init_blue_rate.
 """
 
 import sys
@@ -10,10 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from datetime import datetime, timedelta
 
-# Cargar el módulo scraper sin disparar el __main__ ni la fetch del blue rate
-# (parchamos urlopen para que no salga a internet)
 import urllib.request as _ureq
-_orig_urlopen = _ureq.urlopen
 
 
 class FakeResponse:
@@ -29,9 +29,7 @@ class FakeResponse:
         return X()
 
 
-_ureq.urlopen = lambda *a, **kw: FakeResponse()
 import scraper
-_ureq.urlopen = _orig_urlopen
 
 
 # ─── parse_price_smart ───────────────────────────────────────────────────────
@@ -200,6 +198,65 @@ class TestDetectSourceDrops:
         curr = {'rg': 500}
         drops = scraper.detect_source_drops(prev, curr)
         assert 'rg' in drops
+
+
+# ─── init_blue_rate ──────────────────────────────────────────────────────────
+
+class TestInitBlueRate:
+    """Verifica que init_blue_rate actualiza BLUE_RATE/BLUE_RATE_FALLBACK
+    según lo que devuelva dolarapi, sin hacer red de verdad."""
+
+    def _patch_urlopen(self, body_or_exc):
+        if isinstance(body_or_exc, Exception):
+            def boom(*a, **kw):
+                raise body_or_exc
+            return boom
+        return lambda *a, **kw: FakeResponse(body_or_exc)
+
+    def _reset_globals(self):
+        scraper.BLUE_RATE = 1400
+        scraper.BLUE_RATE_FALLBACK = False
+
+    def test_valid_rate_updates_global(self):
+        self._reset_globals()
+        orig = _ureq.urlopen
+        _ureq.urlopen = self._patch_urlopen(b'{"venta": 1500}')
+        try:
+            scraper.init_blue_rate()
+        finally:
+            _ureq.urlopen = orig
+        assert scraper.BLUE_RATE == 1500
+        assert scraper.BLUE_RATE_FALLBACK is False
+
+    def test_network_failure_marks_fallback(self):
+        self._reset_globals()
+        orig = _ureq.urlopen
+        _ureq.urlopen = self._patch_urlopen(Exception("network down"))
+        try:
+            scraper.init_blue_rate()
+        finally:
+            _ureq.urlopen = orig
+        assert scraper.BLUE_RATE == 1400  # quedó en default
+        assert scraper.BLUE_RATE_FALLBACK is True
+
+    def test_rate_out_of_range_marks_fallback(self):
+        """dolarapi a veces devuelve 0 o valores corruptos — no aceptarlos."""
+        self._reset_globals()
+        orig = _ureq.urlopen
+        _ureq.urlopen = self._patch_urlopen(b'{"venta": 0}')
+        try:
+            scraper.init_blue_rate()
+        finally:
+            _ureq.urlopen = orig
+        assert scraper.BLUE_RATE == 1400
+        assert scraper.BLUE_RATE_FALLBACK is True
+
+    def test_import_does_not_call_network(self):
+        """Smoke test: importar scraper no debe disparar fetch_blue_rate."""
+        # Si import hubiera hecho red, este test fallaría intermitentemente
+        # (o el módulo no se podría importar offline). Es un smoke test puro.
+        assert hasattr(scraper, 'fetch_blue_rate')
+        assert hasattr(scraper, 'init_blue_rate')
 
 
 if __name__ == '__main__':

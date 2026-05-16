@@ -9,29 +9,49 @@ from datetime import datetime, timedelta
 
 from io_utils import atomic_write_json
 
-BLUE_RATE = 1400  # default, se sobreescribe abajo con valor real
+# Cotización USD/ARS usada para convertir precios en pesos a USD.
+# Default 1400 (fallback razonable). main() la actualiza con dolarapi.com.
+# Importar este módulo NO hace network — la llamada está en main() para que
+# tests y scripts puedan importarlo sin side effects.
+BLUE_RATE = 1400
 BLUE_RATE_FALLBACK = False  # True si dolarapi falló y se usó el fallback hardcoded
 
 # Contadores globales de errores HTTP — visibles en el resumen final
 FETCH_ERRORS = {'count': 0, 'urls': []}
 
 def fetch_blue_rate():
-    """Lee dólar blue (venta) desde dolarapi.com. Fallback a 1400."""
-    global BLUE_RATE_FALLBACK
+    """Lee dólar blue (venta) desde dolarapi.com. Devuelve int o None si falla.
+
+    No actualiza la global BLUE_RATE directamente — eso es responsabilidad
+    del caller (main), así queda explícito cuándo ocurre el side effect.
+    """
     try:
         with urllib.request.urlopen('https://dolarapi.com/v1/dolares/blue', timeout=10) as r:
             data = json.loads(r.read())
             rate = data.get('venta')
             if rate and 1000 < rate < 5000:
-                print(f"BLUE_RATE actualizado: {rate} (dolarapi.com)")
                 return int(rate)
-            print(f"WARN: dolarapi devolvió rate fuera de rango ({rate}), usando fallback 1400")
+            print(f"WARN: dolarapi devolvió rate fuera de rango ({rate}), usando fallback {BLUE_RATE}")
     except Exception as e:
-        print(f"WARN: dolarapi falló ({e}), usando fallback 1400")
-    BLUE_RATE_FALLBACK = True
-    return 1400
+        print(f"WARN: dolarapi falló ({e}), usando fallback {BLUE_RATE}")
+    return None
 
-BLUE_RATE = fetch_blue_rate()
+
+def init_blue_rate():
+    """Llamar al inicio de main() para refrescar BLUE_RATE desde dolarapi.
+
+    Si falla, deja el default y marca BLUE_RATE_FALLBACK=True para que el
+    resumen Run health lo señale.
+    """
+    global BLUE_RATE, BLUE_RATE_FALLBACK
+    rate = fetch_blue_rate()
+    if rate is None:
+        BLUE_RATE_FALLBACK = True
+    else:
+        BLUE_RATE = rate
+        print(f"BLUE_RATE actualizado: {rate} (dolarapi.com)")
+
+
 OUTPUT_FILE = "listings.json"
 
 HEADERS_LIST = [
@@ -677,10 +697,11 @@ def load_kavak_listings():
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 
 def main():
+    init_blue_rate()
+
     all_listings = []
 
     # Cargar histórico para preservar first_seen y price_history
-    import os
     first_seen_map = {}
     price_history_map = {}
     prev = {}
