@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-16T09:52:43.326383Z",
-  "count": 159,
+  "updated": "2026-05-16T18:47:55.861954Z",
+  "count": 181,
   "stats": {
     "toyota_yaris_2019": {
       "n": 4,
@@ -476,11 +476,23 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 6357
     },
+    "chery_other_2018": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9500
+    },
     "chery_tiggo_2026": {
       "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 31429
+    },
+    "ford_focus_2018": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12786
     },
     "toyota_etios_2018": {
       "n": 3,
@@ -890,6 +902,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 12000
     },
+    "haval_h6_2025": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 33000
+    },
     "renault_clio_2007": {
       "n": 3,
       "median_days_lived": 11,
@@ -908,38 +926,92 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 8400
     },
+    "nissan_kicks_2020": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 18214
+    },
+    "nissan_sentra_2021": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 20357
+    },
+    "nissan_sentra_2022": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 21286
+    },
+    "nissan_march_2017": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11357
+    },
+    "nissan_march_2016": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10571
+    },
+    "nissan_versa_2015_rs": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10500
+    },
     "citroen_c4_2014": {
       "n": 3,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8571
     },
-    "ford_ecosport_2013_sport": {
+    "ford_other_2018": {
       "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11429
+    },
+    "ford_other_2019_st": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 13214
+    },
+    "ford_other_2017": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10643
+    },
+    "ford_ecosport_2013_sport": {
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10000
     },
     "ford_other_2014_st": {
-      "n": 4,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9643
     },
     "ford_focus_2016": {
-      "n": 5,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12143
+      "median_sale_price_usd": 11786
     },
     "ford_other_2012": {
-      "n": 4,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6786
     },
     "ford_ecosport_2010_sport": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7500
@@ -950,11 +1022,71 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 9286
     },
+    "ford_other_2016": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11786
+    },
+    "ford_other_2017_st": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11429
+    },
+    "ford_focus_2017": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11786
+    },
     "chevrolet_other_2017": {
       "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9857
+    },
+    "nissan_march_2015": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9714
+    },
+    "nissan_kicks_2018_exclusive": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 2,
+      "median_sale_price_usd": 17786
+    },
+    "nissan_kicks_2022": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 2,
+      "median_sale_price_usd": 21429
+    },
+    "nissan_kicks_2021": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 21214
+    },
+    "nissan_other_2011": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 2,
+      "median_sale_price_usd": 8214
+    },
+    "nissan_kicks_2019_exclusive": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 2,
+      "median_sale_price_usd": 18571
+    },
+    "nissan_kicks_2018": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 2,
+      "median_sale_price_usd": 16071
     }
   }
 }
