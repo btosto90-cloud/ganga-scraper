@@ -49,6 +49,11 @@
       "date": "2026-05-11",
       "price_usd": 544.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-16",
+      "price_usd": 651.0,
+      "airline": "Aeroméxico"
     }
   ],
   "EZE-TLV": [
@@ -95,6 +100,11 @@
       "date": "2026-05-09",
       "price_usd": 751.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-16",
+      "price_usd": 841.0,
+      "airline": "Delta"
     }
   ],
   "AEP-MCZ": [
@@ -224,6 +234,16 @@
       "date": "2026-05-11",
       "price_usd": 604.0,
       "airline": "Aerolíneas Argentinas"
+    },
+    {
+      "date": "2026-05-16",
+      "price_usd": 60.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-16",
+      "price_usd": 750.0,
+      "airline": "Aerolíneas Argentinas"
     }
   ],
   "EZE-SCL": [
@@ -286,6 +306,13 @@
       "date": "2026-05-15",
       "price_usd": 611.0,
       "airline": "LATAM"
+    }
+  ],
+  "EZE-NAT": [
+    {
+      "date": "2026-05-16",
+      "price_usd": 343.0,
+      "airline": "JetSMART"
     }
   ]
 }

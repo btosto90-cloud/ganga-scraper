@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-05-15T12:52:13.017665+00:00",
-  "total_flights": 2,
+  "generated_at": "2026-05-16T11:48:55.961179+00:00",
+  "total_flights": 5,
   "sources": {
     "promociones_aereas": {
       "ok": true,
-      "count": 6
+      "count": 7
     }
   },
   "stats": {
-    "total": 2,
-    "ganga_extraordinaria": 0,
-    "emitir_urgente": 0,
-    "top_oportunidades": 0,
-    "error_fares": 0,
-    "alertas_tempranas": 0,
-    "score_promedio": 59
+    "total": 5,
+    "ganga_extraordinaria": 1,
+    "emitir_urgente": 1,
+    "top_oportunidades": 2,
+    "error_fares": 2,
+    "alertas_tempranas": 2,
+    "score_promedio": 75
   },
   "flights": [
     {
-      "id": "f_f7fdfa63c480",
+      "id": "f_94332be9b3d5",
       "source": "promociones_aereas",
-      "origin": "COR",
-      "destination": "AUA",
-      "route_key": "COR-AUA",
-      "airline": "LATAM",
-      "airline_quality": 8,
-      "is_low_cost": false,
-      "price": 611.0,
+      "origin": "EZE",
+      "destination": "PUJ",
+      "route_key": "EZE-PUJ",
+      "airline": "Arajet",
+      "airline_quality": 5,
+      "is_low_cost": true,
+      "price": 60.0,
       "currency": "USD",
-      "price_usd": 611.0,
-      "price_ars": 788190,
+      "price_usd": 60.0,
+      "price_ars": 77400,
       "stops": 1,
       "stops_detail": [],
       "duration_minutes": 0,
@@ -37,791 +37,1667 @@
       "tax_included": true,
       "refundable": false,
       "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p.html",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-descuento-en-vuelos-a-punta-cana-o-santo-domingo-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p.html",
       "trip_type": "rt",
       "is_direct": false,
       "is_partial_direct": false,
-      "raw_title": "Hot Sale: Muy buenos Vuelos a Aruba a partir de U$D 611 🔥 desde Córdoba ✈️",
-      "posted_at": "Thu, 14 May 2026 20:21:09 +0000",
-      "last_checked": "2026-05-15",
+      "raw_title": "Hot Sale: Hasta U$D 60 de descuento 💥 en Vuelos a Punta Cana o Santo Domingo 🌴 desde Bs. As., Córdoba, Rosario o Mendoza",
+      "posted_at": "Fri, 15 May 2026 20:05:51 +0000",
+      "last_checked": "2026-05-16",
       "confidence": 0.92,
-      "departure_date": "2026-06-10",
-      "return_date": "2026-06-18",
+      "departure_date": "2026-05-13",
+      "return_date": "2026-05-20",
       "dates_available": [
         {
-          "depart": "2026-06-10",
-          "return": "2026-06-18",
+          "depart": "2026-05-13",
+          "return": "2026-05-20",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-10%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-05-13%2C2026-05-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-14",
+          "return": "2026-05-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-05-14%2C2026-05-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-20",
+          "return": "2026-05-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-05-20%2C2026-05-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-05-26%2C2026-06-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-05-26%2C2026-06-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-05-26%2C2026-06-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-05-26%2C2026-06-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-27",
+          "return": "2026-06-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-05-27%2C2026-06-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-05-29",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-05-29%2C2026-06-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-06-01%2C2026-06-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-06-02%2C2026-06-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-03%2C2026-06-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-03%2C2026-06-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-06",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-06-06%2C2026-06-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-07",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-06-07%2C2026-06-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-10%2C2026-06-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-06-11",
           "return": "2026-06-18",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-11%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-11%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-11",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-06-11%2C2026-06-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-06-13%2C2026-06-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-13%2C2026-06-24&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-15%2C2026-06-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-15%2C2026-06-24&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-06-15%2C2026-06-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-16",
+          "return": "2026-06-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-06-16%2C2026-06-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-06-17",
           "return": "2026-06-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-17%2C2026-06-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-17%2C2026-06-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-06-17",
-          "return": "2026-06-23",
+          "return": "2026-06-27",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-17%2C2026-06-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-06-17",
-          "return": "2026-06-30",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-17%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-06-21",
-          "return": "2026-07-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-21%2C2026-07-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-06-21",
-          "return": "2026-07-03",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-21%2C2026-07-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-06-23",
-          "return": "2026-07-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-23%2C2026-07-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-06-23",
-          "return": "2026-07-01",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-23%2C2026-07-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-17%2C2026-06-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-06-24",
-          "return": "2026-06-30",
+          "return": "2026-07-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-24%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-06-24%2C2026-07-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-08-18",
+          "depart": "2026-06-25",
+          "return": "2026-07-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-06-25%2C2026-07-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-26",
+          "return": "2026-07-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-26%2C2026-07-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-28",
+          "return": "2026-07-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-06-28%2C2026-07-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-06-30",
+          "return": "2026-07-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-06-30%2C2026-07-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-02",
+          "return": "2026-07-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-07-02%2C2026-07-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-03",
+          "return": "2026-07-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-03%2C2026-07-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-03",
+          "return": "2026-07-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-07-03%2C2026-07-11&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-03",
+          "return": "2026-07-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-07-03%2C2026-07-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-03",
+          "return": "2026-07-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-07-03%2C2026-07-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-04",
+          "return": "2026-07-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-07-04%2C2026-07-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-04",
+          "return": "2026-07-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-04%2C2026-07-11&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-05",
+          "return": "2026-07-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-05%2C2026-07-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-05",
+          "return": "2026-07-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-05%2C2026-07-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-06",
+          "return": "2026-07-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-06%2C2026-07-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-06",
+          "return": "2026-07-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-06%2C2026-07-16&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-08",
+          "return": "2026-07-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-08%2C2026-07-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-09",
+          "return": "2026-07-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-09%2C2026-07-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-13",
+          "return": "2026-07-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-13%2C2026-07-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-14",
+          "return": "2026-07-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-07-14%2C2026-07-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-17",
+          "return": "2026-07-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-17%2C2026-07-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-19",
+          "return": "2026-07-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-19%2C2026-07-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-19",
+          "return": "2026-07-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-19%2C2026-07-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-20",
+          "return": "2026-07-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-20%2C2026-07-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-20",
+          "return": "2026-07-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-20%2C2026-07-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-22",
+          "return": "2026-08-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-22%2C2026-08-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-23",
+          "return": "2026-08-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-23%2C2026-08-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-24",
+          "return": "2026-08-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-24%2C2026-08-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-24",
+          "return": "2026-08-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-24%2C2026-08-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-25",
+          "return": "2026-08-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-25%2C2026-08-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-26",
+          "return": "2026-08-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-26%2C2026-08-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-28",
+          "return": "2026-08-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-07-28%2C2026-08-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-29",
+          "return": "2026-08-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-29%2C2026-08-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-29",
+          "return": "2026-08-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-29%2C2026-08-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-29",
+          "return": "2026-08-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-29%2C2026-08-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-31",
+          "return": "2026-08-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-07-31%2C2026-08-16&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-07-31",
+          "return": "2026-08-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-07-31%2C2026-08-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-01",
+          "return": "2026-08-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-01%2C2026-08-11&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-03",
+          "return": "2026-08-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-03%2C2026-08-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-03",
+          "return": "2026-08-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-03%2C2026-08-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-04",
+          "return": "2026-08-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-04%2C2026-08-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-04",
+          "return": "2026-08-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-04%2C2026-08-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-04",
+          "return": "2026-08-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-04%2C2026-08-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-05",
+          "return": "2026-08-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-05%2C2026-08-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-05",
+          "return": "2026-08-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-05%2C2026-08-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-05",
+          "return": "2026-08-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-05%2C2026-08-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-05",
+          "return": "2026-08-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-05%2C2026-08-16&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-06",
+          "return": "2026-08-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-06%2C2026-08-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-06",
+          "return": "2026-08-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-06%2C2026-08-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-06",
+          "return": "2026-08-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-06%2C2026-08-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-07",
+          "return": "2026-08-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-07%2C2026-08-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-07",
+          "return": "2026-08-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-07%2C2026-08-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-07",
+          "return": "2026-08-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-08-07%2C2026-08-16&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-08",
+          "return": "2026-08-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-08%2C2026-08-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-08",
+          "return": "2026-08-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-08%2C2026-08-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-08",
+          "return": "2026-08-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-08-08%2C2026-08-16&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
           "return": "2026-08-27",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-18%2C2026-08-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-08-15%2C2026-08-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-08-20",
-          "return": "2026-08-27",
+          "depart": "2026-08-23",
+          "return": "2026-08-31",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-20%2C2026-08-27&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-23%2C2026-08-31&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-08-20",
-          "return": "2026-09-02",
+          "depart": "2026-08-24",
+          "return": "2026-09-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-20%2C2026-09-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-24%2C2026-09-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-08-25",
-          "return": "2026-09-02",
+          "depart": "2026-08-24",
+          "return": "2026-08-31",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-25%2C2026-09-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-24%2C2026-08-31&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-08-29",
+          "depart": "2026-08-26",
           "return": "2026-09-08",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-29%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-08-26%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-08-29",
-          "return": "2026-09-04",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-29%2C2026-09-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-08-30",
+          "depart": "2026-08-27",
           "return": "2026-09-07",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-08-30%2C2026-09-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-08-27%2C2026-09-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-28",
+          "return": "2026-09-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-08-28%2C2026-09-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-29",
+          "return": "2026-09-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-08-29%2C2026-09-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-30",
+          "return": "2026-09-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-30%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-31",
+          "return": "2026-09-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-31%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-08-31",
+          "return": "2026-09-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-08-31%2C2026-09-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-09-01",
           "return": "2026-09-08",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-01%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-01%2C2026-09-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-01",
+          "return": "2026-09-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-09-01%2C2026-09-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-09-03",
-          "return": "2026-09-09",
+          "return": "2026-09-13",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-03%2C2026-09-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-09-03%2C2026-09-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-04",
+          "return": "2026-09-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-09-04%2C2026-09-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-07",
+          "return": "2026-09-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-09-07%2C2026-09-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-09-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-08%2C2026-09-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-09-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-09-08%2C2026-09-16&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-11",
+          "return": "2026-09-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-09-11%2C2026-09-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-12",
+          "return": "2026-09-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-12%2C2026-09-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-09-14",
-          "return": "2026-09-23",
+          "return": "2026-09-22",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-14%2C2026-09-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CPUJ&to=PUJ%2CCOR&date=2026-09-14%2C2026-09-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-09-25",
+          "depart": "2026-09-15",
+          "return": "2026-09-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-15%2C2026-09-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-16",
+          "return": "2026-09-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-09-16%2C2026-09-24&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-19",
+          "return": "2026-09-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-19%2C2026-09-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-20",
+          "return": "2026-09-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-09-20%2C2026-09-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-21",
+          "return": "2026-09-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-21%2C2026-09-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-09-24",
           "return": "2026-10-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-25%2C2026-10-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-24%2C2026-10-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-09-26",
-          "return": "2026-10-07",
+          "return": "2026-10-03",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-26%2C2026-10-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-26%2C2026-10-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-09-27",
-          "return": "2026-10-05",
+          "depart": "2026-09-26",
+          "return": "2026-10-04",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-27%2C2026-10-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
-        },
-        {
-          "depart": "2026-09-27",
-          "return": "2026-10-09",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-27%2C2026-10-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-09-26%2C2026-10-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-09-28",
-          "return": "2026-10-06",
+          "return": "2026-10-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-28%2C2026-10-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-28%2C2026-10-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-09-29",
-          "return": "2026-10-06",
+          "depart": "2026-09-30",
+          "return": "2026-10-07",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-09-29%2C2026-10-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-09-30%2C2026-10-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-17",
-          "return": "2026-10-25",
+          "depart": "2026-10-01",
+          "return": "2026-10-08",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-17%2C2026-10-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-01%2C2026-10-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-17",
-          "return": "2026-10-30",
+          "depart": "2026-10-05",
+          "return": "2026-10-19",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-17%2C2026-10-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-05%2C2026-10-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-17",
-          "return": "2026-10-26",
+          "depart": "2026-10-06",
+          "return": "2026-10-19",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-17%2C2026-10-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-06%2C2026-10-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-18",
-          "return": "2026-10-26",
+          "depart": "2026-10-07",
+          "return": "2026-10-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-18%2C2026-10-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-07%2C2026-10-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-18",
-          "return": "2026-10-25",
+          "depart": "2026-10-07",
+          "return": "2026-10-17",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-18%2C2026-10-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-07%2C2026-10-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-19",
-          "return": "2026-10-26",
+          "depart": "2026-10-10",
+          "return": "2026-10-20",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-19%2C2026-10-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-10%2C2026-10-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-20",
-          "return": "2026-10-28",
+          "depart": "2026-10-10",
+          "return": "2026-10-17",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-20%2C2026-10-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-10%2C2026-10-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-23",
-          "return": "2026-11-04",
+          "depart": "2026-10-12",
+          "return": "2026-10-23",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-23%2C2026-11-04&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-12%2C2026-10-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-24",
-          "return": "2026-11-02",
+          "depart": "2026-10-12",
+          "return": "2026-10-19",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-24%2C2026-11-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-12%2C2026-10-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-25",
-          "return": "2026-11-02",
+          "depart": "2026-10-13",
+          "return": "2026-10-22",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-25%2C2026-11-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-13%2C2026-10-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-28",
-          "return": "2026-11-09",
+          "depart": "2026-10-13",
+          "return": "2026-10-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-28%2C2026-11-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-13%2C2026-10-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-10-29",
-          "return": "2026-11-06",
+          "depart": "2026-10-13",
+          "return": "2026-10-20",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-10-29%2C2026-11-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-13%2C2026-10-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-11-01",
-          "return": "2026-11-09",
+          "depart": "2026-10-13",
+          "return": "2026-10-23",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-01%2C2026-11-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-13%2C2026-10-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-11-01",
-          "return": "2026-11-10",
+          "depart": "2026-10-14",
+          "return": "2026-10-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-01%2C2026-11-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-14%2C2026-10-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-10-14",
+          "return": "2026-10-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-14%2C2026-10-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-10-14",
+          "return": "2026-10-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CPUJ&to=PUJ%2CBUE&date=2026-10-14%2C2026-10-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-04",
+          "return": "2026-11-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-11-04%2C2026-11-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-11-06",
-          "return": "2026-11-13",
+          "return": "2026-11-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-06%2C2026-11-13&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-11-06%2C2026-11-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
-          "depart": "2026-11-14",
-          "return": "2026-11-25",
+          "depart": "2026-11-13",
+          "return": "2026-11-22",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-14%2C2026-11-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-11-13%2C2026-11-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         },
         {
           "depart": "2026-11-14",
           "return": "2026-11-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-11-14%2C2026-11-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p"
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-14%2C2026-11-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-20",
+          "return": "2026-11-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-11-20%2C2026-11-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-21",
+          "return": "2026-12-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-11-21%2C2026-12-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-22",
+          "return": "2026-11-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-22%2C2026-11-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-12-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-23%2C2026-12-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-12-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-23%2C2026-12-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-27",
+          "return": "2026-12-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-27%2C2026-12-05&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-27",
+          "return": "2026-12-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-27%2C2026-12-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-11-29",
+          "return": "2026-12-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-11-29%2C2026-12-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-04",
+          "return": "2026-12-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-04%2C2026-12-12&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-06",
+          "return": "2026-12-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-06%2C2026-12-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-08",
+          "return": "2026-12-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-08%2C2026-12-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-08",
+          "return": "2026-12-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-08%2C2026-12-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-11",
+          "return": "2026-12-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-11%2C2026-12-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-11",
+          "return": "2026-12-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-12-11%2C2026-12-24&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-11",
+          "return": "2026-12-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-12-11%2C2026-12-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-13",
+          "return": "2026-12-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-13%2C2026-12-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-13",
+          "return": "2026-12-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-13%2C2026-12-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-15",
+          "return": "2026-12-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-15%2C2026-12-24&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-21",
+          "return": "2026-12-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-12-21%2C2026-12-31&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-21",
+          "return": "2026-12-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-12-21%2C2026-12-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-25",
+          "return": "2027-01-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-12-25%2C2027-01-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-26",
+          "return": "2027-01-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-26%2C2027-01-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-27",
+          "return": "2027-01-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-12-27%2C2027-01-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2026-12-30",
+          "return": "2027-01-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2026-12-30%2C2027-01-06&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-01-08",
+          "return": "2027-01-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2027-01-08%2C2027-01-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-01-31",
+          "return": "2027-02-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2027-01-31%2C2027-02-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-02-01",
+          "return": "2027-02-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2027-02-01%2C2027-02-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-02-01",
+          "return": "2027-02-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2027-02-01%2C2027-02-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-02-07",
+          "return": "2027-02-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2027-02-07%2C2027-02-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-02-15",
+          "return": "2027-02-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2027-02-15%2C2027-02-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-02-21",
+          "return": "2027-03-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=MDZ%2CPUJ&to=PUJ%2CMDZ&date=2027-02-21%2C2027-03-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-03-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2027-02-22%2C2027-03-01&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
+        },
+        {
+          "depart": "2027-03-19",
+          "return": "2027-03-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2027-03-19%2C2027-03-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p"
         }
       ],
-      "total_dates": 43,
-      "direct_booking_url": "https://almundo.com.ar/flights/results?from=COR%2CAUA&to=AUA%2CCOR&date=2026-06-10%2C2026-06-18&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-muy-buenos-vuelos-a-aruba-desde-cordoba-latam-rt-p",
-      "route": null,
-      "marketAvgUSD": null,
-      "dealScore": 60,
+      "total_dates": 166,
+      "direct_booking_url": "https://almundo.com.ar/flights/results?from=ROS%2CPUJ&to=PUJ%2CROS&date=2026-05-13%2C2026-05-20&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-descuento-en-vuelos-a-punta-cana-desde-bs-as-cordoba-rosario-o-mendoza-arajet-rt-p",
+      "route": {
+        "historical_avg": 800,
+        "historical_min": 520,
+        "expected_low": 650,
+        "exceptional_threshold": 560,
+        "avg_duration_min": 720,
+        "region": "Caribe",
+        "_learned": false
+      },
+      "marketAvgUSD": 750.0,
+      "dealScore": 93,
       "dealScoreByMode": {
-        "viaje_personal": 60,
-        "maximo_ahorro": 55,
-        "error_fare": 49,
-        "ejecutivo": 70,
-        "escapadas": 62,
-        "flexible_total": 57
+        "viaje_personal": 93,
+        "maximo_ahorro": 96,
+        "error_fare": 96,
+        "ejecutivo": 89,
+        "escapadas": 93,
+        "flexible_total": 96
       },
       "dealBreakdown": {
-        "hist": 50,
-        "mkt": 50,
-        "qual": 92,
-        "rare": 30,
+        "hist": 100,
+        "mkt": 100,
+        "qual": 86,
+        "rare": 100,
         "cond": 65,
         "conf": 92
       },
-      "qualScore": 92,
+      "qualScore": 86,
       "qualReasons": [
         {
           "kind": "neutral",
           "text": "1 escala"
         },
         {
-          "kind": "good",
-          "text": "LATAM: aerolínea sólida"
+          "kind": "neutral",
+          "text": "Aerolínea low-cost"
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
+        "tier": "GANGA EXTRAORDINARIA",
+        "emoji": "🔥",
+        "cls": "extraordinaria"
       },
       "errorFare": {
-        "is_error_fare": false,
-        "level": "none",
-        "flags": []
+        "is_error_fare": true,
+        "level": "likely",
+        "flags": [
+          "price_40pct_below_avg",
+          "below_historical_min"
+        ]
       },
-      "earlyAlert": false,
-      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "earlyAlert": true,
+      "mainReason": "<strong>92% debajo del histórico</strong> (avg ~USD 800) · una escala · sin equipaje · posible tarifa error",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/aua/260610/260618/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Aruba+on+2026-06-10+returning+2026-06-18",
-        "kayak": "https://www.kayak.com.ar/flights/COR-AUA/2026-06-10/2026-06-18",
-        "momondo": "https://www.momondo.com/flight-search/COR-AUA/2026-06-10/2026-06-18",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/puj/260513/260520/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Punta+Cana+on+2026-05-13+returning+2026-05-20",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-PUJ/2026-05-13/2026-05-20",
+        "momondo": "https://www.momondo.com/flight-search/EZE-PUJ/2026-05-13/2026-05-20",
         "guessed_dates": {
-          "depart": "2026-06-10",
-          "return": "2026-06-18",
+          "depart": "2026-05-13",
+          "return": "2026-05-20",
           "source": "post_table"
         }
       }
     },
     {
-      "id": "f_f90720ec118c",
+      "id": "f_1f610fec30b5",
       "source": "promociones_aereas",
       "origin": "EZE",
-      "destination": "MAD",
-      "route_key": "EZE-MAD",
-      "airline": "Desconocida",
-      "airline_quality": 6,
+      "destination": "PUJ",
+      "route_key": "EZE-PUJ",
+      "airline": "Aerolíneas Argentinas",
+      "airline_quality": 7,
       "is_low_cost": false,
-      "price": 990.0,
+      "price": 750.0,
       "currency": "USD",
-      "price_usd": 990.0,
-      "price_ars": 1277100,
-      "stops": 1,
+      "price_usd": 750.0,
+      "price_ars": 967500,
+      "stops": 0,
       "stops_detail": [],
       "duration_minutes": 0,
-      "baggage_included": false,
+      "baggage_included": true,
       "tax_included": true,
       "refundable": false,
       "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p.html",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p.html",
       "trip_type": "rt",
-      "is_direct": false,
+      "is_direct": true,
       "is_partial_direct": false,
-      "raw_title": "Hot Sale: Lindos Vuelos a Madrid con dos equipajes despachados 🧳 a partir de U$D 990 🔥🔥 desde Buenos Aires",
-      "posted_at": "Thu, 14 May 2026 19:10:33 +0000",
-      "last_checked": "2026-05-15",
+      "raw_title": "Hot Sale: ¡Vuelos Directos a Punta Cana 🌴 en Verano con hasta 15% OFF! Opciones con carry on a partir de U$D 750 🔥 desde Bs. As.",
+      "posted_at": "Fri, 15 May 2026 18:56:37 +0000",
+      "last_checked": "2026-05-16",
       "confidence": 0.92,
-      "departure_date": "2027-03-04",
-      "return_date": "2027-03-24",
+      "departure_date": "2026-12-14",
+      "return_date": "2026-12-23",
       "dates_available": [
         {
-          "depart": "2027-03-04",
-          "return": "2027-03-24",
-          "is_direct": false,
+          "depart": "2026-12-14",
+          "return": "2026-12-23",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-04/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2026-12-14/2026-12-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-08",
-          "return": "2027-03-31",
-          "is_direct": false,
+          "depart": "2027-01-11",
+          "return": "2027-01-18",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-11/2027-01-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-08",
-          "return": "2027-03-26",
-          "is_direct": false,
+          "depart": "2027-01-12",
+          "return": "2027-01-20",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-12/2027-01-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-09",
-          "return": "2027-03-24",
-          "is_direct": false,
+          "depart": "2027-01-12",
+          "return": "2027-01-19",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-12/2027-01-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-09",
-          "return": "2027-04-09",
-          "is_direct": false,
+          "depart": "2027-01-12",
+          "return": "2027-01-21",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-12/2027-01-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-09",
-          "return": "2027-04-07",
-          "is_direct": false,
+          "depart": "2027-01-15",
+          "return": "2027-01-25",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-15/2027-01-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-09",
+          "depart": "2027-01-27",
+          "return": "2027-02-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-27/2027-02-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-01-27",
+          "return": "2027-02-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-27/2027-02-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-01-27",
+          "return": "2027-02-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-27/2027-02-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-14",
+          "return": "2027-02-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-14/2027-02-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-15",
+          "return": "2027-02-22",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-15/2027-02-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-15",
+          "return": "2027-02-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-15/2027-02-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-15",
+          "return": "2027-02-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-15/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-03-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-03-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-03-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-02-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-02-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-02-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-02-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-02-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-19",
+          "return": "2027-03-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-19/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-19",
+          "return": "2027-02-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-19/2027-02-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-03-07",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-22/2027-03-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-02-28",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-22/2027-02-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-04",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-24/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-05",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-24/2027-03-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-26",
+          "return": "2027-03-10",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-26/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-26",
+          "return": "2027-03-12",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-26/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-28",
+          "return": "2027-03-12",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-28/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-28",
+          "return": "2027-03-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-28/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-02-28",
+          "return": "2027-03-15",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-28/2027-03-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-03-02",
+          "return": "2027-03-08",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-03-02",
+          "return": "2027-03-12",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-03-02",
+          "return": "2027-03-10",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
+        },
+        {
+          "depart": "2027-03-02",
           "return": "2027-03-17",
-          "is_direct": false,
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-09/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-13",
-          "return": "2027-03-31",
-          "is_direct": false,
+          "depart": "2027-03-03",
+          "return": "2027-03-12",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-13/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-03/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-15",
-          "return": "2027-03-26",
-          "is_direct": false,
+          "depart": "2027-03-03",
+          "return": "2027-03-11",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-15/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-03/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-15",
-          "return": "2027-03-31",
-          "is_direct": false,
+          "depart": "2027-03-05",
+          "return": "2027-03-12",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-15/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-05/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-15",
-          "return": "2027-04-07",
-          "is_direct": false,
+          "depart": "2027-03-07",
+          "return": "2027-03-18",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-15/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-16",
-          "return": "2027-03-26",
-          "is_direct": false,
+          "depart": "2027-03-07",
+          "return": "2027-03-17",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-16/2027-03-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-16",
-          "return": "2027-04-21",
-          "is_direct": false,
+          "depart": "2027-03-07",
+          "return": "2027-03-13",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-16/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-18",
-          "return": "2027-04-11",
-          "is_direct": false,
+          "depart": "2027-03-07",
+          "return": "2027-03-15",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-18/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-18",
-          "return": "2027-04-18",
-          "is_direct": false,
+          "depart": "2027-03-08",
+          "return": "2027-03-17",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-18/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-18",
-          "return": "2027-04-09",
-          "is_direct": false,
+          "depart": "2027-03-08",
+          "return": "2027-03-22",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-18/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-20",
-          "return": "2027-03-31",
-          "is_direct": false,
+          "depart": "2027-03-08",
+          "return": "2027-03-16",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-20/2027-03-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-20",
-          "return": "2027-04-09",
-          "is_direct": false,
+          "depart": "2027-03-08",
+          "return": "2027-03-19",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-20/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-22",
-          "return": "2027-04-18",
-          "is_direct": false,
+          "depart": "2027-03-09",
+          "return": "2027-03-22",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-09/2027-03-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-22",
-          "return": "2027-04-11",
-          "is_direct": false,
+          "depart": "2027-03-09",
+          "return": "2027-03-24",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-09/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-22",
-          "return": "2027-04-14",
-          "is_direct": false,
+          "depart": "2027-03-09",
+          "return": "2027-03-21",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-09/2027-03-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-22",
-          "return": "2027-04-16",
-          "is_direct": false,
+          "depart": "2027-03-10",
+          "return": "2027-03-22",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-10/2027-03-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-22",
-          "return": "2027-04-07",
-          "is_direct": false,
+          "depart": "2027-03-10",
+          "return": "2027-03-25",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-22/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-10/2027-03-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         },
         {
-          "depart": "2027-03-23",
-          "return": "2027-04-21",
-          "is_direct": false,
+          "depart": "2027-03-10",
+          "return": "2027-03-20",
+          "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-23",
-          "return": "2027-04-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-23",
-          "return": "2027-04-11",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-23",
-          "return": "2027-04-18",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-23",
-          "return": "2027-04-09",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-23",
-          "return": "2027-04-14",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-23/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-25",
-          "return": "2027-04-18",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-25",
-          "return": "2027-04-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-25",
-          "return": "2027-04-11",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-25",
-          "return": "2027-04-09",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-25/2027-04-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-29",
-          "return": "2027-04-18",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-29/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-03-30",
-          "return": "2027-04-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-30/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-01",
-          "return": "2027-04-21",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-01",
-          "return": "2027-04-23",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-01",
-          "return": "2027-04-18",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-01",
-          "return": "2027-04-14",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-01",
-          "return": "2027-04-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-01",
-          "return": "2027-04-11",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-01/2027-04-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-05",
-          "return": "2027-04-30",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-05/2027-04-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-05",
-          "return": "2027-04-18",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-05/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-06",
-          "return": "2027-04-21",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-06/2027-04-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-06",
-          "return": "2027-04-28",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-06/2027-04-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-06",
-          "return": "2027-04-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-06/2027-04-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-08",
-          "return": "2027-04-30",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-08/2027-04-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-08",
-          "return": "2027-04-18",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-08/2027-04-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-10",
-          "return": "2027-04-28",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-10/2027-04-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
-        },
-        {
-          "depart": "2027-04-10",
-          "return": "2027-04-30",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-04-10/2027-04-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-10/2027-03-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
         }
       ],
       "total_dates": 50,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-04/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-lindos-vuelos-a-madrid-con-dos-equipajes-despachados-desde-buenos-aires-boliviana-de-aviacion-rt-p",
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2026-12-14/2026-12-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p",
       "route": {
-        "historical_avg": 950,
-        "historical_min": 580,
-        "expected_low": 780,
-        "exceptional_threshold": 650,
-        "avg_duration_min": 780,
-        "region": "Europa",
+        "historical_avg": 800,
+        "historical_min": 520,
+        "expected_low": 650,
+        "exceptional_threshold": 560,
+        "avg_duration_min": 720,
+        "region": "Caribe",
         "_learned": false
       },
-      "marketAvgUSD": null,
-      "dealScore": 58,
+      "marketAvgUSD": 60.0,
+      "dealScore": 57,
       "dealScoreByMode": {
-        "viaje_personal": 58,
-        "maximo_ahorro": 52,
-        "error_fare": 44,
-        "ejecutivo": 69,
-        "escapadas": 60,
-        "flexible_total": 54
+        "viaje_personal": 57,
+        "maximo_ahorro": 48,
+        "error_fare": 45,
+        "ejecutivo": 71,
+        "escapadas": 59,
+        "flexible_total": 50
       },
       "dealBreakdown": {
-        "hist": 46,
-        "mkt": 50,
-        "qual": 92,
+        "hist": 60,
+        "mkt": 0,
+        "qual": 100,
         "rare": 20,
-        "cond": 65,
+        "cond": 90,
         "conf": 92
       },
-      "qualScore": 92,
+      "qualScore": 100,
       "qualReasons": [
         {
-          "kind": "neutral",
-          "text": "1 escala"
+          "kind": "good",
+          "text": "Vuelo directo"
+        },
+        {
+          "kind": "good",
+          "text": "Equipaje incluido"
         }
       ],
       "category": {
@@ -835,15 +1711,891 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "precio en línea con el histórico · una escala · sin equipaje",
+      "mainReason": "<strong>6% debajo del histórico</strong> (avg ~USD 800) · vuelo directo · equipaje incluido",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mad/270304/270324/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Madrid+on+2027-03-04+returning+2027-03-24",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-MAD/2027-03-04/2027-03-24",
-        "momondo": "https://www.momondo.com/flight-search/EZE-MAD/2027-03-04/2027-03-24",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/puj/261214/261223/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Punta+Cana+on+2026-12-14+returning+2026-12-23",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-PUJ/2026-12-14/2026-12-23",
+        "momondo": "https://www.momondo.com/flight-search/EZE-PUJ/2026-12-14/2026-12-23",
         "guessed_dates": {
-          "depart": "2027-03-04",
-          "return": "2027-03-24",
+          "depart": "2026-12-14",
+          "return": "2026-12-23",
+          "source": "post_table"
+        }
+      }
+    },
+    {
+      "id": "f_caf98afa866f",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "CUN",
+      "route_key": "EZE-CUN",
+      "airline": "Aeroméxico",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 651.0,
+      "currency": "USD",
+      "price_usd": 651.0,
+      "price_ars": 839790,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": true,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Hot Sale: Hermosos vuelos a Cancún en VERANO🌴 con carry on a partir de U$D 651😎 desde Bs. As.",
+      "posted_at": "Fri, 15 May 2026 18:30:00 +0000",
+      "last_checked": "2026-05-16",
+      "confidence": 0.92,
+      "departure_date": "2026-12-02",
+      "return_date": "2026-12-07",
+      "dates_available": [
+        {
+          "depart": "2026-12-02",
+          "return": "2026-12-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2026-12-02/2026-12-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-14",
+          "return": "2027-01-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2026-12-14/2027-01-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-03",
+          "return": "2027-02-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-03/2027-02-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-03",
+          "return": "2027-02-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-03/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-03",
+          "return": "2027-02-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-03/2027-02-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-05",
+          "return": "2027-02-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-05/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-12",
+          "return": "2027-02-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-12/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-21",
+          "return": "2027-03-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-21/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-03-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-22/2027-03-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-22",
+          "return": "2027-03-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-22/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-23",
+          "return": "2027-03-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-23/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-23",
+          "return": "2027-03-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-23/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-24/2027-03-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-24/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-24",
+          "return": "2027-03-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-24/2027-03-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-27",
+          "return": "2027-03-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-27/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-28",
+          "return": "2027-03-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-28/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-28",
+          "return": "2027-03-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-28/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-03-01",
+          "return": "2027-03-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-03-01/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-03-03",
+          "return": "2027-03-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-03-03/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
+        }
+      ],
+      "total_dates": 20,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2026-12-02/2026-12-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p",
+      "route": {
+        "historical_avg": 750,
+        "historical_min": 450,
+        "expected_low": 580,
+        "exceptional_threshold": 500,
+        "avg_duration_min": 720,
+        "region": "Caribe",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 69,
+      "dealScoreByMode": {
+        "viaje_personal": 69,
+        "maximo_ahorro": 65,
+        "error_fare": 53,
+        "ejecutivo": 78,
+        "escapadas": 70,
+        "flexible_total": 66
+      },
+      "dealBreakdown": {
+        "hist": 72,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 20,
+        "cond": 90,
+        "conf": 92
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "Equipaje incluido"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>13% debajo del histórico</strong> (avg ~USD 750) · una escala · equipaje incluido",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/cun/261202/261207/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Cancun+on+2026-12-02+returning+2026-12-07",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-CUN/2026-12-02/2026-12-07",
+        "momondo": "https://www.momondo.com/flight-search/EZE-CUN/2026-12-02/2026-12-07",
+        "guessed_dates": {
+          "depart": "2026-12-02",
+          "return": "2026-12-07",
+          "source": "post_table"
+        }
+      }
+    },
+    {
+      "id": "f_7b4d631b0966",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "JFK",
+      "route_key": "EZE-JFK",
+      "airline": "Delta",
+      "airline_quality": 8,
+      "is_low_cost": false,
+      "price": 841.0,
+      "currency": "USD",
+      "price_usd": 841.0,
+      "price_ars": 1084890,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": true,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "Hot Sale: Nueva York Directo 🗽 con Carry On a partir de U$D 841 🔥 desde Bs. As. ¡Hay cuotas!",
+      "posted_at": "Fri, 15 May 2026 18:18:42 +0000",
+      "last_checked": "2026-05-16",
+      "confidence": 0.92,
+      "departure_date": "2026-05-17",
+      "return_date": "2026-05-27",
+      "dates_available": [
+        {
+          "depart": "2026-05-17",
+          "return": "2026-05-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-17/2026-05-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-05-18",
+          "return": "2026-05-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-18/2026-05-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-07-20",
+          "return": "2026-08-05",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-07-20/2026-08-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-07-21",
+          "return": "2026-08-06",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-07-21/2026-08-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-09-24",
+          "return": "2026-10-01",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-09-24/2026-10-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-09-24",
+          "return": "2026-10-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-09-24/2026-10-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-09-29",
+          "return": "2026-10-12",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-09-29/2026-10-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-05",
+          "return": "2026-10-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-05/2026-10-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-05",
+          "return": "2026-10-13",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-05/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-06",
+          "return": "2026-10-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-06/2026-10-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-06",
+          "return": "2026-10-13",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-06/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-07",
+          "return": "2026-10-16",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-07/2026-10-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-17",
+          "return": "2026-10-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-17/2026-10-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-10-24",
+          "return": "2026-11-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-24/2026-11-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-12",
+          "return": "2026-11-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-12",
+          "return": "2026-11-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-12",
+          "return": "2026-11-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-12",
+          "return": "2026-11-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-13",
+          "return": "2026-11-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-13/2026-11-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-13",
+          "return": "2026-12-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-13/2026-12-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-14",
+          "return": "2026-11-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-14/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-15",
+          "return": "2026-11-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-15/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-15",
+          "return": "2026-11-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-15/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-16",
+          "return": "2026-11-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-16/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-17",
+          "return": "2026-11-27",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-17/2026-11-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-17",
+          "return": "2026-11-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-17/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-11-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-18/2026-11-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-12-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-18/2026-12-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-18",
+          "return": "2026-12-07",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-18/2026-12-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-20",
+          "return": "2026-11-29",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-20/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-22",
+          "return": "2026-11-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-22/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-22",
+          "return": "2026-11-29",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-22/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-11-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-23/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-12-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-23/2026-12-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-24",
+          "return": "2026-12-01",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-24/2026-12-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-24",
+          "return": "2026-12-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-24/2026-12-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-24",
+          "return": "2026-11-30",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-24/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-25",
+          "return": "2026-12-08",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-25/2026-12-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-25",
+          "return": "2026-12-06",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-25/2026-12-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2026-11-26",
+          "return": "2026-12-08",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-26/2026-12-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2027-01-25",
+          "return": "2027-02-05",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2027-01-25/2027-02-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        },
+        {
+          "depart": "2027-03-21",
+          "return": "2027-04-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2027-03-21/2027-04-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
+        }
+      ],
+      "total_dates": 42,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-17/2026-05-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p",
+      "route": {
+        "historical_avg": 950,
+        "historical_min": 650,
+        "expected_low": 780,
+        "exceptional_threshold": 680,
+        "avg_duration_min": 700,
+        "region": "USA",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 72,
+      "dealScoreByMode": {
+        "viaje_personal": 72,
+        "maximo_ahorro": 67,
+        "error_fare": 63,
+        "ejecutivo": 82,
+        "escapadas": 74,
+        "flexible_total": 69
+      },
+      "dealBreakdown": {
+        "hist": 69,
+        "mkt": 50,
+        "qual": 100,
+        "rare": 45,
+        "cond": 90,
+        "conf": 92
+      },
+      "qualScore": 100,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        },
+        {
+          "kind": "good",
+          "text": "Equipaje incluido"
+        },
+        {
+          "kind": "good",
+          "text": "Delta: aerolínea sólida"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>11% debajo del histórico</strong> (avg ~USD 950) · vuelo directo · equipaje incluido",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/jfk/260517/260527/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+New+York+on+2026-05-17+returning+2026-05-27",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-JFK/2026-05-17/2026-05-27",
+        "momondo": "https://www.momondo.com/flight-search/EZE-JFK/2026-05-17/2026-05-27",
+        "guessed_dates": {
+          "depart": "2026-05-17",
+          "return": "2026-05-27",
+          "source": "post_table"
+        }
+      }
+    },
+    {
+      "id": "f_7e3610bca718",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "NAT",
+      "route_key": "EZE-NAT",
+      "airline": "JetSMART",
+      "airline_quality": 5,
+      "is_low_cost": true,
+      "price": 343.0,
+      "currency": "USD",
+      "price_usd": 343.0,
+      "price_ars": 442470,
+      "stops": 0,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": true,
+      "is_partial_direct": false,
+      "raw_title": "Hot Sale: Lindos Vuelos a Natal 🏖️ Directos a partir de U$D 343🔥desde Bs. As.",
+      "posted_at": "Fri, 15 May 2026 17:40:00 +0000",
+      "last_checked": "2026-05-16",
+      "confidence": 0.92,
+      "departure_date": "2026-07-03",
+      "return_date": "2026-07-09",
+      "dates_available": [
+        {
+          "depart": "2026-07-03",
+          "return": "2026-07-09",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-07-03%2C2026-07-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-06",
+          "return": "2026-08-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-06%2C2026-08-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-10",
+          "return": "2026-08-14",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-10%2C2026-08-14&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-10",
+          "return": "2026-08-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-10%2C2026-08-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-13",
+          "return": "2026-08-21",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-13%2C2026-08-21&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-23",
+          "return": "2026-08-28",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-23%2C2026-08-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-23",
+          "return": "2026-09-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-23%2C2026-09-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-23",
+          "return": "2026-09-07",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-23%2C2026-09-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-24",
+          "return": "2026-09-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-24%2C2026-09-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-27",
+          "return": "2026-09-03",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-27%2C2026-09-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-30",
+          "return": "2026-09-17",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-30%2C2026-09-17&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-30",
+          "return": "2026-09-07",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-30%2C2026-09-07&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-08-31",
+          "return": "2026-09-10",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-08-31%2C2026-09-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-09-03",
+          "return": "2026-09-10",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-09-03%2C2026-09-10&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-05",
+          "return": "2026-10-15",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-05%2C2026-10-15&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-12",
+          "return": "2026-10-22",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-12%2C2026-10-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-12",
+          "return": "2026-10-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-12%2C2026-10-19&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-12",
+          "return": "2026-10-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-12%2C2026-10-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-15",
+          "return": "2026-10-22",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-15%2C2026-10-22&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-18",
+          "return": "2026-10-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-18%2C2026-10-23&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        },
+        {
+          "depart": "2026-10-26",
+          "return": "2026-11-02",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-10-26%2C2026-11-02&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p"
+        }
+      ],
+      "total_dates": 21,
+      "direct_booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CNAT&to=NAT%2CBUE&date=2026-07-03%2C2026-07-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-hot-sale-lindos-vuelos-a-natal-directos-desde-bs-as-jetsmart-rt-p",
+      "route": {
+        "historical_avg": 600,
+        "historical_min": 350,
+        "expected_low": 470,
+        "exceptional_threshold": 400,
+        "avg_duration_min": 480,
+        "region": "Brasil",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 84,
+      "dealScoreByMode": {
+        "viaje_personal": 84,
+        "maximo_ahorro": 84,
+        "error_fare": 92,
+        "ejecutivo": 84,
+        "escapadas": 84,
+        "flexible_total": 84
+      },
+      "dealBreakdown": {
+        "hist": 99,
+        "mkt": 50,
+        "qual": 94,
+        "rare": 100,
+        "cond": 65,
+        "conf": 92
+      },
+      "qualScore": 94,
+      "qualReasons": [
+        {
+          "kind": "good",
+          "text": "Vuelo directo"
+        },
+        {
+          "kind": "neutral",
+          "text": "Aerolínea low-cost"
+        }
+      ],
+      "category": {
+        "tier": "EMITIR URGENTE",
+        "emoji": "⚡",
+        "cls": "urgente"
+      },
+      "errorFare": {
+        "is_error_fare": true,
+        "level": "likely",
+        "flags": [
+          "price_40pct_below_avg",
+          "below_historical_min"
+        ]
+      },
+      "earlyAlert": true,
+      "mainReason": "<strong>43% debajo del histórico</strong> (avg ~USD 600) · vuelo directo · sin equipaje · posible tarifa error",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/nat/260703/260709/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+NAT+on+2026-07-03+returning+2026-07-09",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-NAT/2026-07-03/2026-07-09",
+        "momondo": "https://www.momondo.com/flight-search/EZE-NAT/2026-07-03/2026-07-09",
+        "guessed_dates": {
+          "depart": "2026-07-03",
+          "return": "2026-07-09",
           "source": "post_table"
         }
       }
