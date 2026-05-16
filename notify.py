@@ -19,6 +19,7 @@ import sys
 import urllib.parse
 import urllib.request
 from datetime import datetime
+from functools import partial
 
 LISTINGS_FILE = 'listings.json'
 CCA_FILE = 'cca_precios.json'
@@ -135,8 +136,13 @@ def main():
         print(f'{LISTINGS_FILE} no existe — skip')
         return 0
 
-    listings = json.load(open(LISTINGS_FILE)).get('listings', [])
-    cca = json.load(open(CCA_FILE)).get('prices', {}) if os.path.exists(CCA_FILE) else {}
+    with open(LISTINGS_FILE) as f:
+        listings = json.load(f).get('listings', [])
+    if os.path.exists(CCA_FILE):
+        with open(CCA_FILE) as f:
+            cca = json.load(f).get('prices', {})
+    else:
+        cca = {}
 
     use_v2 = has_v2_scoring(listings)
     if use_v2:
@@ -147,8 +153,8 @@ def main():
         if not cca:
             print('No hay scoring v2 ni cca_precios.json — no puedo clasificar gangas')
             return 0
-        is_super = lambda l: is_super_ganga_fallback(l, cca)
-        is_ganga_plus = lambda l: is_ganga_or_better_fallback(l, cca)
+        is_super = partial(is_super_ganga_fallback, cca=cca)
+        is_ganga_plus = partial(is_ganga_or_better_fallback, cca=cca)
         mode_label = 'fallback (CCA solo)'
     print(f'Notifier mode: {mode_label}')
 
@@ -156,14 +162,15 @@ def main():
     if bootstrap:
         seed_new = sorted({l['id'] for l in listings if l.get('is_new')})
         seed_drops = {l['id']: l['precio_usd'] for l in listings if l.get('recent_price_drop')}
-        json.dump({'new_seen': seed_new, 'drop_notified_price': seed_drops,
-                   'last_run': datetime.utcnow().isoformat() + 'Z',
-                   'mode': mode_label},
-                  open(STATE_FILE, 'w'), indent=2)
+        with open(STATE_FILE, 'w') as f:
+            json.dump({'new_seen': seed_new, 'drop_notified_price': seed_drops,
+                       'last_run': datetime.utcnow().isoformat() + 'Z',
+                       'mode': mode_label}, f, indent=2)
         print(f'Bootstrap: estado inicial ({len(seed_new)} ids semilla), sin notificar')
         return 0
 
-    state = json.load(open(STATE_FILE))
+    with open(STATE_FILE) as f:
+        state = json.load(f)
     seen_ids = set(state.get('new_seen', []))
     drop_prices = state.get('drop_notified_price', {})
 
@@ -204,11 +211,11 @@ def main():
         seen_ids.add(l['id'])
     for l in drop_gangas:
         drop_prices[l['id']] = l['precio_usd']
-    json.dump({'new_seen': sorted(seen_ids),
-               'drop_notified_price': drop_prices,
-               'last_run': datetime.utcnow().isoformat() + 'Z',
-               'mode': mode_label},
-              open(STATE_FILE, 'w'), indent=2)
+    with open(STATE_FILE, 'w') as f:
+        json.dump({'new_seen': sorted(seen_ids),
+                   'drop_notified_price': drop_prices,
+                   'last_run': datetime.utcnow().isoformat() + 'Z',
+                   'mode': mode_label}, f, indent=2)
     return 0
 
 

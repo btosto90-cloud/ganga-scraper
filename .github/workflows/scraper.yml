@@ -30,10 +30,6 @@ jobs:
         run: |
           python scraper.py 2>&1 | tee scraper_log.txt
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
-        env:
-          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
-          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
-          ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
 
       - name: Show summary
         if: always()
