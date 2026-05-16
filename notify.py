@@ -21,6 +21,8 @@ import urllib.request
 from datetime import datetime
 from functools import partial
 
+from io_utils import atomic_write_json
+
 LISTINGS_FILE = 'listings.json'
 CCA_FILE = 'cca_precios.json'
 STATE_FILE = 'notified.json'
@@ -162,10 +164,12 @@ def main():
     if bootstrap:
         seed_new = sorted({l['id'] for l in listings if l.get('is_new')})
         seed_drops = {l['id']: l['precio_usd'] for l in listings if l.get('recent_price_drop')}
-        with open(STATE_FILE, 'w') as f:
-            json.dump({'new_seen': seed_new, 'drop_notified_price': seed_drops,
-                       'last_run': datetime.utcnow().isoformat() + 'Z',
-                       'mode': mode_label}, f, indent=2)
+        atomic_write_json(STATE_FILE, {
+            'new_seen': seed_new,
+            'drop_notified_price': seed_drops,
+            'last_run': datetime.utcnow().isoformat() + 'Z',
+            'mode': mode_label,
+        })
         print(f'Bootstrap: estado inicial ({len(seed_new)} ids semilla), sin notificar')
         return 0
 
@@ -211,11 +215,12 @@ def main():
         seen_ids.add(l['id'])
     for l in drop_gangas:
         drop_prices[l['id']] = l['precio_usd']
-    with open(STATE_FILE, 'w') as f:
-        json.dump({'new_seen': sorted(seen_ids),
-                   'drop_notified_price': drop_prices,
-                   'last_run': datetime.utcnow().isoformat() + 'Z',
-                   'mode': mode_label}, f, indent=2)
+    atomic_write_json(STATE_FILE, {
+        'new_seen': sorted(seen_ids),
+        'drop_notified_price': drop_prices,
+        'last_run': datetime.utcnow().isoformat() + 'Z',
+        'mode': mode_label,
+    })
     return 0
 
 

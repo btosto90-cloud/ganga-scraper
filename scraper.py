@@ -7,6 +7,8 @@ import urllib.request
 import urllib.parse
 from datetime import datetime, timedelta
 
+from io_utils import atomic_write_json
+
 BLUE_RATE = 1400  # default, se sobreescribe abajo con valor real
 BLUE_RATE_FALLBACK = False  # True si dolarapi falló y se usó el fallback hardcoded
 
@@ -841,12 +843,11 @@ def main():
             return True
     fast_sales = [e for e in fast_sales if _keep(e)]
 
-    with open(FAST_SALES_FILE, 'w', encoding='utf-8') as f:
-        json.dump({
-            'updated': datetime.utcnow().isoformat() + 'Z',
-            'count': len(fast_sales),
-            'events': fast_sales,
-        }, f, ensure_ascii=False, indent=2)
+    atomic_write_json(FAST_SALES_FILE, {
+        'updated': datetime.utcnow().isoformat() + 'Z',
+        'count': len(fast_sales),
+        'events': fast_sales,
+    })
     print(f"  Fast sales: +{new_events} nuevas, {len(fast_sales)} total (rolling 90d)")
 
     # ─── velocity_stats.json: estadísticas por model_key ────────────────────
@@ -875,12 +876,11 @@ def main():
             'median_sale_price_usd': _median(prices) if prices else None,
         }
 
-    with open('velocity_stats.json', 'w', encoding='utf-8') as f:
-        json.dump({
-            'updated': datetime.utcnow().isoformat() + 'Z',
-            'count': len(velocity_stats),
-            'stats': velocity_stats,
-        }, f, ensure_ascii=False, indent=2)
+    atomic_write_json('velocity_stats.json', {
+        'updated': datetime.utcnow().isoformat() + 'Z',
+        'count': len(velocity_stats),
+        'stats': velocity_stats,
+    })
     print(f"  Velocity stats: {len(velocity_stats)} model_keys con ≥3 fast sales")
 
     # ─── Pre-computar ganga_confidence (CCA + bucket outlier + velocity) ────
@@ -914,8 +914,7 @@ def main():
         'listings': unique,
     }
 
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+    atomic_write_json(OUTPUT_FILE, output)
 
     print(f"\n✓ listings.json: {len(unique)} autos")
     print(f"  Fuentes: {fuentes}")
