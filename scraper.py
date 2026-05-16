@@ -8,9 +8,14 @@ import urllib.parse
 from datetime import datetime, timedelta
 
 BLUE_RATE = 1400  # default, se sobreescribe abajo con valor real
+BLUE_RATE_FALLBACK = False  # True si dolarapi falló y se usó el fallback hardcoded
+
+# Contadores globales de errores HTTP — visibles en el resumen final
+FETCH_ERRORS = {'count': 0, 'urls': []}
 
 def fetch_blue_rate():
     """Lee dólar blue (venta) desde dolarapi.com. Fallback a 1400."""
+    global BLUE_RATE_FALLBACK
     try:
         with urllib.request.urlopen('https://dolarapi.com/v1/dolares/blue', timeout=10) as r:
             data = json.loads(r.read())
@@ -18,17 +23,14 @@ def fetch_blue_rate():
             if rate and 1000 < rate < 5000:
                 print(f"BLUE_RATE actualizado: {rate} (dolarapi.com)")
                 return int(rate)
+            print(f"WARN: dolarapi devolvió rate fuera de rango ({rate}), usando fallback 1400")
     except Exception as e:
         print(f"WARN: dolarapi falló ({e}), usando fallback 1400")
+    BLUE_RATE_FALLBACK = True
     return 1400
 
 BLUE_RATE = fetch_blue_rate()
 OUTPUT_FILE = "listings.json"
-
-# Credenciales ML (vienen de GitHub Actions secrets)
-ML_CLIENT_ID = os.environ.get('ML_CLIENT_ID', '')
-ML_CLIENT_SECRET = os.environ.get('ML_CLIENT_SECRET', '')
-ML_REFRESH_TOKEN = os.environ.get('ML_REFRESH_TOKEN', '')
 
 HEADERS_LIST = [
     {
@@ -51,6 +53,7 @@ HEADERS_LIST = [
 def fetch(url, headers=None, retries=3, delay=2):
     if headers is None:
         headers = random.choice(HEADERS_LIST)
+    last_err = None
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, headers=headers)
@@ -61,9 +64,13 @@ def fetch(url, headers=None, retries=3, delay=2):
                     content = gzip.decompress(content)
                 return content
         except Exception as e:
+            last_err = e
             print(f"  [fetch] err {attempt+1}/{retries} {url[:80]}: {e}")
             if attempt < retries - 1:
                 time.sleep(delay * (attempt + 1))
+    FETCH_ERRORS['count'] += 1
+    if len(FETCH_ERRORS['urls']) < 20:
+        FETCH_ERRORS['urls'].append(f"{url[:120]} ({last_err})")
     return b""
 
 # ─── PRICE PARSING ────────────────────────────────────────────────────────────
@@ -914,6 +921,18 @@ def main():
     print(f"  Fuentes: {fuentes}")
     print(f"  Nuevas hoy: {nuevas_hoy} · Bajaron hoy: {bajaron_hoy}")
     print(f"  Top marcas: {dict(sorted(marcas_count.items(), key=lambda x: -x[1])[:10])}")
+
+    # ─── Resumen de salud del run (errores HTTP, fallbacks) ─────────────────
+    has_warnings = FETCH_ERRORS['count'] > 0 or BLUE_RATE_FALLBACK
+    print("\n" + ("⚠️  " if has_warnings else "✓  ") + "Run health:")
+    if BLUE_RATE_FALLBACK:
+        print(f"  ⚠️  dolarapi falló — USD/ARS calculado con fallback BLUE_RATE={BLUE_RATE}")
+    if FETCH_ERRORS['count'] > 0:
+        print(f"  ⚠️  {FETCH_ERRORS['count']} URLs fallaron después de reintentos. Primeras:")
+        for u in FETCH_ERRORS['urls'][:10]:
+            print(f"     - {u}")
+    if not has_warnings:
+        print("  Sin errores HTTP ni fallbacks")
 
 
 if __name__ == '__main__':
