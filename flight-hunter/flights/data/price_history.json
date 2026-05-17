@@ -54,6 +54,11 @@
       "date": "2026-05-16",
       "price_usd": 651.0,
       "airline": "Aeroméxico"
+    },
+    {
+      "date": "2026-05-17",
+      "price_usd": 651.0,
+      "airline": "Aeroméxico"
     }
   ],
   "EZE-TLV": [
@@ -103,6 +108,11 @@
     },
     {
       "date": "2026-05-16",
+      "price_usd": 841.0,
+      "airline": "Delta"
+    },
+    {
+      "date": "2026-05-17",
       "price_usd": 841.0,
       "airline": "Delta"
     }
@@ -244,6 +254,16 @@
       "date": "2026-05-16",
       "price_usd": 750.0,
       "airline": "Aerolíneas Argentinas"
+    },
+    {
+      "date": "2026-05-17",
+      "price_usd": 60.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-17",
+      "price_usd": 750.0,
+      "airline": "Aerolíneas Argentinas"
     }
   ],
   "EZE-SCL": [
@@ -272,6 +292,11 @@
     {
       "date": "2026-05-15",
       "price_usd": 990.0,
+      "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-17",
+      "price_usd": 1067.0,
       "airline": "Desconocida"
     }
   ],
