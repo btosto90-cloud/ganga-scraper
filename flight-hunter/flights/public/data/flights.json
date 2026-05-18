@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-17T11:58:59.185986+00:00",
-  "total_flights": 5,
+  "generated_at": "2026-05-18T14:29:19.587750+00:00",
+  "total_flights": 4,
   "sources": {
     "promociones_aereas": {
       "ok": true,
@@ -8,15 +8,895 @@
     }
   },
   "stats": {
-    "total": 5,
-    "ganga_extraordinaria": 1,
-    "emitir_urgente": 0,
+    "total": 4,
+    "ganga_extraordinaria": 0,
+    "emitir_urgente": 1,
     "top_oportunidades": 1,
     "error_fares": 1,
     "alertas_tempranas": 1,
-    "score_promedio": 69
+    "score_promedio": 68
   },
   "flights": [
+    {
+      "id": "f_d997259b1c31",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "MAD",
+      "route_key": "EZE-MAD",
+      "airline": "Aeroméxico",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 843.0,
+      "currency": "USD",
+      "price_usd": 843.0,
+      "price_ars": 1087470,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "¡Hermoso! 🫨 Madrid a partir de U$D 843 desde Buenos Aires 💃 ¡Opciones en Verano Europeo! 😎",
+      "posted_at": "Mon, 18 May 2026 13:30:00 +0000",
+      "last_checked": "2026-05-18",
+      "confidence": 0.92,
+      "departure_date": "2026-06-08",
+      "return_date": "2026-06-15",
+      "dates_available": [
+        {
+          "depart": "2026-06-08",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-08/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-07-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-07-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-07-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-07-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-06-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-07-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-07-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-07-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-28",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-28/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-28",
+          "return": "2026-07-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-28/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-28",
+          "return": "2026-07-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-28/2026-07-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-07-05",
+          "return": "2026-08-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-05/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-07-06",
+          "return": "2026-07-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-06/2026-07-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-07-06",
+          "return": "2026-07-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-06/2026-07-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-06",
+          "return": "2026-11-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-09-06/2026-11-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-06",
+          "return": "2026-11-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-09-06/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-13",
+          "return": "2026-12-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-09-13/2026-12-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-14",
+          "return": "2026-11-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-09-14/2026-11-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-27",
+          "return": "2026-11-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-09-27/2026-11-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-29",
+          "return": "2027-02-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-09-29/2027-02-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-14",
+          "return": "2027-04-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-14/2027-04-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-14",
+          "return": "2027-04-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-14/2027-04-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-17",
+          "return": "2026-11-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-17/2026-11-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-18",
+          "return": "2026-11-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-18/2026-11-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-18",
+          "return": "2026-11-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-18/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-18",
+          "return": "2026-11-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-18/2026-11-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-14",
+          "return": "2026-11-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-14/2026-11-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-14",
+          "return": "2026-11-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-14/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-15",
+          "return": "2026-11-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-15/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-15",
+          "return": "2026-11-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-15/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-15",
+          "return": "2026-12-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-15/2026-12-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-16",
+          "return": "2026-11-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-16/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-16",
+          "return": "2026-11-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-16/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-21",
+          "return": "2026-11-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-21/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-21",
+          "return": "2026-12-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-21/2026-12-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-22",
+          "return": "2026-11-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-22/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-22",
+          "return": "2026-12-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-22/2026-12-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-11-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-23/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-23",
+          "return": "2026-11-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-23/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-28",
+          "return": "2026-12-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-28/2026-12-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-29",
+          "return": "2026-12-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-29/2026-12-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-01",
+          "return": "2027-02-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-12-01/2027-02-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-01",
+          "return": "2027-03-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-12-01/2027-03-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-02",
+          "return": "2027-03-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-12-02/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p"
+        }
+      ],
+      "total_dates": 50,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-08/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-desde-buenos-aires-en-verano-europeo-aeromexico-rt-p",
+      "route": {
+        "historical_avg": 950,
+        "historical_min": 580,
+        "expected_low": 780,
+        "exceptional_threshold": 650,
+        "avg_duration_min": 780,
+        "region": "Europa",
+        "_learned": false
+      },
+      "marketAvgUSD": 1067.0,
+      "dealScore": 73,
+      "dealScoreByMode": {
+        "viaje_personal": 73,
+        "maximo_ahorro": 71,
+        "error_fare": 54,
+        "ejecutivo": 79,
+        "escapadas": 74,
+        "flexible_total": 73
+      },
+      "dealBreakdown": {
+        "hist": 69,
+        "mkt": 86,
+        "qual": 92,
+        "rare": 20,
+        "cond": 65,
+        "conf": 92
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        }
+      ],
+      "category": {
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "<strong>11% debajo del histórico</strong> (avg ~USD 950) · una escala · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mad/260608/260615/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Madrid+on+2026-06-08+returning+2026-06-15",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-MAD/2026-06-08/2026-06-15",
+        "momondo": "https://www.momondo.com/flight-search/EZE-MAD/2026-06-08/2026-06-15",
+        "guessed_dates": {
+          "depart": "2026-06-08",
+          "return": "2026-06-15",
+          "source": "post_table"
+        }
+      }
+    },
+    {
+      "id": "f_7ba30c0dddc7",
+      "source": "promociones_aereas",
+      "origin": "AEP",
+      "destination": "REC",
+      "route_key": "AEP-REC",
+      "airline": "GOL",
+      "airline_quality": 6,
+      "is_low_cost": false,
+      "price": 348.0,
+      "currency": "USD",
+      "price_usd": 348.0,
+      "price_ars": 448920,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": true,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p-3.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "¡Muy buenos Vuelos a Recife!🌴 a partir de U$D 348 🔥 con carry-on desde Aeroparque",
+      "posted_at": "Mon, 18 May 2026 12:10:00 +0000",
+      "last_checked": "2026-05-18",
+      "confidence": 0.92,
+      "departure_date": "2026-05-26",
+      "return_date": "2026-06-07",
+      "dates_available": [
+        {
+          "depart": "2026-05-26",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-26/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-28/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-28/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-28/2026-06-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-05-29",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-29/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-05-29",
+          "return": "2026-06-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-29/2026-06-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-01/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-01/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-01/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-01/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-02",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-02/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-03/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-03/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-03/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-03/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-03",
+          "return": "2026-06-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-03/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-04/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-04/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-04/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-04/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-04/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-05/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-05/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-11",
+          "return": "2026-06-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-11/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-14",
+          "return": "2026-06-21",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-14/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-14",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-14/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-15/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-15/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-17/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-17/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-18",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-18/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-18",
+          "return": "2026-06-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-18/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-18",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-18/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-19",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-19/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-19",
+          "return": "2026-06-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-19/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-19",
+          "return": "2026-06-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-19/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-20/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-21/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-21/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-21/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-21/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-21/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-06-22/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p"
+        }
+      ],
+      "total_dates": 50,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/REC/2026-05-26/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-muy-buenos-vuelos-a-recife-con-carry-on-desde-aeroparque-gol-rt-p",
+      "route": null,
+      "marketAvgUSD": null,
+      "dealScore": 63,
+      "dealScoreByMode": {
+        "viaje_personal": 63,
+        "maximo_ahorro": 56,
+        "error_fare": 50,
+        "ejecutivo": 74,
+        "escapadas": 65,
+        "flexible_total": 58
+      },
+      "dealBreakdown": {
+        "hist": 50,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 30,
+        "cond": 90,
+        "conf": 92
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "Equipaje incluido"
+        }
+      ],
+      "category": {
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
+        "cls": "buen-precio"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/aep/rec/260526/260607/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+REC+on+2026-05-26+returning+2026-06-07",
+        "kayak": "https://www.kayak.com.ar/flights/AEP-REC/2026-05-26/2026-06-07",
+        "momondo": "https://www.momondo.com/flight-search/AEP-REC/2026-05-26/2026-06-07",
+        "guessed_dates": {
+          "depart": "2026-05-26",
+          "return": "2026-06-07",
+          "source": "post_table"
+        }
+      }
+    },
     {
       "id": "f_b7c373677e9d",
       "source": "promociones_aereas",
@@ -43,7 +923,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: ¡Sigue Madrid Directo! 🌹 y con Equipaje 🧳 a partir de U$D 1.067 🔥 desde Bs. As. (Fechas en verano de allá)",
       "posted_at": "Sat, 16 May 2026 14:00:00 +0000",
-      "last_checked": "2026-05-17",
+      "last_checked": "2026-05-18",
       "confidence": 0.92,
       "departure_date": "2026-08-06",
       "return_date": "2026-09-05",
@@ -235,19 +1115,19 @@
         "region": "Europa",
         "_learned": false
       },
-      "marketAvgUSD": null,
-      "dealScore": 56,
+      "marketAvgUSD": 843.0,
+      "dealScore": 52,
       "dealScoreByMode": {
-        "viaje_personal": 56,
-        "maximo_ahorro": 49,
-        "error_fare": 42,
-        "ejecutivo": 70,
-        "escapadas": 59,
-        "flexible_total": 52
+        "viaje_personal": 52,
+        "maximo_ahorro": 44,
+        "error_fare": 40,
+        "ejecutivo": 67,
+        "escapadas": 55,
+        "flexible_total": 47
       },
       "dealBreakdown": {
         "hist": 38,
-        "mkt": 50,
+        "mkt": 29,
         "qual": 100,
         "rare": 20,
         "cond": 65,
@@ -310,7 +1190,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Hasta U$D 60 de descuento 💥 en Vuelos a Punta Cana o Santo Domingo 🌴 desde Bs. As., Córdoba, Rosario o Mendoza",
       "posted_at": "Fri, 15 May 2026 20:05:51 +0000",
-      "last_checked": "2026-05-17",
+      "last_checked": "2026-05-18",
       "confidence": 0.92,
       "departure_date": "2026-05-13",
       "return_date": "2026-05-20",
@@ -1489,19 +2369,19 @@
         "region": "Caribe",
         "_learned": false
       },
-      "marketAvgUSD": 750.0,
-      "dealScore": 93,
+      "marketAvgUSD": null,
+      "dealScore": 83,
       "dealScoreByMode": {
-        "viaje_personal": 93,
-        "maximo_ahorro": 96,
-        "error_fare": 96,
-        "ejecutivo": 89,
-        "escapadas": 93,
-        "flexible_total": 96
+        "viaje_personal": 83,
+        "maximo_ahorro": 84,
+        "error_fare": 91,
+        "ejecutivo": 81,
+        "escapadas": 83,
+        "flexible_total": 83
       },
       "dealBreakdown": {
         "hist": 100,
-        "mkt": 100,
+        "mkt": 50,
         "qual": 86,
         "rare": 100,
         "cond": 65,
@@ -1519,9 +2399,9 @@
         }
       ],
       "category": {
-        "tier": "GANGA EXTRAORDINARIA",
-        "emoji": "🔥",
-        "cls": "extraordinaria"
+        "tier": "EMITIR URGENTE",
+        "emoji": "⚡",
+        "cls": "urgente"
       },
       "errorFare": {
         "is_error_fare": true,
@@ -1541,1082 +2421,6 @@
         "guessed_dates": {
           "depart": "2026-05-13",
           "return": "2026-05-20",
-          "source": "post_table"
-        }
-      }
-    },
-    {
-      "id": "f_1f610fec30b5",
-      "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "PUJ",
-      "route_key": "EZE-PUJ",
-      "airline": "Aerolíneas Argentinas",
-      "airline_quality": 7,
-      "is_low_cost": false,
-      "price": 750.0,
-      "currency": "USD",
-      "price_usd": 750.0,
-      "price_ars": 967500,
-      "stops": 0,
-      "stops_detail": [],
-      "duration_minutes": 0,
-      "baggage_included": true,
-      "tax_included": true,
-      "refundable": false,
-      "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p.html",
-      "trip_type": "rt",
-      "is_direct": true,
-      "is_partial_direct": false,
-      "raw_title": "Hot Sale: ¡Vuelos Directos a Punta Cana 🌴 en Verano con hasta 15% OFF! Opciones con carry on a partir de U$D 750 🔥 desde Bs. As.",
-      "posted_at": "Fri, 15 May 2026 18:56:37 +0000",
-      "last_checked": "2026-05-17",
-      "confidence": 0.92,
-      "departure_date": "2026-12-14",
-      "return_date": "2026-12-23",
-      "dates_available": [
-        {
-          "depart": "2026-12-14",
-          "return": "2026-12-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2026-12-14/2026-12-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-11",
-          "return": "2027-01-18",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-11/2027-01-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-12",
-          "return": "2027-01-20",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-12/2027-01-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-12",
-          "return": "2027-01-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-12/2027-01-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-12",
-          "return": "2027-01-21",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-12/2027-01-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-15",
-          "return": "2027-01-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-15/2027-01-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-27",
-          "return": "2027-02-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-27/2027-02-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-27",
-          "return": "2027-02-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-27/2027-02-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-01-27",
-          "return": "2027-02-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-01-27/2027-02-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-14",
-          "return": "2027-02-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-14/2027-02-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-15",
-          "return": "2027-02-22",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-15/2027-02-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-15",
-          "return": "2027-02-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-15/2027-02-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-15",
-          "return": "2027-02-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-15/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-17",
-          "return": "2027-03-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-03-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-17",
-          "return": "2027-03-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-17",
-          "return": "2027-02-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-02-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-17",
-          "return": "2027-02-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-02-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-17",
-          "return": "2027-02-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-17/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-19",
-          "return": "2027-03-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-19/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-19",
-          "return": "2027-02-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-19/2027-02-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-22",
-          "return": "2027-03-07",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-22/2027-03-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-22",
-          "return": "2027-02-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-22/2027-02-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-24",
-          "return": "2027-03-04",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-24/2027-03-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-24",
-          "return": "2027-03-05",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-24/2027-03-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-26",
-          "return": "2027-03-10",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-26/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-26",
-          "return": "2027-03-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-26/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-28",
-          "return": "2027-03-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-28/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-28",
-          "return": "2027-03-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-28/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-02-28",
-          "return": "2027-03-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-02-28/2027-03-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-02",
-          "return": "2027-03-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-02",
-          "return": "2027-03-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-02",
-          "return": "2027-03-10",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-02",
-          "return": "2027-03-17",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-02/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-03",
-          "return": "2027-03-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-03/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-03",
-          "return": "2027-03-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-03/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-05",
-          "return": "2027-03-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-05/2027-03-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-07",
-          "return": "2027-03-18",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-07",
-          "return": "2027-03-17",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-07",
-          "return": "2027-03-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-07",
-          "return": "2027-03-15",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-07/2027-03-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-08",
-          "return": "2027-03-17",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-08",
-          "return": "2027-03-22",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-08",
-          "return": "2027-03-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-08",
-          "return": "2027-03-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-08/2027-03-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-09",
-          "return": "2027-03-22",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-09/2027-03-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-09",
-          "return": "2027-03-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-09/2027-03-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-09",
-          "return": "2027-03-21",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-09/2027-03-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-10",
-          "return": "2027-03-22",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-10/2027-03-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-10",
-          "return": "2027-03-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-10/2027-03-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        },
-        {
-          "depart": "2027-03-10",
-          "return": "2027-03-20",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2027-03-10/2027-03-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p"
-        }
-      ],
-      "total_dates": 50,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2026-12-14/2026-12-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-vuelos-directos-a-punta-cana-en-verano-off-opciones-con-carry-on-desde-bs-as-aerolineas-argentinas-rt-p",
-      "route": {
-        "historical_avg": 800,
-        "historical_min": 520,
-        "expected_low": 650,
-        "exceptional_threshold": 560,
-        "avg_duration_min": 720,
-        "region": "Caribe",
-        "_learned": false
-      },
-      "marketAvgUSD": 60.0,
-      "dealScore": 57,
-      "dealScoreByMode": {
-        "viaje_personal": 57,
-        "maximo_ahorro": 48,
-        "error_fare": 45,
-        "ejecutivo": 71,
-        "escapadas": 59,
-        "flexible_total": 50
-      },
-      "dealBreakdown": {
-        "hist": 60,
-        "mkt": 0,
-        "qual": 100,
-        "rare": 20,
-        "cond": 90,
-        "conf": 92
-      },
-      "qualScore": 100,
-      "qualReasons": [
-        {
-          "kind": "good",
-          "text": "Vuelo directo"
-        },
-        {
-          "kind": "good",
-          "text": "Equipaje incluido"
-        }
-      ],
-      "category": {
-        "tier": "MIRAR PERO NO CORRER",
-        "emoji": "👁",
-        "cls": "mirar"
-      },
-      "errorFare": {
-        "is_error_fare": false,
-        "level": "none",
-        "flags": []
-      },
-      "earlyAlert": false,
-      "mainReason": "<strong>6% debajo del histórico</strong> (avg ~USD 800) · vuelo directo · equipaje incluido",
-      "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/puj/261214/261223/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Punta+Cana+on+2026-12-14+returning+2026-12-23",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-PUJ/2026-12-14/2026-12-23",
-        "momondo": "https://www.momondo.com/flight-search/EZE-PUJ/2026-12-14/2026-12-23",
-        "guessed_dates": {
-          "depart": "2026-12-14",
-          "return": "2026-12-23",
-          "source": "post_table"
-        }
-      }
-    },
-    {
-      "id": "f_caf98afa866f",
-      "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "CUN",
-      "route_key": "EZE-CUN",
-      "airline": "Aeroméxico",
-      "airline_quality": 7,
-      "is_low_cost": false,
-      "price": 651.0,
-      "currency": "USD",
-      "price_usd": 651.0,
-      "price_ars": 839790,
-      "stops": 1,
-      "stops_detail": [],
-      "duration_minutes": 0,
-      "baggage_included": true,
-      "tax_included": true,
-      "refundable": false,
-      "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p.html",
-      "trip_type": "rt",
-      "is_direct": false,
-      "is_partial_direct": false,
-      "raw_title": "Hot Sale: Hermosos vuelos a Cancún en VERANO🌴 con carry on a partir de U$D 651😎 desde Bs. As.",
-      "posted_at": "Fri, 15 May 2026 18:30:00 +0000",
-      "last_checked": "2026-05-17",
-      "confidence": 0.92,
-      "departure_date": "2026-12-02",
-      "return_date": "2026-12-07",
-      "dates_available": [
-        {
-          "depart": "2026-12-02",
-          "return": "2026-12-07",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2026-12-02/2026-12-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2026-12-14",
-          "return": "2027-01-01",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2026-12-14/2027-01-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-03",
-          "return": "2027-02-17",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-03/2027-02-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-03",
-          "return": "2027-02-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-03/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-03",
-          "return": "2027-02-14",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-03/2027-02-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-05",
-          "return": "2027-02-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-05/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-12",
-          "return": "2027-02-16",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-12/2027-02-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-21",
-          "return": "2027-03-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-21/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-22",
-          "return": "2027-03-08",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-22/2027-03-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-22",
-          "return": "2027-03-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-22/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-23",
-          "return": "2027-03-09",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-23/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-23",
-          "return": "2027-03-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-23/2027-03-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-24",
-          "return": "2027-03-08",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-24/2027-03-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-24",
-          "return": "2027-03-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-24/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-24",
-          "return": "2027-03-06",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-24/2027-03-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-27",
-          "return": "2027-03-13",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-27/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-28",
-          "return": "2027-03-09",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-28/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-02-28",
-          "return": "2027-03-10",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-02-28/2027-03-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-03-01",
-          "return": "2027-03-14",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-03-01/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        },
-        {
-          "depart": "2027-03-03",
-          "return": "2027-03-14",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2027-03-03/2027-03-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p"
-        }
-      ],
-      "total_dates": 20,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/CUN/2026-12-02/2026-12-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermosos-vuelos-a-cancun-en-verano-con-carry-on-desde-bs-as-aeromexico-rt-p",
-      "route": {
-        "historical_avg": 750,
-        "historical_min": 450,
-        "expected_low": 580,
-        "exceptional_threshold": 500,
-        "avg_duration_min": 720,
-        "region": "Caribe",
-        "_learned": false
-      },
-      "marketAvgUSD": null,
-      "dealScore": 69,
-      "dealScoreByMode": {
-        "viaje_personal": 69,
-        "maximo_ahorro": 65,
-        "error_fare": 53,
-        "ejecutivo": 78,
-        "escapadas": 70,
-        "flexible_total": 66
-      },
-      "dealBreakdown": {
-        "hist": 72,
-        "mkt": 50,
-        "qual": 92,
-        "rare": 20,
-        "cond": 90,
-        "conf": 92
-      },
-      "qualScore": 92,
-      "qualReasons": [
-        {
-          "kind": "neutral",
-          "text": "1 escala"
-        },
-        {
-          "kind": "good",
-          "text": "Equipaje incluido"
-        }
-      ],
-      "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
-      },
-      "errorFare": {
-        "is_error_fare": false,
-        "level": "none",
-        "flags": []
-      },
-      "earlyAlert": false,
-      "mainReason": "<strong>13% debajo del histórico</strong> (avg ~USD 750) · una escala · equipaje incluido",
-      "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/cun/261202/261207/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Cancun+on+2026-12-02+returning+2026-12-07",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-CUN/2026-12-02/2026-12-07",
-        "momondo": "https://www.momondo.com/flight-search/EZE-CUN/2026-12-02/2026-12-07",
-        "guessed_dates": {
-          "depart": "2026-12-02",
-          "return": "2026-12-07",
-          "source": "post_table"
-        }
-      }
-    },
-    {
-      "id": "f_7b4d631b0966",
-      "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "JFK",
-      "route_key": "EZE-JFK",
-      "airline": "Delta",
-      "airline_quality": 8,
-      "is_low_cost": false,
-      "price": 841.0,
-      "currency": "USD",
-      "price_usd": 841.0,
-      "price_ars": 1084890,
-      "stops": 0,
-      "stops_detail": [],
-      "duration_minutes": 0,
-      "baggage_included": true,
-      "tax_included": true,
-      "refundable": false,
-      "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p.html",
-      "trip_type": "rt",
-      "is_direct": true,
-      "is_partial_direct": false,
-      "raw_title": "Hot Sale: Nueva York Directo 🗽 con Carry On a partir de U$D 841 🔥 desde Bs. As. ¡Hay cuotas!",
-      "posted_at": "Fri, 15 May 2026 18:18:42 +0000",
-      "last_checked": "2026-05-17",
-      "confidence": 0.92,
-      "departure_date": "2026-05-17",
-      "return_date": "2026-05-27",
-      "dates_available": [
-        {
-          "depart": "2026-05-17",
-          "return": "2026-05-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-17/2026-05-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-05-18",
-          "return": "2026-05-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-18/2026-05-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-07-20",
-          "return": "2026-08-05",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-07-20/2026-08-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-07-21",
-          "return": "2026-08-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-07-21/2026-08-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-09-24",
-          "return": "2026-10-01",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-09-24/2026-10-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-09-24",
-          "return": "2026-10-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-09-24/2026-10-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-09-29",
-          "return": "2026-10-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-09-29/2026-10-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-05",
-          "return": "2026-10-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-05/2026-10-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-05",
-          "return": "2026-10-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-05/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-06",
-          "return": "2026-10-20",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-06/2026-10-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-06",
-          "return": "2026-10-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-06/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-07",
-          "return": "2026-10-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-07/2026-10-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-17",
-          "return": "2026-10-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-17/2026-10-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-10-24",
-          "return": "2026-11-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-10-24/2026-11-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-12",
-          "return": "2026-11-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-12",
-          "return": "2026-11-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-12",
-          "return": "2026-11-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-12",
-          "return": "2026-11-20",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-12/2026-11-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-13",
-          "return": "2026-11-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-13/2026-11-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-13",
-          "return": "2026-12-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-13/2026-12-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-14",
-          "return": "2026-11-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-14/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-15",
-          "return": "2026-11-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-15/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-15",
-          "return": "2026-11-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-15/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-16",
-          "return": "2026-11-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-16/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-17",
-          "return": "2026-11-27",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-17/2026-11-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-17",
-          "return": "2026-11-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-17/2026-11-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-18",
-          "return": "2026-11-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-18/2026-11-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-18",
-          "return": "2026-12-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-18/2026-12-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-18",
-          "return": "2026-12-07",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-18/2026-12-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-20",
-          "return": "2026-11-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-20/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-22",
-          "return": "2026-11-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-22/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-22",
-          "return": "2026-11-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-22/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-23",
-          "return": "2026-11-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-23/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-23",
-          "return": "2026-12-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-23/2026-12-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-24",
-          "return": "2026-12-01",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-24/2026-12-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-24",
-          "return": "2026-12-02",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-24/2026-12-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-24",
-          "return": "2026-11-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-24/2026-11-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-25",
-          "return": "2026-12-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-25/2026-12-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-25",
-          "return": "2026-12-06",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-25/2026-12-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2026-11-26",
-          "return": "2026-12-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-11-26/2026-12-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2027-01-25",
-          "return": "2027-02-05",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2027-01-25/2027-02-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        },
-        {
-          "depart": "2027-03-21",
-          "return": "2027-04-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2027-03-21/2027-04-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p"
-        }
-      ],
-      "total_dates": 42,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/NYC/2026-05-17/2026-05-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-nueva-york-directo-con-carry-on-desde-bs-as-hay-cuotas-delta-rt-p",
-      "route": {
-        "historical_avg": 950,
-        "historical_min": 650,
-        "expected_low": 780,
-        "exceptional_threshold": 680,
-        "avg_duration_min": 700,
-        "region": "USA",
-        "_learned": false
-      },
-      "marketAvgUSD": null,
-      "dealScore": 72,
-      "dealScoreByMode": {
-        "viaje_personal": 72,
-        "maximo_ahorro": 67,
-        "error_fare": 63,
-        "ejecutivo": 82,
-        "escapadas": 74,
-        "flexible_total": 69
-      },
-      "dealBreakdown": {
-        "hist": 69,
-        "mkt": 50,
-        "qual": 100,
-        "rare": 45,
-        "cond": 90,
-        "conf": 92
-      },
-      "qualScore": 100,
-      "qualReasons": [
-        {
-          "kind": "good",
-          "text": "Vuelo directo"
-        },
-        {
-          "kind": "good",
-          "text": "Equipaje incluido"
-        },
-        {
-          "kind": "good",
-          "text": "Delta: aerolínea sólida"
-        }
-      ],
-      "category": {
-        "tier": "MUY BUENA OPORTUNIDAD",
-        "emoji": "⭐",
-        "cls": "muy-buena"
-      },
-      "errorFare": {
-        "is_error_fare": false,
-        "level": "none",
-        "flags": []
-      },
-      "earlyAlert": false,
-      "mainReason": "<strong>11% debajo del histórico</strong> (avg ~USD 950) · vuelo directo · equipaje incluido",
-      "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/jfk/260517/260527/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+New+York+on+2026-05-17+returning+2026-05-27",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-JFK/2026-05-17/2026-05-27",
-        "momondo": "https://www.momondo.com/flight-search/EZE-JFK/2026-05-17/2026-05-27",
-        "guessed_dates": {
-          "depart": "2026-05-17",
-          "return": "2026-05-27",
           "source": "post_table"
         }
       }
