@@ -151,6 +151,11 @@
       "date": "2026-05-08",
       "price_usd": 1043.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-20",
+      "price_usd": 1078.0,
+      "airline": "Desconocida"
     }
   ],
   "COR-MAD": [
@@ -170,6 +175,11 @@
       "date": "2026-05-08",
       "price_usd": 688.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-20",
+      "price_usd": 683.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-PTY": [
@@ -226,6 +236,11 @@
       "date": "2026-05-18",
       "price_usd": 348.0,
       "airline": "GOL"
+    },
+    {
+      "date": "2026-05-20",
+      "price_usd": 348.0,
+      "airline": "GOL"
     }
   ],
   "COR-BCN": [
@@ -252,6 +267,11 @@
       "date": "2026-05-11",
       "price_usd": 584.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-20",
+      "price_usd": 680.0,
+      "airline": "Arajet"
     }
   ],
   "EZE-PUJ": [
@@ -328,6 +348,11 @@
       "date": "2026-05-18",
       "price_usd": 1067.0,
       "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-20",
+      "price_usd": 1122.0,
+      "airline": "Iberia"
     }
   ],
   "EZE-FOR": [
@@ -408,6 +433,32 @@
       "date": "2026-05-19",
       "price_usd": 347.0,
       "airline": "GOL"
+    },
+    {
+      "date": "2026-05-20",
+      "price_usd": 335.0,
+      "airline": "GOL"
+    }
+  ],
+  "AEP-FCO": [
+    {
+      "date": "2026-05-20",
+      "price_usd": 1110.0,
+      "airline": "Desconocida"
+    }
+  ],
+  "EZE-MCZ": [
+    {
+      "date": "2026-05-20",
+      "price_usd": 342.0,
+      "airline": "GOL"
+    }
+  ],
+  "EZE-MEX": [
+    {
+      "date": "2026-05-20",
+      "price_usd": 808.0,
+      "airline": "Aeroméxico"
     }
   ]
 }
