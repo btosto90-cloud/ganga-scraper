@@ -8,24 +8,37 @@ import urllib.parse
 from datetime import datetime, timedelta
 
 BLUE_RATE = 1400  # default, se sobreescribe abajo con valor real
-BLUE_RATE_FALLBACK = False  # True si dolarapi falló y se usó el fallback hardcoded
+BLUE_RATE_FALLBACK = False  # True si todas las fuentes fallaron y se usó el fallback hardcoded
 
 # Contadores globales de errores HTTP — visibles en el resumen final
 FETCH_ERRORS = {'count': 0, 'urls': []}
 
+# Fuentes de dólar blue (venta), en orden de preferencia. dolarapi bloquea las IPs
+# de datacenter de GitHub Actions (HTTP 403), así que probamos alternativas que sí
+# responden desde datacenter antes de caer al fallback hardcoded.
+BLUE_SOURCES = (
+    ('dolarapi', 'https://dolarapi.com/v1/dolares/blue', lambda d: d.get('venta')),
+    ('bluelytics', 'https://api.bluelytics.com.ar/v2/latest', lambda d: (d.get('blue') or {}).get('value_sell')),
+    ('criptoya', 'https://criptoya.com/api/dolar', lambda d: (d.get('blue') or {}).get('ask')),
+)
+
 def fetch_blue_rate():
-    """Lee dólar blue (venta) desde dolarapi.com. Fallback a 1400."""
+    """Lee dólar blue (venta) probando varias fuentes en orden. Fallback a 1400."""
     global BLUE_RATE_FALLBACK
-    try:
-        with urllib.request.urlopen('https://dolarapi.com/v1/dolares/blue', timeout=10) as r:
-            data = json.loads(r.read())
-            rate = data.get('venta')
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15'}
+    for name, url, extract in BLUE_SOURCES:
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                data = json.loads(r.read())
+            rate = extract(data)
             if rate and 1000 < rate < 5000:
-                print(f"BLUE_RATE actualizado: {rate} (dolarapi.com)")
+                print(f"BLUE_RATE actualizado: {int(rate)} ({name})")
                 return int(rate)
-            print(f"WARN: dolarapi devolvió rate fuera de rango ({rate}), usando fallback 1400")
-    except Exception as e:
-        print(f"WARN: dolarapi falló ({e}), usando fallback 1400")
+            print(f"WARN: {name} devolvió rate fuera de rango ({rate})")
+        except Exception as e:
+            print(f"WARN: {name} falló ({e})")
+    print("WARN: todas las fuentes de blue fallaron, usando fallback 1400")
     BLUE_RATE_FALLBACK = True
     return 1400
 
