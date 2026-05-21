@@ -883,21 +883,20 @@ def main():
         }, f, ensure_ascii=False, indent=2)
     print(f"  Velocity stats: {len(velocity_stats)} model_keys con ≥3 fast sales")
 
-    # ─── Pre-computar ganga_confidence (CCA + bucket outlier + velocity) ────
+    # ─── Pre-computar ganga_confidence (precio justo + bucket outlier + velocity) ────
     # Esto pre-procesa el scoring que antes hacía solo el Worker. Cada listing
     # queda anotado con ganga_confidence (0-100), ganga_tag (super_ganga_v2/...),
-    # precio_cca, bucket_z_score. Ver SCORING.md para detalles.
+    # precio_justo, bucket_z_score. Ver SCORING.md para detalles.
+    # El precio justo se auto-calibra desde velocity_stats (ventas reales) + comparables;
+    # cca_precios.json quedó deprecado (era data inflada que fabricaba gangas falsas).
     try:
         import scoring
-        cca_prices = {}
-        if os.path.exists('cca_precios.json'):
-            with open('cca_precios.json', 'r', encoding='utf-8') as f:
-                cca_prices = json.load(f).get('prices', {})
-        scoring_stats = scoring.annotate_listings(unique, cca_prices, velocity_stats)
-        print(f"  Scoring: with_cca={scoring_stats['with_cca']} with_bucket={scoring_stats['with_bucket']} "
-              f"with_velocity={scoring_stats['with_velocity']}")
+        scoring_stats = scoring.annotate_listings(unique, velocity_stats)
+        print(f"  Scoring: with_ref={scoring_stats['with_ref']} (con_venta={scoring_stats['with_sold']}) "
+              f"with_bucket={scoring_stats['with_bucket']} with_velocity={scoring_stats['with_velocity']}")
         print(f"  Tags: super_ganga_v2={scoring_stats['super_ganga_v2']} ganga_v2={scoring_stats['ganga_v2']} "
-              f"interesante={scoring_stats['interesante']} sin_ref={scoring_stats['sin_referencia']}")
+              f"interesante={scoring_stats['interesante']} sin_ref={scoring_stats['sin_referencia']} "
+              f"fake={scoring_stats['fake']}")
     except Exception as e:
         print(f"  ⚠️  Scoring falló: {e} — sigo sin ganga_confidence")
         scoring_stats = {}
@@ -909,6 +908,8 @@ def main():
         'bajaron_hoy': bajaron_hoy,
         'super_ganga_v2': scoring_stats.get('super_ganga_v2', 0),
         'ganga_v2': scoring_stats.get('ganga_v2', 0),
+        'con_ref': scoring_stats.get('with_ref', 0),
+        'con_venta': scoring_stats.get('with_sold', 0),
         'fuentes': fuentes,
         'marcas': marcas_count,
         'listings': unique,

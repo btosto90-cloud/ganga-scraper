@@ -67,7 +67,7 @@ class TestFmtListing:
         assert 'https://test.com/abc' in out
         assert '85' in out  # confidence score
         assert '14.000' in out  # AR-style number
-        assert 'CCA' in out
+        assert 'precio justo' in out  # ancla renombrada (antes 'CCA')
 
     def test_drop_format(self):
         l = make_listing(precio_usd=12000, recent_price_drop=True, recent_drop_pct=20,

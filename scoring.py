@@ -1,17 +1,26 @@
 """Ganga Hunter scoring — pre-computed en el scraper, leído por el Worker.
 
-Filosofía: el Worker hoy compara cada listing contra la mediana de OTROS listings.
-Eso significa que si todos los vendedores piden de más, una "ganga" es solo "menos
-inflada que el resto". Este módulo agrega tres anclas independientes:
+Filosofía: el Worker compara cada listing contra la mediana de OTROS listings, así
+que una "ganga" termina siendo "menos inflada que el resto". Para encontrar gangas
+REALES anclamos cada precio a un **precio justo auto-calibrado desde la propia data**:
 
-  1. CCA — ground truth del mercado (precio CCA por modelo+año, 501 modelos).
-  2. Bucket — dentro del segmento (modelo+año±1+km±20%), z-score del precio.
-  3. Velocity — modelos que venden rápido = demanda real = más confianza.
+  1. PRECIO JUSTO (señal principal) — mezcla de:
+       a) precio de venta real (median_sale_price_usd de velocity_stats, derivado de
+          listings que desaparecieron = transacciones reales), y
+       b) mediana de comparables vivos (mismo brand+model, año±1, km±20%).
+     Reemplaza al viejo `cca_precios.json`, que era data estimada/inflada (en 64% de
+     los modelos el "CCA" estaba por ENCIMA del precio pedido → fabricaba gangas falsas).
 
-Combinamos las tres en `ganga_confidence` (0-100). Solo se considera una "verdadera
-ganga" cuando varias señales convergen.
+  2. OUTLIER z-score — qué tan bajo está el precio dentro de su segmento.
+  3. VELOCITY — modelos que venden rápido = demanda real = más confianza.
+  4. FRESHNESS — listings nuevos o recién bajados son más accionables.
 
-Las funciones son puras y testeables. El scraper las llama después de dedup+filtros.
+Combinamos las cuatro en `ganga_confidence` (0-100). Solo es "verdadera ganga" cuando
+varias señales convergen. Las funciones son puras y testeables.
+
+Nota de compatibilidad: seguimos poblando `precio_cca`/`descuento_cca_pct` (ahora con
+el precio justo) para no romper frontend ni notify; los nombres limpios nuevos son
+`precio_justo`/`descuento_justo_pct`/`ref_fuente`.
 """
 
 from __future__ import annotations
@@ -19,6 +28,23 @@ from __future__ import annotations
 import math
 from collections import defaultdict
 from typing import Optional
+
+
+# ─── Helpers de model_key ─────────────────────────────────────────────────────
+
+def base_model_key(model_key: Optional[str]) -> Optional[str]:
+    """brand_model_year — quita el trim que viene después del año.
+
+    'honda_hr_v_2016_cvt' -> 'honda_hr_v_2016'
+    'toyota_corolla_2020' -> 'toyota_corolla_2020'
+    """
+    if not model_key:
+        return None
+    parts = model_key.split('_')
+    for i, p in enumerate(parts):
+        if len(p) == 4 and p.isdigit():
+            return '_'.join(parts[:i + 1])
+    return None
 
 
 # ─── Bucket stats ─────────────────────────────────────────────────────────────
@@ -93,18 +119,72 @@ def bucket_stats_for(listing: dict, buckets: dict, year_window: int = 1, km_pct:
     }
 
 
+# ─── Precio justo auto-calibrado ──────────────────────────────────────────────
+
+def build_sold_index(velocity_stats: dict) -> dict:
+    """{base_key: precio_venta_ponderado} desde velocity_stats.
+
+    velocity_stats viene keyed por model_key (a veces con trim). Colapsamos por base
+    (brand_model_year) ponderando por cantidad de ventas (n).
+    """
+    by_base: dict[str, list[tuple]] = defaultdict(list)
+    for mk, v in (velocity_stats or {}).items():
+        price = v.get('median_sale_price_usd')
+        if not price or v.get('n', 0) < 3:
+            continue
+        base = base_model_key(mk)
+        if base:
+            by_base[base].append((v.get('n', 1), price))
+    out = {}
+    for base, arr in by_base.items():
+        total_n = sum(n for n, _ in arr)
+        out[base] = round(sum(n * p for n, p in arr) / total_n)
+    return out
+
+
+def build_velocity_index(velocity_stats: dict) -> dict:
+    """{base_key: mejor_entry_velocity} (la de mayor n) para lookup robusto al trim."""
+    by_base: dict[str, dict] = {}
+    for mk, v in (velocity_stats or {}).items():
+        base = base_model_key(mk)
+        if not base:
+            continue
+        if base not in by_base or v.get('n', 0) > by_base[base].get('n', 0):
+            by_base[base] = v
+    return by_base
+
+
+def fair_price_for(listing: dict, bucket: Optional[dict], sold_index: dict) -> Optional[dict]:
+    """Precio justo del listing: mezcla venta real (60%) + mediana de comparables (40%).
+
+    Devuelve {'fair', 'source', 'n'} o None si no hay ni ventas ni bucket.
+    """
+    base = base_model_key(listing.get('model_key'))
+    sold = sold_index.get(base) if base else None
+    asking = bucket.get('median') if bucket else None
+
+    if sold and asking:
+        return {'fair': round(0.6 * sold + 0.4 * asking), 'source': 'venta+pedido',
+                'n': bucket.get('n')}
+    if sold:
+        return {'fair': sold, 'source': 'venta_real', 'n': None}
+    if asking:
+        return {'fair': asking, 'source': 'pedido_p50', 'n': bucket.get('n')}
+    return None
+
+
 # ─── Component scores (0-100 each) ────────────────────────────────────────────
 
-def cca_component(listing: dict, cca_prices: dict) -> Optional[int]:
-    """% bajo CCA, escalado: 30% bajo → 100. None si no hay CCA para el modelo."""
-    if not listing.get('model_key') or not listing.get('precio_usd'):
+def fair_price_component(listing: dict, fair: Optional[dict]) -> Optional[int]:
+    """% bajo el precio justo, escalado: 30% bajo → 100. None si no hay precio justo."""
+    if not fair or not listing.get('precio_usd'):
         return None
-    cca = cca_prices.get(listing['model_key'])
-    if not cca or cca <= 0:
+    fp = fair.get('fair') or 0
+    if fp <= 0:
         return None
-    pct = (1 - listing['precio_usd'] / cca) * 100
+    pct = (1 - listing['precio_usd'] / fp) * 100
     if pct <= 0:
-        return 0  # no es ganga, está al precio o sobre
+        return 0  # al precio o por encima: no es ganga
     return min(100, round(pct * 100 / 30))
 
 
@@ -185,10 +265,9 @@ PLAN_KEYWORDS = (
 )
 
 
-def is_likely_fake(listing: dict, cca_prices: dict) -> tuple[bool, str]:
+def is_likely_fake(listing: dict, fair_price: Optional[float] = None) -> tuple[bool, str]:
     """Detecta listings que NO son ofertas reales: planes de ahorro, errores de carga,
-    publicaciones de agencia con precio anclado bajo (anticipo). Replica y extiende la
-    lógica del Worker.
+    publicaciones con precio anclado bajo (anticipo), o descuentos imposibles.
 
     Devuelve (is_fake, reason).
     """
@@ -200,17 +279,19 @@ def is_likely_fake(listing: dict, cca_prices: dict) -> tuple[bool, str]:
     precio = listing.get('precio_usd') or 0
     year = listing.get('year') or 0
 
-    # Auto reciente con precio absurdo (2022+ < 7500, 2020+ < 5500)
+    # Auto reciente con precio absurdo (escalonado por antigüedad)
     if year >= 2022 and precio < 7500:
         return True, f'año {year} con precio {precio} es irreal'
-    if year >= 2020 and precio < 5500:
+    if year >= 2019 and precio < 5500:
+        return True, f'año {year} con precio {precio} es irreal'
+    if year >= 2018 and precio < 4500:
         return True, f'año {year} con precio {precio} es irreal'
 
-    # Precio sospechosamente bajo vs CCA (>60% de descuento es muy raro)
-    cca = cca_prices.get(listing.get('model_key'))
-    if cca and precio > 0:
-        if precio < cca * 0.40:
-            return True, f'precio < 40% del CCA ({precio} vs {cca})'
+    # Demasiado bueno para ser verdad: >55% bajo el precio justo casi siempre es
+    # error de carga, plan de ahorro o bucket contaminado, no una ganga real.
+    if fair_price and precio > 0 and fair_price > 0:
+        if precio < fair_price * 0.45:
+            return True, f'descuento irreal: {precio} es <45% del precio justo {fair_price}'
 
     return False, ''
 
@@ -218,7 +299,7 @@ def is_likely_fake(listing: dict, cca_prices: dict) -> tuple[bool, str]:
 # ─── Final ganga_confidence ───────────────────────────────────────────────────
 
 WEIGHTS = {
-    'cca': 0.50,        # CCA es la señal más confiable cuando existe
+    'fair': 0.50,       # Precio justo auto-calibrado: la señal más confiable
     'outlier': 0.30,    # Bucket z-score, segundo en confianza
     'velocity': 0.10,   # Refuerzo cuando hay data de demanda
     'freshness': 0.10,  # Modificador de oportunidad temporal
@@ -227,11 +308,11 @@ WEIGHTS = {
 
 def compute_ganga_confidence(
     listing: dict,
-    cca_prices: dict,
     buckets: dict,
-    velocity_stats: dict,
+    sold_index: dict,
+    velocity_index: dict,
 ) -> dict:
-    """Devuelve dict con 'score' (0-100), 'tag', 'breakdown', 'fake_reason'.
+    """Devuelve dict con 'score' (0-100), 'tag', 'breakdown', 'fair', 'fake_reason'.
 
     Tag derivado:
       'fake'           si pasa el filtro is_likely_fake
@@ -239,24 +320,27 @@ def compute_ganga_confidence(
       >= 65            ganga_v2
       >= 45            interesante
       <  45            normal
-      sin_referencia   si no hay CCA ni bucket disponibles
+      sin_referencia   si no hay precio justo ni bucket disponibles
     """
     bucket = bucket_stats_for(listing, buckets)
-    velocity = velocity_stats.get(listing.get('model_key', '')) if velocity_stats else None
+    fair = fair_price_for(listing, bucket, sold_index)
+    base = base_model_key(listing.get('model_key'))
+    velocity = velocity_index.get(base) if (velocity_index and base) else None
 
-    # Filtro fake-first: si parece plan de ahorro o error de carga, no scoreamos.
-    is_fake, fake_reason = is_likely_fake(listing, cca_prices)
+    # Filtro fake-first: plan de ahorro, error de carga o descuento imposible.
+    is_fake, fake_reason = is_likely_fake(listing, fair.get('fair') if fair else None)
     if is_fake:
         return {
             'score': 0,
             'tag': 'fake',
-            'breakdown': {'cca': None, 'outlier': None, 'velocity': None, 'freshness': None},
+            'breakdown': {'fair': None, 'outlier': None, 'velocity': None, 'freshness': None},
             'bucket': bucket,
+            'fair': fair,
             'fake_reason': fake_reason,
         }
 
     components = {
-        'cca': cca_component(listing, cca_prices),
+        'fair': fair_price_component(listing, fair),
         'outlier': outlier_component(bucket),
         'velocity': velocity_component(velocity),
         'freshness': freshness_component(listing),
@@ -272,20 +356,21 @@ def compute_ganga_confidence(
         total_score += v * w
         total_weight += w
 
-    # Si no hay CCA NI outlier, no podemos opinar (solo tenemos freshness/velocity)
-    has_anchor = components['cca'] is not None or components['outlier'] is not None
+    # Si no hay precio justo NI outlier, no podemos opinar (solo freshness/velocity)
+    has_anchor = components['fair'] is not None or components['outlier'] is not None
     if not has_anchor or total_weight == 0:
         return {
             'score': None,
             'tag': 'sin_referencia',
             'breakdown': components,
             'bucket': bucket,
+            'fair': fair,
             'fake_reason': None,
         }
 
-    base = total_score / total_weight
-    base *= quality_multiplier(listing)
-    score = max(0, min(100, round(base)))
+    base_score = total_score / total_weight
+    base_score *= quality_multiplier(listing)
+    score = max(0, min(100, round(base_score)))
 
     if score >= 80:
         tag = 'super_ganga_v2'
@@ -301,29 +386,34 @@ def compute_ganga_confidence(
         'tag': tag,
         'breakdown': components,
         'bucket': bucket,
+        'fair': fair,
         'fake_reason': None,
     }
 
 
 # ─── Helper para el scraper: anota cada listing in-place ──────────────────────
 
-def annotate_listings(listings: list[dict], cca_prices: dict, velocity_stats: dict) -> dict:
+def annotate_listings(listings: list[dict], velocity_stats: dict, cca_prices: Optional[dict] = None) -> dict:
     """Calcula ganga_confidence para cada listing y lo anota in-place.
 
-    Agrega a cada listing los campos:
-      - precio_cca (USD del CCA si hay match, None si no)
-      - descuento_cca_pct (% bajo CCA)
-      - bucket_n, bucket_median_usd, bucket_z_score (stats del bucket)
-      - ganga_confidence (0-100 o None)
-      - ganga_tag ('super_ganga_v2' | 'ganga_v2' | 'interesante' | 'normal' | 'sin_referencia')
-      - ganga_breakdown (dict con cada componente)
+    `cca_prices` se acepta por compatibilidad pero ya NO se usa (era data inflada).
+
+    Agrega a cada listing:
+      - precio_justo, descuento_justo_pct, ref_fuente (nombres limpios)
+      - precio_cca, descuento_cca_pct (alias del precio justo, para no romper frontend/notify)
+      - bucket_n, bucket_median_usd, bucket_z_score
+      - ganga_confidence, ganga_tag, ganga_breakdown, fake_reason
 
     Devuelve resumen de stats agregadas.
     """
     buckets = build_buckets(listings)
+    sold_index = build_sold_index(velocity_stats)
+    velocity_index = build_velocity_index(velocity_stats)
+
     out_stats = {
         'total': len(listings),
-        'with_cca': 0,
+        'with_ref': 0,
+        'with_sold': 0,
         'with_bucket': 0,
         'with_velocity': 0,
         'super_ganga_v2': 0,
@@ -333,27 +423,37 @@ def annotate_listings(listings: list[dict], cca_prices: dict, velocity_stats: di
         'fake': 0,
     }
     for l in listings:
-        # CCA
-        cca = cca_prices.get(l.get('model_key'))
-        if cca and cca > 0:
-            l['precio_cca'] = cca
-            l['descuento_cca_pct'] = round((1 - l.get('precio_usd', 0) / cca) * 100, 1) if l.get('precio_usd') else None
-            out_stats['with_cca'] += 1
+        result = compute_ganga_confidence(l, buckets, sold_index, velocity_index)
+
+        # Precio justo (+ alias de compatibilidad precio_cca)
+        fair = result.get('fair')
+        if fair:
+            fp = fair['fair']
+            disc = round((1 - l['precio_usd'] / fp) * 100, 1) if l.get('precio_usd') and fp else None
+            l['precio_justo'] = fp
+            l['ref_fuente'] = fair['source']
+            l['descuento_justo_pct'] = disc
+            l['precio_cca'] = fp                 # alias compat (frontend/notify)
+            l['descuento_cca_pct'] = disc        # alias compat
+            out_stats['with_ref'] += 1
+            if fair['source'] in ('venta_real', 'venta+pedido'):
+                out_stats['with_sold'] += 1
         else:
+            l['precio_justo'] = None
+            l['ref_fuente'] = None
+            l['descuento_justo_pct'] = None
             l['precio_cca'] = None
             l['descuento_cca_pct'] = None
 
-        # Velocity
-        v = velocity_stats.get(l.get('model_key', '')) if velocity_stats else None
-        if v:
+        base = base_model_key(l.get('model_key'))
+        if velocity_index.get(base):
             out_stats['with_velocity'] += 1
 
-        # Confidence (incluye bucket internamente)
-        result = compute_ganga_confidence(l, cca_prices, buckets, velocity_stats or {})
         l['ganga_confidence'] = result['score']
         l['ganga_tag'] = result['tag']
         l['ganga_breakdown'] = result['breakdown']
         l['fake_reason'] = result.get('fake_reason')
+
         bucket = result.get('bucket')
         if bucket:
             l['bucket_n'] = bucket['n']

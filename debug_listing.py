@@ -14,7 +14,6 @@ import os
 import sys
 
 LISTINGS_FILE = 'listings.json'
-CCA_FILE = 'cca_precios.json'
 VELOCITY_FILE = 'velocity_stats.json'
 
 
@@ -44,8 +43,11 @@ def show(l):
 
     # Anclas
     print("  ── ANCLAS ──")
-    print(f"  CCA:        {fmt_money(l.get('precio_cca'))} "
-          f"({'-' + str(l['descuento_cca_pct']) + '%' if l.get('descuento_cca_pct') is not None else 'sin match'})")
+    fair = l.get('precio_justo', l.get('precio_cca'))
+    fair_pct = l.get('descuento_justo_pct', l.get('descuento_cca_pct'))
+    src = l.get('ref_fuente') or 'sin match'
+    print(f"  Precio justo: {fmt_money(fair)} "
+          f"({'-' + str(fair_pct) + '%' if fair_pct is not None else 'sin match'}) · {src}")
     if l.get('bucket_n'):
         print(f"  Bucket:     {l['bucket_n']} comparables · mediana {fmt_money(l['bucket_median_usd'])} "
               f"· z-score {l['bucket_z_score']}")

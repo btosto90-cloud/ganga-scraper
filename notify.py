@@ -91,14 +91,16 @@ def fmt_listing(l, cca, show_drop=False, show_score=True):
         if prev:
             lines.append(f"  📉 USD {fmt_num(prev)} → USD {fmt_num(precio)} (-{l.get('recent_drop_pct', 0)}%)")
 
-    # Anchors (CCA + bucket)
-    cca_price = l.get('precio_cca') or cca.get(l.get('model_key'))
-    if cca_price:
-        cca_pct = l.get('descuento_cca_pct')
-        if cca_pct is None and l.get('precio_usd'):
-            cca_pct = round((1 - l['precio_usd'] / cca_price) * 100, 1)
-        if cca_pct is not None and cca_pct > 0:
-            lines.append(f"  ↓ {cca_pct}% vs CCA (USD {fmt_num(cca_price)})")
+    # Anchors (precio justo + bucket)
+    fair_price = l.get('precio_justo') or l.get('precio_cca')
+    fair_src = l.get('ref_fuente')
+    if fair_price:
+        fair_pct = l.get('descuento_justo_pct') or l.get('descuento_cca_pct')
+        if fair_pct is None and l.get('precio_usd'):
+            fair_pct = round((1 - l['precio_usd'] / fair_price) * 100, 1)
+        if fair_pct is not None and fair_pct > 0:
+            ref_label = 'venta real' if fair_src in ('venta_real', 'venta+pedido') else 'precio justo'
+            lines.append(f"  ↓ {fair_pct}% vs {ref_label} (USD {fmt_num(fair_price)})")
     if l.get('bucket_n'):
         lines.append(f"  📊 {l['bucket_n']} comparables · z={l.get('bucket_z_score')}")
 

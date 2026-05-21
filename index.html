@@ -170,7 +170,7 @@
 <div class="stats-bar" id="stats-bar" style="display:none">
   <div class="stat">Total: <span class="stat-val" id="s-total">-</span></div>
   <div class="stat">Gangas: <span class="stat-val" id="s-gangas">-</span></div>
-  <div class="stat">Con precio CCA: <span class="stat-val" id="s-cca">-</span></div>
+  <div class="stat">Con precio justo: <span class="stat-val" id="s-cca">-</span></div>
   <div class="stat">🆕 Nuevas: <span class="stat-val" id="s-nuevas">-</span></div>
   <div class="stat">📉 Bajaron: <span class="stat-val" id="s-bajaron">-</span></div>
   <div class="stat">
@@ -263,7 +263,7 @@ function renderStats(data) {
   const m = data.meta;
   document.getElementById('s-total').textContent = m.total;
   document.getElementById('s-gangas').textContent = m.gangas;
-  document.getElementById('s-cca').textContent = m.con_cca || 0;
+  document.getElementById('s-cca').textContent = m.con_ref || m.con_cca || 0;
   const all = data.normales || [];
   const nuevas = m.nuevas_hoy != null ? m.nuevas_hoy : all.filter(i => i.is_new).length;
   const bajaron = m.bajaron_hoy != null ? m.bajaron_hoy : all.filter(i => i.recent_price_drop).length;
@@ -340,7 +340,7 @@ function renderCard(l) {
   const dropBadge = l.recent_price_drop && l.recent_drop_pct ? `<span class="badge drop">📉 -${l.recent_drop_pct}%</span>` : '';
 
   const precioMercado = l.precio_mercado ? `<div class="price-block"><div class="price-label">Precio mercado</div><div class="price-val market">USD ${l.precio_mercado.toLocaleString('es-AR')}</div></div>` : '';
-  const precioCca = l.precio_cca ? `<div class="price-block"><div class="price-label">CCA</div><div class="price-val">USD ${l.precio_cca.toLocaleString('es-AR')}</div></div>` : '';
+  const precioJusto = (l.precio_justo || l.precio_cca) ? `<div class="price-block"><div class="price-label">Precio justo${l.ref_fuente === 'venta_real' || l.ref_fuente === 'venta+pedido' ? ' (venta real)' : ''}</div><div class="price-val">USD ${(l.precio_justo || l.precio_cca).toLocaleString('es-AR')}</div></div>` : '';
 
   const discountBar = l.precio_mercado ? `
     <div class="discount-bar">
@@ -368,7 +368,7 @@ function renderCard(l) {
           <div class="price-label">Precio pedido</div>
           <div class="price-val highlight">USD ${l.precio_usd.toLocaleString('es-AR')}</div>
         </div>
-        ${precioMercado || precioCca}
+        ${precioMercado || precioJusto}
       </div>
       ${discountBar}
       <div class="card-footer">
