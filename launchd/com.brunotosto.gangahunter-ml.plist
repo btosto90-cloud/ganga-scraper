@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.brunotosto.gangahunter-ml</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>/Users/brunotosto/.ganga-auto/ml_auto.sh</string>
+    </array>
+
+    <!-- Corre todos los días a las 10:00 hora local (ART). Si la Mac estaba
+         dormida a esa hora, launchd lo ejecuta al despertar. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>10</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- No correr al cargar/login: evita un scrape de 40 min cada vez que iniciás sesión -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/brunotosto/.ganga-auto/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/brunotosto/.ganga-auto/launchd.err.log</string>
+</dict>
+</plist>
