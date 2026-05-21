@@ -81,9 +81,10 @@ def fmt_listing(l, cca, show_drop=False, show_score=True):
     fuel = l.get('fuel') or '?'
     fuente = (l.get('fuente') or '').upper()
     precio = l['precio_usd']
+    anio = l.get('year') or '?'
 
     lines = [f"<b>{title}</b>",
-             f"  {fmt_num(precio)} USD · {km} · {trans} · {fuel} · {fuente}"]
+             f"  {fmt_num(precio)} USD · {anio} · {km} · {trans} · {fuel} · {fuente}"]
 
     if show_drop:
         hist = l.get('price_history') or []
