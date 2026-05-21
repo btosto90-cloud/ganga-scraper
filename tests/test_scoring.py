@@ -2,6 +2,7 @@
 
 import sys
 import os
+from datetime import date
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pytest
@@ -373,6 +374,59 @@ class TestComputeGangaConfidenceWithFakes:
         assert result['tag'] == 'fake'
         assert result['score'] == 0
         assert result['fake_reason'] is not None
+
+
+# ─── days_on_market / negotiation (#3) ───────────────────────────────────────
+
+class TestDaysOnMarket:
+    def test_basic(self):
+        assert scoring.days_on_market({'first_seen': '2026-01-01'}, date(2026, 5, 1)) == 120
+
+    def test_iso_con_hora(self):
+        assert scoring.days_on_market({'first_seen': '2026-04-01T10:00:00Z'}, date(2026, 5, 1)) == 30
+
+    def test_sin_first_seen(self):
+        assert scoring.days_on_market({}, date(2026, 5, 1)) is None
+
+    def test_first_seen_invalido(self):
+        assert scoring.days_on_market({'first_seen': 'xx'}, date(2026, 5, 1)) is None
+
+    def test_nunca_negativo(self):
+        assert scoring.days_on_market({'first_seen': '2026-05-10'}, date(2026, 5, 1)) == 0
+
+
+class TestNegotiationComponent:
+    def test_none_sin_dom(self):
+        assert scoring.negotiation_component({}) is None
+
+    def test_reciente_neutral(self):
+        assert scoring.negotiation_component({'days_on_market': 10}) == 0
+
+    def test_45_a_89(self):
+        assert scoring.negotiation_component({'days_on_market': 50}) == 40
+
+    def test_90_a_179(self):
+        assert scoring.negotiation_component({'days_on_market': 120}) == 70
+
+    def test_180_o_mas(self):
+        assert scoring.negotiation_component({'days_on_market': 200}) == 100
+
+
+class TestAnnotateSetsDaysOnMarket:
+    def test_setea_days_on_market(self):
+        listings = [make_listing(id='x', first_seen='2026-01-01', precio_usd=18000)]
+        scoring.annotate_listings(listings, velocity_stats={}, today=date(2026, 5, 1))
+        assert listings[0]['days_on_market'] == 120
+
+    def test_listing_viejo_y_barato_sube_score(self):
+        # Un listing barato vs venta real + viejo en mercado debe puntuar más que el mismo fresco
+        vs = {'toyota_corolla_2020': {'n': 4, 'median_days_lived': 6, 'median_sale_price_usd': 18000}}
+        viejo = [make_listing(id='v', first_seen='2025-11-01', precio_usd=14000)]
+        fresco = [make_listing(id='f', first_seen='2026-05-01', precio_usd=14000)]
+        scoring.annotate_listings(viejo, velocity_stats=vs, today=date(2026, 5, 1))
+        scoring.annotate_listings(fresco, velocity_stats=vs, today=date(2026, 5, 1))
+        assert viejo[0]['ganga_confidence'] >= fresco[0]['ganga_confidence']
+        assert viejo[0]['ganga_breakdown']['negotiation'] == 100
 
 
 if __name__ == '__main__':

@@ -74,120 +74,10 @@ USER_AGENTS = [
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────
 
-BRANDS_NORMALIZE = {'mercedes-benz': 'mercedes', 'mercedes benz': 'mercedes', 'vw': 'volkswagen'}
-KNOWN_BRANDS = ['mercedes-benz', 'mercedes benz', 'mercedes', 'audi', 'toyota', 'volkswagen', 'ford',
-    'chevrolet', 'peugeot', 'renault', 'honda', 'fiat', 'bmw', 'hyundai', 'kia', 'nissan',
-    'mazda', 'citroen', 'jeep', 'mitsubishi', 'subaru', 'chery', 'haval', 'byd', 'ram',
-    'dodge', 'suzuki', 'volvo', 'land rover']
-KNOWN_MODELS = [
-    # Audi performance/RS
-    'rs3', 'rs4', 'rs5', 'rs6', 'rs7', 'rs q3', 'rs q5', 'rs q8', 'tt rs', 'tts',
-    's3', 's4', 's5', 's6', 's7', 's8', 'sq5', 'sq7', 'sq8',
-    # Audi normales
-    'corolla cross', 'corolla', 'land cruiser', 'grand cherokee', 'santa fe',
-    'a1', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'q2', 'q3', 'q5', 'q7', 'q8', 'tt',
-    # BMW M y series
-    'm135', 'm140', 'm235', 'm240', 'm340', 'm440', 'm550',
-    'm2', 'm3', 'm4', 'm5', 'm6', 'm8',
-    'x1 m', 'x2 m', 'x3 m', 'x4 m', 'x5 m', 'x6 m',
-    '116', '118', '120', '125', '130',
-    '218', '220', '228', '230',
-    '318', '320', '325', '328', '330', '335', '340',
-    '420', '428', '430', '435', '440',
-    '520', '523', '525', '528', '530', '535', '540',
-    'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7',
-    # Mercedes AMG y normales
-    'amg gt', 'a45', 'cla45', 'c43', 'c63', 'e43', 'e53', 'e63', 'gle63', 'glc63',
-    'a200', 'a250', 'c180', 'c200', 'c250', 'c300',
-    'gla', 'glb', 'glc', 'gle', 'gls',
-    # Toyota
-    'yaris', 'hilux', 'rav4', 'sw4', 'chr', 'c-hr', 'etios', 'fortuner', 'prius',
-    # VW (incluyendo R/GTI)
-    'golf gti', 'golf r', 'polo gti',
-    'polo', 'golf', 'vento', 'tiguan', 'amarok', 'taos', 'nivus', 'virtus', 'saveiro',
-    # Peugeot
-    '208', '308', '2008', '3008', '408', '508',
-    # Renault (incluyendo RS)
-    'megane rs', 'clio rs', 'sandero rs',
-    'clio', 'sandero', 'duster', 'logan', 'kwid', 'captur', 'arkana', 'oroch', 'megane',
-    # Honda (incluyendo Type R)
-    'civic type r', 'civic',
-    'fit', 'hr-v', 'hrv', 'cr-v', 'crv', 'wr-v', 'wrv', 'accord',
-    # Fiat
-    'cronos', 'argo', 'pulse', 'fastback', 'mobi', 'toro', 'strada',
-    # Hyundai
-    'tucson', 'creta', 'venue', 'i30',
-    # Kia
-    'cerato', 'sportage', 'sorento', 'seltos', 'stinger', 'rio', 'picanto',
-    # Nissan (incluyendo GT-R/Nismo)
-    'gt-r', 'gtr', 'nismo',
-    'march', 'versa', 'sentra', 'kicks', 'frontier',
-    # Jeep
-    'renegade', 'compass', 'wrangler', 'gladiator',
-    # Chevrolet
-    'onix', 'tracker', 'cruze', 'equinox', 's10', 'spin',
-    # Ford (incluyendo ST/RS)
-    'focus rs', 'focus st', 'fiesta st', 'mustang gt',
-    'focus', 'ecosport', 'ranger', 'territory', 'kuga', 'maverick', 'bronco',
-    # Citroen
-    'c3', 'c4', 'berlingo',
-    # Chinos
-    'tiggo', 'jolion', 'h6', 'dolphin'
-]
+from vehicles import (
+    normalize_brand, find_brand_in_text, find_model_in_text, find_trim, make_model_key,
+)
 
-def normalize_brand(b):
-    if not b: return 'other'
-    b = b.lower().strip()
-    return BRANDS_NORMALIZE.get(b, b).replace(' ', '_').replace('-', '_')
-
-def find_brand_in_text(text):
-    if not text: return None
-    t = text.lower()
-    for b in KNOWN_BRANDS:
-        if b in t: return normalize_brand(b)
-    return None
-
-def find_model_in_text(text):
-    if not text: return None
-    t = text.lower()
-    for m in KNOWN_MODELS:
-        if m in t: return m.replace(' ', '_').replace('-', '_')
-    return None
-
-# Variantes de equipamiento/trim que afectan precio significativamente
-TRIMS = [
-    'amg line', 'm sport', 'm-sport', 'r line', 'r-line', 'n line', 'n-line',
-    'gt line', 'gt-line', 'st line', 'st-line', 's line', 's-line',
-    'sport', 'sportback', 'sportline', 'avantgarde', 'progressive', 'exclusive',
-    'gti', 'gtd', 'gts', 'rs', 'st', 'gt',
-    'highline', 'comfortline', 'trendline',
-    'titanium', 'limited', 'platinum', 'premium', 'luxury',
-    'ultimate', 'top', 'tope de gama',
-    'xei', 'xls', 'xlt', 'xei plus', 'xls plus',
-    'd-cab', 'cd', 'cs', 'ce',
-    'awd', '4x4', 'quattro', 'xdrive', '4motion', '4matic',
-    'cabrio', 'coupe', 'sedan', 'hatchback', 'wagon', 'sw',
-    'manual', 'automatico', 'automatic', 'tiptronic', 'dsg', 'cvt',
-]
-
-def find_trim(text):
-    """Detecta el trim/versión del título. Devuelve el más específico."""
-    if not text: return None
-    t = text.lower()
-    found = []
-    for trim in TRIMS:
-        if trim in t:
-            found.append(trim)
-    if not found: return None
-    # Priorizar el más largo/específico (ej. "amg line" > "line")
-    found.sort(key=len, reverse=True)
-    return found[0].replace(' ', '_').replace('-', '_')
-
-def make_model_key(brand, model, year, trim=None):
-    base = f"{brand or 'other'}_{model or 'other'}_{year}"
-    if trim:
-        base += f"_{trim}"
-    return base
 
 def is_realistic_price(precio_usd, year):
     if not precio_usd or precio_usd < 1500: return False
@@ -351,7 +241,7 @@ def parse_extracted(items, marca_search):
             if not is_realistic_price(precio_usd, year): continue
 
             brand = find_brand_in_text(title) or normalize_brand(marca_search)
-            model = find_model_in_text(title)
+            model = find_model_in_text(title, brand)
 
             trim = find_trim(title)
             listings.append({

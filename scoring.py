@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import math
 from collections import defaultdict
+from datetime import date
 from typing import Optional
 
 
@@ -239,6 +240,41 @@ def freshness_component(listing: dict) -> int:
     return 30
 
 
+def days_on_market(listing: dict, today: Optional[date] = None) -> Optional[int]:
+    """Días desde que vimos el listing por primera vez (first_seen).
+
+    Es nuestra mejor señal de antigüedad: la API pública de ML que daba la fecha de
+    publicación dejó de funcionar (401). Arranca en 0 y se vuelve precisa a medida que
+    se acumulan corridas diarias. None si no hay first_seen.
+    """
+    fs = listing.get('first_seen')
+    if not fs:
+        return None
+    try:
+        seen = date.fromisoformat(fs[:10])
+    except (ValueError, TypeError):
+        return None
+    return max(0, ((today or date.today()) - seen).days)
+
+
+def negotiation_component(listing: dict) -> Optional[int]:
+    """Listings que llevan mucho tiempo sin venderse = vendedor más negociable.
+
+    Neutral (0) para publicaciones recientes; sube con la antigüedad. Lee
+    `days_on_market` precalculado por annotate_listings. None si no se puede estimar.
+    """
+    d = listing.get('days_on_market')
+    if d is None:
+        return None
+    if d < 45:
+        return 0
+    if d < 90:
+        return 40
+    if d < 180:
+        return 70
+    return 100
+
+
 def quality_multiplier(listing: dict) -> float:
     """Penalización multiplicativa por data faltante/sospechosa."""
     m = 1.0
@@ -299,10 +335,11 @@ def is_likely_fake(listing: dict, fair_price: Optional[float] = None) -> tuple[b
 # ─── Final ganga_confidence ───────────────────────────────────────────────────
 
 WEIGHTS = {
-    'fair': 0.50,       # Precio justo auto-calibrado: la señal más confiable
-    'outlier': 0.30,    # Bucket z-score, segundo en confianza
-    'velocity': 0.10,   # Refuerzo cuando hay data de demanda
-    'freshness': 0.10,  # Modificador de oportunidad temporal
+    'fair': 0.50,        # Precio justo auto-calibrado: la señal más confiable
+    'outlier': 0.30,     # Bucket z-score, segundo en confianza
+    'velocity': 0.10,    # Refuerzo cuando hay data de demanda
+    'freshness': 0.10,   # Modificador de oportunidad temporal (nuevo/bajó)
+    'negotiation': 0.05, # Antigüedad en mercado (vendedor negociable). Madura con el tiempo.
 }
 
 
@@ -333,7 +370,8 @@ def compute_ganga_confidence(
         return {
             'score': 0,
             'tag': 'fake',
-            'breakdown': {'fair': None, 'outlier': None, 'velocity': None, 'freshness': None},
+            'breakdown': {'fair': None, 'outlier': None, 'velocity': None,
+                          'freshness': None, 'negotiation': None},
             'bucket': bucket,
             'fair': fair,
             'fake_reason': fake_reason,
@@ -344,6 +382,7 @@ def compute_ganga_confidence(
         'outlier': outlier_component(bucket),
         'velocity': velocity_component(velocity),
         'freshness': freshness_component(listing),
+        'negotiation': negotiation_component(listing),
     }
 
     # Combinación ponderada de componentes disponibles
@@ -393,19 +432,23 @@ def compute_ganga_confidence(
 
 # ─── Helper para el scraper: anota cada listing in-place ──────────────────────
 
-def annotate_listings(listings: list[dict], velocity_stats: dict, cca_prices: Optional[dict] = None) -> dict:
+def annotate_listings(listings: list[dict], velocity_stats: dict,
+                      cca_prices: Optional[dict] = None, today: Optional[date] = None) -> dict:
     """Calcula ganga_confidence para cada listing y lo anota in-place.
 
     `cca_prices` se acepta por compatibilidad pero ya NO se usa (era data inflada).
+    `today` permite fijar la fecha de referencia en tests (default: hoy).
 
     Agrega a cada listing:
       - precio_justo, descuento_justo_pct, ref_fuente (nombres limpios)
       - precio_cca, descuento_cca_pct (alias del precio justo, para no romper frontend/notify)
       - bucket_n, bucket_median_usd, bucket_z_score
+      - days_on_market (días desde first_seen)
       - ganga_confidence, ganga_tag, ganga_breakdown, fake_reason
 
     Devuelve resumen de stats agregadas.
     """
+    today = today or date.today()
     buckets = build_buckets(listings)
     sold_index = build_sold_index(velocity_stats)
     velocity_index = build_velocity_index(velocity_stats)
@@ -423,6 +466,8 @@ def annotate_listings(listings: list[dict], velocity_stats: dict, cca_prices: Op
         'fake': 0,
     }
     for l in listings:
+        # days_on_market debe estar seteado ANTES de scorear (negotiation_component lo lee)
+        l['days_on_market'] = days_on_market(l, today)
         result = compute_ganga_confidence(l, buckets, sold_index, velocity_index)
 
         # Precio justo (+ alias de compatibilidad precio_cca)
