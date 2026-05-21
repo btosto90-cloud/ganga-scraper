@@ -35,11 +35,16 @@ cd "$REPO_DIR" || { echo "ERROR: no pude cd a $REPO_DIR"; exit 1; }
 git fetch origin "$BRANCH" 2>&1 || echo "WARN: fetch falló, sigo con lo que haya"
 git reset --hard "origin/$BRANCH" 2>&1 || echo "WARN: reset falló, sigo con lo que haya"
 
-# 2. Elegir el ml_local.py: el del repo (si ya está mergeado) o tu copia local
+# 2. Elegir el ml_local.py: el del repo (si ya está mergeado) o la copia en $AUTO_DIR.
+# OJO: NO usar ~/Downloads — launchd no puede leer carpetas protegidas por TCC
+# (Downloads/Desktop/Documents) → "Operation not permitted".
 ML_SCRIPT="ml_local.py"
 if [ ! -f "$ML_SCRIPT" ]; then
-    ML_SCRIPT="$HOME/Downloads/11_Proyectos_Codigo/ml_local.py"
+    ML_SCRIPT="$AUTO_DIR/ml_local.py"
     echo "Nota: ml_local.py no está en el repo todavía, uso $ML_SCRIPT"
+fi
+if [ ! -f "$ML_SCRIPT" ]; then
+    echo "ERROR: no encuentro ml_local.py (ni en el repo ni en $AUTO_DIR)"; exit 1
 fi
 
 # 3. Scrapear ML (genera ./ml_listings.json en el clone, con history del repo)

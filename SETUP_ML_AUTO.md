@@ -28,9 +28,17 @@ Usa un clone aparte para no tocar tu clone de trabajo (`~/ganga-scraper`).
 mkdir -p ~/.ganga-auto
 cp ~/ganga-scraper/ml_auto.sh ~/.ganga-auto/ml_auto.sh
 chmod +x ~/.ganga-auto/ml_auto.sh
+# Copia de ml_local.py en una carpeta NO protegida por TCC (ver nota abajo).
+# Una vez mergeado el PR, el wrapper usa el ml_local.py del repo y esta copia es solo respaldo.
+cp ~/ganga-scraper/ml_local.py ~/.ganga-auto/ml_local.py
 cp ~/ganga-scraper/launchd/com.brunotosto.gangahunter-ml.plist ~/Library/LaunchAgents/
 launchctl load ~/Library/LaunchAgents/com.brunotosto.gangahunter-ml.plist
 ```
+
+> **TCC / privacidad de macOS:** los jobs de launchd NO pueden leer `~/Downloads`,
+> `~/Desktop` ni `~/Documents` (carpetas protegidas) → da "Operation not permitted".
+> Por eso `ml_local.py` y el clone viven en `~/.ganga-auto/` (no protegida). No muevas
+> el scraper a esas carpetas.
 
 ## Operación
 
