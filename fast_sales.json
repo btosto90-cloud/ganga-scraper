@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-21T11:33:14.760900Z",
-  "count": 3122,
+  "updated": "2026-05-21T11:56:43.818717Z",
+  "count": 3133,
   "events": [
     {
       "id": "5597212",
@@ -37464,6 +37464,138 @@
       "first_seen": "2026-05-19",
       "last_seen_at": "2026-05-20T10:57:31.604129Z",
       "days_lived": 2,
+      "fuente": "ac"
+    },
+    {
+      "id": "5518673",
+      "model_key": "volkswagen_other_2016",
+      "brand": "volkswagen",
+      "model": null,
+      "year": 2016,
+      "last_price_usd": 10857,
+      "first_seen": "2026-05-20",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 1,
+      "fuente": "rg"
+    },
+    {
+      "id": "5660221",
+      "model_key": "volkswagen_virtus_2025",
+      "brand": "volkswagen",
+      "model": "virtus",
+      "year": 2025,
+      "last_price_usd": 22857,
+      "first_seen": "2026-05-20",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 1,
+      "fuente": "rg"
+    },
+    {
+      "id": "5575148",
+      "model_key": "volkswagen_other_2011_highline",
+      "brand": "volkswagen",
+      "model": null,
+      "year": 2011,
+      "last_price_usd": 7786,
+      "first_seen": "2026-05-20",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 1,
+      "fuente": "rg"
+    },
+    {
+      "id": "5659675",
+      "model_key": "fiat_argo_2020_gt",
+      "brand": "fiat",
+      "model": "argo",
+      "year": 2020,
+      "last_price_usd": 13214,
+      "first_seen": "2026-05-19",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 2,
+      "fuente": "rg"
+    },
+    {
+      "id": "ac__auto_usado_ford_ka_10l_fly_plus_d949d969e23b42bba",
+      "model_key": "ford_ka_2012",
+      "brand": "ford",
+      "model": "ka",
+      "year": 2012,
+      "last_price_usd": 6357,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 17,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_chevrolet_corsa_3p_wind_16_27a973a522f",
+      "model_key": "chevrolet_corsa_2000_rs",
+      "brand": "chevrolet",
+      "model": "corsa",
+      "year": 2000,
+      "last_price_usd": 4500,
+      "first_seen": "2026-05-12",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 9,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_peugeot_208_allure_16_tiptronic_b24ee9",
+      "model_key": "peugeot_208_2022",
+      "brand": "peugeot",
+      "model": "208",
+      "year": 2022,
+      "last_price_usd": 6071,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 17,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_renault_symbol_16_pack_5ec96ef3337745d",
+      "model_key": "renault_symbol_2011",
+      "brand": "renault",
+      "model": "symbol",
+      "year": 2011,
+      "last_price_usd": 5357,
+      "first_seen": "2026-05-13",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 8,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_fiat_fiorino_fire_144534af473f47f7ac71",
+      "model_key": "fiat_fiorino_2013",
+      "brand": "fiat",
+      "model": "fiorino",
+      "year": 2013,
+      "last_price_usd": 6421,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 17,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_citroen_c4_16i_x_ba277f19d4834d5d9839c",
+      "model_key": "citroen_c4_2014",
+      "brand": "citroen",
+      "model": "c4",
+      "year": 2014,
+      "last_price_usd": 8929,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 17,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_jeep_renegade_longitude_aut_b583a9439a",
+      "model_key": "jeep_renegade_2019",
+      "brand": "jeep",
+      "model": "renegade",
+      "year": 2019,
+      "last_price_usd": 19107,
+      "first_seen": "2026-05-04",
+      "last_seen_at": "2026-05-21T11:33:14.919738Z",
+      "days_lived": 17,
       "fuente": "ac"
     }
   ]

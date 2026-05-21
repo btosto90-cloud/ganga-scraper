@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T11:33:14.790703Z",
+  "updated": "2026-05-21T11:56:43.848973Z",
   "count": 335,
   "stats": {
     "toyota_corolla_2022": {
@@ -135,10 +135,10 @@
       "median_sale_price_usd": 10929
     },
     "peugeot_208_2022": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 16357
+      "median_sale_price_usd": 15214
     },
     "peugeot_308_2017": {
       "n": 13,
@@ -933,7 +933,7 @@
       "median_sale_price_usd": 6429
     },
     "volkswagen_other_2016": {
-      "n": 18,
+      "n": 19,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9929
@@ -1461,10 +1461,10 @@
       "median_sale_price_usd": 10357
     },
     "citroen_c4_2014": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8571
+      "median_sale_price_usd": 8929
     },
     "citroen_c4_2021": {
       "n": 4,
