@@ -429,5 +429,59 @@ class TestAnnotateSetsDaysOnMarket:
         assert viejo[0]['ganga_breakdown']['negotiation'] == 100
 
 
+# ─── build_buckets excluye fakes (#2) ─────────────────────────────────────────
+
+class TestBuildBucketsExcludesFakes:
+    def test_fake_anticipo_no_contamina_el_pool(self):
+        listings = [make_listing(id=f'r{i}', precio_usd=p, km=80000)
+                    for i, p in enumerate([14000, 14500, 15000, 15500, 16000])]
+        # Un anticipo/fake: 2024 a USD 5000 (year>=2022 & <7500)
+        listings.append(make_listing(id='fake', precio_usd=5000, year=2024, km=80000))
+        buckets = scoring.build_buckets(listings)
+        precios = [x['precio'] for x in buckets[('toyota', 'corolla')]]
+        assert 5000 not in precios
+        assert len(precios) == 5
+
+
+# ─── km_predicted_price (#2) ──────────────────────────────────────────────────
+
+def _km_group(pairs):
+    return [make_listing(id=f'g{i}', km=k, precio_usd=p, year=2020)
+            for i, (k, p) in enumerate(pairs)]
+
+
+class TestKmPredictedPrice:
+    PAIRS = [(20000, 22000), (50000, 20000), (80000, 18000), (110000, 16000),
+             (140000, 14000), (170000, 13000), (200000, 12000), (60000, 19000)]
+
+    def test_pocos_km_vale_mas_que_muchos_km(self):
+        buckets = scoring.build_buckets(_km_group(self.PAIRS))
+        low = scoring.km_predicted_price(make_listing(id='t', km=30000, year=2020), buckets)
+        high = scoring.km_predicted_price(make_listing(id='t', km=180000, year=2020), buckets)
+        assert low is not None and high is not None
+        assert low > high
+
+    def test_n_insuficiente(self):
+        buckets = scoring.build_buckets(_km_group(self.PAIRS[:3]))
+        assert scoring.km_predicted_price(make_listing(km=30000, year=2020), buckets) is None
+
+    def test_sin_spread_de_km(self):
+        pairs = [(80000, 18000 + i * 100) for i in range(9)]
+        buckets = scoring.build_buckets(_km_group(pairs))
+        assert scoring.km_predicted_price(make_listing(km=80000, year=2020), buckets) is None
+
+
+class TestFairPriceKmSource:
+    def test_usa_km_pred_y_lo_etiqueta(self):
+        fair = scoring.fair_price_for(make_listing(), {'median': 20000, 'n': 8}, {}, km_pred=17000)
+        assert fair['fair'] == 17000
+        assert fair['source'] == 'pedido_km'
+
+    def test_sin_km_pred_cae_a_mediana(self):
+        fair = scoring.fair_price_for(make_listing(), {'median': 20000, 'n': 8}, {})
+        assert fair['fair'] == 20000
+        assert fair['source'] == 'pedido_p50'
+
+
 if __name__ == '__main__':
     sys.exit(pytest.main([__file__, '-v']))

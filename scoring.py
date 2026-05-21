@@ -53,6 +53,9 @@ def base_model_key(model_key: Optional[str]) -> Optional[str]:
 def build_buckets(listings: list[dict]) -> dict:
     """Agrupa listings por (brand, model) para lookup rápido por bucket.
 
+    Excluye fakes obvios (planes de ahorro / anticipos / precios irreales) del pool
+    de comparables: si no, contaminan la mediana y la regresión por km de los reales.
+
     Devuelve dict (brand, model) -> [{'year', 'km', 'precio'}].
     """
     buckets: dict[tuple, list[dict]] = defaultdict(list)
@@ -62,6 +65,9 @@ def build_buckets(listings: list[dict]) -> dict:
         if not (l.get('brand') and l.get('model')):
             continue
         if l['precio_usd'] < 1500:  # mismo guard que el Worker
+            continue
+        # Sin precio justo todavía: detecta fakes por keyword + precio/año irreal.
+        if is_likely_fake(l)[0]:
             continue
         buckets[(l['brand'], l['model'])].append({
             'year': l['year'],
@@ -155,22 +161,72 @@ def build_velocity_index(velocity_stats: dict) -> dict:
     return by_base
 
 
-def fair_price_for(listing: dict, bucket: Optional[dict], sold_index: dict) -> Optional[dict]:
-    """Precio justo del listing: mezcla venta real (60%) + mediana de comparables (40%).
+def km_predicted_price(listing: dict, buckets: dict, year_window: int = 1,
+                       min_n: int = 8) -> Optional[int]:
+    """Precio esperado ajustado por km: regresión lineal precio~km sobre el grupo
+    (misma marca/modelo, año±1). Un mismo modelo+año pierde valor con los km
+    (correlación ~-0.5), así que un auto de pocos km vale más que la mediana del grupo
+    y uno de muchos, menos. Ayuda a detectar gangas en los extremos de km.
 
-    Devuelve {'fair', 'source', 'n'} o None si no hay ni ventas ni bucket.
+    Guardas anti-ruido: n≥min_n, pendiente negativa, spread de km ≥20.000, y se clampea
+    al rango de precios observado (no extrapola). None si no aplica → cae a la mediana.
+    """
+    if not (listing.get('brand') and listing.get('model')
+            and listing.get('year') and listing.get('km')):
+        return None
+    group = buckets.get((listing['brand'], listing['model']), [])
+    if len(group) < min_n:
+        return None
+    yr, own = listing['year'], listing.get('id')
+    pts = [(x['km'], x['precio']) for x in group
+           if x.get('id') != own and abs(x['year'] - yr) <= year_window]
+    if len(pts) < min_n:
+        return None
+    kms = [p[0] for p in pts]
+    prs = [p[1] for p in pts]
+    if max(kms) - min(kms) < 20000:
+        return None  # poco spread de km → la regresión no aporta
+    n = len(pts)
+    mk = sum(kms) / n
+    mp = sum(prs) / n
+    den = sum((k - mk) ** 2 for k in kms)
+    var_pr = sum((p - mp) ** 2 for p in prs)
+    if den == 0 or var_pr == 0:
+        return None
+    num = sum((k - mk) * (p - mp) for k, p in zip(kms, prs))
+    corr = num / (den ** 0.5 * var_pr ** 0.5)
+    if corr > -0.3:
+        return None  # km no predice bien el precio en este grupo (ruido) → cae a mediana
+    slope = num / den
+    pred = (mp - slope * mk) + slope * listing['km']
+    pred = max(min(prs), min(max(prs), pred))  # clamp al rango observado (no extrapola)
+    return round(pred)
+
+
+def fair_price_for(listing: dict, bucket: Optional[dict], sold_index: dict,
+                   km_pred: Optional[int] = None) -> Optional[dict]:
+    """Precio justo del listing: mezcla venta real (60%) + referencia de pedidos (40%).
+
+    La referencia de pedidos es el precio ajustado por km (km_pred) si está disponible;
+    si no, la mediana del bucket. Devuelve {'fair', 'source', 'n'} o None.
     """
     base = base_model_key(listing.get('model_key'))
     sold = sold_index.get(base) if base else None
-    asking = bucket.get('median') if bucket else None
+    if km_pred:
+        asking, asking_src = km_pred, 'km'
+    elif bucket:
+        asking, asking_src = bucket.get('median'), 'p50'
+    else:
+        asking, asking_src = None, None
 
     if sold and asking:
         return {'fair': round(0.6 * sold + 0.4 * asking), 'source': 'venta+pedido',
-                'n': bucket.get('n')}
+                'n': bucket.get('n') if bucket else None}
     if sold:
         return {'fair': sold, 'source': 'venta_real', 'n': None}
     if asking:
-        return {'fair': asking, 'source': 'pedido_p50', 'n': bucket.get('n')}
+        return {'fair': asking, 'source': f'pedido_{asking_src}',
+                'n': bucket.get('n') if bucket else None}
     return None
 
 
@@ -360,7 +416,8 @@ def compute_ganga_confidence(
       sin_referencia   si no hay precio justo ni bucket disponibles
     """
     bucket = bucket_stats_for(listing, buckets)
-    fair = fair_price_for(listing, bucket, sold_index)
+    km_pred = km_predicted_price(listing, buckets)
+    fair = fair_price_for(listing, bucket, sold_index, km_pred)
     base = base_model_key(listing.get('model_key'))
     velocity = velocity_index.get(base) if (velocity_index and base) else None
 
