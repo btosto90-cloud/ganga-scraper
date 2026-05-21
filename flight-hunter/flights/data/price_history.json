@@ -98,6 +98,11 @@
       "date": "2026-05-10",
       "price_usd": 898.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-21",
+      "price_usd": 696.0,
+      "airline": "LATAM"
     }
   ],
   "EZE-JFK": [
@@ -131,6 +136,11 @@
     {
       "date": "2026-05-08",
       "price_usd": 349.0,
+      "airline": "GOL"
+    },
+    {
+      "date": "2026-05-21",
+      "price_usd": 342.0,
       "airline": "GOL"
     }
   ],
@@ -353,6 +363,11 @@
       "date": "2026-05-20",
       "price_usd": 1122.0,
       "airline": "Iberia"
+    },
+    {
+      "date": "2026-05-21",
+      "price_usd": 983.0,
+      "airline": "Aeroméxico"
     }
   ],
   "EZE-FOR": [
@@ -391,6 +406,11 @@
       "date": "2026-05-15",
       "price_usd": 611.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-21",
+      "price_usd": 749.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-NAT": [
@@ -426,6 +446,11 @@
       "date": "2026-05-19",
       "price_usd": 622.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-21",
+      "price_usd": 622.0,
+      "airline": "LATAM"
     }
   ],
   "EZE-SSA": [
@@ -459,6 +484,13 @@
       "date": "2026-05-20",
       "price_usd": 808.0,
       "airline": "Aeroméxico"
+    }
+  ],
+  "EZE-LAX": [
+    {
+      "date": "2026-05-21",
+      "price_usd": 755.0,
+      "airline": "Copa Airlines"
     }
   ]
 }
