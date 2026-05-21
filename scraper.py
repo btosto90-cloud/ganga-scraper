@@ -144,48 +144,45 @@ from vehicles import (
 
 # ─── ROSARIO GARAGE ───────────────────────────────────────────────────────────
 
-def scrape_rg(marca, paginas=5):
-    listings = []
-    base_urls = [
-        f"https://www.rosariogarage.com/Autos/{marca}",
-        f"https://www.rosariogarage.com/autos/{marca}",
-        f"https://www.rosariogarage.com/Autos/{marca.capitalize()}",
-    ]
+# La página real de RG pesa ~400KB; cuando rate-limitea devuelve una de ~11KB.
+RG_MIN_PAGE_BYTES = 50000
 
-    url_ok = None
-    for bu in base_urls:
-        html = fetch(bu)
-        if html and len(html) > 1000:
-            url_ok = bu
-            break
-        time.sleep(0.5)
 
-    if not url_ok:
-        print(f"  RG {marca}: no se pudo acceder")
-        return []
+def _fetch_rg_page(url, retries=4):
+    """Fetch de una página de RG, reintentando ante la página de bloqueo/rate-limit.
 
-    for page in range(1, paginas + 1):
-        url = url_ok if page == 1 else f"{url_ok}?page={page}"
+    RG es flaky: intercala respuestas válidas (~400KB con listings) con una página
+    chica (~11KB) cuando te rate-limitea. El check viejo (len>1000) la aceptaba y
+    devolvía 0 autos (por eso marcas enteras daban 0 al azar). Acá exigimos tamaño real
+    + presencia de listings, y reintentamos con backoff progresivo para que RG se enfríe.
+    """
+    for attempt in range(retries):
         html_bytes = fetch(url)
-        if not html_bytes:
-            break
+        if html_bytes:
+            html = html_bytes.decode('utf-8', errors='ignore')
+            if len(html) > RG_MIN_PAGE_BYTES and 'data-rel="' in html:
+                return html
+        time.sleep(random.uniform(4, 9) * (attempt + 1))
+    return None
 
-        html = None
-        for enc in ['utf-8', 'latin-1', 'iso-8859-1']:
-            try:
-                html = html_bytes.decode(enc, errors='ignore')
-                break
-            except Exception:
-                continue
+
+def scrape_rg(marca, paginas=3):
+    """RG filtra por marca en la URL (/Autos/{marca}) y muestra todo en una página."""
+    listings = []
+    base = f"https://www.rosariogarage.com/Autos/{marca}"
+    for page in range(1, paginas + 1):
+        url = base if page == 1 else f"{base}?page={page}"
+        html = _fetch_rg_page(url)
         if not html:
+            if page == 1:
+                print(f"  RG {marca}: bloqueado/sin datos tras reintentos")
             break
-
         parsed = _parse_rg_html(html, marca)
         listings.extend(parsed)
         print(f"  RG {marca} p{page}: {len(parsed)}")
         if len(parsed) == 0:
             break
-        time.sleep(random.uniform(1.0, 2.5))
+        time.sleep(random.uniform(2.0, 4.0))
 
     return listings
 
