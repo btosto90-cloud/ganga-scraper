@@ -161,6 +161,54 @@ def build_velocity_index(velocity_stats: dict) -> dict:
     return by_base
 
 
+# ─── Dominancia (mejor compra del mismo modelo) ───────────────────────────────
+
+def build_model_index(listings: list[dict]) -> dict:
+    """Agrupa listings por (brand, model) para comparar entre sí (value-for-money)."""
+    idx: dict[tuple, list[dict]] = defaultdict(list)
+    for l in listings:
+        if l.get('brand') and l.get('model') and l.get('year') and l.get('km') and l.get('precio_usd'):
+            idx[(l['brand'], l['model'])].append(l)
+    return idx
+
+
+def dominating_listing(listing: dict, model_index: dict, premium: float = 1.15) -> Optional[dict]:
+    """Otro aviso del MISMO modelo claramente MEJOR (más nuevo y/o con menos km) por una
+    diferencia de precio chica (<= premium). Si existe, este aviso está 'dominado': no es
+    buena compra aunque esté barato para su año (hay uno mejor por casi la misma plata).
+
+    Devuelve el mejor dominador (más barato) o None.
+    """
+    if not (listing.get('brand') and listing.get('model') and listing.get('year')
+            and listing.get('km') and listing.get('precio_usd')):
+        return None
+    grp = model_index.get((listing['brand'], listing['model']), [])
+    y, km, precio = listing['year'], listing['km'], listing['precio_usd']
+    best = None
+    for x in grp:
+        if x.get('id') == listing.get('id'):
+            continue
+        if not (x.get('year') and x.get('km') and x.get('precio_usd')):
+            continue
+        # x no es peor en año ni en km, y cuesta a lo sumo `premium` más...
+        if x['year'] >= y and x['km'] <= km and x['precio_usd'] <= precio * premium:
+            # ...y es estrictamente mejor en al menos una dimensión
+            if x['year'] > y or x['km'] < km * 0.9:
+                if best is None or x['precio_usd'] < best['precio_usd']:
+                    best = x
+    return best
+
+
+def _tag_from_score(score: int) -> str:
+    if score >= 80:
+        return 'super_ganga_v2'
+    if score >= 65:
+        return 'ganga_v2'
+    if score >= 45:
+        return 'interesante'
+    return 'normal'
+
+
 def km_predicted_price(listing: dict, buckets: dict, year_window: int = 1,
                        min_n: int = 8) -> Optional[int]:
     """Precio esperado ajustado por km: regresión lineal precio~km sobre el grupo
@@ -509,6 +557,7 @@ def annotate_listings(listings: list[dict], velocity_stats: dict,
     buckets = build_buckets(listings)
     sold_index = build_sold_index(velocity_stats)
     velocity_index = build_velocity_index(velocity_stats)
+    model_index = build_model_index(listings)
 
     out_stats = {
         'total': len(listings),
@@ -551,8 +600,19 @@ def annotate_listings(listings: list[dict], velocity_stats: dict,
         if velocity_index.get(base):
             out_stats['with_velocity'] += 1
 
-        l['ganga_confidence'] = result['score']
-        l['ganga_tag'] = result['tag']
+        # Dominancia: si existe un mismo-modelo claramente mejor (más nuevo / menos km)
+        # por casi la misma plata, penalizar — no es buena compra aunque esté barato
+        # para su año (hay uno mejor por casi lo mismo).
+        score, tag = result['score'], result['tag']
+        if score is not None and tag in ('super_ganga_v2', 'ganga_v2', 'interesante'):
+            dom = dominating_listing(l, model_index)
+            if dom:
+                score = round(score * 0.6)
+                tag = _tag_from_score(score)
+                l['dominado_por'] = {'precio_usd': dom['precio_usd'], 'year': dom['year'],
+                                     'km': dom['km'], 'url': dom.get('url')}
+        l['ganga_confidence'] = score
+        l['ganga_tag'] = tag
         l['ganga_breakdown'] = result['breakdown']
         l['fake_reason'] = result.get('fake_reason')
 
@@ -567,7 +627,7 @@ def annotate_listings(listings: list[dict], velocity_stats: dict,
             l['bucket_median_usd'] = None
             l['bucket_z_score'] = None
 
-        if result['tag'] in out_stats:
-            out_stats[result['tag']] += 1
+        if tag in out_stats:
+            out_stats[tag] += 1
 
     return out_stats

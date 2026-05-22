@@ -65,8 +65,9 @@ def load_context():
     buckets = scoring.build_buckets(listings)
     sold_index = scoring.build_sold_index(vstats)
     velocity_index = scoring.build_velocity_index(vstats)
+    model_index = scoring.build_model_index(listings)
     existing_ids = {l.get('id') for l in listings if l.get('id')}
-    return buckets, sold_index, velocity_index, existing_ids
+    return buckets, sold_index, velocity_index, model_index, existing_ids
 
 
 def telegram_creds():
@@ -162,7 +163,7 @@ def annotate_fresh(l, result):
 def main():
     from playwright.sync_api import sync_playwright
 
-    buckets, sold_index, velocity_index, existing_ids = load_context()
+    buckets, sold_index, velocity_index, model_index, existing_ids = load_context()
     state = json.load(open(STATE_FILE)) if os.path.exists(STATE_FILE) else {}
     alerted = set(state.get('alerted', []))
     today = datetime.utcnow().date().isoformat()
@@ -196,10 +197,15 @@ def main():
                 l['first_seen'] = today
                 l['is_new'] = True
                 result = scoring.compute_ganga_confidence(l, buckets, sold_index, velocity_index)
-                if is_alert_worthy(l, result):
-                    annotate_fresh(l, result)
-                    hallazgos.append(l)
-                    alerted.add(lid)
+                if not is_alert_worthy(l, result):
+                    continue
+                # No alertar si está dominado por un mismo-modelo mejor (más nuevo/menos km)
+                dom = scoring.dominating_listing(l, model_index)
+                if dom:
+                    continue
+                annotate_fresh(l, result)
+                hallazgos.append(l)
+                alerted.add(lid)
 
         # 1) Scan nacional por marca (gangas en todo el país)
         for marca in ml_local.MARCAS:
