@@ -8,6 +8,12 @@ on:
     paths:
       - 'scraper.py'
 
+# Un solo scraper a la vez: si se dispara otro mientras uno corre, se encola en vez
+# de chocar al commitear listings.json (evita el "failure" por git push rechazado).
+concurrency:
+  group: scraper
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
