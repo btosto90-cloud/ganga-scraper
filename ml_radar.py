@@ -29,6 +29,9 @@ LISTINGS_FILE = 'listings.json'
 VELOCITY_FILE = 'velocity_stats.json'
 STATE_FILE = 'radar_state.json'
 
+# Recordatorio one-shot por Telegram para armar el loop de calibración (data madura ~3 semanas)
+REMINDER_CALIBRACION = '2026-06-12'
+
 # Barra para alerta instantánea (moderada): super-ganga o ganga_v2 CONFIRMADA por
 # ventas reales (no por bucket suelto) con descuento decente. Sigue evitando los
 # falsos positivos de buckets chicos/contaminados (exige ancla de venta real).
@@ -233,8 +236,25 @@ def main():
                 print(f"  [{l.get('ganga_confidence')}] {(l.get('title') or '')[:42]} "
                       f"${l.get('precio_usd')} ({l.get('descuento_justo_pct')}% bajo justo) — {l.get('url')}")
 
+    # Recordatorio one-shot: armar el loop de calibración cuando haya data madura.
+    reminder_sent = state.get('reminder_calibracion_sent', False)
+    if not reminder_sent and datetime.utcnow().date().isoformat() >= REMINDER_CALIBRACION:
+        tok, chat = telegram_creds()
+        if tok and chat:
+            try:
+                notify.send_telegram(tok, chat,
+                    "🔔 <b>Recordatorio Ganga Hunter</b>\n\nYa pasaron ~3 semanas y hay data "
+                    "acumulada de ventas. Es buen momento para armar el <b>loop de calibración</b> "
+                    "(que el sistema aprenda de qué gangas se vendieron y afine los umbrales solo).\n\n"
+                    "Pedíselo a Claude cuando quieras 🚗")
+                reminder_sent = True
+                print("Recordatorio de calibración enviado a Telegram")
+            except Exception as e:
+                print(f"Recordatorio falló: {e}")
+
     # Persistir estado (cap para no crecer infinito)
-    state = {'alerted': sorted(alerted)[-8000:], 'last_run': datetime.utcnow().isoformat() + 'Z'}
+    state = {'alerted': sorted(alerted)[-8000:], 'last_run': datetime.utcnow().isoformat() + 'Z',
+             'reminder_calibracion_sent': reminder_sent}
     json.dump(state, open(STATE_FILE, 'w'), indent=2)
 
 
