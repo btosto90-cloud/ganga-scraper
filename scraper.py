@@ -148,26 +148,34 @@ from vehicles import (
 RG_MIN_PAGE_BYTES = 50000
 
 
-def _fetch_rg_page(url, retries=4):
+# Circuit breaker: desde el datacenter de GitHub Actions, RG bloquea (rate-limit) casi
+# todo. Reintentar en cada marca explota el timeout de 30 min del workflow. Si varias
+# marcas seguidas vienen vacías, asumimos que RG está bloqueado este run y cortamos.
+_rg_state = {'empty_streak': 0, 'disabled': False}
+
+
+def _fetch_rg_page(url, retries=2):
     """Fetch de una página de RG, reintentando ante la página de bloqueo/rate-limit.
 
-    RG es flaky: intercala respuestas válidas (~400KB con listings) con una página
-    chica (~11KB) cuando te rate-limitea. El check viejo (len>1000) la aceptaba y
-    devolvía 0 autos (por eso marcas enteras daban 0 al azar). Acá exigimos tamaño real
-    + presencia de listings, y reintentamos con backoff progresivo para que RG se enfríe.
+    RG intercala la página real (~400KB con listings) con una de bloqueo (~11KB).
+    Exigimos tamaño real + presencia de listings. Reintentos ACOTADOS (backoff plano)
+    para no colgar el run cuando RG bloquea sistemáticamente (datacenter).
     """
     for attempt in range(retries):
-        html_bytes = fetch(url)
+        html_bytes = fetch(url, retries=1)  # sin doble-retry interno de fetch()
         if html_bytes:
             html = html_bytes.decode('utf-8', errors='ignore')
             if len(html) > RG_MIN_PAGE_BYTES and 'data-rel="' in html:
                 return html
-        time.sleep(random.uniform(4, 9) * (attempt + 1))
+        if attempt < retries - 1:
+            time.sleep(random.uniform(2.0, 4.0))
     return None
 
 
 def scrape_rg(marca, paginas=3):
     """RG filtra por marca en la URL (/Autos/{marca}) y muestra todo en una página."""
+    if _rg_state['disabled']:
+        return []
     listings = []
     base = f"https://www.rosariogarage.com/Autos/{marca}"
     for page in range(1, paginas + 1):
@@ -175,7 +183,7 @@ def scrape_rg(marca, paginas=3):
         html = _fetch_rg_page(url)
         if not html:
             if page == 1:
-                print(f"  RG {marca}: bloqueado/sin datos tras reintentos")
+                print(f"  RG {marca}: bloqueado/sin datos")
             break
         parsed = _parse_rg_html(html, marca)
         listings.extend(parsed)
@@ -183,6 +191,15 @@ def scrape_rg(marca, paginas=3):
         if len(parsed) == 0:
             break
         time.sleep(random.uniform(2.0, 4.0))
+
+    # Circuit breaker: cortar RG si bloquea varias marcas seguidas (ej. desde datacenter)
+    if listings:
+        _rg_state['empty_streak'] = 0
+    else:
+        _rg_state['empty_streak'] += 1
+        if _rg_state['empty_streak'] >= 4:
+            _rg_state['disabled'] = True
+            print("  RG: bloqueado sistemáticamente (datacenter) — salteando el resto del run")
 
     return listings
 
