@@ -86,6 +86,10 @@ def fmt_listing(l, cca, show_drop=False, show_score=True):
     lines = [f"<b>{title}</b>",
              f"  {fmt_num(precio)} USD · {anio} · {km} · {trans} · {fuel} · {fuente}"]
 
+    loc = l.get('location')
+    if loc:
+        lines.append(f"  {'📍 <b>EN TU ZONA</b> · ' if l.get('en_zona') else '📍 '}{loc}")
+
     if show_drop:
         hist = l.get('price_history') or []
         prev = hist[-2]['precio_usd'] if len(hist) >= 2 else None

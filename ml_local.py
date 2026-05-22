@@ -76,6 +76,7 @@ USER_AGENTS = [
 
 from vehicles import (
     normalize_brand, find_brand_in_text, find_model_in_text, find_trim, make_model_key,
+    clasificar_ubicacion,
 )
 
 
@@ -143,7 +144,11 @@ EXTRACT_JS = """
       // CRÍTICO: capturar TODO el texto del card para detectar "anticipo", "cuotas", etc.
       const fullText = (card.innerText || card.textContent || '').toLowerCase();
 
-      items.push({ url, title, allPrices, attrs, fullText });
+      // Ubicación: "Ciudad - Provincia"
+      const locEl = card.querySelector('.poly-component__location');
+      const location = locEl ? locEl.textContent.trim() : '';
+
+      items.push({ url, title, allPrices, attrs, fullText, location });
     } catch (e) {}
   }
   return items;
@@ -243,6 +248,9 @@ def parse_extracted(items, marca_search):
             brand = find_brand_in_text(title) or normalize_brand(marca_search)
             model = find_model_in_text(title, brand)
 
+            location = raw.get('location') or ''
+            provincia, region, en_zona = clasificar_ubicacion(location)
+
             trim = find_trim(title)
             listings.append({
                 'id': item_id,
@@ -258,6 +266,10 @@ def parse_extracted(items, marca_search):
                 'fuente': 'ml',
                 'trim': trim,
                 'model_key': make_model_key(brand, model, year, trim),
+                'location': location,
+                'provincia': provincia,
+                'region': region,
+                'en_zona': en_zona,
             })
         except Exception:
             continue
