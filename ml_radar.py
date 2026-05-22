@@ -32,6 +32,10 @@ STATE_FILE = 'radar_state.json'
 # Recordatorio one-shot por Telegram para armar el loop de calibración (data madura ~3 semanas)
 REMINDER_CALIBRACION = '2026-06-12'
 
+# Límite de tiempo por corrida: si ML throttlea y los fetches se cuelgan, cortar en vez
+# de quedar trabado horas (un run colgado bloquea los siguientes del launchd).
+MAX_RUN_SECONDS = 720
+
 # Barra para alerta instantánea (moderada): super-ganga o ganga_v2 CONFIRMADA por
 # ventas reales (no por bucket suelto) con descuento decente. Sigue evitando los
 # falsos positivos de buckets chicos/contaminados (exige ancla de venta real).
@@ -207,15 +211,23 @@ def main():
                 hallazgos.append(l)
                 alerted.add(lid)
 
+        deadline = time.time() + MAX_RUN_SECONDS
+
         # 1) Scan nacional por marca (gangas en todo el país)
         for marca in ml_local.MARCAS:
+            if time.time() > deadline:
+                print("Radar: límite de tiempo alcanzado — corto el scan nacional")
+                break
             procesar(scrape_newest(pg, marca))
-            time.sleep(random.uniform(3, 5))
+            time.sleep(random.uniform(2, 4))
 
         # 2) Scan regional: provincias de la zona de Bruno (Córdoba/NOA/Cuyo)
         for prov in vehicles.PROVINCIAS_ZONA:
+            if time.time() > deadline:
+                print("Radar: límite de tiempo alcanzado — corto el scan regional")
+                break
             procesar(scrape_region(pg, prov))
-            time.sleep(random.uniform(3, 5))
+            time.sleep(random.uniform(2, 4))
         b.close()
 
     # Prioridad: primero las de TU ZONA, después por confianza

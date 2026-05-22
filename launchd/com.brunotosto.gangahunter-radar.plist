@@ -11,39 +11,24 @@
         <string>/Users/brunotosto/.ganga-auto/ml_radar.sh</string>
     </array>
 
-    <!-- Cada 30 min en horario diurno (8:00–22:30). Las gangas se venden en ~1 día.
-         Probando cadencia agresiva; si ML empieza a bloquear, volver a cada hora. -->
+    <!-- Cada hora en horario diurno (8:30–22:30). Cada 30 min sobrecargaba ML
+         (throttling → runs colgados). Hourly es el punto dulce. -->
     <key>StartCalendarInterval</key>
     <array>
-        <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>30</integer></dict>
-        <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>0</integer></dict>
         <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>30</integer></dict>
     </array>
 
