@@ -194,17 +194,22 @@ def make_model_key(brand, model, year, trim=None):
 # ─── Ubicación / región ───────────────────────────────────────────────────────
 # La zona de Bruno (gestión comercial en Córdoba/NOA/Cuyo): gangas que puede ir a ver.
 
-# provincia normalizada -> región
+# provincia normalizada -> región. Zona de interés de Bruno: su territorio comercial
+# (Córdoba/NOA/Cuyo) + Santa Fe y Buenos Aires (donde también compra/sigue mercado).
 ZONA_BRUNO = {
     'cordoba': 'Centro',
     'mendoza': 'Cuyo', 'san juan': 'Cuyo', 'san luis': 'Cuyo',
     'salta': 'NOA', 'jujuy': 'NOA', 'tucuman': 'NOA',
     'santiago del estero': 'NOA', 'catamarca': 'NOA', 'la rioja': 'NOA',
+    'santa fe': 'Litoral',
+    'buenos aires': 'Buenos Aires', 'bs.as': 'Buenos Aires', 'g.b.a': 'Buenos Aires',
+    'capital federal': 'CABA',
 }
 
-# slugs de provincia para filtrar ML por URL (zona de Bruno)
+# slugs de provincia para escanear ML por URL (targeted). Zona de Bruno + SF + BsAs.
 PROVINCIAS_ZONA = [
-    'cordoba', 'mendoza', 'san-juan', 'san-luis', 'salta', 'jujuy',
+    'cordoba', 'santa-fe', 'buenos-aires', 'capital-federal',
+    'mendoza', 'san-juan', 'san-luis', 'salta', 'jujuy',
     'tucuman', 'santiago-del-estero', 'catamarca', 'la-rioja',
 ]
 

@@ -99,12 +99,20 @@ class TestClasificarUbicacion:
         _, region, en = v.clasificar_ubicacion("San Miguel de Tucumán - Tucumán")
         assert region == "NOA" and en is True
 
-    def test_santa_fe_fuera(self):
+    def test_santa_fe_en_zona(self):
         prov, _, en = v.clasificar_ubicacion("Rosario - Santa Fe")
-        assert prov == "Santa Fe" and en is False
+        assert prov == "Santa Fe" and en is True
 
-    def test_buenos_aires_fuera(self):
+    def test_buenos_aires_en_zona(self):
         _, _, en = v.clasificar_ubicacion("Pergamino - Buenos Aires Interior")
+        assert en is True
+
+    def test_bsas_gba_en_zona(self):
+        _, _, en = v.clasificar_ubicacion("Lomas de Zamora - Bs.As. G.B.A. Sur")
+        assert en is True
+
+    def test_patagonia_fuera(self):
+        _, _, en = v.clasificar_ubicacion("Neuquén - Neuquén")
         assert en is False
 
     def test_vacio(self):
