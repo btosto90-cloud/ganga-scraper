@@ -483,5 +483,45 @@ class TestFairPriceKmSource:
         assert fair['source'] == 'pedido_p50'
 
 
+# ─── dominancia (mejor compra del mismo modelo) ───────────────────────────────
+
+class TestDominancia:
+    def _idx(self, listings):
+        return scoring.build_model_index(listings)
+
+    def test_mas_nuevo_y_menos_km_por_poca_plata_domina(self):
+        # El 2016/69k está dominado por el 2018/37k que cuesta solo 12% más
+        viejo = make_listing(id='v', year=2016, km=69000, precio_usd=24000)
+        nuevo = make_listing(id='n', year=2018, km=37000, precio_usd=26900)
+        idx = self._idx([viejo, nuevo])
+        assert scoring.dominating_listing(viejo, idx) is not None      # el viejo está dominado
+        assert scoring.dominating_listing(nuevo, idx) is None          # el nuevo no
+
+    def test_premium_grande_no_domina(self):
+        # Si el mejor cuesta 40% más, NO domina (son rangos de precio distintos)
+        viejo = make_listing(id='v', year=2016, km=69000, precio_usd=20000)
+        nuevo = make_listing(id='n', year=2018, km=37000, precio_usd=28000)
+        idx = self._idx([viejo, nuevo])
+        assert scoring.dominating_listing(viejo, idx) is None
+
+    def test_otro_modelo_no_domina(self):
+        a = make_listing(id='a', model='corolla', year=2016, km=69000, precio_usd=24000)
+        b = make_listing(id='b', model='hilux', year=2018, km=37000, precio_usd=25000)
+        idx = self._idx([a, b])
+        assert scoring.dominating_listing(a, idx) is None
+
+    def test_annotate_penaliza_dominado(self):
+        # bucket de 2016 para que el viejo puntúe; + un 2018 mejor que lo domina
+        listings = [make_listing(id=f'c{i}', year=2016, km=69000, precio_usd=p)
+                    for i, p in enumerate([27000, 27500, 28000, 28500, 29000, 29500])]
+        viejo = make_listing(id='barato2016', year=2016, km=69000, precio_usd=21000)
+        nuevo = make_listing(id='mejor2018', year=2018, km=37000, precio_usd=23000)
+        listings += [viejo, nuevo]
+        scoring.annotate_listings(listings, velocity_stats={})
+        v = next(l for l in listings if l['id'] == 'barato2016')
+        assert v.get('dominado_por') is not None
+        assert v['dominado_por']['year'] == 2018
+
+
 if __name__ == '__main__':
     sys.exit(pytest.main([__file__, '-v']))
