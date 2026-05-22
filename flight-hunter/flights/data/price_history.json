@@ -4,6 +4,11 @@
       "date": "2026-05-08",
       "price_usd": 1269.0,
       "airline": "Aerolíneas Argentinas"
+    },
+    {
+      "date": "2026-05-22",
+      "price_usd": 1098.0,
+      "airline": "Desconocida"
     }
   ],
   "AEP-BPS": [
@@ -130,6 +135,11 @@
       "date": "2026-05-17",
       "price_usd": 841.0,
       "airline": "Delta"
+    },
+    {
+      "date": "2026-05-22",
+      "price_usd": 727.0,
+      "airline": "Copa Airlines"
     }
   ],
   "AEP-MCZ": [
@@ -314,6 +324,11 @@
       "date": "2026-05-18",
       "price_usd": 60.0,
       "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-22",
+      "price_usd": 644.0,
+      "airline": "Arajet"
     }
   ],
   "EZE-SCL": [
@@ -425,6 +440,11 @@
       "date": "2026-05-19",
       "price_usd": 342.0,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-22",
+      "price_usd": 329.0,
+      "airline": "JetSMART"
     }
   ],
   "AEP-BCN": [
@@ -463,6 +483,11 @@
       "date": "2026-05-20",
       "price_usd": 335.0,
       "airline": "GOL"
+    },
+    {
+      "date": "2026-05-22",
+      "price_usd": 343.0,
+      "airline": "GOL"
     }
   ],
   "AEP-FCO": [
@@ -491,6 +516,20 @@
       "date": "2026-05-21",
       "price_usd": 755.0,
       "airline": "Copa Airlines"
+    }
+  ],
+  "AEP-NAT": [
+    {
+      "date": "2026-05-22",
+      "price_usd": 473.0,
+      "airline": "JetSMART"
+    }
+  ],
+  "EZE-BCN": [
+    {
+      "date": "2026-05-22",
+      "price_usd": 970.0,
+      "airline": "LATAM"
     }
   ]
 }
