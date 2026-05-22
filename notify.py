@@ -88,7 +88,7 @@ def fmt_listing(l, cca, show_drop=False, show_score=True):
 
     loc = l.get('location')
     if loc:
-        lines.append(f"  {'📍 <b>EN TU ZONA</b> · ' if l.get('en_zona') else '📍 '}{loc}")
+        lines.append(f"  📍 {loc}")
 
     if show_drop:
         hist = l.get('price_history') or []
