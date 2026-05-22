@@ -28,17 +28,18 @@ LISTINGS_FILE = 'listings.json'
 VELOCITY_FILE = 'velocity_stats.json'
 STATE_FILE = 'radar_state.json'
 
-# Barra ALTA para alerta instantánea (poco ruido, solo lo accionable de verdad):
-# super-ganga CONFIRMADA por ventas reales (no por bucket suelto) y descuento fuerte.
-# Así evita los falsos positivos de buckets chicos/contaminados.
-ALERT_MIN_DISCOUNT = 25                              # % bajo el precio justo
+# Barra para alerta instantánea (moderada): super-ganga o ganga_v2 CONFIRMADA por
+# ventas reales (no por bucket suelto) con descuento decente. Sigue evitando los
+# falsos positivos de buckets chicos/contaminados (exige ancla de venta real).
+ALERT_MIN_DISCOUNT = 20                              # % bajo el precio justo
+ALERT_TAGS = ('super_ganga_v2', 'ganga_v2')          # super + ganga
 ALERT_SOLD_SOURCES = ('venta_real', 'venta+pedido')  # ancla de venta real
-MAX_ALERTS = 8                                       # tope por corrida
+MAX_ALERTS = 10                                      # tope por corrida
 
 
 def is_alert_worthy(listing, result):
-    """Solo alertar lo más fuerte: super-ganga + ancla de venta real + descuento >= umbral."""
-    if result.get('tag') != 'super_ganga_v2':
+    """Alertar super-ganga o ganga_v2 + ancla de venta real + descuento >= umbral."""
+    if result.get('tag') not in ALERT_TAGS:
         return False
     fair = result.get('fair') or {}
     if fair.get('source') not in ALERT_SOLD_SOURCES:
