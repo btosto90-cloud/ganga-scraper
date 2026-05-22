@@ -86,6 +86,31 @@ class TestMakeModelKey:
         assert v.make_model_key("toyota", None, 2020) == "toyota_other_2020"
 
 
+class TestClasificarUbicacion:
+    def test_cordoba_en_zona(self):
+        prov, region, en = v.clasificar_ubicacion("Río Cuarto - Córdoba")
+        assert prov == "Córdoba" and en is True
+
+    def test_mendoza_cuyo(self):
+        prov, region, en = v.clasificar_ubicacion("Godoy Cruz - Mendoza")
+        assert region == "Cuyo" and en is True
+
+    def test_tucuman_noa(self):
+        _, region, en = v.clasificar_ubicacion("San Miguel de Tucumán - Tucumán")
+        assert region == "NOA" and en is True
+
+    def test_santa_fe_fuera(self):
+        prov, _, en = v.clasificar_ubicacion("Rosario - Santa Fe")
+        assert prov == "Santa Fe" and en is False
+
+    def test_buenos_aires_fuera(self):
+        _, _, en = v.clasificar_ubicacion("Pergamino - Buenos Aires Interior")
+        assert en is False
+
+    def test_vacio(self):
+        assert v.clasificar_ubicacion("") == (None, None, False)
+
+
 if __name__ == '__main__':
     import pytest
     sys.exit(pytest.main([__file__, '-v']))

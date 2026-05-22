@@ -189,3 +189,42 @@ def make_model_key(brand, model, year, trim=None):
     if trim:
         base += f"_{trim}"
     return base
+
+
+# ─── Ubicación / región ───────────────────────────────────────────────────────
+# La zona de Bruno (gestión comercial en Córdoba/NOA/Cuyo): gangas que puede ir a ver.
+
+# provincia normalizada -> región
+ZONA_BRUNO = {
+    'cordoba': 'Centro',
+    'mendoza': 'Cuyo', 'san juan': 'Cuyo', 'san luis': 'Cuyo',
+    'salta': 'NOA', 'jujuy': 'NOA', 'tucuman': 'NOA',
+    'santiago del estero': 'NOA', 'catamarca': 'NOA', 'la rioja': 'NOA',
+}
+
+# slugs de provincia para filtrar ML por URL (zona de Bruno)
+PROVINCIAS_ZONA = [
+    'cordoba', 'mendoza', 'san-juan', 'san-luis', 'salta', 'jujuy',
+    'tucuman', 'santiago-del-estero', 'catamarca', 'la-rioja',
+]
+
+
+def _sin_acentos(s):
+    for a, b in (('á', 'a'), ('é', 'e'), ('í', 'i'), ('ó', 'o'), ('ú', 'u')):
+        s = s.replace(a, b)
+    return s
+
+
+def clasificar_ubicacion(loc):
+    """Desde 'Ciudad - Provincia' devuelve (provincia, region, en_zona).
+
+    en_zona = True si la provincia está en la zona de Bruno (Córdoba/NOA/Cuyo).
+    """
+    if not loc:
+        return (None, None, False)
+    prov_raw = loc.split(' - ')[-1].strip()
+    p = _sin_acentos(prov_raw.lower())
+    for key, region in ZONA_BRUNO.items():
+        if key in p:
+            return (prov_raw, region, True)
+    return (prov_raw, 'Otra', False)

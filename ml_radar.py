@@ -23,6 +23,7 @@ from datetime import datetime
 import ml_local   # EXTRACT_JS, parse_extracted, USER_AGENTS, MARCAS, UA_SAFARI
 import scoring     # build_buckets/sold_index/velocity_index, compute_ganga_confidence
 import notify      # send_telegram, fmt_listing
+import vehicles    # PROVINCIAS_ZONA (zona de Bruno)
 
 LISTINGS_FILE = 'listings.json'
 VELOCITY_FILE = 'velocity_stats.json'
@@ -109,6 +110,33 @@ def scrape_newest(pg, marca):
     return []
 
 
+def scrape_region(pg, provincia):
+    """Página 1 de TODAS las marcas en una provincia, ordenada por más recientes.
+    Sirve para captar gangas frescas en la zona de Bruno (que el scan nacional casi no muestra).
+    """
+    urls = [
+        f"https://listado.mercadolibre.com.ar/{provincia}/autos-camionetas-usado_OrderId_BEGINS*DESC_NoIndex_True",
+        f"https://listado.mercadolibre.com.ar/{provincia}/autos-camionetas-usado_NoIndex_True",
+    ]
+    for url in urls:
+        try:
+            pg.goto(url, wait_until='domcontentloaded', timeout=30000)
+            time.sleep(2.5)
+            try:
+                pg.wait_for_selector('.poly-card, .ui-search-layout__item', timeout=12000)
+            except Exception:
+                pass
+            pg.evaluate("window.scrollTo(0, document.body.scrollHeight / 2)")
+            time.sleep(0.8)
+            items = pg.evaluate(ml_local.EXTRACT_JS)
+            parsed = ml_local.parse_extracted(items, '')
+            if parsed:
+                return parsed
+        except Exception:
+            continue
+    return []
+
+
 def annotate_fresh(l, result):
     """Pega los campos de scoring al listing (para fmt_listing / debug)."""
     l['ganga_confidence'] = result['score']
@@ -155,14 +183,13 @@ def main():
         except Exception:
             pass
 
-        for marca in ml_local.MARCAS:
-            parsed = scrape_newest(pg, marca)
+        def procesar(parsed):
+            nonlocal scanned
             scanned += len(parsed)
             for l in parsed:
                 lid = l.get('id')
                 if not lid or lid in existing_ids or lid in alerted:
                     continue  # ya conocido o ya alertado → no es fresco
-                # Es nuevo para nosotros → marcarlo fresco y scorear
                 l['first_seen'] = today
                 l['is_new'] = True
                 result = scoring.compute_ganga_confidence(l, buckets, sold_index, velocity_index)
@@ -170,11 +197,23 @@ def main():
                     annotate_fresh(l, result)
                     hallazgos.append(l)
                     alerted.add(lid)
+
+        # 1) Scan nacional por marca (gangas en todo el país)
+        for marca in ml_local.MARCAS:
+            procesar(scrape_newest(pg, marca))
+            time.sleep(random.uniform(3, 5))
+
+        # 2) Scan regional: provincias de la zona de Bruno (Córdoba/NOA/Cuyo)
+        for prov in vehicles.PROVINCIAS_ZONA:
+            procesar(scrape_region(pg, prov))
             time.sleep(random.uniform(3, 5))
         b.close()
 
-    hallazgos.sort(key=lambda l: -(l.get('ganga_confidence') or 0))
-    print(f"Radar: escaneados {scanned} avisos, {len(hallazgos)} super-gangas frescas nuevas")
+    # Prioridad: primero las de TU ZONA, después por confianza
+    hallazgos.sort(key=lambda l: (not l.get('en_zona'), -(l.get('ganga_confidence') or 0)))
+    en_zona_n = sum(1 for l in hallazgos if l.get('en_zona'))
+    print(f"Radar: escaneados {scanned} avisos, {len(hallazgos)} gangas frescas nuevas "
+          f"({en_zona_n} en tu zona)")
 
     if hallazgos:
         tok, chat = telegram_creds()
