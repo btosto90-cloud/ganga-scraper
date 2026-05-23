@@ -210,7 +210,10 @@ ZONA_BRUNO = {
 # nacional sub-muestra (Córdoba/NOA/Cuyo). Santa Fe y BsAs NO van acá (ya entran fuerte
 # por el nacional, y agregarlas targeted sobrecargaba ML → throttling/colgadas). Igual
 # siguen priorizadas vía ZONA_BRUNO cuando aparecen.
-PROVINCIAS_ZONA = ['cordoba']
+# Vacío a propósito: el scan NACIONAL (22 marcas) ya barre TODO el país. El scan
+# extra por provincia era redundante y sobrecargaba ML (bloqueo de IP). Sin él, el
+# radar cubre el país igual y la zona de Bruno sigue priorizada vía ZONA_BRUNO (en_zona).
+PROVINCIAS_ZONA = []
 
 
 def _sin_acentos(s):
