@@ -51,3 +51,11 @@ jobs:
             git commit -m "chore(flights): daily refresh $(date -u +%Y-%m-%d)"
             git push
           fi
+
+      # Publica el sitio en Netlify (flighthunter-bruno.netlify.app). Usa la CLI
+      # oficial de Netlify; no hay build, solo sube la carpeta estática.
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: npx --yes netlify-cli@26 deploy --prod --dir public --message "daily flights refresh $(date -u +%Y-%m-%d)"
