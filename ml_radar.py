@@ -239,20 +239,33 @@ def main():
     if hallazgos:
         tok, chat = telegram_creds()
         hora = datetime.now().strftime('%H:%M')
+        nuevos_ids = {l.get('id') for l in hallazgos}
         if tok and chat:
             parts = [f"🚨 <b>Radar de gangas · {hora}</b>",
                      f"{len(hallazgos)} super-ganga(s) recién publicada(s) — contactá rápido:", ""]
             parts += [notify.fmt_listing(l, {}) for l in hallazgos[:MAX_ALERTS]]
-            try:
-                notify.send_telegram(tok, chat, "\n\n".join(parts)[:4000])
+            msg = "\n\n".join(parts)[:4000]
+            sent = False
+            for intento in range(3):
+                try:
+                    notify.send_telegram(tok, chat, msg)
+                    sent = True
+                    break
+                except Exception as e:
+                    print(f"Telegram intento {intento + 1} falló: {e}")
+                    time.sleep(5)
+            if sent:
                 print(f"Telegram enviado: {min(len(hallazgos), MAX_ALERTS)}")
-            except Exception as e:
-                print(f"Telegram falló: {e}")
+            else:
+                # No se pudo enviar → NO marcarlas como alertadas, reintentar el próximo run
+                print("Telegram: no se pudo enviar tras reintentos — quedan para el próximo run")
+                alerted -= nuevos_ids
         else:
             print("Sin credenciales Telegram (~/.ganga-auto/telegram.env) — solo log:")
             for l in hallazgos[:MAX_ALERTS]:
                 print(f"  [{l.get('ganga_confidence')}] {(l.get('title') or '')[:42]} "
                       f"${l.get('precio_usd')} ({l.get('descuento_justo_pct')}% bajo justo) — {l.get('url')}")
+            alerted -= nuevos_ids
 
     # Recordatorio one-shot: armar el loop de calibración cuando haya data madura.
     reminder_sent = state.get('reminder_calibracion_sent', False)
