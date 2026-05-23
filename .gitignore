@@ -6,3 +6,6 @@ venv/
 .env
 radar_state.json
 scraper_log.txt
+
+# Local Netlify folder
+.netlify
