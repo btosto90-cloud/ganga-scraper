@@ -207,17 +207,24 @@ def to_usd(amount: float, currency: str) -> float:
     return amount
 
 
+# Contexto que indica que el número NO es la tarifa (descuento, ahorro, cuota...).
+_NOT_A_FARE = ("descuento", "ahorr", "reintegro", "cashback", "off", "regalo", "cuota")
+
+
 def _parse_price(title: str) -> tuple[Optional[float], Optional[str]]:
-    """Return (price, currency_code) parsed from the title."""
+    """Return (price, currency_code) parsed from the title.
+
+    Ignora números que son descuentos/ahorros/cuotas (ej. "Hasta U$D 60 de
+    descuento" → 60 es el descuento, no el precio del vuelo).
+    """
     for pattern, currency in CURRENCY_PATTERNS:
-        m = pattern.search(title)
-        if m:
+        for m in pattern.finditer(title):
+            ctx = title[max(0, m.start() - 14):min(len(title), m.end() + 20)].lower()
+            if any(w in ctx for w in _NOT_A_FARE):
+                continue  # es un descuento/cuota, no la tarifa
             raw = m.group(1).replace(".", "").replace(",", ".")
             try:
-                # Handle Argentine number formats: "1.269" = 1269 (no decimals);
-                # but "1.5" could be 1.5. Heuristic: if last group is 3 digits, it's a thousands separator.
-                # Above we strip "." everywhere because in Argentine notation prices use "." as thousands sep.
-                # That gives us "1269" → 1269 and "964" → 964. Sufficient for flight prices.
+                # Notación argentina: "1.269" = 1269 (el "." es separador de miles).
                 return float(raw), currency
             except ValueError:
                 continue
@@ -309,6 +316,10 @@ def normalize_offer(raw: dict) -> Optional[dict]:
 
     # Parse the post body for dates and booking URLs (only available from REST API strategy)
     post_data = _parse_body_if_present(raw.get("content_html", ""))
+
+    # Deal vencido: el post tenía fechas pero TODAS ya pasaron → descartar.
+    if post_data and post_data.get("all_past"):
+        return None
 
     # Heuristics for the rest of the schema
     is_direct = bool(DIRECTO_RE.search(title)) and not TRAMO_DIRECTO_RE.search(title)

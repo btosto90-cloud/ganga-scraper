@@ -89,8 +89,15 @@ def parse_post_body(html: str) -> dict:
         sample = text_for_log.replace("\n", " ¶ ")
         print(f"[parse_post] no dates found. body sample: {sample[:300]}")
 
+    # Descartar fechas YA VENCIDAS — los posts viejos listan fechas pasadas, y
+    # parear el precio con una fecha pasada rompe los deeplinks del buscador.
+    today = date.today().isoformat()
+    future = [r for r in rows if r.get("depart", "") >= today]
+    all_past = bool(rows) and not future   # post enteramente vencido
+    rows = future
+
     if not rows:
-        return _empty()
+        return _empty(all_past)
 
     # Sort by depart date ascending — earliest first is usually the cheapest/displayed
     rows.sort(key=lambda r: r["depart"])
@@ -105,6 +112,7 @@ def parse_post_body(html: str) -> dict:
         "first_is_direct": first.get("is_direct", False),
         "direct_booking_url": booking,
         "total_dates": len(rows),
+        "all_past": all_past,
     }
 
 
@@ -170,7 +178,7 @@ def _parse_adjacent_date_pairs(text: str) -> list[dict]:
     return rows[:30]
 
 
-def _empty() -> dict:
+def _empty(all_past: bool = False) -> dict:
     return {
         "dates_available": [],
         "first_depart": None,
@@ -178,6 +186,7 @@ def _empty() -> dict:
         "first_is_direct": False,
         "direct_booking_url": None,
         "total_dates": 0,
+        "all_past": all_past,
     }
 
 
