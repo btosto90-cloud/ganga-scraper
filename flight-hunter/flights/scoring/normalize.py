@@ -19,20 +19,50 @@ and slug (airline/trip-type). Anything ambiguous becomes a sensible default.
 """
 from __future__ import annotations
 
+import functools
 import hashlib
+import json
 import re
+import urllib.request
 from datetime import datetime, timezone
 from typing import Optional
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
-USD_TO_ARS = 1290           # mismo BLUE_RATE de Ganga Hunter Autos
+USD_TO_ARS_FALLBACK = 1290  # solo si fallan todas las fuentes del blue
 EUR_TO_USD = 1.07
 GBP_TO_USD = 1.27
 BRL_TO_USD = 0.18
 CLP_TO_USD = 0.0011
-ARS_TO_USD = 1 / USD_TO_ARS
+
+# Dólar blue en vivo — misma cadena probada del scraper de autos (dolarapi cae a
+# 403 desde datacenter; bluelytics/criptoya responden). Se cachea: 1 fetch por corrida.
+BLUE_SOURCES = (
+    ("dolarapi", "https://dolarapi.com/v1/dolares/blue", lambda d: d.get("venta")),
+    ("bluelytics", "https://api.bluelytics.com.ar/v2/latest", lambda d: (d.get("blue") or {}).get("value_sell")),
+    ("criptoya", "https://criptoya.com/api/dolar", lambda d: (d.get("blue") or {}).get("ask")),
+)
+
+
+@functools.lru_cache(maxsize=1)
+def get_usd_to_ars() -> int:
+    """Dólar blue (venta) en vivo, probando fuentes en orden. Cacheado por corrida."""
+    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15"}
+    for name, url, extract in BLUE_SOURCES:
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                data = json.loads(r.read())
+            rate = extract(data)
+            if rate and 1000 < rate < 5000:
+                print(f"[normalize] blue rate = {int(rate)} ({name})")
+                return int(rate)
+            print(f"[normalize] {name} devolvió rate fuera de rango ({rate})")
+        except Exception as e:
+            print(f"[normalize] fuente blue {name} falló: {e}")
+    print(f"[normalize] todas las fuentes de blue fallaron, fallback {USD_TO_ARS_FALLBACK}")
+    return USD_TO_ARS_FALLBACK
 
 # IATA airport mapping. Origins (Argentina) vs destinations (rest).
 ORIGIN_MAP = {
@@ -65,6 +95,8 @@ DEST_MAP = {
     # Caribe / México
     "cancun": "CUN", "cancún": "CUN", "punta-cana": "PUJ", "aruba": "AUA",
     "curazao": "CUR", "san-andres": "ADZ", "san-andrés": "ADZ",
+    "saint-martin": "SXM", "san-martin-caribe": "SXM", "saint-marteen": "SXM",
+    "guadalupe": "PTP", "martinica": "FDF",
     "cartagena-de-indias": "CTG", "cartagena": "CTG",
     "san-jose": "SJO", "panama": "PTY", "panamá": "PTY",
     "la-habana": "HAV", "cozumel": "CZM", "playa-del-carmen": "CZM",
@@ -163,7 +195,7 @@ def to_usd(amount: float, currency: str) -> float:
     if currency == "USD":
         return amount
     if currency == "ARS":
-        return amount * ARS_TO_USD
+        return amount / get_usd_to_ars()
     if currency == "EUR":
         return amount * EUR_TO_USD
     if currency == "GBP":
@@ -301,7 +333,7 @@ def normalize_offer(raw: dict) -> Optional[dict]:
         confidence = 0.92
 
     price_usd = round(to_usd(price, currency), 2)
-    price_ars = round(price_usd * USD_TO_ARS)
+    price_ars = round(price_usd * get_usd_to_ars())
 
     return {
         "id": _make_id(url),

@@ -53,8 +53,9 @@ POST_PER_PAGE = 50  # WP REST API page size
 class PromocionesAereasSource(Source):
     name = "promociones_aereas"
 
-    def __init__(self, max_offers: int = 80) -> None:
+    def __init__(self, max_offers: int = 120, rss_pages: int = 6) -> None:
         self.max_offers = max_offers
+        self.rss_pages = rss_pages   # RSS shows 15 posts/page; paginar = más rutas
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
 
@@ -230,16 +231,41 @@ class PromocionesAereasSource(Source):
 
     # ------------------------------------------------------------------
     # Strategy 2: RSS feed (includes content:encoded with full body)
+    # WP RSS muestra 15 posts por página; paginamos con ?paged=N para sumar rutas.
     # ------------------------------------------------------------------
     def _fetch_rss(self) -> list[dict]:
-        r = self.session.get(f"{BASE}/feed/", timeout=20)
+        out: list[dict] = []
+        seen_urls: set[str] = set()
+        for paged in range(1, self.rss_pages + 1):
+            url = f"{BASE}/feed/" if paged == 1 else f"{BASE}/feed/?paged={paged}"
+            try:
+                page_offers = self._fetch_rss_page(url, diag=(paged == 1))
+            except Exception as e:
+                print(f"[{self.name}] RSS page {paged} failed: {type(e).__name__}: {e}")
+                break  # páginas se sirven en orden; si una corta, las siguientes también
+            new = 0
+            for o in page_offers:
+                if o["url"] in seen_urls:
+                    continue
+                seen_urls.add(o["url"])
+                out.append(o)
+                new += 1
+            print(f"[{self.name}] RSS page {paged}: {len(page_offers)} items, {new} new (total {len(out)})")
+            if not page_offers or new == 0:
+                break  # se acabaron los posts nuevos
+            if paged < self.rss_pages:
+                time.sleep(0.4)  # ser amable con el feed
+        return out
+
+    def _fetch_rss_page(self, url: str, diag: bool = False) -> list[dict]:
+        r = self.session.get(url, timeout=20)
         r.raise_for_status()
         # WP RSS uses the namespace http://purl.org/rss/1.0/modules/content/ for the body
         ns = {"content": "http://purl.org/rss/1.0/modules/content/"}
         root = ET.fromstring(r.content)
         items = root.findall(".//item")
         out = []
-        diag_logged = False
+        diag_logged = not diag
         for item in items:
             link = (item.findtext("link") or "").strip()
             title = unescape(item.findtext("title") or "").strip()
