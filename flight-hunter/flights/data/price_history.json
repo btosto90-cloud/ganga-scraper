@@ -62,6 +62,21 @@
       "date": "2026-05-23",
       "price_usd": 619.0,
       "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 548.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 619.0,
+      "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 622.0,
+      "airline": "Arajet"
     }
   ],
   "EZE-CUN": [
@@ -228,6 +243,16 @@
       "date": "2026-05-14",
       "price_usd": 904.0,
       "airline": "Avianca"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 904.0,
+      "airline": "Avianca"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 844.0,
+      "airline": "Air Europa"
     }
   ],
   "EZE-ADZ": [
@@ -367,6 +392,16 @@
       "date": "2026-05-23",
       "price_usd": 680.0,
       "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 503.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 584.0,
+      "airline": "LATAM"
     }
   ],
   "EZE-PUJ": [
@@ -414,6 +449,16 @@
       "date": "2026-05-23",
       "price_usd": 755.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 60.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 496.0,
+      "airline": "Arajet"
     }
   ],
   "EZE-SCL": [
@@ -531,6 +576,21 @@
       "date": "2026-05-23",
       "price_usd": 749.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 611.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 565.0,
+      "airline": "Avianca"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 533.0,
+      "airline": "LATAM"
     }
   ],
   "EZE-NAT": [
@@ -554,6 +614,11 @@
     {
       "date": "2026-05-23",
       "price_usd": 329.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 214.32,
       "airline": "JetSMART"
     }
   ],
@@ -687,6 +752,11 @@
       "date": "2026-05-23",
       "price_usd": 329.0,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 279.0,
+      "airline": "JetSMART"
     }
   ],
   "EZE-SFO": [
@@ -707,6 +777,73 @@
     {
       "date": "2026-05-23",
       "price_usd": 1072.0,
+      "airline": "Desconocida"
+    }
+  ],
+  "COR-SJO": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 588.0,
+      "airline": "Copa Airlines"
+    }
+  ],
+  "ROS-PUJ": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 642.0,
+      "airline": "Arajet"
+    }
+  ],
+  "ROS-AUA": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 527.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 620.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 668.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 616.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 581.0,
+      "airline": "Copa Airlines"
+    }
+  ],
+  "ROS-SJO": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 529.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 569.0,
+      "airline": "Copa Airlines"
+    }
+  ],
+  "MDZ-MAD": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 1061.0,
+      "airline": "LATAM"
+    }
+  ],
+  "MDZ-PUJ": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 586.0,
       "airline": "Desconocida"
     }
   ]

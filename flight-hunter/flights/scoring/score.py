@@ -273,11 +273,11 @@ def build_main_reason(f: dict, route: dict | None, error_fare: dict) -> str:
     if hist_avg:
         discount = round((1 - f["price_usd"] / hist_avg) * 100)
         if discount > 0:
-            parts.append(f"<strong>{discount}% debajo del histórico</strong> (avg ~USD {round(hist_avg)})")
+            parts.append(f"precio \"desde\" ~{discount}% bajo la referencia (orientativo, verificá fecha)")
         elif discount < -5:
-            parts.append(f"<strong>{abs(discount)}% por encima del histórico</strong>")
+            parts.append(f"~{abs(discount)}% sobre la referencia")
         else:
-            parts.append("precio en línea con el histórico")
+            parts.append("precio \"desde\" en línea con la referencia")
 
     if f["stops"] == 0:
         parts.append("vuelo directo")

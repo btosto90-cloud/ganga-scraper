@@ -53,9 +53,14 @@ POST_PER_PAGE = 50  # WP REST API page size
 class PromocionesAereasSource(Source):
     name = "promociones_aereas"
 
-    def __init__(self, max_offers: int = 120, rss_pages: int = 6) -> None:
+    # El feed principal está dominado por Buenos Aires. Estas búsquedas traen
+    # vuelos desde las otras ciudades de interés de Bruno (Córdoba/Rosario/Mendoza).
+    CITY_SEARCHES = ("cordoba", "rosario", "mendoza")
+
+    def __init__(self, max_offers: int = 150, rss_pages: int = 6, search_pages: int = 3) -> None:
         self.max_offers = max_offers
-        self.rss_pages = rss_pages   # RSS shows 15 posts/page; paginar = más rutas
+        self.rss_pages = rss_pages       # RSS shows 15 posts/page; paginar = más rutas
+        self.search_pages = search_pages # páginas del RSS de búsqueda por ciudad
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
 
@@ -80,6 +85,24 @@ class PromocionesAereasSource(Source):
         if not offers:
             return []
 
+        # Dedup the main feed by URL, then supplement with per-city searches so
+        # Córdoba/Rosario/Mendoza no queden tapadas por Buenos Aires.
+        seen: set[str] = set()
+        deduped: list[dict] = []
+        for o in offers:
+            if o["url"] in seen:
+                continue
+            seen.add(o["url"])
+            deduped.append(o)
+        offers = deduped
+        try:
+            city_offers = self._fetch_search_feeds(seen)
+            if city_offers:
+                print(f"[{self.name}] +{len(city_offers)} ofertas extra de búsquedas por ciudad")
+                offers.extend(city_offers)
+        except Exception as e:
+            print(f"[{self.name}] búsquedas por ciudad fallaron: {type(e).__name__}: {e}")
+
         offers = self._filter_flights(offers)[: self.max_offers]
 
         # Backfill content_html for any offer that doesn't have one
@@ -87,6 +110,33 @@ class PromocionesAereasSource(Source):
         offers = self._backfill_post_bodies(offers)
 
         return offers
+
+    # ------------------------------------------------------------------
+    # Búsquedas por ciudad de origen (RSS de búsqueda de WordPress).
+    # /?s=<ciudad>&feed=rss2 devuelve los posts que mencionan la ciudad;
+    # normalize asigna el origen real desde el slug, así que filtra solo.
+    # ------------------------------------------------------------------
+    def _fetch_search_feeds(self, existing_urls: set[str]) -> list[dict]:
+        out: list[dict] = []
+        for term in self.CITY_SEARCHES:
+            for paged in range(1, self.search_pages + 1):
+                base = f"{BASE}/?s={term}&feed=rss2"
+                url = base if paged == 1 else f"{base}&paged={paged}"
+                try:
+                    page = self._fetch_rss_page(url)
+                except Exception as e:
+                    print(f"[{self.name}] search '{term}' p{paged} failed: {type(e).__name__}: {e}")
+                    break
+                new = [o for o in page if o["url"] not in existing_urls]
+                for o in new:
+                    existing_urls.add(o["url"])
+                out.extend(new)
+                print(f"[{self.name}] search '{term}' p{paged}: {len(page)} items, {len(new)} new")
+                if not page or not new:
+                    break  # sin items o todo repetido → no hay más para esta ciudad
+                if paged < self.search_pages:
+                    time.sleep(0.3)
+        return out
 
     # ------------------------------------------------------------------
     def _backfill_post_bodies(self, offers: list[dict]) -> list[dict]:
