@@ -314,6 +314,11 @@
       "date": "2026-05-10",
       "price_usd": 710.0,
       "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 739.0,
+      "airline": "Arajet"
     }
   ],
   "AEP-REC": [
@@ -528,6 +533,11 @@
       "date": "2026-05-23",
       "price_usd": 1122.0,
       "airline": "Iberia"
+    },
+    {
+      "date": "2026-05-23",
+      "price_usd": 982.0,
+      "airline": "Desconocida"
     }
   ],
   "EZE-FOR": [
@@ -844,6 +854,13 @@
     {
       "date": "2026-05-23",
       "price_usd": 586.0,
+      "airline": "Desconocida"
+    }
+  ],
+  "AEP-SCL": [
+    {
+      "date": "2026-05-23",
+      "price_usd": 237.0,
       "airline": "Desconocida"
     }
   ]

@@ -85,6 +85,18 @@ def main() -> int:
     # 5. Score every flight ---------------------------------------------
     enriched = [enrich_flight(f, baseline, flights) for f in flights]
 
+    # 5.5 Precio REAL en los mejores deals (SerpApi / Google Flights) ----
+    # Gateado: sin SERPAPI_KEY no hace nada (precios "desde", igual que antes).
+    # A prueba de fallos: si la API falla, el pipeline sigue.
+    try:
+        from scoring import price_resolver
+        if price_resolver.has_key():
+            price_resolver.resolve_top_flights(enriched)
+        else:
+            print("[flight-hunter] sin SERPAPI_KEY — precios 'desde' (sin verificar)")
+    except Exception as e:
+        print(f"[flight-hunter] price_resolver falló, sigo sin precio real: {e}")
+
     # 6. Write output ----------------------------------------------------
     output = {
         "generated_at": started.isoformat(),

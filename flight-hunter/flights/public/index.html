@@ -746,7 +746,26 @@ function renderCard(f) {
         <span class="qual">Calidad: <b>${f.qualScore}</b>/100</span>
       </div>
 
-      <div class="price-row">
+      ${f.has_real_price ? (() => {
+        const arsRate = f.price_usd ? f.price_ars / f.price_usd : 1425;
+        const realARS = Math.round(f.real_price_usd * arsRate);
+        const lvl = f.price_level;
+        const verdict = lvl === "low"
+          ? `<span style="color:#34d399; font-weight:700">🟢 Google: precio BAJO</span>`
+          : lvl === "high"
+          ? `<span style="color:#f87171; font-weight:700">🔴 Google: precio alto</span>`
+          : `<span style="color:#fbbf24; font-weight:700">🟡 Google: precio normal</span>`;
+        const rng = (f.typical_low && f.typical_high)
+          ? `<br/><span style="color:var(--text-3); font-size:11px">típico USD ${Math.round(f.typical_low)}–${Math.round(f.typical_high)}</span>` : "";
+        return `<div class="price-row">
+        <div class="price-main">
+          <span style="display:block; font-size:10px; font-weight:700; letter-spacing:0.12em; color:#34d399; text-transform:uppercase">precio real · Google</span>
+          <span class="cur">USD</span>${f.real_price_usd.toLocaleString("es-AR")}
+          <span class="alt">≈ ARS ${realARS.toLocaleString("es-AR")} · la fuente decía desde USD ${f.price_usd.toFixed(0)}</span>
+        </div>
+        <div class="price-vs">${verdict}${rng}</div>
+      </div>`;
+      })() : `<div class="price-row">
         <div class="price-main">
           <span style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--text-3); text-transform:uppercase">desde</span>
           <span class="cur">${f.currency}</span>${f.price.toLocaleString("es-AR")}
@@ -756,7 +775,7 @@ function renderCard(f) {
           Ref. histórica: <span class="normal">USD ${Math.round(histAvgUSD)}</span><br/>
           ${saveUSD > 0 ? `<span class="save">~USD ${saveUSD} menos (estim.)</span>` : `<span style="color:var(--text-3)">en línea</span>`}
         </div>` : '<div class="price-vs" style="color:var(--text-3)">Sin referencia</div>'}
-      </div>
+      </div>`}
 
       <div class="specs">
         <div class="spec">
@@ -783,7 +802,7 @@ function renderCard(f) {
       ${fbBadge}
 
       <div class="card-actions">
-        ${f.direct_booking_url ? `<a href="${f.direct_booking_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="Abre el buscador con esas fechas. El precio 'desde' es orientativo y cambia según la fecha — confirmá el total real acá antes de emitir.">🔍 Ver precio real</a>` : (f.searchLinks?.skyscanner ? `<a href="${f.searchLinks.skyscanner}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="${f.departure_date ? `Skyscanner ${f.departure_date}${f.return_date ? ` → ${f.return_date}` : ''}` : 'Vista calendario en Skyscanner'}">🔍 Ver precio real</a>` : "")}
+        ${f.has_real_price && f.real_link ? `<a href="${f.real_link}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="Precio real verificado en Google Flights para estas fechas.">✈️ Ver en Google Flights</a>` : (f.direct_booking_url ? `<a href="${f.direct_booking_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="Abre el buscador con esas fechas. El precio 'desde' es orientativo y cambia según la fecha — confirmá el total real acá antes de emitir.">🔍 Ver precio real</a>` : (f.searchLinks?.skyscanner ? `<a href="${f.searchLinks.skyscanner}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none" title="${f.departure_date ? `Skyscanner ${f.departure_date}${f.return_date ? ` → ${f.return_date}` : ''}` : 'Vista calendario en Skyscanner'}">🔍 Ver precio real</a>` : ""))}
         <div class="more-engines" style="position:relative; display:inline-block">
           <button class="btn" data-act="toggle-engines" data-id="${f.id}">Más motores ▾</button>
           <div class="engines-menu" data-menu-for="${f.id}" style="display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--bg-1); border:1px solid var(--border); border-radius:8px; padding:6px; z-index:20; min-width:200px; box-shadow:0 8px 24px rgba(0,0,0,0.4)">
