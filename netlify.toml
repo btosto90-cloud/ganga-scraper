@@ -1,0 +1,11 @@
+# Flight Hunter — sitio estático (sin build). Netlify sirve directamente
+# la carpeta que genera el pipeline diario y commitea el workflow.
+[build]
+  publish = "flight-hunter/flights/public"
+  command = ""
+
+# SPA-friendly: cualquier ruta cae al index (la app es de una sola página)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
