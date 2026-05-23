@@ -210,10 +210,7 @@ ZONA_BRUNO = {
 # nacional sub-muestra (Córdoba/NOA/Cuyo). Santa Fe y BsAs NO van acá (ya entran fuerte
 # por el nacional, y agregarlas targeted sobrecargaba ML → throttling/colgadas). Igual
 # siguen priorizadas vía ZONA_BRUNO cuando aparecen.
-PROVINCIAS_ZONA = [
-    'cordoba', 'mendoza', 'san-juan', 'san-luis', 'salta', 'jujuy',
-    'tucuman', 'santiago-del-estero', 'catamarca', 'la-rioja',
-]
+PROVINCIAS_ZONA = ['cordoba']
 
 
 def _sin_acentos(s):
