@@ -9,3 +9,14 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Que el navegador SIEMPRE revalide HTML y datos → no más versiones cacheadas viejas
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

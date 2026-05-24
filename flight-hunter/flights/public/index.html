@@ -801,11 +801,10 @@ function renderCard(f) {
       </div>${bagLine}`;
       })() : `<div class="price-row">
         <div class="price-main">
-          <span style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--text-3); text-transform:uppercase">desde · sin verificar</span>
-          <span class="cur">${f.currency}</span>${f.price.toLocaleString("es-AR")}
-          <span class="alt">≈ USD ${f.price_usd.toFixed(0)} · gancho de la fuente, sin valija ni confirmar</span>
+          <span style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--text-3); text-transform:uppercase">precio a confirmar</span>
+          <span style="font-size:20px; font-weight:800; color:var(--text-2)">🔎 Ver precio real</span>
+          <span class="alt">la fuente publicó una oferta en esta ruta — el "desde" casi siempre es irreal. Miralo en el buscador.</span>
         </div>
-        <div class="price-vs" style="color:var(--text-3)">tocá<br/>"Ver precio real"</div>
       </div>`}
 
       <div class="specs">
