@@ -31,6 +31,8 @@ jobs:
       - name: Run scraper
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          # Plan Starter de SerpApi (1.000/mes): verificamos ~30 rutas/día (~900/mes).
+          FLIGHT_PRICE_MAX_RESOLVE: "30"
         run: python run.py
 
       - name: Show output preview
