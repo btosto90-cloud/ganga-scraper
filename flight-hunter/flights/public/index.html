@@ -479,6 +479,11 @@
     <select id="fBag"><option value="">—</option><option value="1">Sí</option><option value="0">Sin</option></select>
     <label>Score min</label>
     <input type="number" id="fScore" min="0" max="100" value="0" />
+    <label>Salida desde</label>
+    <input type="date" id="fDateFrom" />
+    <label>hasta</label>
+    <input type="date" id="fDateTo" />
+    <button class="btn btn-ghost" id="fDateClear" title="Limpiar fechas" style="padding:4px 8px">✕ fechas</button>
   </div>
 
   <!-- Tabs -->
@@ -546,7 +551,7 @@ const state = {
   enriched: [],
   mode: "viaje_personal",  // currently informational; deal score precomputed server-side
   tab: "todas",
-  filters: { origin: "", dest: "", stops: "", baggage: "", minScore: 0 },
+  filters: { origin: "", dest: "", stops: "", baggage: "", minScore: 0, dateFrom: "", dateTo: "" },
   feedback: JSON.parse(localStorage.getItem("fh_feedback") || "{}"),
 };
 
@@ -679,6 +684,14 @@ function applyFilters(list) {
     if (f.baggage === "1" && !x.baggage_included) return false;
     if (f.baggage === "0" && x.baggage_included) return false;
     if (f.minScore > 0 && x.dealScore < f.minScore) return false;
+    if (f.dateFrom || f.dateTo) {
+      // Matchea si el deal tiene AL MENOS una fecha de salida en el rango.
+      const dates = (x.dates_available && x.dates_available.length)
+        ? x.dates_available.map(d => d.depart)
+        : (x.departure_date ? [x.departure_date] : []);
+      const ok = dates.some(d => (!f.dateFrom || d >= f.dateFrom) && (!f.dateTo || d <= f.dateTo));
+      if (!ok) return false;
+    }
     return true;
   });
 }
@@ -691,6 +704,15 @@ function renderCard(f) {
   const saveUSD = histAvgUSD ? Math.round(histAvgUSD - f.price_usd) : null;
 
   const verified = !!f.has_real_price;
+
+  // Si hay filtro de fecha activo, mostramos las fechas del deal que caen en el rango.
+  const df = state.filters;
+  let matchedDates = null;
+  if ((df.dateFrom || df.dateTo) && Array.isArray(f.dates_available) && f.dates_available.length) {
+    matchedDates = f.dates_available
+      .filter(d => (!df.dateFrom || d.depart >= df.dateFrom) && (!df.dateTo || d.depart <= df.dateTo))
+      .slice(0, 8);
+  }
 
   // alertas (las basadas en el precio "desde" solo cuentan si está verificado)
   const alerts = [];
@@ -825,11 +847,13 @@ function renderCard(f) {
         <button class="btn" data-act="copy" data-id="${f.id}">Copiar</button>
         <button class="btn" data-act="watch" data-id="${f.id}">Seguir</button>
       </div>
-      ${f.total_dates > 0 ? `<div class="dates-line" style="margin-top:6px; font-family:var(--fs-mono); font-size:10px; color:var(--text-3); letter-spacing:0.04em">
+      ${(matchedDates && matchedDates.length) ? `<div class="dates-line" style="margin-top:6px; font-family:var(--fs-mono); font-size:10px; color:#34d399; letter-spacing:0.04em">
+        📅 ${matchedDates.length} en tu rango: ${matchedDates.map(d => fmtPrettyDate(d.depart) + (d.return ? ' → ' + fmtPrettyDate(d.return) : '')).join('  ·  ')}
+      </div>` : (f.total_dates > 0 ? `<div class="dates-line" style="margin-top:6px; font-family:var(--fs-mono); font-size:10px; color:var(--text-3); letter-spacing:0.04em">
         ${f.total_dates === 1
           ? `📅 ${fmtPrettyDate(f.departure_date)}${f.return_date ? ` → ${fmtPrettyDate(f.return_date)}` : ''}`
           : `📅 ${f.total_dates} fechas disponibles · primera ${fmtPrettyDate(f.departure_date)}`}
-      </div>` : ""}
+      </div>` : "")}
       <div class="source-line">
         <span class="source">${f.source}</span>
         <span>${f.airline} · conf. ${(f.confidence * 100).toFixed(0)}%</span>
@@ -1024,7 +1048,7 @@ function categorize(score) {
    ============================================================ */
 document.getElementById("refreshBtn").onclick = () => loadFlights();
 
-["fOrigin", "fDest", "fStops", "fBag", "fScore"].forEach(id => {
+["fOrigin", "fDest", "fStops", "fBag", "fScore", "fDateFrom", "fDateTo"].forEach(id => {
   document.getElementById(id).onchange = () => {
     state.filters = {
       origin: document.getElementById("fOrigin").value,
@@ -1032,11 +1056,21 @@ document.getElementById("refreshBtn").onclick = () => loadFlights();
       stops: document.getElementById("fStops").value,
       baggage: document.getElementById("fBag").value,
       minScore: +document.getElementById("fScore").value || 0,
+      dateFrom: document.getElementById("fDateFrom").value,
+      dateTo: document.getElementById("fDateTo").value,
     };
     renderGrid();
     renderTabs();
   };
 });
+document.getElementById("fDateClear").onclick = () => {
+  document.getElementById("fDateFrom").value = "";
+  document.getElementById("fDateTo").value = "";
+  state.filters.dateFrom = "";
+  state.filters.dateTo = "";
+  renderGrid();
+  renderTabs();
+};
 document.getElementById("fScore").oninput = e => {
   state.filters.minScore = +e.target.value || 0;
   renderGrid();
