@@ -617,37 +617,36 @@ function renderModes() {
 
 function renderStats() {
   const f = state.enriched;
-  const totalUSD = f.reduce((s, x) => s + x.price_usd, 0);
-  const avgScore = f.length ? Math.round(f.reduce((s, x) => s + x.dealScore, 0) / f.length) : 0;
-  const top = f.filter(x => x.dealScore >= 80).length;
-  const errorFares = f.filter(x => x.errorFare.is_error_fare).length;
-  const alerts = f.filter(x => x.earlyAlert).length;
+  const ver = f.filter(x => x.has_real_price);
+  const low = ver.filter(x => x.price_level === "low").length;
+  const typ = ver.filter(x => x.price_level === "typical").length;
+  const high = ver.filter(x => x.price_level === "high").length;
 
   document.getElementById("stats").innerHTML = `
     <div class="stat" style="--accent: var(--gold)">
       <div class="stat-label">Vuelos en radar</div>
       <div class="stat-value">${f.length}</div>
-      <div class="stat-sub">Modo: <b>${MODES.find(m => m.key === state.mode)?.label}</b></div>
-    </div>
-    <div class="stat" style="--accent: var(--emerald)">
-      <div class="stat-label">Top oportunidades</div>
-      <div class="stat-value">${top}</div>
-      <div class="stat-sub">Score ≥ 80</div>
+      <div class="stat-sub">rutas con promo publicada</div>
     </div>
     <div class="stat" style="--accent: var(--cyan)">
-      <div class="stat-label">Score promedio</div>
-      <div class="stat-value">${avgScore}</div>
-      <div class="stat-sub">de 100</div>
+      <div class="stat-label">Verificados con Google</div>
+      <div class="stat-value">${ver.length}</div>
+      <div class="stat-sub">precio real (máx 8/día gratis)</div>
+    </div>
+    <div class="stat" style="--accent: var(--emerald)">
+      <div class="stat-label">🟢 Gangas confirmadas</div>
+      <div class="stat-value">${low}</div>
+      <div class="stat-sub">precio real bajo</div>
+    </div>
+    <div class="stat" style="--accent: var(--gold)">
+      <div class="stat-label">🟡 Precio normal</div>
+      <div class="stat-value">${typ}</div>
+      <div class="stat-sub">precio justo</div>
     </div>
     <div class="stat" style="--accent: var(--rose)">
-      <div class="stat-label">Posibles error fares</div>
-      <div class="stat-value">${errorFares}</div>
-      <div class="stat-sub">Verificar antes de comprar</div>
-    </div>
-    <div class="stat" style="--accent: var(--violet)">
-      <div class="stat-label">Alertas tempranas</div>
-      <div class="stat-value">${alerts}</div>
-      <div class="stat-sub">Precio recién bajó</div>
+      <div class="stat-label">🔴 Precio alto</div>
+      <div class="stat-value">${high}</div>
+      <div class="stat-sub">conviene esperar</div>
     </div>
   `;
 }
@@ -714,23 +713,37 @@ function renderCard(f) {
       .slice(0, 8);
   }
 
+  // Razón coherente con el veredicto real (para verificados).
+  let verifiedReason = "";
+  if (verified) {
+    const lvl = f.price_level;
+    const head = lvl === "low"
+      ? "Precio real MÁS BAJO de lo habitual — ganga confirmada por Google."
+      : lvl === "high"
+      ? "Precio real POR ENCIMA de lo habitual — conviene esperar o cambiar fechas."
+      : "Precio real en el rango NORMAL de la ruta (precio justo, no ganga).";
+    const stops = f.stops === 0 ? "directo" : (f.stops === 1 ? "una escala" : f.stops + " escalas");
+    const bag = f.is_low_cost ? "valija despachada aparte" : "valija normalmente incluida";
+    verifiedReason = `${head} · ${stops} · ${bag}`;
+  }
+
   // alertas (las basadas en el precio "desde" solo cuentan si está verificado)
   const alerts = [];
-  if (verified && f.errorFare.level === "likely") {
+  if (verified && f.price_level === "low" && f.errorFare.level === "likely") {
     alerts.push(`<div class="alert error-fare">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
       <div><strong>Posible tarifa error.</strong> Verificá disponibilidad antes de reservar hoteles no reembolsables.</div>
     </div>`);
-  } else if (verified && f.errorFare.level === "possible") {
+  } else if (verified && f.price_level === "low" && f.errorFare.level === "possible") {
     alerts.push(`<div class="alert warn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
       <div>Precio sospechosamente bajo. Confirmá total final y disponibilidad real.</div>
     </div>`);
   }
-  if (verified && f.earlyAlert) {
+  if (verified && f.price_level === "low") {
     alerts.push(`<div class="alert early">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      <div><strong>Alerta temprana.</strong> Precio agresivo recién detectado. Emitir rápido si las fechas te sirven.</div>
+      <div><strong>Precio confirmado BAJO por Google.</strong> Si las fechas te sirven, emití rápido.</div>
     </div>`);
   }
   if (!f.tax_included) {
@@ -826,7 +839,7 @@ function renderCard(f) {
         </div>
       </div>
 
-      <div class="reasons">${verified ? f.mainReason : 'Lead sin verificar. El precio "desde" es un gancho de la fuente y casi siempre sube — tocá "Ver precio real" para confirmar el valor de verdad.'}</div>
+      <div class="reasons">${verified ? verifiedReason : 'Lead sin verificar. El precio "desde" es un gancho de la fuente y casi siempre sube — tocá "Ver precio real" para confirmar el valor de verdad.'}</div>
 
       ${alerts.join("")}
       ${fbBadge}
@@ -1023,6 +1036,9 @@ function recalc() {
   // from the precomputed dealScoreByMode in the JSON. No network call needed.
   const m = state.mode;
   state.enriched = state.flights.map(f => {
+    // Verificados: respetar el veredicto REAL de Google (score/category que puso
+    // el pipeline). NO recalcular con la fórmula del gancho.
+    if (f.has_real_price) return { ...f };
     const score = (f.dealScoreByMode && f.dealScoreByMode[m] != null) ? f.dealScoreByMode[m] : f.dealScore;
     return { ...f, dealScore: score, category: categorize(score) };
   });
