@@ -1,22 +1,805 @@
 {
-  "generated_at": "2026-05-24T14:58:23.867450+00:00",
-  "total_flights": 57,
+  "generated_at": "2026-05-25T13:58:18.152655+00:00",
+  "total_flights": 58,
   "sources": {
     "promociones_aereas": {
       "ok": true,
-      "count": 71
+      "count": 72
     }
   },
   "stats": {
-    "total": 57,
-    "ganga_extraordinaria": 3,
+    "total": 58,
+    "ganga_extraordinaria": 5,
     "emitir_urgente": 0,
-    "top_oportunidades": 3,
-    "error_fares": 7,
-    "alertas_tempranas": 13,
+    "top_oportunidades": 5,
+    "error_fares": 5,
+    "alertas_tempranas": 9,
     "score_promedio": 56
   },
   "flights": [
+    {
+      "id": "f_dadc752232ac",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "MEX",
+      "route_key": "EZE-MEX",
+      "airline": "Aeroméxico",
+      "airline_quality": 7,
+      "is_low_cost": false,
+      "price": 525.0,
+      "currency": "USD",
+      "price_usd": 525.0,
+      "price_ars": 748125,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": false,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Corran!!🏃‍♀️🏃 ¡Estocolmo desde U$D 525 💥 con full Equipaje 🧳 y cuotas desde Buenos Aires! 🔥🔥",
+      "posted_at": "Sun, 24 May 2026 18:25:51 +0000",
+      "last_checked": "2026-05-25",
+      "confidence": 0.92,
+      "departure_date": "2026-05-27",
+      "return_date": "2026-06-03",
+      "dates_available": [
+        {
+          "depart": "2026-05-27",
+          "return": "2026-06-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-05-27/2026-06-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-01/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-09",
+          "return": "2026-06-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-09/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-10/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-10/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-10/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-16",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-07-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-07-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-06-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-07-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-07-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-07-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-07-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-12",
+          "return": "2026-07-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-12/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-13/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-13",
+          "return": "2026-07-11",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-13/2026-07-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-15/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-17/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-18",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-18/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-19",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-19/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-07-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-20/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-07-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-20/2026-07-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-07-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-06-22/2026-07-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-07-25",
+          "return": "2026-08-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-07-25/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-07-26",
+          "return": "2026-08-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-07-26/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-08-07",
+          "return": "2026-08-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-08-07/2026-08-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-08-07",
+          "return": "2026-09-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-08-07/2026-09-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-08-12",
+          "return": "2026-08-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-08-12/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-08-16",
+          "return": "2026-09-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-08-16/2026-09-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-08-17",
+          "return": "2026-09-05",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-08-17/2026-09-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-08-20",
+          "return": "2026-09-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-08-20/2026-09-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-02",
+          "return": "2026-09-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-02/2026-09-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-07",
+          "return": "2026-09-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-07/2026-09-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-07",
+          "return": "2026-09-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-07/2026-09-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-10-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-08/2026-10-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-09-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-08/2026-09-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-10-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-08/2026-10-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-10-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-08/2026-10-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-08",
+          "return": "2026-09-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-08/2026-09-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-09",
+          "return": "2026-09-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-09/2026-09-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-09",
+          "return": "2026-09-22",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-09/2026-09-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-10",
+          "return": "2026-10-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-10/2026-10-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-11",
+          "return": "2026-09-20",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-11/2026-09-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-13",
+          "return": "2026-09-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-13/2026-09-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-15",
+          "return": "2026-09-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-15/2026-09-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-16",
+          "return": "2026-09-23",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-16/2026-09-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-20",
+          "return": "2026-10-14",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-20/2026-10-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-20",
+          "return": "2026-10-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-20/2026-10-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-21",
+          "return": "2026-10-19",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-21/2026-10-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-23",
+          "return": "2026-10-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-23/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-23",
+          "return": "2026-10-09",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-23/2026-10-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-09-29",
+          "return": "2026-10-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-09-29/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-09",
+          "return": "2026-10-17",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-10-09/2026-10-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-14",
+          "return": "2026-11-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-10-14/2026-11-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-10-14",
+          "return": "2026-11-04",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-10-14/2026-11-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-12",
+          "return": "2026-12-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-11-12/2026-12-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-19",
+          "return": "2026-12-03",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-11-19/2026-12-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-19",
+          "return": "2026-12-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-11-19/2026-12-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-19",
+          "return": "2026-12-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-11-19/2026-12-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-11-19",
+          "return": "2026-11-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-11-19/2026-11-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-24",
+          "return": "2027-01-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-12-24/2027-01-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-27",
+          "return": "2027-01-18",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-12-27/2027-01-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2026-12-28",
+          "return": "2027-01-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-12-28/2027-01-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-13",
+          "return": "2027-02-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2027-02-13/2027-02-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-13",
+          "return": "2027-02-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2027-02-13/2027-02-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-16",
+          "return": "2027-03-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2027-02-16/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-17",
+          "return": "2027-03-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2027-02-17/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        },
+        {
+          "depart": "2027-02-23",
+          "return": "2027-03-13",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2027-02-23/2027-03-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p"
+        }
+      ],
+      "total_dates": 67,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/ARN/2026-05-27/2026-06-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-estocolmo-con-full-equipaje-y-cuotas-desde-buenos-aires-aeromexico-rt-p",
+      "route": {
+        "historical_avg": 720,
+        "historical_min": 470,
+        "expected_low": 580,
+        "exceptional_threshold": 490,
+        "avg_duration_min": 600,
+        "region": "México",
+        "_learned": false
+      },
+      "marketAvgUSD": null,
+      "dealScore": 30,
+      "dealScoreByMode": {
+        "viaje_personal": 79,
+        "maximo_ahorro": 78,
+        "error_fare": 75,
+        "ejecutivo": 81,
+        "escapadas": 79,
+        "flexible_total": 78
+      },
+      "dealBreakdown": {
+        "hist": 95,
+        "mkt": 50,
+        "qual": 92,
+        "rare": 60,
+        "cond": 65,
+        "conf": 92
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        }
+      ],
+      "category": {
+        "tier": "PRECIO ALTO (verificado)",
+        "emoji": "🔴",
+        "cls": "no-priorizar"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": true,
+      "mainReason": "precio \"desde\" ~27% bajo la referencia (orientativo, verificá fecha) · una escala · sin equipaje",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mex/260527/260603/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Mexico+City+on+2026-05-27+returning+2026-06-03",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-MEX/2026-05-27/2026-06-03",
+        "momondo": "https://www.momondo.com/flight-search/EZE-MEX/2026-05-27/2026-06-03",
+        "guessed_dates": {
+          "depart": "2026-05-27",
+          "return": "2026-06-03",
+          "source": "post_table"
+        }
+      },
+      "real_price_usd": 1082,
+      "price_level": "high",
+      "typical_low": 750,
+      "typical_high": 1050,
+      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI3agcIARIDRVpFcgcIARIDTUVYGh4SCjIwMjYtMDYtMDNqBwgBEgNNRVhyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "real_source": "google_flights",
+      "has_real_price": true
+    },
+    {
+      "id": "f_f4e6fc61c03c",
+      "source": "promociones_aereas",
+      "origin": "EZE",
+      "destination": "SSA",
+      "route_key": "EZE-SSA",
+      "airline": "GOL",
+      "airline_quality": 6,
+      "is_low_cost": false,
+      "price": 342.0,
+      "currency": "USD",
+      "price_usd": 342.0,
+      "price_ars": 487350,
+      "stops": 1,
+      "stops_detail": [],
+      "duration_minutes": 0,
+      "baggage_included": true,
+      "tax_included": true,
+      "refundable": false,
+      "cabin": "economy",
+      "booking_url": "https://promociones-aereas.com.ar/2026/05/lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p.html",
+      "trip_type": "rt",
+      "is_direct": false,
+      "is_partial_direct": false,
+      "raw_title": "Lindos Vuelos a Salvador de Bahía 🏖️con carry on a partir de U$D 342 🔥 desde Buenos Aires",
+      "posted_at": "Sun, 24 May 2026 18:00:00 +0000",
+      "last_checked": "2026-05-25",
+      "confidence": 0.92,
+      "departure_date": "2026-05-28",
+      "return_date": "2026-06-07",
+      "dates_available": [
+        {
+          "depart": "2026-05-28",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-05-28/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-01",
+          "return": "2026-06-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-01/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-04",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-04/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-05",
+          "return": "2026-06-12",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-05/2026-06-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-10",
+          "return": "2026-06-15",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-10/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-15/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-15/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-15",
+          "return": "2026-06-24",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-15/2026-06-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-17",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-17/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-20/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-28",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-20/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-20",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-20/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-21",
+          "return": "2026-06-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-21/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-22",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-22/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-26",
+          "return": "2026-06-29",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-26/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        },
+        {
+          "depart": "2026-06-27",
+          "return": "2026-06-30",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-06-27/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p"
+        }
+      ],
+      "total_dates": 16,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SSA/2026-05-28/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-salvador-de-bahia-con-carry-on-desde-buenos-aires-gol-rt-p",
+      "route": {
+        "historical_avg": 500,
+        "historical_min": 280,
+        "expected_low": 380,
+        "exceptional_threshold": 320,
+        "avg_duration_min": 360,
+        "region": "Brasil",
+        "_learned": false
+      },
+      "marketAvgUSD": 343.0,
+      "dealScore": 30,
+      "dealScoreByMode": {
+        "viaje_personal": 82,
+        "maximo_ahorro": 80,
+        "error_fare": 76,
+        "ejecutivo": 85,
+        "escapadas": 82,
+        "flexible_total": 80
+      },
+      "dealBreakdown": {
+        "hist": 96,
+        "mkt": 51,
+        "qual": 92,
+        "rare": 60,
+        "cond": 90,
+        "conf": 92
+      },
+      "qualScore": 92,
+      "qualReasons": [
+        {
+          "kind": "neutral",
+          "text": "1 escala"
+        },
+        {
+          "kind": "good",
+          "text": "Equipaje incluido"
+        }
+      ],
+      "category": {
+        "tier": "PRECIO ALTO (verificado)",
+        "emoji": "🔴",
+        "cls": "no-priorizar"
+      },
+      "errorFare": {
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
+      },
+      "earlyAlert": false,
+      "mainReason": "precio \"desde\" ~32% bajo la referencia (orientativo, verificá fecha) · una escala · equipaje incluido",
+      "searchLinks": {
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/ssa/260528/260607/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Salvador+on+2026-05-28+returning+2026-06-07",
+        "kayak": "https://www.kayak.com.ar/flights/EZE-SSA/2026-05-28/2026-06-07",
+        "momondo": "https://www.momondo.com/flight-search/EZE-SSA/2026-05-28/2026-06-07",
+        "guessed_dates": {
+          "depart": "2026-05-28",
+          "return": "2026-06-07",
+          "source": "post_table"
+        }
+      },
+      "real_price_usd": 658,
+      "price_level": "high",
+      "typical_low": 510,
+      "typical_high": 620,
+      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI4agcIARIDRVpFcgcIARIDU1NBGh4SCjIwMjYtMDYtMDdqBwgBEgNTU0FyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "real_source": "google_flights",
+      "has_real_price": true
+    },
     {
       "id": "f_020cfa81ebca",
       "source": "promociones_aereas",
@@ -43,7 +826,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Excelente! Vuelos a Orlando 🎡 a partir de U$D 739 🔥🔥 desde Buenos Aires",
       "posted_at": "Sat, 23 May 2026 14:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-25",
       "return_date": "2026-06-01",
@@ -615,7 +1398,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Olé! 🪭 Madrid con Equipaje despachado 🧳 a partir de U$D 982 desde Buenos Aires",
       "posted_at": "Sat, 23 May 2026 14:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-05",
       "return_date": "2026-06-14",
@@ -1184,31 +1967,31 @@
       "total_dates": 80,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p",
       "route": {
-        "historical_avg": 1028.76,
+        "historical_avg": 1030.9,
         "historical_min": 825.0,
         "expected_low": 983.0,
-        "exceptional_threshold": 843.0,
+        "exceptional_threshold": 982.0,
         "avg_duration_min": 780,
         "region": "Europa",
-        "samples": 17,
+        "samples": 20,
         "median": 990.0,
         "_learned": true
       },
-      "marketAvgUSD": 1089.67,
+      "marketAvgUSD": 1073.5,
       "dealScore": 90,
       "dealScoreByMode": {
-        "viaje_personal": 70,
-        "maximo_ahorro": 66,
-        "error_fare": 65,
-        "ejecutivo": 76,
-        "escapadas": 71,
-        "flexible_total": 68
+        "viaje_personal": 72,
+        "maximo_ahorro": 68,
+        "error_fare": 75,
+        "ejecutivo": 77,
+        "escapadas": 73,
+        "flexible_total": 70
       },
       "dealBreakdown": {
         "hist": 58,
-        "mkt": 70,
+        "mkt": 67,
         "qual": 92,
-        "rare": 60,
+        "rare": 85,
         "cond": 65,
         "conf": 92
       },
@@ -1242,7 +2025,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 1094,
+      "real_price_usd": 1135,
       "price_level": "low",
       "typical_low": 1150,
       "typical_high": 1500,
@@ -1276,7 +2059,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Santiago de Chile directos a partir de U$D 237 🔥 desde Aeroparque ¡Fechas en feriados!🥳",
       "posted_at": "Sat, 23 May 2026 13:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-27",
       "return_date": "2026-06-13",
@@ -1286,473 +2069,354 @@
           "return": "2026-06-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-05-28",
           "return": "2026-05-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-28/2026-05-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-28/2026-05-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-08",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-06",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-09",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-10",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-16",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-23",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-22",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-18",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-04",
           "return": "2026-06-10",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-04",
           "return": "2026-06-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-13",
           "return": "2026-06-20",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-15",
           "return": "2026-06-29",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-15",
           "return": "2026-06-20",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-16",
           "return": "2026-06-29",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-16/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-16/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-07-02",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-22/2026-07-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-22/2026-07-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-23",
           "return": "2026-06-29",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-23/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-23/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-24",
           "return": "2026-06-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-24/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-24/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-25",
           "return": "2026-06-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-25/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-25/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-03",
           "return": "2026-07-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-03/2026-07-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-03/2026-07-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-06",
           "return": "2026-07-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-06",
           "return": "2026-07-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-10",
           "return": "2026-07-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-10/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-10/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-13",
           "return": "2026-07-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-13/2026-07-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-13/2026-07-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-23",
           "return": "2026-07-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-23/2026-07-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-23/2026-07-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-30",
           "return": "2026-08-03",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-30",
           "return": "2026-08-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-31",
           "return": "2026-08-09",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-31/2026-08-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-31/2026-08-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-16",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-08",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-08-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-03/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-03/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-08-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-08-12",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-06",
           "return": "2026-08-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-06",
           "return": "2026-08-12",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-06",
           "return": "2026-08-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-07",
           "return": "2026-08-12",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-07/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-07/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-08",
           "return": "2026-08-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-08",
           "return": "2026-08-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-20",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-21",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-10",
-          "return": "2026-08-16",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-10/2026-08-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-10",
-          "return": "2026-08-31",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-10/2026-08-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-12",
-          "return": "2026-08-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-12/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-13",
-          "return": "2026-08-20",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-13/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-14",
-          "return": "2026-08-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-14/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-15",
-          "return": "2026-08-20",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-15/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-17",
-          "return": "2026-08-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-17/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-17",
-          "return": "2026-08-23",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-17/2026-08-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-08-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-19/2026-08-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-08-19",
-          "return": "2026-08-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-19/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-06",
-          "return": "2026-10-11",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-06/2026-10-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-08",
-          "return": "2026-10-12",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-08/2026-10-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-10",
-          "return": "2026-10-13",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-10/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-10",
-          "return": "2026-10-17",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-10/2026-10-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-16",
-          "return": "2026-10-19",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-16/2026-10-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-21",
-          "return": "2026-10-24",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-21/2026-10-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
-        },
-        {
-          "depart": "2026-10-22",
-          "return": "2026-10-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-22/2026-10-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         }
       ],
-      "total_dates": 67,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p",
+      "total_dates": 50,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p",
       "route": null,
       "marketAvgUSD": null,
       "dealScore": 62,
@@ -1829,7 +2493,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos Directos a Río de Janeiro 🏖️ a partir de U$D 325 🔥 desde Córdoba ¡Fechas en verano!",
       "posted_at": "Fri, 22 May 2026 20:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-10-03",
       "return_date": "2026-10-11",
@@ -2344,7 +3008,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Vuelos a Cartagena de Indias! A partir de U$D 602 🔥 desde Aeroparque ¡Opciones en cuotas😎!",
       "posted_at": "Fri, 22 May 2026 19:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-26",
       "return_date": "2026-07-09",
@@ -2642,7 +3306,7 @@
       "is_partial_direct": false,
       "raw_title": "Excelentes vuelos a San Francisco 🌉 con Carry On a partir de U$D 872 desde Buenos Aires",
       "posted_at": "Fri, 22 May 2026 18:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-25",
       "return_date": "2026-06-07",
@@ -2799,7 +3463,7 @@
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SFO/2026-05-25/2026-06-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelentes-vuelos-a-san-francisco-con-carry-on-desde-buenos-aires-copa-rt-p",
       "route": null,
       "marketAvgUSD": null,
-      "dealScore": 63,
+      "dealScore": 90,
       "dealScoreByMode": {
         "viaje_personal": 63,
         "maximo_ahorro": 56,
@@ -2828,9 +3492,9 @@
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
+        "tier": "GANGA VERIFICADA",
+        "emoji": "🟢",
+        "cls": "extraordinaria"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -2849,7 +3513,14 @@
           "return": "2026-06-07",
           "source": "post_table"
         }
-      }
+      },
+      "real_price_usd": 875,
+      "price_level": "low",
+      "typical_low": 900,
+      "typical_high": 1150,
+      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI1agcIARIDRVpFcgcIARIDU0ZPGh4SCjIwMjYtMDYtMDdqBwgBEgNTRk9yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "real_source": "google_flights",
+      "has_real_price": true
     },
     {
       "id": "f_35db0988e337",
@@ -2877,7 +3548,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Punta Cana 🌴 DIRECTOS a partir de U$D 619 🔥🔥 desde Córdoba ¡Opciones en verano!",
       "posted_at": "Fri, 22 May 2026 18:20:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-03",
       "return_date": "2026-06-09",
@@ -3187,29 +3858,31 @@
       "total_dates": 43,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-03/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-punta-cana-directos-desde-cordoba-opciones-en-verano-arajet-rt-p",
       "route": {
-        "historical_avg": 850,
-        "historical_min": 580,
-        "expected_low": 700,
-        "exceptional_threshold": 620,
+        "historical_avg": 600.87,
+        "historical_min": 548.0,
+        "expected_low": 548.0,
+        "exceptional_threshold": 548.0,
         "avg_duration_min": 700,
         "region": "Caribe",
-        "_learned": false
+        "samples": 15,
+        "median": 619.0,
+        "_learned": true
       },
       "marketAvgUSD": 596.33,
-      "dealScore": 58,
+      "dealScore": 60,
       "dealScoreByMode": {
-        "viaje_personal": 81,
-        "maximo_ahorro": 80,
-        "error_fare": 85,
-        "ejecutivo": 82,
-        "escapadas": 81,
-        "flexible_total": 80
+        "viaje_personal": 60,
+        "maximo_ahorro": 55,
+        "error_fare": 54,
+        "ejecutivo": 71,
+        "escapadas": 63,
+        "flexible_total": 57
       },
       "dealBreakdown": {
-        "hist": 95,
+        "hist": 47,
         "mkt": 47,
         "qual": 94,
-        "rare": 85,
+        "rare": 45,
         "cond": 65,
         "conf": 92
       },
@@ -3225,8 +3898,8 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
         "cls": "buen-precio"
       },
       "errorFare": {
@@ -3234,8 +3907,8 @@
         "level": "none",
         "flags": []
       },
-      "earlyAlert": true,
-      "mainReason": "precio \"desde\" ~27% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje",
+      "earlyAlert": false,
+      "mainReason": "precio \"desde\" en línea con la referencia · vuelo directo · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/260603/260609/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2026-06-03+returning+2026-06-09",
@@ -3246,14 +3919,7 @@
           "return": "2026-06-09",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 628,
-      "price_level": "typical",
-      "typical_low": 600,
-      "typical_high": 790,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTAzagcIARIDQ09ScgcIARIDUFVKGh4SCjIwMjYtMDYtMDlqBwgBEgNQVUpyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_a01b40aa931a",
@@ -3281,7 +3947,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Miami 🌴 a partir de U$D 686 desde Córdoba ¡Hay cuotas!",
       "posted_at": "Fri, 22 May 2026 17:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-08-18",
       "return_date": "2026-08-30",
@@ -3499,7 +4165,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 651,
+      "real_price_usd": 652,
       "price_level": "low",
       "typical_low": 670,
       "typical_high": 920,
@@ -3533,7 +4199,7 @@
       "is_partial_direct": false,
       "raw_title": "¡¡Siguen!! Excelentes Vuelos a Saint Martin 🏝️ a partir de U$D 771 desde Buenos Aires ¡Opción de pago en cuotas!",
       "posted_at": "Fri, 22 May 2026 17:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-12-03",
       "return_date": "2026-12-13",
@@ -3778,7 +4444,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Lisboa con Equipaje 🧳 a partir de U$D 1.072 desde Aeroparque 🚃",
       "posted_at": "Fri, 22 May 2026 16:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-11",
       "return_date": "2026-09-08",
@@ -4107,7 +4773,7 @@
       "is_partial_direct": false,
       "raw_title": "Muy buenos Vuelos a Florianópolis Directos 🏖️ a partir de U$D 251 🔥 desde Bs. As ¡En Verano😎 y opción de pago en cuotas !",
       "posted_at": "Fri, 22 May 2026 16:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-12-02",
       "return_date": "2026-12-09",
@@ -4421,7 +5087,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 435,
+      "real_price_usd": 437,
       "price_level": "high",
       "typical_low": 255,
       "typical_high": 415,
@@ -4455,7 +5121,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Vuelos a Recife!🌴 a partir de U$D 350🔥desde Aeroparque. Ideal para visitar Porto de Galinhas 🏖️",
       "posted_at": "Fri, 22 May 2026 14:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-25",
       "return_date": "2026-06-01",
@@ -5120,7 +5786,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Hermoso! 🔥 Vuelos a Roma con Equipaje Despachado 🧳 a partir de U$D 1.098 desde Buenos Aires 🍕",
       "posted_at": "Fri, 22 May 2026 13:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-11",
       "return_date": "2026-09-08",
@@ -5513,7 +6179,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Excelente! Punta Cana DIRECTO en Verano a partir de U$D 644 🔥🔥🌴 desde Bs. As.",
       "posted_at": "Fri, 22 May 2026 13:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-08-10",
       "return_date": "2026-08-21",
@@ -5872,29 +6538,31 @@
       "total_dates": 50,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/PUJ/2026-08-10/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-punta-cana-directo-en-verano-desde-bs-as-arajet-rt-p",
       "route": {
-        "historical_avg": 800,
-        "historical_min": 520,
-        "expected_low": 650,
-        "exceptional_threshold": 560,
+        "historical_avg": 510.18,
+        "historical_min": 60.0,
+        "expected_low": 496.0,
+        "exceptional_threshold": 60.0,
         "avg_duration_min": 720,
         "region": "Caribe",
-        "_learned": false
+        "samples": 17,
+        "median": 644.0,
+        "_learned": true
       },
       "marketAvgUSD": 625.5,
-      "dealScore": 58,
+      "dealScore": 50,
       "dealScoreByMode": {
-        "viaje_personal": 75,
-        "maximo_ahorro": 73,
-        "error_fare": 71,
-        "ejecutivo": 79,
-        "escapadas": 75,
-        "flexible_total": 73
+        "viaje_personal": 50,
+        "maximo_ahorro": 42,
+        "error_fare": 37,
+        "ejecutivo": 65,
+        "escapadas": 53,
+        "flexible_total": 45
       },
       "dealBreakdown": {
-        "hist": 84,
+        "hist": 24,
         "mkt": 48,
         "qual": 94,
-        "rare": 60,
+        "rare": 20,
         "cond": 65,
         "conf": 92
       },
@@ -5910,9 +6578,9 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
-        "cls": "buen-precio"
+        "tier": "MIRAR PERO NO CORRER",
+        "emoji": "👁",
+        "cls": "mirar"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -5920,7 +6588,7 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "precio \"desde\" ~19% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje",
+      "mainReason": "~26% sobre la referencia · vuelo directo · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/puj/260810/260821/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Punta+Cana+on+2026-08-10+returning+2026-08-21",
@@ -5931,14 +6599,7 @@
           "return": "2026-08-21",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 584,
-      "price_level": "typical",
-      "typical_low": 540,
-      "typical_high": 700,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA4LTEwagcIARIDRVpFcgcIARIDUFVKGh4SCjIwMjYtMDgtMjFqBwgBEgNQVUpyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_84d6463095ad",
@@ -5966,7 +6627,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Nueva York 🌆 a partir de U$D 727 🔥 desde Bs. As. ¡Hay cuotas!",
       "posted_at": "Fri, 22 May 2026 13:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-04",
       "return_date": "2026-06-16",
@@ -6556,9 +7217,9 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 1162,
+      "real_price_usd": 1096,
       "price_level": "high",
-      "typical_low": 760,
+      "typical_low": 780,
       "typical_high": 1050,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTA0agcIARIDRVpFcgcIARIDSkZLGh4SCjIwMjYtMDYtMTZqBwgBEgNKRktyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
@@ -6590,7 +7251,7 @@
       "is_partial_direct": false,
       "raw_title": "Lindos Vuelos Directos a Natal 🏖️ a partir de U$D 473 🔥desde Aeroparque (Fechas de Octubre a Diciembre)",
       "posted_at": "Thu, 21 May 2026 20:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-10-01",
       "return_date": "2026-10-09",
@@ -6839,7 +7500,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Barcelona 🪭con Carry On a partir de U$D 970 desde Buenos Aires ¡Podes pagarlo en cuotas!😯",
       "posted_at": "Thu, 21 May 2026 20:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-10-16",
       "return_date": "2026-11-11",
@@ -6997,7 +7658,7 @@
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 63,
+      "dealScore": 90,
       "dealScoreByMode": {
         "viaje_personal": 63,
         "maximo_ahorro": 58,
@@ -7030,9 +7691,9 @@
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
+        "tier": "GANGA VERIFICADA",
+        "emoji": "🟢",
+        "cls": "extraordinaria"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -7051,7 +7712,14 @@
           "return": "2026-11-11",
           "source": "post_table"
         }
-      }
+      },
+      "real_price_usd": 1094,
+      "price_level": "low",
+      "typical_low": 1150,
+      "typical_high": 1700,
+      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEwLTE2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTEtMTFqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "real_source": "google_flights",
+      "has_real_price": true
     },
     {
       "id": "f_79082459e44f",
@@ -7079,7 +7747,7 @@
       "is_partial_direct": false,
       "raw_title": "Lindos Vuelos a Salvador de Bahía 🏖️con carry on a partir de U$D 343 🔥 desde Buenos Aires",
       "posted_at": "Thu, 21 May 2026 19:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-28",
       "return_date": "2026-06-07",
@@ -7215,7 +7883,7 @@
         "region": "Brasil",
         "_learned": false
       },
-      "marketAvgUSD": null,
+      "marketAvgUSD": 342.0,
       "dealScore": 30,
       "dealScoreByMode": {
         "viaje_personal": 82,
@@ -7267,7 +7935,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 655,
+      "real_price_usd": 658,
       "price_level": "high",
       "typical_low": 510,
       "typical_high": 620,
@@ -7301,7 +7969,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Río de Janeiro DIRECTOS 🪇 en VERANO 🌞 a partir de U$D 329 🔥 desde Bs. As ¡Opción de pago en cuotas!",
       "posted_at": "Thu, 21 May 2026 18:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-04",
       "return_date": "2026-06-09",
@@ -8097,7 +8765,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Imperdible! 🔥 Vuelos a Saint Martin 🏝️ a partir de U$D 771 desde Buenos Aires ¡Opción de pago en cuotas!",
       "posted_at": "Thu, 21 May 2026 16:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-12-03",
       "return_date": "2026-12-13",
@@ -8342,7 +9010,7 @@
       "is_partial_direct": true,
       "raw_title": "¡Lindo Multidestino! Panamá + Punta Cana 😎 con carry on y 2 de 3 tramos directos a partir de U$D 755 🔥 desde Bs. As.",
       "posted_at": "Thu, 21 May 2026 15:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.85,
       "departure_date": null,
       "return_date": null,
@@ -8350,26 +9018,28 @@
       "total_dates": 0,
       "direct_booking_url": null,
       "route": {
-        "historical_avg": 800,
-        "historical_min": 520,
-        "expected_low": 650,
-        "exceptional_threshold": 560,
+        "historical_avg": 510.18,
+        "historical_min": 60.0,
+        "expected_low": 496.0,
+        "exceptional_threshold": 60.0,
         "avg_duration_min": 720,
         "region": "Caribe",
-        "_learned": false
+        "samples": 17,
+        "median": 644.0,
+        "_learned": true
       },
       "marketAvgUSD": 570.0,
-      "dealScore": 60,
+      "dealScore": 40,
       "dealScoreByMode": {
-        "viaje_personal": 60,
-        "maximo_ahorro": 53,
-        "error_fare": 46,
-        "ejecutivo": 72,
-        "escapadas": 62,
-        "flexible_total": 55
+        "viaje_personal": 40,
+        "maximo_ahorro": 27,
+        "error_fare": 29,
+        "ejecutivo": 61,
+        "escapadas": 44,
+        "flexible_total": 32
       },
       "dealBreakdown": {
-        "hist": 59,
+        "hist": 2,
         "mkt": 24,
         "qual": 95,
         "rare": 20,
@@ -8388,9 +9058,9 @@
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
+        "tier": "NO PRIORIZAR",
+        "emoji": "—",
+        "cls": "no-priorizar"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -8398,7 +9068,7 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "precio \"desde\" ~6% bajo la referencia (orientativo, verificá fecha) · un tramo directo · equipaje incluido",
+      "mainReason": "~48% sobre la referencia · un tramo directo · equipaje incluido",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/puj/?adults=1",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Punta+Cana",
@@ -8437,7 +9107,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Caribe Colombiano! 🏝️ Vuelos a la Isla de San Andrés con carry on a partir de U$D 676🔥desde Buenos Aires. ¡Opción de pago en cuotas!",
       "posted_at": "Thu, 21 May 2026 15:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-01",
       "return_date": "2026-06-07",
@@ -8751,7 +9421,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 811,
+      "real_price_usd": 810,
       "price_level": "high",
       "typical_low": 570,
       "typical_high": 790,
@@ -8785,7 +9455,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Cancún 🌴 con carry on a partir de U$D 644 🔥 desde Bs. As. ¡Fechas en feriados y en verano! 😉",
       "posted_at": "Thu, 21 May 2026 14:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-08-06",
       "return_date": "2026-08-19",
@@ -9204,7 +9874,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 683,
+      "real_price_usd": 684,
       "price_level": "high",
       "typical_low": 540,
       "typical_high": 650,
@@ -9238,7 +9908,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Hermoso! 😍 Madrid con Equipaje despachado 🧳 a partir de U$D 983 desde Buenos Aires 🪭",
       "posted_at": "Thu, 21 May 2026 13:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-08",
       "return_date": "2026-06-21",
@@ -9639,17 +10309,17 @@
       "total_dates": 56,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-08/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-aeromexico-rt-p",
       "route": {
-        "historical_avg": 1028.76,
+        "historical_avg": 1030.9,
         "historical_min": 825.0,
         "expected_low": 983.0,
-        "exceptional_threshold": 843.0,
+        "exceptional_threshold": 982.0,
         "avg_duration_min": 780,
         "region": "Europa",
-        "samples": 17,
+        "samples": 20,
         "median": 990.0,
         "_learned": true
       },
-      "marketAvgUSD": 1089.33,
+      "marketAvgUSD": 1073.0,
       "dealScore": 58,
       "dealScoreByMode": {
         "viaje_personal": 69,
@@ -9657,11 +10327,11 @@
         "error_fare": 65,
         "ejecutivo": 76,
         "escapadas": 71,
-        "flexible_total": 68
+        "flexible_total": 67
       },
       "dealBreakdown": {
-        "hist": 57,
-        "mkt": 70,
+        "hist": 58,
+        "mkt": 67,
         "qual": 92,
         "rare": 60,
         "cond": 65,
@@ -9685,7 +10355,7 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "precio \"desde\" ~4% bajo la referencia (orientativo, verificá fecha) · una escala · sin equipaje",
+      "mainReason": "precio \"desde\" ~5% bajo la referencia (orientativo, verificá fecha) · una escala · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mad/260608/260621/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Madrid+on+2026-06-08+returning+2026-06-21",
@@ -9697,7 +10367,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 1259,
+      "real_price_usd": 1306,
       "price_level": "typical",
       "typical_low": 1150,
       "typical_high": 1500,
@@ -9731,7 +10401,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Muy buenos vuelos a Maceió! 🏖️Con carry on a partir de  U$D 342 🔥🔥 desde Aeroparque",
       "posted_at": "Thu, 21 May 2026 12:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-27",
       "return_date": "2026-06-01",
@@ -9989,9 +10659,9 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 650,
+      "real_price_usd": 643,
       "price_level": "high",
-      "typical_low": 355,
+      "typical_low": 360,
       "typical_high": 570,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI3agcIARIDQUVQcgcIARIDTUNaGh4SCjIwMjYtMDYtMDFqBwgBEgNNQ1pyBwgBEgNBRVBAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
@@ -10023,7 +10693,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Los Ángeles 🎡 en Verano de allá a partir de U$D 755 🔥 desde Bs. As. ¡Opción de pago en cuotas!",
       "posted_at": "Wed, 20 May 2026 19:50:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-07-13",
       "return_date": "2026-08-10",
@@ -10290,7 +10960,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Siguen Muy buenos Vuelos a San José, Costa Rica! 🦜 con Carry On a partir de U$D 622🔥 desde Bs. As",
       "posted_at": "Wed, 20 May 2026 19:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-02",
       "return_date": "2026-06-07",
@@ -10550,7 +11220,7 @@
       "is_partial_direct": false,
       "raw_title": "Muy buenos Vuelos a Aruba con carry on a partir de U$D 749 🔥 desde Córdoba ✈️",
       "posted_at": "Wed, 20 May 2026 18:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-27",
       "return_date": "2026-06-05",
@@ -10925,7 +11595,7 @@
       "is_partial_direct": false,
       "raw_title": "Muy buenos Vuelos a Aruba 🦩 a partir de U$D 696 🔥 desde Bs. As. ¡Opciones en Diciembre y en cuotas!",
       "posted_at": "Wed, 20 May 2026 17:20:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-02",
       "return_date": "2026-06-12",
@@ -11547,10 +12217,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 779,
+      "real_price_usd": 762,
       "price_level": "typical",
-      "typical_low": 550,
-      "typical_high": 800,
+      "typical_low": 570,
+      "typical_high": 820,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTAyagcIARIDRVpFcgcIARIDQVVBGh4SCjIwMjYtMDYtMTJqBwgBEgNBVUFyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -11581,7 +12251,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Multidestino Europeo! Vuelos a Madrid 💃 directos con regreso desde Roma 🍝 a partir de U$D 1.164 desde Buenos Aires.",
       "posted_at": "Wed, 20 May 2026 15:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.85,
       "departure_date": null,
       "return_date": null,
@@ -11589,29 +12259,29 @@
       "total_dates": 0,
       "direct_booking_url": null,
       "route": {
-        "historical_avg": 1028.76,
+        "historical_avg": 1030.9,
         "historical_min": 825.0,
         "expected_low": 983.0,
-        "exceptional_threshold": 843.0,
+        "exceptional_threshold": 982.0,
         "avg_duration_min": 780,
         "region": "Europa",
-        "samples": 17,
+        "samples": 20,
         "median": 990.0,
         "_learned": true
       },
-      "marketAvgUSD": 1029.0,
-      "dealScore": 54,
+      "marketAvgUSD": 982.5,
+      "dealScore": 53,
       "dealScoreByMode": {
-        "viaje_personal": 54,
-        "maximo_ahorro": 46,
-        "error_fare": 41,
+        "viaje_personal": 53,
+        "maximo_ahorro": 45,
+        "error_fare": 40,
         "ejecutivo": 68,
-        "escapadas": 57,
-        "flexible_total": 49
+        "escapadas": 56,
+        "flexible_total": 48
       },
       "dealBreakdown": {
         "hist": 37,
-        "mkt": 40,
+        "mkt": 35,
         "qual": 100,
         "rare": 20,
         "cond": 65,
@@ -11674,7 +12344,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos Directos a Florianópolis 🏖️ a partir de U$D 258 🔥🔥 desde Bs. As. ¡En Verano!",
       "posted_at": "Wed, 20 May 2026 15:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-10-16",
       "return_date": "2026-10-21",
@@ -12093,7 +12763,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 521,
+      "real_price_usd": 517,
       "price_level": "high",
       "typical_low": 260,
       "typical_high": 380,
@@ -12127,7 +12797,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Río de Janeiro 🏖️ Directos a partir de U$D 329 🔥 desde Córdoba en hasta 3 Cuotas  ¡Opciones para Navidad🎅!",
       "posted_at": "Wed, 20 May 2026 14:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-11-01",
       "return_date": "2026-11-16",
@@ -12565,7 +13235,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Miami 🛍️ a partir de U$D 680 desde Córdoba",
       "posted_at": "Wed, 20 May 2026 13:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-08-18",
       "return_date": "2026-08-30",
@@ -12769,283 +13439,13 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 651,
+      "real_price_usd": 652,
       "price_level": "low",
       "typical_low": 670,
       "typical_high": 920,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA4LTE4agcIARIDQ09ScgcIARIDTUlBGh4SCjIwMjYtMDgtMzBqBwgBEgNNSUFyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
-    },
-    {
-      "id": "f_b0a1f32d4d52",
-      "source": "promociones_aereas",
-      "origin": "EZE",
-      "destination": "MAD",
-      "route_key": "EZE-MAD",
-      "airline": "Iberia",
-      "airline_quality": 8,
-      "is_low_cost": false,
-      "price": 1122.0,
-      "currency": "USD",
-      "price_usd": 1122.0,
-      "price_ars": 1598850,
-      "stops": 0,
-      "stops_detail": [],
-      "duration_minutes": 0,
-      "baggage_included": true,
-      "tax_included": true,
-      "refundable": false,
-      "cabin": "economy",
-      "booking_url": "https://promociones-aereas.com.ar/2026/05/madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p.html",
-      "trip_type": "rt",
-      "is_direct": true,
-      "is_partial_direct": false,
-      "raw_title": "Madrid Directo con con Carry On 💃 y en Primavera (de allá) 🌼 a partir de U$D 1.122 desde Buenos Aires",
-      "posted_at": "Wed, 20 May 2026 13:00:00 +0000",
-      "last_checked": "2026-05-24",
-      "confidence": 0.92,
-      "departure_date": "2026-06-07",
-      "return_date": "2026-06-26",
-      "dates_available": [
-        {
-          "depart": "2026-06-07",
-          "return": "2026-06-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-07%2C2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-12",
-          "return": "2026-06-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-12%2C2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-12",
-          "return": "2026-06-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-12%2C2026-06-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-12",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-12%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-12",
-          "return": "2026-07-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-12%2C2026-07-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-13",
-          "return": "2026-06-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-13%2C2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-13",
-          "return": "2026-06-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-13%2C2026-06-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-13",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-13%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-14",
-          "return": "2026-06-25",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-14%2C2026-06-25&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-14",
-          "return": "2026-06-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-14%2C2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-15",
-          "return": "2026-07-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-15%2C2026-07-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-16",
-          "return": "2026-06-26",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-16%2C2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-16",
-          "return": "2026-06-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-16%2C2026-06-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-16",
-          "return": "2026-06-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-16%2C2026-06-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-16",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-16%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-16",
-          "return": "2026-07-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-16%2C2026-07-03&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-17",
-          "return": "2026-06-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-17%2C2026-06-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-18",
-          "return": "2026-06-28",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-18%2C2026-06-28&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-18",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-18%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-19",
-          "return": "2026-06-29",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-19%2C2026-06-29&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-19",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-19%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-06-20",
-          "return": "2026-06-30",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-20%2C2026-06-30&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2026-12-07",
-          "return": "2027-01-08",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-12-07%2C2027-01-08&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        },
-        {
-          "depart": "2027-03-07",
-          "return": "2027-04-09",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2027-03-07%2C2027-04-09&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p"
-        }
-      ],
-      "total_dates": 24,
-      "direct_booking_url": "https://almundo.com.ar/flights/results?from=BUE%2CMAD&to=MAD%2CBUE&date=2026-06-07%2C2026-06-26&adults=1&utm_source=promociones_aereas¤cyCode=USD&utm_medium=affiliate&utm_campaign=stm-c051-madrid-directo-con-con-carry-on-y-en-primavera-desde-buenos-aires-iberia-rt-p",
-      "route": {
-        "historical_avg": 1028.76,
-        "historical_min": 825.0,
-        "expected_low": 983.0,
-        "exceptional_threshold": 843.0,
-        "avg_duration_min": 780,
-        "region": "Europa",
-        "samples": 17,
-        "median": 990.0,
-        "_learned": true
-      },
-      "marketAvgUSD": 1043.0,
-      "dealScore": 59,
-      "dealScoreByMode": {
-        "viaje_personal": 59,
-        "maximo_ahorro": 51,
-        "error_fare": 44,
-        "ejecutivo": 74,
-        "escapadas": 62,
-        "flexible_total": 53
-      },
-      "dealBreakdown": {
-        "hist": 41,
-        "mkt": 44,
-        "qual": 100,
-        "rare": 20,
-        "cond": 90,
-        "conf": 92
-      },
-      "qualScore": 100,
-      "qualReasons": [
-        {
-          "kind": "good",
-          "text": "Vuelo directo"
-        },
-        {
-          "kind": "good",
-          "text": "Equipaje incluido"
-        },
-        {
-          "kind": "good",
-          "text": "Iberia: aerolínea sólida"
-        }
-      ],
-      "category": {
-        "tier": "MIRAR PERO NO CORRER",
-        "emoji": "👁",
-        "cls": "mirar"
-      },
-      "errorFare": {
-        "is_error_fare": false,
-        "level": "none",
-        "flags": []
-      },
-      "earlyAlert": false,
-      "mainReason": "~9% sobre la referencia · vuelo directo · equipaje incluido",
-      "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/mad/260607/260626/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Madrid+on+2026-06-07+returning+2026-06-26",
-        "kayak": "https://www.kayak.com.ar/flights/EZE-MAD/2026-06-07/2026-06-26",
-        "momondo": "https://www.momondo.com/flight-search/EZE-MAD/2026-06-07/2026-06-26",
-        "guessed_dates": {
-          "depart": "2026-06-07",
-          "return": "2026-06-26",
-          "source": "post_table"
-        }
-      }
     },
     {
       "id": "f_1b670fbf8ce2",
@@ -13073,7 +13473,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos a Punta Cana 🌴DIRECTOS a partir de U$D 548 desde Córdoba 🔥🔥",
       "posted_at": "Mon, 18 May 2026 18:15:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-01",
       "return_date": "2026-06-14",
@@ -13278,26 +13678,28 @@
       "total_dates": 28,
       "direct_booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=CORA&destination=PUJA&outboundDate=2026-06-01&inboundDate=2026-06-14&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas",
       "route": {
-        "historical_avg": 850,
-        "historical_min": 580,
-        "expected_low": 700,
-        "exceptional_threshold": 620,
+        "historical_avg": 600.87,
+        "historical_min": 548.0,
+        "expected_low": 548.0,
+        "exceptional_threshold": 548.0,
         "avg_duration_min": 700,
         "region": "Caribe",
-        "_learned": false
+        "samples": 15,
+        "median": 619.0,
+        "_learned": true
       },
       "marketAvgUSD": 620.0,
       "dealScore": 58,
       "dealScoreByMode": {
-        "viaje_personal": 89,
-        "maximo_ahorro": 89,
-        "error_fare": 94,
-        "ejecutivo": 87,
-        "escapadas": 88,
-        "flexible_total": 89
+        "viaje_personal": 77,
+        "maximo_ahorro": 75,
+        "error_fare": 84,
+        "ejecutivo": 81,
+        "escapadas": 79,
+        "flexible_total": 76
       },
       "dealBreakdown": {
-        "hist": 97,
+        "hist": 65,
         "mkt": 73,
         "qual": 94,
         "rare": 100,
@@ -13321,14 +13723,12 @@
         "cls": "buen-precio"
       },
       "errorFare": {
-        "is_error_fare": true,
-        "level": "possible",
-        "flags": [
-          "below_historical_min"
-        ]
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
       },
-      "earlyAlert": true,
-      "mainReason": "precio \"desde\" ~36% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje · posible tarifa error",
+      "earlyAlert": false,
+      "mainReason": "precio \"desde\" ~9% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/260601/260614/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2026-06-01+returning+2026-06-14",
@@ -13343,7 +13743,7 @@
       "real_price_usd": 637,
       "price_level": "typical",
       "typical_low": 600,
-      "typical_high": 840,
+      "typical_high": 850,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTAxagcIARIDQ09ScgcIARIDUFVKGh4SCjIwMjYtMDYtMTRqBwgBEgNQVUpyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -13374,7 +13774,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Muy buenos Vuelos a Aruba a partir de U$D 611 🔥 desde Córdoba ✈️",
       "posted_at": "Thu, 14 May 2026 20:21:09 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-10",
       "return_date": "2026-06-18",
@@ -13763,7 +14163,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Vuelos Directos a Río de Janeiro 🏖️ a partir de U$D 279 🔥 desde Córdoba",
       "posted_at": "Thu, 14 May 2026 18:36:17 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-09-03",
       "return_date": "2026-09-08",
@@ -14174,7 +14574,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 401,
+      "real_price_usd": 403,
       "price_level": "typical",
       "typical_low": 265,
       "typical_high": 430,
@@ -14208,7 +14608,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Muy buenos vuelos a San José, Costa Rica 🏄 a partir de U$D 588 🔥 desde Córdoba.",
       "posted_at": "Thu, 14 May 2026 16:09:33 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-30",
       "return_date": "2026-06-08",
@@ -14516,7 +14916,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Vuelos a Madrid a partir de U$D 904 🔥🔥🔥 desde Córdoba ✈️",
       "posted_at": "Wed, 13 May 2026 18:47:52 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-07-22",
       "return_date": "2026-08-25",
@@ -14758,7 +15158,7 @@
         "_learned": false
       },
       "marketAvgUSD": 844.0,
-      "dealScore": 58,
+      "dealScore": 71,
       "dealScoreByMode": {
         "viaje_personal": 71,
         "maximo_ahorro": 69,
@@ -14783,9 +15183,9 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
-        "cls": "buen-precio"
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -14804,14 +15204,7 @@
           "return": "2026-08-25",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 1549,
-      "price_level": null,
-      "typical_low": null,
-      "typical_high": null,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA3LTIyagcIARIDQ09ScgcIARIDTUFEGh4SCjIwMjYtMDgtMjVqBwgBEgNNQURyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_71d786853d3b",
@@ -14839,7 +15232,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Tremendos Vuelos DIRECTOS a Punta Cana 🏖️ a partir de U$D 619 🔥🔥 desde Córdoba ¡Fechas en verano!",
       "posted_at": "Wed, 13 May 2026 18:01:40 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-29",
       "return_date": "2026-06-06",
@@ -15135,29 +15528,31 @@
       "total_dates": 41,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-05-29/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-tremendos-vuelos-directos-a-punta-cana-desde-cordoba-fechas-en-verano-rt-p",
       "route": {
-        "historical_avg": 850,
-        "historical_min": 580,
-        "expected_low": 700,
-        "exceptional_threshold": 620,
+        "historical_avg": 600.87,
+        "historical_min": 548.0,
+        "expected_low": 548.0,
+        "exceptional_threshold": 548.0,
         "avg_duration_min": 700,
         "region": "Caribe",
-        "_learned": false
+        "samples": 15,
+        "median": 619.0,
+        "_learned": true
       },
       "marketAvgUSD": 596.33,
-      "dealScore": 58,
+      "dealScore": 61,
       "dealScoreByMode": {
-        "viaje_personal": 82,
-        "maximo_ahorro": 81,
-        "error_fare": 85,
-        "ejecutivo": 85,
-        "escapadas": 83,
-        "flexible_total": 81
+        "viaje_personal": 61,
+        "maximo_ahorro": 55,
+        "error_fare": 55,
+        "ejecutivo": 73,
+        "escapadas": 64,
+        "flexible_total": 58
       },
       "dealBreakdown": {
-        "hist": 95,
+        "hist": 47,
         "mkt": 47,
         "qual": 100,
-        "rare": 85,
+        "rare": 45,
         "cond": 65,
         "conf": 92
       },
@@ -15169,8 +15564,8 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
         "cls": "buen-precio"
       },
       "errorFare": {
@@ -15178,8 +15573,8 @@
         "level": "none",
         "flags": []
       },
-      "earlyAlert": true,
-      "mainReason": "precio \"desde\" ~27% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje",
+      "earlyAlert": false,
+      "mainReason": "precio \"desde\" en línea con la referencia · vuelo directo · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/260529/260606/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2026-05-29+returning+2026-06-06",
@@ -15190,14 +15585,7 @@
           "return": "2026-06-06",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 673,
-      "price_level": "typical",
-      "typical_low": 650,
-      "typical_high": 850,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI5agcIARIDQ09ScgcIARIDUFVKGh4SCjIwMjYtMDYtMDZqBwgBEgNQVUpyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_c75719b9753a",
@@ -15225,7 +15613,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: ¡IMPERDIBLES! Vuelos a MIAMI 🛍️ a partir de U$D 503 desde Córdoba 😯🔥🔥",
       "posted_at": "Wed, 13 May 2026 18:00:35 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-07-17",
       "return_date": "2026-08-04",
@@ -15440,7 +15828,7 @@
       "real_price_usd": 831,
       "price_level": "typical",
       "typical_low": 730,
-      "typical_high": 1200,
+      "typical_high": 1150,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA3LTE3agcIARIDQ09ScgcIARIDTUlBGh4SCjIwMjYtMDgtMDRqBwgBEgNNSUFyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -15471,7 +15859,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Excelentes Vuelos a Aruba 🦩a partir de U$D 565🔥 desde Córdoba ✈️",
       "posted_at": "Wed, 13 May 2026 17:03:01 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-11",
       "return_date": "2026-06-16",
@@ -15738,10 +16126,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 753,
+      "real_price_usd": 755,
       "price_level": "typical",
-      "typical_low": 580,
-      "typical_high": 790,
+      "typical_low": 600,
+      "typical_high": 810,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTExagcIARIDQ09ScgcIARIDQVVBGh4SCjIwMjYtMDYtMTZqBwgBEgNBVUFyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -15772,7 +16160,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: ¡Preciazo! Vuelos a Aruba con carry on a partir de AR$ 756.958 (U$D 533) 🔥🔥 desde Córdoba ✈️",
       "posted_at": "Mon, 11 May 2026 16:27:36 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-10",
       "return_date": "2026-06-18",
@@ -15908,7 +16296,7 @@
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/AUA/2026-06-10/2026-06-18/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-preciazo-vuelos-a-aruba-con-carry-on-desde-cordoba-latam-rt-p",
       "route": null,
       "marketAvgUSD": 641.67,
-      "dealScore": 30,
+      "dealScore": 58,
       "dealScoreByMode": {
         "viaje_personal": 69,
         "maximo_ahorro": 64,
@@ -15941,9 +16329,9 @@
         }
       ],
       "category": {
-        "tier": "PRECIO ALTO (verificado)",
-        "emoji": "🔴",
-        "cls": "no-priorizar"
+        "tier": "PRECIO NORMAL (verificado)",
+        "emoji": "🟡",
+        "cls": "buen-precio"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -15963,10 +16351,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 759,
-      "price_level": "high",
+      "real_price_usd": 760,
+      "price_level": "typical",
       "typical_low": 580,
-      "typical_high": 750,
+      "typical_high": 760,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTEwagcIARIDQ09ScgcIARIDQVVBGh4SCjIwMjYtMDYtMThqBwgBEgNBVUFyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -15997,7 +16385,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: Vuelos Directos a Río de Janeiro a partir de AR$ 305.400 🔥🔥 desde Buenos Aires ✈️",
       "posted_at": "Mon, 11 May 2026 16:10:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-28",
       "return_date": "2026-06-05",
@@ -16405,10 +16793,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 445,
+      "real_price_usd": 447,
       "price_level": "typical",
-      "typical_low": 350,
-      "typical_high": 455,
+      "typical_low": 355,
+      "typical_high": 460,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI4agcIARIDRVpFcgcIARIDR0lHGh4SCjIwMjYtMDYtMDVqBwgBEgNHSUdyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -16439,7 +16827,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: ¡Preciazo! Vuelos a Madrid a partir de U$D 844 🔥🔥 o Directos a partir de U$D 1.153 desde Cordoba ✈️",
       "posted_at": "Mon, 11 May 2026 16:06:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-06",
       "return_date": "2026-06-26",
@@ -16854,10 +17242,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 1613,
+      "real_price_usd": 1632,
       "price_level": "typical",
       "typical_low": 1550,
-      "typical_high": 1950,
+      "typical_high": 2000,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTA2agcIARIDQ09ScgcIARIDTUFEGh4SCjIwMjYtMDYtMjZqBwgBEgNNQURyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -16888,7 +17276,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale:  ¡Atención Cordoba! Muy buenas tarifas de Vuelos a Miami 🛍️ a partir de U$D 584 🔥🔥.",
       "posted_at": "Mon, 11 May 2026 13:29:32 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-30",
       "return_date": "2026-06-12",
@@ -17305,7 +17693,7 @@
       },
       "real_price_usd": 843,
       "price_level": "high",
-      "typical_low": 650,
+      "typical_low": 660,
       "typical_high": 780,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTMwagcIARIDQ09ScgcIARIDTUlBGh4SCjIwMjYtMDYtMTJqBwgBEgNNSUFyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
@@ -17337,7 +17725,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: ¡Preciazo! Vuelos DIRECTOS a Punta Cana 🏖️ a partir de U$D 642 🔥 desde Rosario ¡Opcion de pago en cuotas!",
       "posted_at": "Thu, 14 May 2026 14:29:38 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-17",
       "return_date": "2026-06-25",
@@ -17541,8 +17929,8 @@
       },
       "real_price_usd": 723,
       "price_level": "typical",
-      "typical_low": 640,
-      "typical_high": 840,
+      "typical_low": 650,
+      "typical_high": 870,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTE3agcIARIDUk9TcgcIARIDUFVKGh4SCjIwMjYtMDYtMjVqBwgBEgNQVUpyBwgBEgNST1NAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -17573,7 +17961,7 @@
       "is_partial_direct": false,
       "raw_title": "Hot Sale: ¡Hermoso! Vuelos a Aruba con carry on a partir de AR$ 749.415 (U$D 527) 🔥🔥 desde Rosario ✈️",
       "posted_at": "Mon, 11 May 2026 18:54:26 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-17",
       "return_date": "2026-07-02",
@@ -17763,22 +18151,30 @@
       ],
       "total_dates": 26,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-17/2026-07-02/1/0/0?currency=ARS&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-hot-sale-hermoso-vuelos-a-aruba-con-carry-on-desde-rosario-latam-rt-p",
-      "route": null,
+      "route": {
+        "historical_avg": 602.4,
+        "historical_min": 527.0,
+        "expected_low": 581.0,
+        "exceptional_threshold": 527.0,
+        "samples": 15,
+        "median": 616.0,
+        "_learned": true
+      },
       "marketAvgUSD": 621.25,
       "dealScore": 30,
       "dealScoreByMode": {
-        "viaje_personal": 69,
-        "maximo_ahorro": 64,
-        "error_fare": 53,
-        "ejecutivo": 78,
-        "escapadas": 71,
-        "flexible_total": 66
+        "viaje_personal": 83,
+        "maximo_ahorro": 80,
+        "error_fare": 88,
+        "ejecutivo": 86,
+        "escapadas": 84,
+        "flexible_total": 81
       },
       "dealBreakdown": {
-        "hist": 50,
+        "hist": 71,
         "mkt": 80,
         "qual": 92,
-        "rare": 30,
+        "rare": 100,
         "cond": 90,
         "conf": 92
       },
@@ -17808,7 +18204,7 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "mainReason": "precio \"desde\" ~13% bajo la referencia (orientativo, verificá fecha) · una escala · equipaje incluido",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260617/260702/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-06-17+returning+2026-07-02",
@@ -17820,10 +18216,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 915,
+      "real_price_usd": 918,
       "price_level": "high",
-      "typical_low": 620,
-      "typical_high": 850,
+      "typical_low": 630,
+      "typical_high": 900,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTE3agcIARIDUk9TcgcIARIDQVVBGh4SCjIwMjYtMDctMDJqBwgBEgNBVUFyBwgBEgNST1NAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
@@ -17854,7 +18250,7 @@
       "is_partial_direct": false,
       "raw_title": "Vuelos DIRECTOS a Punta Cana 🏖️ a partir de U$D 622 🔥🔥 desde Córdoba o Rosario (Opciones en verano)",
       "posted_at": "Thu, 07 May 2026 16:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-03",
       "return_date": "2026-06-13",
@@ -18402,29 +18798,31 @@
       "total_dates": 77,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/COR/PUJ/2026-06-03/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-directos-a-punta-cana-desde-cordoba-o-rosario-opciones-en-verano-arajet-rt-p",
       "route": {
-        "historical_avg": 850,
-        "historical_min": 580,
-        "expected_low": 700,
-        "exceptional_threshold": 620,
+        "historical_avg": 600.87,
+        "historical_min": 548.0,
+        "expected_low": 548.0,
+        "exceptional_threshold": 548.0,
         "avg_duration_min": 700,
         "region": "Caribe",
-        "_learned": false
+        "samples": 15,
+        "median": 619.0,
+        "_learned": true
       },
       "marketAvgUSD": 595.33,
-      "dealScore": 58,
+      "dealScore": 60,
       "dealScoreByMode": {
-        "viaje_personal": 79,
-        "maximo_ahorro": 78,
-        "error_fare": 75,
-        "ejecutivo": 81,
-        "escapadas": 78,
-        "flexible_total": 78
+        "viaje_personal": 60,
+        "maximo_ahorro": 54,
+        "error_fare": 54,
+        "ejecutivo": 70,
+        "escapadas": 62,
+        "flexible_total": 57
       },
       "dealBreakdown": {
-        "hist": 95,
+        "hist": 46,
         "mkt": 46,
         "qual": 94,
-        "rare": 60,
+        "rare": 45,
         "cond": 65,
         "conf": 92
       },
@@ -18440,8 +18838,8 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
+        "tier": "BUEN PRECIO",
+        "emoji": "✓",
         "cls": "buen-precio"
       },
       "errorFare": {
@@ -18449,8 +18847,8 @@
         "level": "none",
         "flags": []
       },
-      "earlyAlert": true,
-      "mainReason": "precio \"desde\" ~27% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje",
+      "earlyAlert": false,
+      "mainReason": "precio \"desde\" en línea con la referencia · vuelo directo · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/cor/puj/260603/260613/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+C%C3%B3rdoba+to+Punta+Cana+on+2026-06-03+returning+2026-06-13",
@@ -18461,14 +18859,7 @@
           "return": "2026-06-13",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 643,
-      "price_level": "typical",
-      "typical_low": 600,
-      "typical_high": 960,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTAzagcIARIDQ09ScgcIARIDUFVKGh4SCjIwMjYtMDYtMTNqBwgBEgNQVUpyBwgBEgNDT1JAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_b0725ac3d431",
@@ -18496,7 +18887,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Atención Rosario! Vuelos a San José, Costa Rica 🦥 a partir de U$D 529 🔥🔥🔥 con carry on",
       "posted_at": "Wed, 29 Apr 2026 20:10:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-07",
       "return_date": "2026-06-17",
@@ -18766,18 +19157,11 @@
       "is_partial_direct": false,
       "raw_title": "¡Excelente! Vuelos a Aruba 🦩 desde Rosario con carry on a partir de U$D 620 🔥🔥",
       "posted_at": "Wed, 08 Apr 2026 16:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
-      "departure_date": "2026-05-24",
-      "return_date": "2026-06-02",
+      "departure_date": "2026-05-31",
+      "return_date": "2026-06-09",
       "dates_available": [
-        {
-          "depart": "2026-05-24",
-          "return": "2026-06-02",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-24/2026-06-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-aruba-desde-rosario-con-carry-on-latam-copa-airlines-rt-p"
-        },
         {
           "depart": "2026-05-31",
           "return": "2026-06-09",
@@ -19003,24 +19387,32 @@
           "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-10-16/2026-10-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-aruba-desde-rosario-con-carry-on-latam-copa-airlines-rt-p"
         }
       ],
-      "total_dates": 33,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-24/2026-06-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-aruba-desde-rosario-con-carry-on-latam-copa-airlines-rt-p",
-      "route": null,
+      "total_dates": 32,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-31/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-excelente-vuelos-a-aruba-desde-rosario-con-carry-on-latam-copa-airlines-rt-p",
+      "route": {
+        "historical_avg": 602.4,
+        "historical_min": 527.0,
+        "expected_low": 581.0,
+        "exceptional_threshold": 527.0,
+        "samples": 15,
+        "median": 616.0,
+        "_learned": true
+      },
       "marketAvgUSD": 598.0,
       "dealScore": 62,
       "dealScoreByMode": {
         "viaje_personal": 62,
         "maximo_ahorro": 56,
-        "error_fare": 50,
-        "ejecutivo": 73,
-        "escapadas": 64,
+        "error_fare": 55,
+        "ejecutivo": 74,
+        "escapadas": 65,
         "flexible_total": 58
       },
       "dealBreakdown": {
-        "hist": 50,
+        "hist": 47,
         "mkt": 47,
         "qual": 92,
-        "rare": 30,
+        "rare": 45,
         "cond": 90,
         "conf": 92
       },
@@ -19046,15 +19438,15 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "mainReason": "precio \"desde\" en línea con la referencia · una escala · equipaje incluido",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260524/260602/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-05-24+returning+2026-06-02",
-        "kayak": "https://www.kayak.com.ar/flights/ROS-AUA/2026-05-24/2026-06-02",
-        "momondo": "https://www.momondo.com/flight-search/ROS-AUA/2026-05-24/2026-06-02",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260531/260609/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-05-31+returning+2026-06-09",
+        "kayak": "https://www.kayak.com.ar/flights/ROS-AUA/2026-05-31/2026-06-09",
+        "momondo": "https://www.momondo.com/flight-search/ROS-AUA/2026-05-31/2026-06-09",
         "guessed_dates": {
-          "depart": "2026-05-24",
-          "return": "2026-06-02",
+          "depart": "2026-05-31",
+          "return": "2026-06-09",
           "source": "post_table"
         }
       }
@@ -19085,7 +19477,7 @@
       "is_partial_direct": false,
       "raw_title": "Lindos Vuelos a Aruba 🦩 desde Rosario con carry on a partir de U$D 668 🔥🔥",
       "posted_at": "Tue, 10 Mar 2026 17:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-05-31",
       "return_date": "2026-06-08",
@@ -19394,22 +19786,30 @@
       ],
       "total_dates": 43,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-31/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-lindos-vuelos-a-aruba-desde-rosario-con-carry-on-copa-airlines-rt-p",
-      "route": null,
+      "route": {
+        "historical_avg": 602.4,
+        "historical_min": 527.0,
+        "expected_low": 581.0,
+        "exceptional_threshold": 527.0,
+        "samples": 15,
+        "median": 616.0,
+        "_learned": true
+      },
       "marketAvgUSD": 586.0,
-      "dealScore": 60,
+      "dealScore": 58,
       "dealScoreByMode": {
-        "viaje_personal": 60,
-        "maximo_ahorro": 54,
-        "error_fare": 49,
-        "ejecutivo": 72,
-        "escapadas": 62,
-        "flexible_total": 56
+        "viaje_personal": 58,
+        "maximo_ahorro": 50,
+        "error_fare": 52,
+        "ejecutivo": 71,
+        "escapadas": 61,
+        "flexible_total": 53
       },
       "dealBreakdown": {
-        "hist": 50,
+        "hist": 39,
         "mkt": 39,
         "qual": 92,
-        "rare": 30,
+        "rare": 45,
         "cond": 90,
         "conf": 92
       },
@@ -19425,9 +19825,9 @@
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
-        "cls": "buen-precio"
+        "tier": "MIRAR PERO NO CORRER",
+        "emoji": "👁",
+        "cls": "mirar"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -19435,7 +19835,7 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "mainReason": "~11% sobre la referencia · una escala · equipaje incluido",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260531/260608/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-05-31+returning+2026-06-08",
@@ -19474,7 +19874,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Vuelos a Aruba 🦩 desde Rosario! Opciones a partir de U$D 616 🔥🔥",
       "posted_at": "Sun, 08 Mar 2026 21:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-03",
       "return_date": "2026-06-11",
@@ -19797,22 +20197,30 @@
       ],
       "total_dates": 45,
       "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-03/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-aruba-desde-rosario-latam-rt-p",
-      "route": null,
+      "route": {
+        "historical_avg": 602.4,
+        "historical_min": 527.0,
+        "expected_low": 581.0,
+        "exceptional_threshold": 527.0,
+        "samples": 15,
+        "median": 616.0,
+        "_learned": true
+      },
       "marketAvgUSD": 599.0,
       "dealScore": 60,
       "dealScoreByMode": {
         "viaje_personal": 60,
-        "maximo_ahorro": 54,
-        "error_fare": 49,
+        "maximo_ahorro": 55,
+        "error_fare": 54,
         "ejecutivo": 70,
         "escapadas": 62,
         "flexible_total": 57
       },
       "dealBreakdown": {
-        "hist": 50,
+        "hist": 48,
         "mkt": 48,
         "qual": 92,
-        "rare": 30,
+        "rare": 45,
         "cond": 65,
         "conf": 92
       },
@@ -19838,7 +20246,7 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "mainReason": "precio \"desde\" en línea con la referencia · una escala · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260603/260611/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-06-03+returning+2026-06-11",
@@ -19877,163 +20285,164 @@
       "is_partial_direct": false,
       "raw_title": "¡Atenti Rosario! Vuelos a Aruba 🦩 con Carry On a partir de U$D 581 🔥 + Opciones en cuotas",
       "posted_at": "Fri, 02 Jan 2026 18:45:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
-      "departure_date": "2026-05-24",
-      "return_date": "2026-06-01",
+      "departure_date": "2026-05-30",
+      "return_date": "2026-06-06",
       "dates_available": [
-        {
-          "depart": "2026-05-24",
-          "return": "2026-06-01",
-          "is_direct": false,
-          "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-24/2026-06-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
-        },
         {
           "depart": "2026-05-30",
           "return": "2026-06-06",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-30/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-30/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-05-31",
           "return": "2026-06-06",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-31/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-31/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-03",
           "return": "2026-06-11",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-03/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-03/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-16",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-06/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-06/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-06/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-06/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-06/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-06/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-07",
           "return": "2026-06-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-07/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-07/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-13",
           "return": "2026-06-22",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-13/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-13/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-13",
           "return": "2026-06-20",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-14",
           "return": "2026-06-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-14/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-14/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-14",
           "return": "2026-06-22",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-14/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-14/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-17",
           "return": "2026-06-27",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-17/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-17/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-18",
           "return": "2026-06-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-18/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-18/2026-06-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-19",
           "return": "2026-06-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-19/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-19/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-20",
           "return": "2026-06-28",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-20/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-20/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-20",
           "return": "2026-06-27",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-20/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-20/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-21",
           "return": "2026-06-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-21/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-21/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         },
         {
           "depart": "2026-06-21",
           "return": "2026-06-27",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-21/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-06-21/2026-06-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p"
         }
       ],
-      "total_dates": 19,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-24/2026-06-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p",
-      "route": null,
+      "total_dates": 18,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/ROS/AUA/2026-05-30/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-atenti-rosario-vuelos-a-aruba-con-carry-on-opciones-en-cuotas-copa-airlines-rt-p",
+      "route": {
+        "historical_avg": 602.4,
+        "historical_min": 527.0,
+        "expected_low": 581.0,
+        "exceptional_threshold": 527.0,
+        "samples": 15,
+        "median": 616.0,
+        "_learned": true
+      },
       "marketAvgUSD": 607.75,
-      "dealScore": 64,
+      "dealScore": 58,
       "dealScoreByMode": {
-        "viaje_personal": 64,
-        "maximo_ahorro": 59,
-        "error_fare": 51,
-        "ejecutivo": 75,
-        "escapadas": 66,
-        "flexible_total": 61
+        "viaje_personal": 69,
+        "maximo_ahorro": 64,
+        "error_fare": 65,
+        "ejecutivo": 78,
+        "escapadas": 71,
+        "flexible_total": 66
       },
       "dealBreakdown": {
-        "hist": 50,
+        "hist": 56,
         "mkt": 59,
         "qual": 92,
-        "rare": 30,
+        "rare": 60,
         "cond": 90,
         "conf": 92
       },
@@ -20049,8 +20458,8 @@
         }
       ],
       "category": {
-        "tier": "BUEN PRECIO",
-        "emoji": "✓",
+        "tier": "PRECIO NORMAL (verificado)",
+        "emoji": "🟡",
         "cls": "buen-precio"
       },
       "errorFare": {
@@ -20059,18 +20468,25 @@
         "flags": []
       },
       "earlyAlert": false,
-      "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
+      "mainReason": "precio \"desde\" ~4% bajo la referencia (orientativo, verificá fecha) · una escala · equipaje incluido",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260524/260601/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-05-24+returning+2026-06-01",
-        "kayak": "https://www.kayak.com.ar/flights/ROS-AUA/2026-05-24/2026-06-01",
-        "momondo": "https://www.momondo.com/flight-search/ROS-AUA/2026-05-24/2026-06-01",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/260530/260606/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Rosario+to+Aruba+on+2026-05-30+returning+2026-06-06",
+        "kayak": "https://www.kayak.com.ar/flights/ROS-AUA/2026-05-30/2026-06-06",
+        "momondo": "https://www.momondo.com/flight-search/ROS-AUA/2026-05-30/2026-06-06",
         "guessed_dates": {
-          "depart": "2026-05-24",
-          "return": "2026-06-01",
+          "depart": "2026-05-30",
+          "return": "2026-06-06",
           "source": "post_table"
         }
-      }
+      },
+      "real_price_usd": 835,
+      "price_level": "typical",
+      "typical_low": 680,
+      "typical_high": 1200,
+      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTMwagcIARIDUk9TcgcIARIDQVVBGh4SCjIwMjYtMDYtMDZqBwgBEgNBVUFyBwgBEgNST1NAAUgBcAGYAQE&tfu=EgIIAQ",
+      "real_source": "google_flights",
+      "has_real_price": true
     },
     {
       "id": "f_887d42776d67",
@@ -20098,7 +20514,7 @@
       "is_partial_direct": false,
       "raw_title": "¡En Cuotas! 🤑 Vuelos a Madrid con Carry On a partir de U$D 1.061 desde Mendoza 💃",
       "posted_at": "Tue, 28 Apr 2026 12:00:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-07-22",
       "return_date": "2026-08-27",
@@ -20365,18 +20781,11 @@
       "is_partial_direct": false,
       "raw_title": "¡Atención Mendoza! Vuelo DIRECTO a Punta Cana 🌴 a partir de U$D 586 🔥🔥",
       "posted_at": "Fri, 17 Apr 2026 19:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
-      "departure_date": "2026-05-24",
-      "return_date": "2026-06-03",
+      "departure_date": "2026-06-07",
+      "return_date": "2026-06-13",
       "dates_available": [
-        {
-          "depart": "2026-05-24",
-          "return": "2026-06-03",
-          "is_direct": true,
-          "days": null,
-          "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=MDZA&destination=PUJA&outboundDate=2026-05-24&inboundDate=2026-06-03&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
-        },
         {
           "depart": "2026-06-07",
           "return": "2026-06-13",
@@ -20546,8 +20955,8 @@
           "booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=MDZA&destination=PUJA&outboundDate=2026-12-20&inboundDate=2026-12-28&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas"
         }
       ],
-      "total_dates": 25,
-      "direct_booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=MDZA&destination=PUJA&outboundDate=2026-05-24&inboundDate=2026-06-03&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas",
+      "total_dates": 24,
+      "direct_booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=MDZA&destination=PUJA&outboundDate=2026-06-07&inboundDate=2026-06-13&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas",
       "route": null,
       "marketAvgUSD": null,
       "dealScore": 62,
@@ -20587,13 +20996,13 @@
       "earlyAlert": false,
       "mainReason": "Sin histórico de la ruta. Score basado en condiciones del itinerario.",
       "searchLinks": {
-        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/mdz/puj/260524/260603/?adults=1&adultsv2=1&cabinclass=economy",
-        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Mendoza+to+Punta+Cana+on+2026-05-24+returning+2026-06-03",
-        "kayak": "https://www.kayak.com.ar/flights/MDZ-PUJ/2026-05-24/2026-06-03",
-        "momondo": "https://www.momondo.com/flight-search/MDZ-PUJ/2026-05-24/2026-06-03",
+        "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/mdz/puj/260607/260613/?adults=1&adultsv2=1&cabinclass=economy",
+        "google_flights": "https://www.google.com/travel/flights?q=flights+from+Mendoza+to+Punta+Cana+on+2026-06-07+returning+2026-06-13",
+        "kayak": "https://www.kayak.com.ar/flights/MDZ-PUJ/2026-06-07/2026-06-13",
+        "momondo": "https://www.momondo.com/flight-search/MDZ-PUJ/2026-06-07/2026-06-13",
         "guessed_dates": {
-          "depart": "2026-05-24",
-          "return": "2026-06-03",
+          "depart": "2026-06-07",
+          "return": "2026-06-13",
           "source": "post_table"
         }
       }
@@ -20624,7 +21033,7 @@
       "is_partial_direct": false,
       "raw_title": "¡Imperdible! Punta Cana 🌴 DIRECTO desde MENDOZA a partir de U$D 496 desde Buenos Aires 🔥🔥",
       "posted_at": "Thu, 02 Apr 2026 15:30:00 +0000",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "confidence": 0.92,
       "departure_date": "2026-06-04",
       "return_date": "2026-06-13",
@@ -20745,29 +21154,31 @@
       "total_dates": 16,
       "direct_booking_url": "https://skyscanner.net/g/referrals/v1/flights/day-view?currency=USD&mediaPartnerId=3027655&locale=es-MX&market=AR&origin=MDZA&destination=PUJA&outboundDate=2026-06-04&inboundDate=2026-06-13&adultsv2=1&cabinclass=economy&utm_term=stm-c051-tablas",
       "route": {
-        "historical_avg": 800,
-        "historical_min": 520,
-        "expected_low": 650,
-        "exceptional_threshold": 560,
+        "historical_avg": 510.18,
+        "historical_min": 60.0,
+        "expected_low": 496.0,
+        "exceptional_threshold": 60.0,
         "avg_duration_min": 720,
         "region": "Caribe",
-        "_learned": false
+        "samples": 17,
+        "median": 644.0,
+        "_learned": true
       },
       "marketAvgUSD": 699.5,
       "dealScore": 58,
       "dealScoreByMode": {
-        "viaje_personal": 93,
-        "maximo_ahorro": 95,
-        "error_fare": 96,
-        "ejecutivo": 91,
-        "escapadas": 93,
-        "flexible_total": 95
+        "viaje_personal": 74,
+        "maximo_ahorro": 71,
+        "error_fare": 67,
+        "ejecutivo": 80,
+        "escapadas": 76,
+        "flexible_total": 73
       },
       "dealBreakdown": {
-        "hist": 98,
+        "hist": 55,
         "mkt": 94,
         "qual": 94,
-        "rare": 100,
+        "rare": 60,
         "cond": 65,
         "conf": 92
       },
@@ -20788,14 +21199,12 @@
         "cls": "buen-precio"
       },
       "errorFare": {
-        "is_error_fare": true,
-        "level": "possible",
-        "flags": [
-          "below_historical_min"
-        ]
+        "is_error_fare": false,
+        "level": "none",
+        "flags": []
       },
-      "earlyAlert": true,
-      "mainReason": "precio \"desde\" ~38% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje · posible tarifa error",
+      "earlyAlert": false,
+      "mainReason": "precio \"desde\" ~3% bajo la referencia (orientativo, verificá fecha) · vuelo directo · sin equipaje",
       "searchLinks": {
         "skyscanner": "https://www.skyscanner.com.ar/transporte/vuelos/eze/puj/260604/260613/?adults=1&adultsv2=1&cabinclass=economy",
         "google_flights": "https://www.google.com/travel/flights?q=flights+from+Buenos+Aires+to+Punta+Cana+on+2026-06-04+returning+2026-06-13",
@@ -20807,10 +21216,10 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 710,
+      "real_price_usd": 678,
       "price_level": "typical",
       "typical_low": 560,
-      "typical_high": 710,
+      "typical_high": 730,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA2LTA0agcIARIDRVpFcgcIARIDUFVKGh4SCjIwMjYtMDYtMTNqBwgBEgNQVUpyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "real_source": "google_flights",
       "has_real_price": true
