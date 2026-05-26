@@ -493,7 +493,7 @@
 
   <!-- Honestidad de precios -->
   <div style="margin:0 0 14px; padding:12px 14px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:10px; font-size:12.5px; line-height:1.55; color:var(--text-2)">
-    💡 <b>Cómo leer esto:</b> arriba van los <b>verificados con Google</b> (precio real con impuestos + veredicto 🟢 bajo / 🟡 normal / 🔴 alto, y la valija estimada aparte en low-cost). Abajo van los <b>"leads sin verificar"</b>: el número es un <b>gancho "desde"</b> de la fuente que casi siempre sube — tocá <b>"Ver precio real"</b> para confirmarlo. Verificamos los mejores 8 por día (límite del plan gratis).
+    💡 <b>Cómo leer esto:</b> arriba van los <b>verificados con Google</b> — precio real con impuestos + veredicto 🟢 bajo / 🟡 normal / 🔴 alto + valija estimada aparte en low-cost. Verificamos <b>32 por día</b> priorizando <b>cubrir todas las rutas distintas</b>. Abajo van las fechas alternativas o rutas que no entraron en la cuota — sin precio, solo el link directo al buscador para chequear.
   </div>
 
   <!-- Cards grid -->
@@ -795,11 +795,9 @@ function renderCard(f) {
         </div>`}
       </div>
 
-      <div class="tier-strip">
-        ${verified
-          ? `<span class="tier">${cat.emoji} ${cat.tier}</span><span class="qual">Calidad: <b>${f.qualScore}</b>/100</span>`
-          : `<span class="tier" style="color:var(--text-3)">🔎 Lead sin verificar</span><span class="qual" style="color:var(--text-3)">precio "desde" — sin confirmar</span>`}
-      </div>
+      ${verified ? `<div class="tier-strip">
+        <span class="tier">${cat.emoji} ${cat.tier}</span><span class="qual">Calidad: <b>${f.qualScore}</b>/100</span>
+      </div>` : ''}
 
       ${f.has_real_price ? (() => {
         const arsRate = f.price_usd ? f.price_ars / f.price_usd : 1425;
@@ -829,9 +827,8 @@ function renderCard(f) {
       </div>${bagLine}`;
       })() : `<div class="price-row">
         <div class="price-main">
-          <span style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--text-3); text-transform:uppercase">precio a confirmar</span>
-          <span style="font-size:20px; font-weight:800; color:var(--text-2)">🔎 Ver precio real</span>
-          <span class="alt">la fuente publicó una oferta en esta ruta — el "desde" casi siempre es irreal. Miralo en el buscador.</span>
+          <span style="font-size:17px; font-weight:700; color:var(--text-2)">🔎 Ver precio real</span>
+          <span class="alt" style="margin-top:4px">Promo publicada · precio sin verificar todavía</span>
         </div>
       </div>`}
 
@@ -854,7 +851,7 @@ function renderCard(f) {
         </div>
       </div>
 
-      <div class="reasons">${verified ? verifiedReason : 'Lead sin verificar. El precio "desde" es un gancho de la fuente y casi siempre sube — tocá "Ver precio real" para confirmar el valor de verdad.'}</div>
+      ${verified ? `<div class="reasons">${verifiedReason}</div>` : ''}
 
       ${alerts.join("")}
       ${fbBadge}

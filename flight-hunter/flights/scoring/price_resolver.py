@@ -130,14 +130,31 @@ def resolve_flight(f: dict) -> dict | None:
 
 
 def resolve_top_flights(flights: list[dict], rank_key=lambda f: f.get("dealScore", 0)) -> int:
-    """Resuelve el precio real SOLO de los mejores `MAX_RESOLVE` vuelos (cuida la cuota).
+    """Resuelve el precio real cuidando la cuota — SELECCIÓN INTELIGENTE:
 
-    Muta cada flight in-place agregando: real_price_usd, price_level, typical_low/high,
+    1) Primero cubrimos TODAS las rutas distintas (el mejor flight por route_key).
+       Así no se gastan 3 verificaciones en "COR-PUJ" mientras "EZE-FCO" queda lead.
+    2) Si sobra cupo, llenamos con los siguientes mejores (fechas alternativas
+       de rutas ya cubiertas).
+
+    Muta cada flight in-place: real_price_usd, price_level, typical_low/high,
     real_link, real_source, has_real_price. Devuelve cuántos resolvió.
     """
     if not has_key():
         return 0
-    ordered = sorted(flights, key=rank_key, reverse=True)
+    by_score = sorted(flights, key=rank_key, reverse=True)
+    seen_routes: set[str] = set()
+    primary: list[dict] = []   # uno por ruta distinta (cobertura)
+    secondary: list[dict] = [] # el resto, por si sobra cupo
+    for f in by_score:
+        rk = f.get("route_key") or f.get("id")
+        if rk in seen_routes:
+            secondary.append(f)
+        else:
+            seen_routes.add(rk)
+            primary.append(f)
+    ordered = primary + secondary
+    print(f"[price_resolver] cobertura: {len(primary)} rutas distintas, {len(secondary)} extras posibles (cap {MAX_RESOLVE})")
     done = 0
     for f in ordered:
         if done >= MAX_RESOLVE:
