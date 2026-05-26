@@ -474,6 +474,13 @@
       <div style="display:flex; flex-direction:column; gap:3px">
         <label style="font-size:10px; color:var(--text-3)">Destino</label>
         <select id="sDest">
+          <optgroup label="🌐 COMPARAR REGIÓN ENTERA (varios destinos a la vez)">
+            <option value="ALL_EU">⭐ Toda Europa (10 destinos)</option>
+            <option value="ALL_USA">⭐ Todo USA (5 destinos)</option>
+            <option value="ALL_BR">⭐ Todo Brasil (7 destinos)</option>
+            <option value="ALL_CARIBE">⭐ Todo Caribe (6 destinos)</option>
+            <option value="ALL_SA">⭐ Toda Sudamérica (5 destinos)</option>
+          </optgroup>
           <optgroup label="Europa">
             <option value="MAD">Madrid (MAD)</option>
             <option value="BCN">Barcelona (BCN)</option>
@@ -1244,6 +1251,15 @@ document.getElementById("fScore").oninput = e => {
 /* =============================================================
    BÚSQUEDA DIRECTA → Netlify Function → SerpApi/Google Flights
    ============================================================= */
+const REGION_DESTS = {
+  ALL_EU: ["MAD","BCN","FCO","MXP","CDG","LHR","LIS","FRA","AMS","MUC"],
+  ALL_USA: ["MIA","JFK","LAX","MCO","ORD"],
+  ALL_BR: ["GRU","GIG","FLN","SSA","MCZ","REC","FOR"],
+  ALL_CARIBE: ["CUN","PUJ","AUA","ADZ","CTG","PTY"],
+  ALL_SA: ["SCL","LIM","BOG","MDE","MVD"],
+};
+const REGION_LABELS = { ALL_EU:"Europa", ALL_USA:"USA", ALL_BR:"Brasil", ALL_CARIBE:"Caribe", ALL_SA:"Sudamérica" };
+
 async function doSearch() {
   const origin = document.getElementById("sOrigin").value;
   const dest = document.getElementById("sDest").value;
@@ -1257,6 +1273,11 @@ async function doSearch() {
   const today = new Date().toISOString().slice(0, 10);
   if (out < today) { status.textContent = "⚠️ La ida ya pasó"; return; }
   if (ret && ret <= out) { status.textContent = "⚠️ La vuelta tiene que ser posterior a la ida"; return; }
+
+  // Multi-destino: compara una región entera en paralelo
+  if (dest.startsWith("ALL_")) {
+    return doMultiSearch(origin, REGION_DESTS[dest] || [], out, ret, dest);
+  }
 
   status.textContent = "⏳ Buscando en Google Flights…";
   result.style.display = "none";
@@ -1322,6 +1343,80 @@ function renderSearchResult(d) {
       </table>
       ${lowCostNote}
       ${gfBtn}
+    </div>`;
+}
+
+async function doMultiSearch(origin, dests, out, ret, regionKey) {
+  const status = document.getElementById("sStatus");
+  const result = document.getElementById("sResult");
+  const btn = document.getElementById("sGo");
+  if (!dests.length) { status.textContent = "⚠️ Región vacía"; return; }
+  status.textContent = `⏳ Buscando ${dests.length} destinos en paralelo (usa ${dests.length} de tu cupo SerpApi)…`;
+  result.style.display = "none";
+  btn.disabled = true;
+  const buildParams = (d) => {
+    const p = new URLSearchParams({ origin, destination: d, outbound_date: out });
+    if (ret) p.set("return_date", ret);
+    return p;
+  };
+  const all = await Promise.all(dests.map(d =>
+    fetch(`/.netlify/functions/search-flight?${buildParams(d)}`)
+      .then(r => r.json())
+      .then(j => ({ destination: d, ...j }))
+      .catch(e => ({ destination: d, error: String(e) }))
+  ));
+  status.textContent = "";
+  btn.disabled = false;
+  const ok = all.filter(r => !r.error && !r.empty && r.real_price_usd);
+  const failed = all.filter(r => r.error || r.empty);
+  if (!ok.length) {
+    result.innerHTML = `<div style="padding:10px 14px; color:#f87171">⚠️ Sin opciones para ningún destino. (${failed.length} fallaron)</div>`;
+    result.style.display = "block";
+    return;
+  }
+  ok.sort((a, b) => a.real_price_usd - b.real_price_usd);
+  result.innerHTML = renderMultiSearchResult(origin, ok, out, ret, regionKey, failed);
+  result.style.display = "block";
+}
+
+function renderMultiSearchResult(origin, items, out, ret, regionKey, failed) {
+  const label = REGION_LABELS[regionKey] || "Comparativa";
+  const rows = items.map((it, i) => {
+    const lvl = it.price_level;
+    const v = lvl === "low" ? '<span style="color:#34d399; font-weight:700">🟢 BAJO</span>'
+      : lvl === "high" ? '<span style="color:#f87171; font-weight:700">🔴 ALTO</span>'
+      : '<span style="color:#fbbf24; font-weight:700">🟡 normal</span>';
+    const top = (it.options || [])[0] || {};
+    const airline = top.airline || "?";
+    const lcTag = top.is_low_cost ? ' <span style="font-size:9px; color:#fbbf24; border:1px solid #fbbf24; padding:1px 4px; border-radius:3px">low-cost</span>' : "";
+    const stops = top.stops === 0 ? "directo" : (top.stops || "?") + " escala(s)";
+    const rng = (it.typical_low && it.typical_high) ? `${Math.round(it.typical_low)}-${Math.round(it.typical_high)}` : "—";
+    return `<tr style="${i === 0 ? "background:rgba(52,211,153,0.08)" : ""}">
+      <td style="padding:7px 10px">${i === 0 ? "🥇" : "#" + (i + 1)}</td>
+      <td style="padding:7px 10px; font-weight:700; letter-spacing:0.04em">${origin} → ${it.destination}</td>
+      <td style="padding:7px 10px">${v}</td>
+      <td style="padding:7px 10px; font-weight:800; font-size:14px">USD ${(it.real_price_usd || 0).toLocaleString("es-AR")}</td>
+      <td style="padding:7px 10px">${airline}${lcTag}</td>
+      <td style="padding:7px 10px">${stops}</td>
+      <td style="padding:7px 10px; color:var(--text-3); font-size:11px">típico ${rng}</td>
+      <td style="padding:7px 10px">${it.google_flights_url ? `<a href="${it.google_flights_url}" target="_blank" rel="noopener" style="color:#34d399; text-decoration:none">abrir ↗</a>` : ""}</td>
+    </tr>`;
+  }).join("");
+  const failedNote = failed.length ? `<div style="margin-top:8px; font-size:11px; color:var(--text-3)">${failed.length} sin opciones: ${failed.map(f => f.destination).join(", ")}</div>` : "";
+  const lowSummary = items.filter(it => it.price_level === "low").length;
+  const summary = lowSummary > 0
+    ? `<div style="font-size:13px; color:#34d399; font-weight:700; margin-bottom:8px">${origin} → ${label} · ${out}${ret ? " → " + ret : ""} · 🟢 ${lowSummary} ganga(s) entre ${items.length} destinos</div>`
+    : `<div style="font-size:13px; color:var(--text-2); font-weight:700; margin-bottom:8px">${origin} → ${label} · ${out}${ret ? " → " + ret : ""} · ${items.length} destinos rankeados (sin gangas confirmadas hoy)</div>`;
+  return `
+    <div style="padding:14px 16px; background:rgba(52,211,153,0.05); border:1px solid rgba(52,211,153,0.4); border-radius:10px; overflow-x:auto">
+      ${summary}
+      <table style="width:100%; min-width:700px; font-size:12.5px; border-collapse:collapse">
+        <thead style="color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; font-size:10px">
+          <tr><th style="text-align:left; padding:7px 10px"></th><th style="text-align:left; padding:7px 10px">Ruta</th><th style="text-align:left; padding:7px 10px">Veredicto</th><th style="text-align:left; padding:7px 10px">Precio</th><th style="text-align:left; padding:7px 10px">Aerolínea</th><th style="text-align:left; padding:7px 10px">Escalas</th><th style="text-align:left; padding:7px 10px">Histórico</th><th style="text-align:left; padding:7px 10px">Link</th></tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+      ${failedNote}
     </div>`;
 }
 
