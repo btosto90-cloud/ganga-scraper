@@ -55,8 +55,16 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore(flights): daily refresh $(date -u +%Y-%m-%d)"
-            git push
+            # Reintento robusto: si alguien pusheó en el medio, rebase y reintenta.
+            for i in 1 2 3; do
+              if git push; then break; fi
+              echo "push falló (intento $i), rebase + retry..."
+              git pull --rebase -X ours origin main || true
+              sleep 2
+            done
           fi
+        # Aunque falle el commit/push, deployamos lo que generamos (no perdemos la corrida).
+        continue-on-error: true
 
       # Publica el sitio en Netlify (flighthunter-bruno.netlify.app). Usa la CLI
       # oficial de Netlify; no hay build, solo sube la carpeta estática.
