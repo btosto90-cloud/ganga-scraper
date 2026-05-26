@@ -479,9 +479,9 @@
     <select id="fBag"><option value="">—</option><option value="1">Sí</option><option value="0">Sin</option></select>
     <label>Score min</label>
     <input type="number" id="fScore" min="0" max="100" value="0" />
-    <label>Salida desde</label>
+    <label title="Quiero salir en o después de esta fecha">Ida desde</label>
     <input type="date" id="fDateFrom" />
-    <label>hasta</label>
+    <label title="Quiero estar de vuelta antes o el mismo día de esta fecha">Vuelta hasta</label>
     <input type="date" id="fDateTo" />
     <button class="btn btn-ghost" id="fDateClear" title="Limpiar fechas" style="padding:4px 8px">✕ fechas</button>
   </div>
@@ -684,11 +684,19 @@ function applyFilters(list) {
     if (f.baggage === "0" && x.baggage_included) return false;
     if (f.minScore > 0 && x.dealScore < f.minScore) return false;
     if (f.dateFrom || f.dateTo) {
-      // Matchea si el deal tiene AL MENOS una fecha de salida en el rango.
-      const dates = (x.dates_available && x.dates_available.length)
-        ? x.dates_available.map(d => d.depart)
-        : (x.departure_date ? [x.departure_date] : []);
-      const ok = dates.some(d => (!f.dateFrom || d >= f.dateFrom) && (!f.dateTo || d <= f.dateTo));
+      // Matchea si el VIAJE ENTERO cabe en la ventana:
+      // ida >= dateFrom  Y  vuelta <= dateTo (si no hay vuelta, ida <= dateTo).
+      const trips = (x.dates_available && x.dates_available.length)
+        ? x.dates_available.map(d => ({ dep: d.depart, ret: d.return }))
+        : (x.departure_date ? [{ dep: x.departure_date, ret: x.return_date }] : []);
+      const ok = trips.some(t => {
+        if (f.dateFrom && t.dep < f.dateFrom) return false;
+        if (f.dateTo) {
+          const end = t.ret || t.dep;
+          if (end > f.dateTo) return false;
+        }
+        return true;
+      });
       if (!ok) return false;
     }
     return true;
@@ -709,7 +717,14 @@ function renderCard(f) {
   let matchedDates = null;
   if ((df.dateFrom || df.dateTo) && Array.isArray(f.dates_available) && f.dates_available.length) {
     matchedDates = f.dates_available
-      .filter(d => (!df.dateFrom || d.depart >= df.dateFrom) && (!df.dateTo || d.depart <= df.dateTo))
+      .filter(d => {
+        if (df.dateFrom && d.depart < df.dateFrom) return false;       // sale antes de tu ventana
+        if (df.dateTo) {                                                // vuelta tiene que entrar
+          const end = d.return || d.depart;
+          if (end > df.dateTo) return false;
+        }
+        return true;
+      })
       .slice(0, 8);
   }
 
