@@ -2,7 +2,9 @@ name: Flight Hunter — Daily
 
 on:
   schedule:
-    - cron: "0 11 * * *"
+    # 11:00 UTC (hora redonda) es pico de GitHub Actions y se saltea seguido.
+    # 09:37 UTC = ~06:37 ART, fuera de horas pico → mucho más confiable.
+    - cron: "37 9 * * *"
   workflow_dispatch:
 
 jobs:
