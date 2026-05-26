@@ -456,6 +456,107 @@
     </div>
   </header>
 
+  <!-- BÚSQUEDA DIRECTA — pedís cualquier ruta+fechas y trae el precio REAL de Google al instante. -->
+  <div id="searchBox" style="margin:0 0 18px; padding:16px 18px; background:linear-gradient(180deg, rgba(52,211,153,0.08), rgba(52,211,153,0.03)); border:1px solid rgba(52,211,153,0.4); border-radius:12px">
+    <div style="font-size:11px; color:#34d399; letter-spacing:0.14em; text-transform:uppercase; font-weight:700; margin-bottom:10px">🔎 Búsqueda directa · precio real en Google Flights</div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:end">
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <label style="font-size:10px; color:var(--text-3)">Origen</label>
+        <select id="sOrigin">
+          <option value="EZE">EZE · Buenos Aires (Ezeiza)</option>
+          <option value="AEP">AEP · Buenos Aires (Aeroparque)</option>
+          <option value="COR">COR · Córdoba</option>
+          <option value="ROS">ROS · Rosario</option>
+          <option value="MDZ">MDZ · Mendoza</option>
+          <option value="BRC">BRC · Bariloche</option>
+        </select>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <label style="font-size:10px; color:var(--text-3)">Destino</label>
+        <select id="sDest">
+          <optgroup label="Europa">
+            <option value="MAD">Madrid (MAD)</option>
+            <option value="BCN">Barcelona (BCN)</option>
+            <option value="FCO">Roma (FCO)</option>
+            <option value="MXP">Milán (MXP)</option>
+            <option value="CDG">París (CDG)</option>
+            <option value="LHR">Londres (LHR)</option>
+            <option value="AMS">Amsterdam (AMS)</option>
+            <option value="LIS">Lisboa (LIS)</option>
+            <option value="OPO">Oporto (OPO)</option>
+            <option value="FRA">Frankfurt (FRA)</option>
+            <option value="MUC">Múnich (MUC)</option>
+            <option value="BER">Berlín (BER)</option>
+            <option value="DUB">Dublín (DUB)</option>
+            <option value="VIE">Viena (VIE)</option>
+            <option value="PRG">Praga (PRG)</option>
+            <option value="IST">Estambul (IST)</option>
+          </optgroup>
+          <optgroup label="Estados Unidos">
+            <option value="MIA">Miami (MIA)</option>
+            <option value="JFK">Nueva York JFK</option>
+            <option value="EWR">Nueva York EWR</option>
+            <option value="LAX">Los Ángeles (LAX)</option>
+            <option value="ORD">Chicago (ORD)</option>
+            <option value="MCO">Orlando (MCO)</option>
+            <option value="LAS">Las Vegas (LAS)</option>
+            <option value="DFW">Dallas (DFW)</option>
+            <option value="SFO">San Francisco (SFO)</option>
+          </optgroup>
+          <optgroup label="Brasil">
+            <option value="GRU">San Pablo (GRU)</option>
+            <option value="GIG">Río de Janeiro (GIG)</option>
+            <option value="FLN">Florianópolis (FLN)</option>
+            <option value="SSA">Salvador (SSA)</option>
+            <option value="MCZ">Maceió (MCZ)</option>
+            <option value="REC">Recife (REC)</option>
+            <option value="FOR">Fortaleza (FOR)</option>
+          </optgroup>
+          <optgroup label="Caribe">
+            <option value="CUN">Cancún (CUN)</option>
+            <option value="PUJ">Punta Cana (PUJ)</option>
+            <option value="AUA">Aruba (AUA)</option>
+            <option value="ADZ">San Andrés (ADZ)</option>
+            <option value="CTG">Cartagena (CTG)</option>
+            <option value="PTY">Panamá (PTY)</option>
+            <option value="HAV">La Habana (HAV)</option>
+            <option value="SDQ">Santo Domingo (SDQ)</option>
+          </optgroup>
+          <optgroup label="Sudamérica">
+            <option value="SCL">Santiago de Chile (SCL)</option>
+            <option value="LIM">Lima (LIM)</option>
+            <option value="BOG">Bogotá (BOG)</option>
+            <option value="MDE">Medellín (MDE)</option>
+            <option value="MVD">Montevideo (MVD)</option>
+            <option value="PDP">Punta del Este (PDP)</option>
+            <option value="CUZ">Cusco (CUZ)</option>
+          </optgroup>
+          <optgroup label="Asia / Oceanía / Otros">
+            <option value="HND">Tokio (HND)</option>
+            <option value="KIX">Osaka (KIX)</option>
+            <option value="BKK">Bangkok (BKK)</option>
+            <option value="DXB">Dubai (DXB)</option>
+            <option value="DEL">Delhi (DEL)</option>
+            <option value="SYD">Sydney (SYD)</option>
+            <option value="TLV">Tel Aviv (TLV)</option>
+            <option value="JNB">Johannesburgo (JNB)</option>
+          </optgroup>
+        </select>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <label style="font-size:10px; color:var(--text-3)">Ida</label>
+        <input type="date" id="sOut" />
+      </div>
+      <div style="display:flex; flex-direction:column; gap:3px">
+        <label style="font-size:10px; color:var(--text-3)">Vuelta <span style="opacity:0.6">(opcional, vacío = solo ida)</span></label>
+        <input type="date" id="sRet" />
+      </div>
+      <button class="btn btn-primary" id="sGo" style="height:34px; padding:0 16px">🔍 Buscar precio real</button>
+      <span id="sStatus" style="color:var(--text-3); font-size:12px"></span>
+    </div>
+    <div id="sResult" style="display:none; margin-top:14px"></div>
+  </div>
+
   <!-- Modes -->
   <div class="modes" id="modes">
     <span class="modes-label">Modo</span>
@@ -1139,6 +1240,96 @@ document.getElementById("fScore").oninput = e => {
   renderGrid();
   renderTabs();
 };
+
+/* =============================================================
+   BÚSQUEDA DIRECTA → Netlify Function → SerpApi/Google Flights
+   ============================================================= */
+async function doSearch() {
+  const origin = document.getElementById("sOrigin").value;
+  const dest = document.getElementById("sDest").value;
+  const out = document.getElementById("sOut").value;
+  const ret = document.getElementById("sRet").value;
+  const status = document.getElementById("sStatus");
+  const result = document.getElementById("sResult");
+  const btn = document.getElementById("sGo");
+  if (!origin || !dest || !out) { status.textContent = "⚠️ Elegí origen, destino e ida"; return; }
+  if (origin === dest) { status.textContent = "⚠️ Origen y destino no pueden ser iguales"; return; }
+  const today = new Date().toISOString().slice(0, 10);
+  if (out < today) { status.textContent = "⚠️ La ida ya pasó"; return; }
+  if (ret && ret <= out) { status.textContent = "⚠️ La vuelta tiene que ser posterior a la ida"; return; }
+
+  status.textContent = "⏳ Buscando en Google Flights…";
+  result.style.display = "none";
+  btn.disabled = true;
+  const params = new URLSearchParams({ origin, destination: dest, outbound_date: out });
+  if (ret) params.set("return_date", ret);
+  try {
+    const r = await fetch(`/.netlify/functions/search-flight?${params}`);
+    const data = await r.json();
+    status.textContent = "";
+    if (data.error) {
+      result.innerHTML = `<div style="padding:10px 14px; background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.4); border-radius:8px; color:#f87171">⚠️ ${data.error}${data.detail ? ` <span style="opacity:0.7">· ${data.detail}</span>` : ""}</div>`;
+      result.style.display = "block";
+      return;
+    }
+    if (data.empty) {
+      result.innerHTML = `<div style="padding:10px 14px; color:var(--text-3)">📭 ${data.message || "Sin opciones para esas fechas"}</div>`;
+      result.style.display = "block";
+      return;
+    }
+    result.innerHTML = renderSearchResult(data);
+    result.style.display = "block";
+  } catch (e) {
+    status.textContent = "❌ Error de red: " + e.message;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function renderSearchResult(d) {
+  const lvl = d.price_level;
+  const verdict = lvl === "low" ? `<span style="color:#34d399; font-weight:800; font-size:13px">🟢 PRECIO BAJO</span>`
+    : lvl === "high" ? `<span style="color:#f87171; font-weight:800; font-size:13px">🔴 PRECIO ALTO (esperá)</span>`
+    : `<span style="color:#fbbf24; font-weight:800; font-size:13px">🟡 PRECIO NORMAL</span>`;
+  const rng = (d.typical_low && d.typical_high)
+    ? `<div style="font-size:11px; color:var(--text-3); margin-top:2px">típico USD ${Math.round(d.typical_low)}–${Math.round(d.typical_high)}</div>` : "";
+  const dur = m => m ? `${Math.floor(m / 60)}h ${m % 60}m` : "—";
+  const lowCostNote = d.options.some(o => o.is_low_cost) ? `<div style="font-size:11.5px; color:#fbbf24; margin-top:8px">🧳 Hay opciones <b>low-cost</b> → la valija despachada va aparte (~USD 100-160 round-trip)</div>` : "";
+  const rows = d.options.map((o, i) => `
+    <tr style="${i === 0 ? "background:rgba(52,211,153,0.06)" : ""}">
+      <td style="padding:6px 10px; ${i === 0 ? "color:#34d399; font-weight:700" : "color:var(--text-3)"}">${i === 0 ? "🥇" : "#" + (i + 1)}</td>
+      <td style="padding:6px 10px">${o.airline}${o.is_low_cost ? ' <span style="font-size:9px; color:#fbbf24; border:1px solid #fbbf24; padding:1px 4px; border-radius:3px; vertical-align:middle">low-cost</span>' : ""}</td>
+      <td style="padding:6px 10px; font-weight:700">USD ${(o.price || 0).toLocaleString("es-AR")}</td>
+      <td style="padding:6px 10px">${o.stops === 0 ? "directo" : o.stops + " escala" + (o.stops > 1 ? "s" : "")}</td>
+      <td style="padding:6px 10px; color:var(--text-3)">${dur(o.duration_min)}</td>
+    </tr>`).join("");
+  const gfBtn = d.google_flights_url
+    ? `<a href="${d.google_flights_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none; margin-top:10px; display:inline-block">✈️ Abrir en Google Flights</a>` : "";
+  return `
+    <div style="padding:14px 16px; background:rgba(52,211,153,0.06); border:1px solid rgba(52,211,153,0.4); border-radius:10px">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px">
+        <div>
+          <div style="font-size:24px; font-weight:800; letter-spacing:0.02em">${d.route} · USD ${(d.real_price_usd || 0).toLocaleString("es-AR")}</div>
+          <div style="color:var(--text-3); font-size:12px; margin-top:2px">${d.outbound_date}${d.return_date ? " → " + d.return_date : " (solo ida)"}</div>
+        </div>
+        <div style="text-align:right">${verdict}${rng}</div>
+      </div>
+      <table style="width:100%; margin-top:12px; font-size:12.5px; border-collapse:collapse">
+        <thead style="color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; font-size:10px">
+          <tr><th style="text-align:left; padding:6px 10px"></th><th style="text-align:left; padding:6px 10px">Aerolínea</th><th style="text-align:left; padding:6px 10px">Precio</th><th style="text-align:left; padding:6px 10px">Escalas</th><th style="text-align:left; padding:6px 10px">Duración</th></tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+      ${lowCostNote}
+      ${gfBtn}
+    </div>`;
+}
+
+document.getElementById("sGo").onclick = doSearch;
+// Enter en cualquier input dispara la búsqueda
+["sOrigin", "sDest", "sOut", "sRet"].forEach(id => {
+  document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+});
 
 /* GO */
 loadFlights();

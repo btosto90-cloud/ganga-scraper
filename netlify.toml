@@ -2,6 +2,7 @@
 # la carpeta que genera el pipeline diario y commitea el workflow.
 [build]
   publish = "flight-hunter/flights/public"
+  functions = "netlify/functions"
   command = ""
 
 # SPA-friendly: cualquier ruta cae al index (la app es de una sola página)
