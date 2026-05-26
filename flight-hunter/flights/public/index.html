@@ -484,6 +484,10 @@
     <label title="Quiero estar de vuelta antes o el mismo día de esta fecha">Vuelta hasta</label>
     <input type="date" id="fDateTo" />
     <button class="btn btn-ghost" id="fDateClear" title="Limpiar fechas" style="padding:4px 8px">✕ fechas</button>
+    <label style="margin-left:12px; display:inline-flex; align-items:center; gap:6px; cursor:pointer" title="Los 🔴 son precios verificados como ALTOS — no son gangas">
+      <input type="checkbox" id="fHideHigh" checked />
+      Ocultar 🔴 precio alto
+    </label>
   </div>
 
   <!-- Tabs -->
@@ -551,7 +555,7 @@ const state = {
   enriched: [],
   mode: "viaje_personal",  // currently informational; deal score precomputed server-side
   tab: "todas",
-  filters: { origin: "", dest: "", stops: "", baggage: "", minScore: 0, dateFrom: "", dateTo: "" },
+  filters: { origin: "", dest: "", stops: "", baggage: "", minScore: 0, dateFrom: "", dateTo: "", hideHigh: true },
   feedback: JSON.parse(localStorage.getItem("fh_feedback") || "{}"),
 };
 
@@ -683,6 +687,7 @@ function applyFilters(list) {
     if (f.baggage === "1" && !x.baggage_included) return false;
     if (f.baggage === "0" && x.baggage_included) return false;
     if (f.minScore > 0 && x.dealScore < f.minScore) return false;
+    if (f.hideHigh && x.price_level === "high") return false;
     if (f.dateFrom || f.dateTo) {
       // Matchea si el VIAJE ENTERO cabe en la ventana:
       // ida >= dateFrom  Y  vuelta <= dateTo (si no hay vuelta, ida <= dateTo).
@@ -899,9 +904,39 @@ function renderGrid() {
 
   const grid = document.getElementById("grid");
   if (list.length === 0) {
+    // Diagnóstico: ¿qué desbloquearía cada filtro si lo aflojás?
+    const baseList = state.enriched.filter(tab.filter);
+    const probe = (override) => {
+      const save = { ...state.filters };
+      Object.assign(state.filters, override);
+      const n = applyFilters(baseList).length;
+      state.filters = save;
+      return n;
+    };
+    const tips = [];
+    if (state.filters.dateTo) {
+      const n = probe({ dateTo: "" });
+      if (n > 0) tips.push(`Si dejás <b>"Vuelta hasta"</b> vacía aparecen <b>${n}</b> (Europa/Asia suelen volver semanas después).`);
+    }
+    if (state.filters.dateFrom) {
+      const n = probe({ dateFrom: "" });
+      if (n > 0 && !tips.length) tips.push(`Si dejás <b>"Ida desde"</b> vacía aparecen <b>${n}</b>.`);
+    }
+    if (state.filters.hideHigh) {
+      const n = probe({ hideHigh: false });
+      if (n > 0) tips.push(`Si destildás <b>"Ocultar 🔴"</b> aparecen <b>${n}</b> más (precios altos, no son ganga).`);
+    }
+    if (state.filters.origin || state.filters.dest) {
+      const n = probe({ origin: "", dest: "" });
+      if (n > 0) tips.push(`Si limpiás <b>Origen/Destino</b> aparecen <b>${n}</b>.`);
+    }
+    const tipHtml = tips.length
+      ? `<div style="margin-top:14px; padding:12px 16px; background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.35); border-radius:8px; color:var(--text-2); font-size:13px; line-height:1.55; text-align:left">💡 <b>Cómo desbloquearlos:</b><ul style="margin:6px 0 0 18px; padding:0">${tips.map(t => `<li>${t}</li>`).join("")}</ul></div>`
+      : "";
     grid.innerHTML = `<div class="empty" style="grid-column: 1/-1">
-      <h3>Sin vuelos en este filtro</h3>
-      <div>Probá otra pestaña, ajustá filtros o cargá más vuelos.</div>
+      <h3>Sin vuelos con estos filtros</h3>
+      <div>No hay coincidencias con tu combinación actual.</div>
+      ${tipHtml}
     </div>`;
   } else {
     grid.innerHTML = list.map(renderCard).join("");
@@ -1075,7 +1110,7 @@ function categorize(score) {
    ============================================================ */
 document.getElementById("refreshBtn").onclick = () => loadFlights();
 
-["fOrigin", "fDest", "fStops", "fBag", "fScore", "fDateFrom", "fDateTo"].forEach(id => {
+["fOrigin", "fDest", "fStops", "fBag", "fScore", "fDateFrom", "fDateTo", "fHideHigh"].forEach(id => {
   document.getElementById(id).onchange = () => {
     state.filters = {
       origin: document.getElementById("fOrigin").value,
@@ -1085,6 +1120,7 @@ document.getElementById("refreshBtn").onclick = () => loadFlights();
       minScore: +document.getElementById("fScore").value || 0,
       dateFrom: document.getElementById("fDateFrom").value,
       dateTo: document.getElementById("fDateTo").value,
+      hideHigh: document.getElementById("fHideHigh").checked,
     };
     renderGrid();
     renderTabs();
