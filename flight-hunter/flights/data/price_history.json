@@ -29,6 +29,11 @@
       "date": "2026-05-26",
       "price_usd": 1098.0,
       "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 1098.0,
+      "airline": "Desconocida"
     }
   ],
   "AEP-BPS": [
@@ -150,6 +155,26 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 622.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 619.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 548.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 619.0,
+      "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 622.0,
       "airline": "Arajet"
     }
@@ -300,6 +325,16 @@
       "date": "2026-05-26",
       "price_usd": 727.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 793.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 727.0,
+      "airline": "Copa Airlines"
     }
   ],
   "AEP-MCZ": [
@@ -331,6 +366,11 @@
     {
       "date": "2026-05-26",
       "price_usd": 342.0,
+      "airline": "GOL"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 374.0,
       "airline": "GOL"
     }
   ],
@@ -377,6 +417,16 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 251.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 258.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 251.0,
       "airline": "JetSMART"
     }
@@ -443,6 +493,16 @@
       "date": "2026-05-26",
       "price_usd": 844.0,
       "airline": "Air Europa"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 904.0,
+      "airline": "Avianca"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 844.0,
+      "airline": "Air Europa"
     }
   ],
   "EZE-ADZ": [
@@ -502,6 +562,11 @@
       "date": "2026-05-26",
       "price_usd": 712.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 712.0,
+      "airline": "Copa Airlines"
     }
   ],
   "EZE-MCO": [
@@ -542,6 +607,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 739.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 739.0,
       "airline": "Arajet"
     }
@@ -596,6 +666,16 @@
       "date": "2026-05-26",
       "price_usd": 346.0,
       "airline": "GOL"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 346.0,
+      "airline": "GOL"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 350.0,
+      "airline": "GOL"
     }
   ],
   "COR-BCN": [
@@ -633,6 +713,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 602.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 602.0,
       "airline": "JetSMART"
     }
@@ -725,6 +810,26 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 584.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 686.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 680.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 503.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 584.0,
       "airline": "LATAM"
     }
@@ -827,6 +932,21 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 496.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 644.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 755.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 496.0,
       "airline": "Arajet"
     }
@@ -948,6 +1068,11 @@
       "date": "2026-05-26",
       "price_usd": 983.0,
       "airline": "Aeroméxico"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 982.0,
+      "airline": "Desconocida"
     }
   ],
   "EZE-FOR": [
@@ -971,6 +1096,11 @@
     {
       "date": "2026-05-19",
       "price_usd": 542.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 814.0,
       "airline": "Arajet"
     }
   ],
@@ -1071,6 +1201,26 @@
       "date": "2026-05-26",
       "price_usd": 533.0,
       "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 749.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 611.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 565.0,
+      "airline": "Avianca"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 533.0,
+      "airline": "LATAM"
     }
   ],
   "EZE-NAT": [
@@ -1130,6 +1280,16 @@
       "date": "2026-05-26",
       "price_usd": 214.32,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 329.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 212.08,
+      "airline": "JetSMART"
     }
   ],
   "AEP-BCN": [
@@ -1143,6 +1303,11 @@
     {
       "date": "2026-05-19",
       "price_usd": 355.0,
+      "airline": "GOL"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 328.0,
       "airline": "GOL"
     }
   ],
@@ -1223,6 +1388,16 @@
       "date": "2026-05-26",
       "price_usd": 343.0,
       "airline": "GOL"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 342.0,
+      "airline": "GOL"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 343.0,
+      "airline": "GOL"
     }
   ],
   "AEP-FCO": [
@@ -1262,6 +1437,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 525.0,
+      "airline": "Aeroméxico"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 525.0,
       "airline": "Aeroméxico"
     }
@@ -1318,6 +1498,11 @@
       "date": "2026-05-26",
       "price_usd": 473.0,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 473.0,
+      "airline": "JetSMART"
     }
   ],
   "EZE-BCN": [
@@ -1343,6 +1528,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 970.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 970.0,
       "airline": "LATAM"
     }
@@ -1407,6 +1597,21 @@
       "date": "2026-05-26",
       "price_usd": 279.0,
       "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 325.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 329.0,
+      "airline": "JetSMART"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 279.0,
+      "airline": "JetSMART"
     }
   ],
   "EZE-SFO": [
@@ -1427,6 +1632,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 872.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 872.0,
       "airline": "Copa Airlines"
     }
@@ -1451,6 +1661,11 @@
       "date": "2026-05-26",
       "price_usd": 771.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 771.0,
+      "airline": "Copa Airlines"
     }
   ],
   "AEP-LIS": [
@@ -1471,6 +1686,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 1072.0,
+      "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 1072.0,
       "airline": "Desconocida"
     }
@@ -1495,6 +1715,11 @@
       "date": "2026-05-26",
       "price_usd": 588.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 588.0,
+      "airline": "Copa Airlines"
     }
   ],
   "ROS-PUJ": [
@@ -1515,6 +1740,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 642.0,
+      "airline": "Arajet"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 642.0,
       "airline": "Arajet"
     }
@@ -1619,6 +1849,31 @@
       "date": "2026-05-26",
       "price_usd": 581.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 527.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 620.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 668.0,
+      "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 616.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 581.0,
+      "airline": "Copa Airlines"
     }
   ],
   "ROS-SJO": [
@@ -1646,6 +1901,11 @@
       "date": "2026-05-26",
       "price_usd": 529.0,
       "airline": "Copa Airlines"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 529.0,
+      "airline": "Copa Airlines"
     }
   ],
   "MDZ-MAD": [
@@ -1666,6 +1926,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 1061.0,
+      "airline": "LATAM"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 1061.0,
       "airline": "LATAM"
     }
@@ -1690,6 +1955,11 @@
       "date": "2026-05-26",
       "price_usd": 586.0,
       "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-27",
+      "price_usd": 586.0,
+      "airline": "Desconocida"
     }
   ],
   "AEP-SCL": [
@@ -1710,6 +1980,11 @@
     },
     {
       "date": "2026-05-26",
+      "price_usd": 237.0,
+      "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-27",
       "price_usd": 237.0,
       "airline": "Desconocida"
     }
