@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T00:31:02.758549+00:00",
+  "generated_at": "2026-05-27T10:43:40.150621+00:00",
   "total_flights": 58,
   "sources": {
     "promociones_aereas": {
@@ -14,7 +14,7 @@
     "top_oportunidades": 1,
     "error_fares": 1,
     "alertas_tempranas": 3,
-    "score_promedio": 59
+    "score_promedio": 60
   },
   "flights": [
     {
@@ -524,7 +524,7 @@
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 58,
+      "dealScore": 30,
       "dealScoreByMode": {
         "viaje_personal": 82,
         "maximo_ahorro": 80,
@@ -553,9 +553,9 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
-        "cls": "buen-precio"
+        "tier": "PRECIO ALTO (verificado)",
+        "emoji": "🔴",
+        "cls": "no-priorizar"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -575,8 +575,8 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 359,
-      "price_level": "typical",
+      "real_price_usd": 668,
+      "price_level": "high",
       "typical_low": 355,
       "typical_high": 570,
       "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTMwagcIARIDQUVQcgcIARIDTUNaGh4SCjIwMjYtMDYtMTFqBwgBEgNNQ1pyBwgBEgNBRVBAAUgBcAGYAQE&tfu=EgIIAQ",
@@ -725,7 +725,7 @@
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 58,
+      "dealScore": 79,
       "dealScoreByMode": {
         "viaje_personal": 79,
         "maximo_ahorro": 79,
@@ -750,9 +750,9 @@
         }
       ],
       "category": {
-        "tier": "PRECIO NORMAL (verificado)",
-        "emoji": "🟡",
-        "cls": "buen-precio"
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -771,14 +771,7 @@
           "return": "2026-06-12",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 588,
-      "price_level": "typical",
-      "typical_low": 500,
-      "typical_high": 720,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTMxagcIARIDRVpFcgcIARIDQlBTGh4SCjIwMjYtMDYtMTJqBwgBEgNCUFNyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_234af80072b4",
@@ -3642,7 +3635,7 @@
         "_learned": false
       },
       "marketAvgUSD": null,
-      "dealScore": 30,
+      "dealScore": 79,
       "dealScoreByMode": {
         "viaje_personal": 79,
         "maximo_ahorro": 78,
@@ -3667,9 +3660,9 @@
         }
       ],
       "category": {
-        "tier": "PRECIO ALTO (verificado)",
-        "emoji": "🔴",
-        "cls": "no-priorizar"
+        "tier": "MUY BUENA OPORTUNIDAD",
+        "emoji": "⭐",
+        "cls": "muy-buena"
       },
       "errorFare": {
         "is_error_fare": false,
@@ -3688,14 +3681,7 @@
           "return": "2026-06-03",
           "source": "post_table"
         }
-      },
-      "real_price_usd": 1075,
-      "price_level": "high",
-      "typical_low": 750,
-      "typical_high": 1050,
-      "real_link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA1LTI3agcIARIDRVpFcgcIARIDTUVYGh4SCjIwMjYtMDYtMDNqBwgBEgNNRVhyBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "real_source": "google_flights",
-      "has_real_price": true
+      }
     },
     {
       "id": "f_f4e6fc61c03c",
@@ -3904,7 +3890,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 675,
+      "real_price_usd": 708,
       "price_level": "high",
       "typical_low": 510,
       "typical_high": 620,
@@ -4464,564 +4450,648 @@
           "return": "2026-06-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-05",
           "return": "2026-06-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-08",
           "return": "2026-06-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-08/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-08/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-09",
           "return": "2026-06-30",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-09/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-09/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-10",
           "return": "2026-06-16",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-10/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-10/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-11",
           "return": "2026-09-08",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-11/2026-09-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-11/2026-09-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-13",
           "return": "2026-06-26",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-13/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-13/2026-06-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-15",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-15/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-15/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-16",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-16/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-16/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-17",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-17/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-17/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-18",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-18/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-18/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-18",
           "return": "2026-07-07",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-18/2026-07-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-18/2026-07-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-18",
           "return": "2026-06-28",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-18/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-18/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-19",
           "return": "2026-06-28",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-19/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-19/2026-06-28/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-20",
           "return": "2026-07-04",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-20/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-20/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-21",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-21/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-06-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-07-04",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-07-13",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-06-30",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-22/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-23",
           "return": "2026-06-30",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-23/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-23/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-23",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-23/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-23/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-24",
           "return": "2026-07-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-24/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-24/2026-07-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-29",
           "return": "2026-08-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-29/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-29/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-06-30",
           "return": "2026-08-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-30/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-30/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-05",
           "return": "2026-07-19",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-05/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-05/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-09",
           "return": "2026-07-18",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-09/2026-07-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-09/2026-07-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-09",
           "return": "2026-07-19",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-09/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-09/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-16",
           "return": "2026-08-04",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-16/2026-08-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-16/2026-08-04/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-23",
           "return": "2026-08-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-23/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-23/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-28",
           "return": "2026-08-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-28/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-28/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-28",
           "return": "2026-08-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-28/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-28/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-28",
           "return": "2026-08-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-28/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-28/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-29",
           "return": "2026-08-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-29/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-29/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-29",
           "return": "2026-08-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-29/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-29/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-29",
           "return": "2026-08-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-29/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-29/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-07-30",
           "return": "2026-08-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-30/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-07-30/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-01/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-01/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-14",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-01/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-01/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-01/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-01/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-08-27",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-08-15",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-09-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-09-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-09-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-08-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-08-30",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-03/2026-08-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-09-07",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-09-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-09-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-09-02",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-09-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-09-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-08-25",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-08-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-05/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-08-15",
           "return": "2026-09-10",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-09-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-09-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-08-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-08-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-09-01",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-09-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-09-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-09-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-09-06",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-09-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-09-07",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-15/2026-09-07/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-09-10",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-18/2026-09-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-09-08",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-18/2026-09-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-08-25",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-18/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-08-26",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-18/2026-08-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-09-02",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-18/2026-09-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-18",
+          "return": "2026-08-27",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-18/2026-08-27/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+        },
+        {
+          "depart": "2026-08-21",
+          "return": "2026-08-31",
+          "is_direct": false,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-08-21/2026-08-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-14",
           "return": "2026-11-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-14/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-14/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-14",
           "return": "2026-11-12",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-14/2026-11-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-14/2026-11-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-19",
           "return": "2026-11-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-19/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-19/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-19",
           "return": "2026-11-11",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-19/2026-11-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-19/2026-11-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-27",
           "return": "2026-11-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-27/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-27/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-27",
           "return": "2026-11-11",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-27/2026-11-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-27/2026-11-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-28",
           "return": "2026-11-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-28/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-28/2026-11-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-28",
           "return": "2026-11-17",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-28/2026-11-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-28/2026-11-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-10-31",
           "return": "2026-11-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-31/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-10-31/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-08",
           "return": "2026-11-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-08/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-08/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-09",
           "return": "2026-11-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-09/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-09/2026-11-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-10",
           "return": "2026-11-21",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-10/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-10/2026-11-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-15",
           "return": "2026-12-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-15/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-15/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-16",
           "return": "2026-12-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-16/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-16/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-17",
           "return": "2026-12-03",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-17/2026-12-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-17/2026-12-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-11-25",
           "return": "2026-12-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-25/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-11-25/2026-12-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2026-12-07",
           "return": "2027-03-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-12-07/2027-03-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-12-07/2027-03-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-02-21",
           "return": "2027-03-06",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-21/2027-03-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-21/2027-03-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-02-22",
           "return": "2027-03-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-22/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-22/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-02-22",
           "return": "2027-03-11",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-22/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-22/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-02-22",
           "return": "2027-04-06",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-22/2027-04-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-22/2027-04-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-02-24",
           "return": "2027-03-11",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-24/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-02-24/2027-03-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-01",
           "return": "2027-03-09",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-01/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-01/2027-03-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-01",
           "return": "2027-04-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-01/2027-04-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-01/2027-04-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-03",
           "return": "2027-03-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-03/2027-03-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-03/2027-03-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-08",
           "return": "2027-03-29",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-03-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-03-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-08",
           "return": "2027-04-01",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-04-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-04-01/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-08",
           "return": "2027-04-02",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-04-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-04-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         },
         {
           "depart": "2027-03-08",
           "return": "2027-04-05",
           "is_direct": false,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-04-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2027-03-08/2027-04-05/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p"
         }
       ],
-      "total_dates": 80,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p",
+      "total_dates": 92,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/MAD/2026-06-05/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=madrid-con-equipaje-despachado-desde-buenos-aires-tap-rt-p",
       "route": {
         "historical_avg": 1024.57,
         "historical_min": 825.0,
@@ -5118,354 +5188,473 @@
           "return": "2026-06-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-05-28",
           "return": "2026-05-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-28/2026-05-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-28/2026-05-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-08",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-06",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-06/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-09",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-10",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-16",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-23",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-22",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-22/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-01",
           "return": "2026-06-18",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-01/2026-06-18/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-04",
           "return": "2026-06-10",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-10/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-04",
           "return": "2026-06-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-04/2026-06-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-06",
           "return": "2026-06-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-06/2026-06-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-13",
           "return": "2026-06-20",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-13/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-15",
           "return": "2026-06-29",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-15",
           "return": "2026-06-20",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-15/2026-06-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-16",
           "return": "2026-06-29",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-16/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-16/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-22",
           "return": "2026-07-02",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-22/2026-07-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-22/2026-07-02/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-23",
           "return": "2026-06-29",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-23/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-23/2026-06-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-24",
           "return": "2026-06-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-24/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-24/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-06-25",
           "return": "2026-06-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-25/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-06-25/2026-06-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-03",
           "return": "2026-07-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-03/2026-07-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-03/2026-07-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-06",
           "return": "2026-07-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-06",
           "return": "2026-07-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-06/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-10",
           "return": "2026-07-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-10/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-10/2026-07-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-13",
           "return": "2026-07-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-13/2026-07-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-13/2026-07-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-23",
           "return": "2026-07-30",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-23/2026-07-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-23/2026-07-30/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-30",
           "return": "2026-08-03",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-03/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-30",
           "return": "2026-08-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-30/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-07-31",
           "return": "2026-08-09",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-31/2026-08-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-07-31/2026-08-09/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-16",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-01",
           "return": "2026-08-08",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-01/2026-08-08/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-03",
           "return": "2026-08-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-03/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-03/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-08-11",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-05",
           "return": "2026-08-12",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-05/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-06",
           "return": "2026-08-13",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-06",
           "return": "2026-08-12",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-06",
           "return": "2026-08-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-06/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-07",
           "return": "2026-08-12",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-07/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-07/2026-08-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-08",
           "return": "2026-08-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-08",
           "return": "2026-08-17",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-08/2026-08-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-19",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-20",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-21",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-21/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-14",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-14/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         },
         {
           "depart": "2026-08-09",
           "return": "2026-08-15",
           "is_direct": true,
           "days": null,
-          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-09/2026-08-15/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-10",
+          "return": "2026-08-16",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-10/2026-08-16/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-10",
+          "return": "2026-08-31",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-10/2026-08-31/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-12",
+          "return": "2026-08-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-12/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-13",
+          "return": "2026-08-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-13/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-14",
+          "return": "2026-08-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-14/2026-08-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-15",
+          "return": "2026-08-20",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-15/2026-08-20/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-17",
+          "return": "2026-08-29",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-17/2026-08-29/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-17",
+          "return": "2026-08-23",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-17/2026-08-23/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-19",
+          "return": "2026-08-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-19/2026-08-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-08-19",
+          "return": "2026-08-25",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-08-19/2026-08-25/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-06",
+          "return": "2026-10-11",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-06/2026-10-11/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-08",
+          "return": "2026-10-12",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-08/2026-10-12/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-10",
+          "return": "2026-10-13",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-10/2026-10-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-10",
+          "return": "2026-10-17",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-10/2026-10-17/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-16",
+          "return": "2026-10-19",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-16/2026-10-19/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-21",
+          "return": "2026-10-24",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-21/2026-10-24/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
+        },
+        {
+          "depart": "2026-10-22",
+          "return": "2026-10-26",
+          "is_direct": true,
+          "days": null,
+          "booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-10-22/2026-10-26/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p"
         }
       ],
-      "total_dates": 50,
-      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=stm-c051-vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p",
+      "total_dates": 67,
+      "direct_booking_url": "https://www.despegar.com.ar/shop/flights/results/roundtrip/BUE/SCL/2026-05-27/2026-06-13/1/0/0?currency=USD&clt_n=r&clt_c=PROMOS-AR-V&clt_pr=V&clt_af=PROMOS&clt_cc=AR&clt_pa_pub=vuelos-a-santiago-de-chile-directos-desde-aeroparque-fechas-en-feriados-sky-rt-p",
       "route": null,
       "marketAvgUSD": null,
       "dealScore": 62,
@@ -8116,7 +8305,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 433,
+      "real_price_usd": 435,
       "price_level": "high",
       "typical_low": 255,
       "typical_high": 415,
@@ -10225,7 +10414,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 1088,
+      "real_price_usd": 1092,
       "price_level": "high",
       "typical_low": 770,
       "typical_high": 1050,
@@ -15514,7 +15703,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 764,
+      "real_price_usd": 762,
       "price_level": "typical",
       "typical_low": 720,
       "typical_high": 1150,
@@ -16049,7 +16238,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 757,
+      "real_price_usd": 790,
       "price_level": "high",
       "typical_low": 580,
       "typical_high": 750,
@@ -16491,7 +16680,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 460,
+      "real_price_usd": 462,
       "price_level": "high",
       "typical_low": 355,
       "typical_high": 455,
@@ -16940,7 +17129,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 1613,
+      "real_price_usd": 1866,
       "price_level": "typical",
       "typical_low": 1550,
       "typical_high": 1950,
@@ -17899,7 +18088,7 @@
           "source": "post_table"
         }
       },
-      "real_price_usd": 912,
+      "real_price_usd": 915,
       "price_level": "high",
       "typical_low": 620,
       "typical_high": 890,
