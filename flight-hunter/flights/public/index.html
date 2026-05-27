@@ -1591,16 +1591,18 @@ function renderCalendar(d) {
     return d2.toLocaleDateString("es-AR", { weekday: "short", day: "2-digit", month: "short" });
   };
 
+  const fmtDur = m => m ? Math.floor(m / 60) + "h " + (m % 60) + "m" : "—";
   const cheapestBox = cheapest ? `
     <div style="padding: 12px 14px; background: ${ck[1]}; border: 1px solid ${ck[0]}; border-radius: 8px; margin-bottom: 12px;">
-      <div style="font-size: 11px; color: var(--text-3); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;">🎯 La fecha más barata del batch</div>
+      <div style="font-size: 11px; color: var(--text-3); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;">🎯 La mejor opción del batch (mejor valor: precio + duración + escalas)</div>
       <div style="display: flex; align-items: center; gap: 14px; margin-top: 4px; flex-wrap: wrap;">
         <div style="font-size: 22px; font-weight: 800;">USD ${cheapest.price_usd.toLocaleString("es-AR")}</div>
         <div>${ck[2]} ${cheapest.price_level || "vs batch"}</div>
         <div style="color: var(--text-2);">${fmtLong(cheapest.dep)} → ${fmtLong(cheapest.ret)}</div>
-        <div style="color: var(--text-3); font-size: 12px;">${cheapest.airline || "?"} · ${cheapest.stops === 0 ? "directo" : (cheapest.stops || "?") + " escala(s)"}</div>
+        <div style="color: var(--text-3); font-size: 12px;">${cheapest.airline || "?"} · ${cheapest.stops === 0 ? "directo" : (cheapest.stops || "?") + " escala(s)"} · ${fmtDur(cheapest.duration_min)}</div>
         ${cheapest.google_flights_url ? `<a href="${cheapest.google_flights_url}" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; padding: 6px 14px;">abrir en Google Flights ↗</a>` : ""}
       </div>
+      ${cheapest.cheapest_absolute ? `<div style="margin-top: 8px; font-size: 11px; color: var(--text-3); font-style: italic;">⚠️ Hay opción más barata (USD ${cheapest.cheapest_absolute.price_usd}) con ${cheapest.cheapest_absolute.stops} escala(s) y ${fmtDur(cheapest.cheapest_absolute.duration_min)} — descartada por exceso de tiempo/escalas (no vale los USD ${cheapest.price_usd - cheapest.cheapest_absolute.price_usd} de ahorro).</div>` : ""}
     </div>` : "";
 
   const typicalNote = (d.typical_low && d.typical_high)

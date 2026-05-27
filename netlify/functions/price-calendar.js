@@ -118,16 +118,36 @@ async function fetchSample(origin, destination, { dep, ret }, KEY) {
     const priced = all.filter(o => Number.isFinite(o.price));
     if (!priced.length) return { dep, ret, empty: true };
 
-    const cheap = priced.reduce((m, o) => (o.price < m.price ? o : m));
+    // MEJOR VALOR (no "más barato absoluto"): penaliza duración y escalas para
+    // no recomendar conexiones kilométricas que ahorran 100 USD a costa de 20h+.
+    // Penalty: cada hora sobre 12h base cuesta ~$30; cada escala ~$100.
+    const valueScore = (o) => {
+      const dur = o.total_duration || 720;
+      const stops = Math.max(0, (o.flights?.length || 1) - 1);
+      return o.price + Math.max(0, dur - 720) * 0.5 + stops * 100;
+    };
+    const best = priced.reduce((m, o) => (valueScore(o) < valueScore(m) ? o : m));
+    const absCheap = priced.reduce((m, o) => (o.price < m.price ? o : m));
+
     const insights = data.price_insights || {};
-    const legs = cheap.flights || [];
+    const legs = best.flights || [];
+    const absLegs = absCheap.flights || [];
+
     return {
       dep,
       ret,
-      price_usd: cheap.price,
+      // Headline = mejor valor (precio razonable, duración y escalas humanas)
+      price_usd: best.price,
       airline: legs[0]?.airline || null,
       stops: Math.max(0, legs.length - 1),
-      duration_min: cheap.total_duration || null,
+      duration_min: best.total_duration || null,
+      // Más barato absoluto (solo si DIFIERE del best por >$30 — si no, no vale mencionarlo)
+      cheapest_absolute: (absCheap.price < best.price - 30) ? {
+        price_usd: absCheap.price,
+        airline: absLegs[0]?.airline || null,
+        stops: Math.max(0, absLegs.length - 1),
+        duration_min: absCheap.total_duration || null,
+      } : null,
       price_level: insights.price_level || null,
       typical_low: (insights.typical_price_range || [])[0] || null,
       typical_high: (insights.typical_price_range || [])[1] || null,
