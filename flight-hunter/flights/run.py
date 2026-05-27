@@ -108,6 +108,18 @@ def main() -> int:
     _write_json(FLIGHTS_FILE, output)
     print(f"[flight-hunter] wrote {FLIGHTS_FILE} with {len(enriched)} flights")
     print(f"[flight-hunter] stats: {output['stats']}")
+
+    # 7. Alertas Telegram cuando aparece una 🟢 ganga verificada -----------
+    # A prueba de fallos: sin creds o si Telegram cae, el pipeline sigue.
+    try:
+        from scoring import notify
+        if notify.has_creds():
+            notify.alert_new_gangas(enriched)
+        else:
+            print("[flight-hunter] sin TELEGRAM_BOT_TOKEN/CHAT_ID — no alerto")
+    except Exception as e:
+        print(f"[flight-hunter] notify falló, sigo: {e}")
+
     return 0
 
 
