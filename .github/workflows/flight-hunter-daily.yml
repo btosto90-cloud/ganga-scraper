@@ -35,10 +35,11 @@ jobs:
       - name: Run scraper
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          # Plan Starter (1.000/mes), 3 corridas/día: 11×3=33/día ≈ 990/mes.
-          # SerpApi cachea iguales (free) → en corridas seguidas casi no gasta.
-          # Selección inteligente prioriza rutas distintas → cobertura máxima.
-          FLIGHT_PRICE_MAX_RESOLVE: "11"
+          # Plan Starter (1.000/mes), 3 corridas/día: 9×3=27/día ≈ 810/mes.
+          # Bajamos de 11→9 para liberar ~180/mes para el feature Calendario
+          # (price-calendar.js, ~12 searches por calendario fresco, cacheado 48h).
+          # SerpApi cachea iguales (free) → uso real menor.
+          FLIGHT_PRICE_MAX_RESOLVE: "9"
           # Telegram para alertas cuando aparece 🟢 ganga verificada (dedup 24h).
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
