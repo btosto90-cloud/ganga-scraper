@@ -54,12 +54,23 @@
   .hero .price { font-family: var(--fs-mono); font-weight: 700; font-size: clamp(40px, 10vw, 64px); line-height: 1; margin: 6px 0; }
   .hero .meta { color: var(--text-2); font-size: 15px; }
   .hero .meta b { color: var(--text); font-weight: 600; }
+  .cta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
   .cta {
-    display: inline-block; margin-top: 16px; background: var(--gold); color: #1a1205;
-    font-weight: 700; text-decoration: none; padding: 12px 20px; border-radius: 12px;
+    display: inline-block; background: var(--gold); color: #1a1205;
+    font-weight: 700; text-decoration: none; padding: 12px 18px; border-radius: 12px;
     font-size: 15px;
   }
   .cta:hover { filter: brightness(1.08); }
+  .cta-2 {
+    display: inline-block; background: transparent; color: var(--text);
+    border: 1px solid var(--border); font-weight: 600; text-decoration: none;
+    padding: 12px 16px; border-radius: 12px; font-size: 14px;
+  }
+  .cta-2:hover { border-color: var(--gold); color: var(--gold); }
+  .xlinks { display: flex; gap: 8px; }
+  .xlinks a { color: var(--text-2); text-decoration: none; font-weight: 700; font-size: 13px; }
+  .xlinks a:hover { color: var(--gold); }
+  .xlinks a.g { color: var(--gold); }
 
   .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: 13px; }
   .b-low { background: var(--emerald-soft); color: var(--emerald); }
@@ -150,7 +161,11 @@ async function load() {
           ${disc!==null && disc>0 ? ` · <b>~${disc}% bajo lo normal</b>` : ""}
         </div>
         <div class="meta" style="margin-top:4px">${typ}</div>
-        ${b.link ? `<a class="cta" href="${b.link}" target="_blank" rel="noopener">Ver en Google Flights →</a>` : ""}
+        <div class="cta-row">
+          ${b.link ? `<a class="cta" href="${b.link}" target="_blank" rel="noopener">Ver en Google Flights →</a>` : ""}
+          ${b.kiwi ? `<a class="cta-2" href="${b.kiwi}" target="_blank" rel="noopener">Kiwi (self-transfer)</a>` : ""}
+          ${b.despegar ? `<a class="cta-2" href="${b.despegar}" target="_blank" rel="noopener">Despegar (cuotas AR)</a>` : ""}
+        </div>
       </div>
       <div style="text-align:right">
         <div class="label">Mínimo registrado</div>
@@ -165,11 +180,11 @@ async function load() {
     </div>
 
     <h2>Todas las fechas (${d.results.length})</h2>
-    <div class="sub" style="margin:-4px 0 12px">Ordenado por mejor relación precio/escalas${d.stop_penalty_usd ? ` (cada escala penaliza ~USD ${d.stop_penalty_usd})` : ""} — no solo por el precio más bajo.</div>
+    <div class="sub" style="margin:-4px 0 12px">Ordenado por mejor relación precio/escalas${d.stop_penalty_usd ? ` (cada escala penaliza ~USD ${d.stop_penalty_usd})` : ""} — no solo por el precio más bajo. Buscar en: <b>G</b>=Google Flights · <b>K</b>=Kiwi · <b>D</b>=Despegar.</div>
     <table>
       <thead><tr>
         <th>Salida</th><th>Vuelta</th><th>Precio</th><th>Nivel</th>
-        <th class="hide-sm">Aerolínea</th><th class="hide-sm">Escalas</th><th></th>
+        <th class="hide-sm">Aerolínea</th><th class="hide-sm">Escalas</th><th>Buscar</th>
       </tr></thead>
       <tbody>
         ${d.results.map((r,i) => `
@@ -180,7 +195,11 @@ async function load() {
             <td>${lvlBadge(r.price_level)}</td>
             <td class="hide-sm">${r.airline || "—"}</td>
             <td class="hide-sm">${stopsTxt(r.stops)}</td>
-            <td>${r.link ? `<a href="${r.link}" target="_blank" rel="noopener">ver →</a>` : ""}</td>
+            <td><div class="xlinks">
+              ${r.link ? `<a class="g" href="${r.link}" target="_blank" rel="noopener" title="Google Flights">G</a>` : ""}
+              ${r.kiwi ? `<a href="${r.kiwi}" target="_blank" rel="noopener" title="Kiwi">K</a>` : ""}
+              ${r.despegar ? `<a href="${r.despegar}" target="_blank" rel="noopener" title="Despegar">D</a>` : ""}
+            </div></td>
           </tr>`).join("")}
       </tbody>
     </table>

@@ -49,6 +49,18 @@ def _load_config() -> dict:
     return cfg
 
 
+def _deep_links(o: str, d: str, dep: str, ret: str | None) -> dict:
+    """Links a buscadores que ocasionalmente le ganan a Google Flights, con
+    las fechas ya cargadas: Kiwi (self-transfer) y Despegar (cuotas/promos AR)."""
+    if ret:
+        kiwi = f"https://www.kiwi.com/en/search/results/{o}/{d}/{dep}/{ret}/"
+        despegar = f"https://www.despegar.com.ar/shop/flights/results/roundtrip/{o}/{d}/{dep}/{ret}/1/0/0"
+    else:
+        kiwi = f"https://www.kiwi.com/en/search/results/{o}/{d}/{dep}/"
+        despegar = f"https://www.despegar.com.ar/shop/flights/results/oneway/{o}/{d}/{dep}/1/0/0"
+    return {"kiwi": kiwi, "despegar": despegar}
+
+
 def _effective_score(row: dict, penalty: float) -> float:
     """Precio ajustado por escalas (lo que usamos para rankear, no para mostrar).
     stops desconocido = se asume 1 escala."""
@@ -142,6 +154,7 @@ def main() -> None:
             "airline": res.get("airline"),
             "stops": res.get("stops"),
             "link": res.get("link"),
+            **_deep_links(cfg["origin"], cfg["destination"], out, ret),
         }
         results.append(row)
         print(f"[watch]   {out} -> {ret}: USD {row['price_usd']} ({row['price_level']}, {row['stops']}esc)")
