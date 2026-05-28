@@ -14,7 +14,7 @@
       "2026-10-16"
     ]
   },
-  "generated_at": "2026-05-28T21:30:29.965348+00:00",
+  "generated_at": "2026-05-28T21:33:51.547664+00:00",
   "currency": "USD",
   "best": {
     "departure_date": "2026-09-24",
@@ -336,6 +336,13 @@
   "history": [
     {
       "checked_at": "2026-05-28T21:30:29.965348+00:00",
+      "best_usd": 1383,
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-08",
+      "price_level": "low"
+    },
+    {
+      "checked_at": "2026-05-28T21:33:51.547664+00:00",
       "best_usd": 1383,
       "departure_date": "2026-09-24",
       "return_date": "2026-10-08",
