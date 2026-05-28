@@ -71,13 +71,7 @@ jobs:
               sleep 2
             done
           fi
-        # Aunque falle el commit/push, deployamos lo que generamos (no perdemos la corrida).
-        continue-on-error: true
-
-      # Publica el sitio en Netlify (flighthunter-bruno.netlify.app). Usa la CLI
-      # oficial de Netlify; no hay build, solo sube la carpeta estática.
-      - name: Deploy to Netlify
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: npx --yes netlify-cli@26 deploy --prod --dir public --message "daily flights refresh $(date -u +%Y-%m-%d)"
+        # El push a main dispara el auto-deploy del sitio git-connected
+        # flight-hunter90.netlify.app (el que usa Bruno). No hace falta deploy por CLI:
+        # el paso viejo a flighthunter-bruno fallaba con 403 (token vencido) y dejaba
+        # el workflow en rojo aunque la data se generaba bien.
