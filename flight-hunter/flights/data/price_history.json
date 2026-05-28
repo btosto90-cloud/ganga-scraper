@@ -598,6 +598,11 @@
       "date": "2026-05-28",
       "price_usd": 844.0,
       "airline": "Air Europa"
+    },
+    {
+      "date": "2026-05-28",
+      "price_usd": 996.0,
+      "airline": "LATAM"
     }
   ],
   "EZE-ADZ": [
@@ -1665,6 +1670,11 @@
       "date": "2026-05-23",
       "price_usd": 1110.0,
       "airline": "Desconocida"
+    },
+    {
+      "date": "2026-05-28",
+      "price_usd": 1099.0,
+      "airline": "GOL"
     }
   ],
   "EZE-MCZ": [
@@ -2371,6 +2381,20 @@
       "date": "2026-05-28",
       "price_usd": 1490.0,
       "airline": "Air Europa"
+    }
+  ],
+  "EZE-MDE": [
+    {
+      "date": "2026-05-28",
+      "price_usd": 443.0,
+      "airline": "JetSMART"
+    }
+  ],
+  "EZE-CUZ": [
+    {
+      "date": "2026-05-28",
+      "price_usd": 425.0,
+      "airline": "Sky Airline"
     }
   ]
 }
