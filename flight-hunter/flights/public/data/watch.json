@@ -1,0 +1,345 @@
+{
+  "route": {
+    "origin": "EZE",
+    "destination": "BCN",
+    "trip": "round"
+  },
+  "window": {
+    "outbound": [
+      "2026-09-22",
+      "2026-09-30"
+    ],
+    "return": [
+      "2026-10-08",
+      "2026-10-16"
+    ]
+  },
+  "generated_at": "2026-05-28T21:30:29.965348+00:00",
+  "currency": "USD",
+  "best": {
+    "departure_date": "2026-09-24",
+    "return_date": "2026-10-08",
+    "price_usd": 1383,
+    "price_level": "low",
+    "typical_low": 1500,
+    "typical_high": 2200,
+    "airline": "LEVEL",
+    "stops": 0,
+    "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+    "score": 1383
+  },
+  "best_ever_usd": 1383,
+  "results": [
+    {
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-08",
+      "price_usd": 1383,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2200,
+      "airline": "LEVEL",
+      "stops": 0,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1383
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-08",
+      "price_usd": 1383,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "LEVEL",
+      "stops": 0,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1383
+    },
+    {
+      "departure_date": "2026-09-22",
+      "return_date": "2026-10-12",
+      "price_usd": 1236,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1486
+    },
+    {
+      "departure_date": "2026-09-22",
+      "return_date": "2026-10-14",
+      "price_usd": 1236,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1486
+    },
+    {
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-12",
+      "price_usd": 1236,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2200,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1486
+    },
+    {
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-12",
+      "price_usd": 1236,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1486
+    },
+    {
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-14",
+      "price_usd": 1236,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1486
+    },
+    {
+      "departure_date": "2026-09-22",
+      "return_date": "2026-10-16",
+      "price_usd": 1257,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1507
+    },
+    {
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-12",
+      "price_usd": 1257,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1507
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-12",
+      "price_usd": 1257,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2200,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1507
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-14",
+      "price_usd": 1257,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1507
+    },
+    {
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-16",
+      "price_usd": 1257,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1507
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-16",
+      "price_usd": 1279,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1529
+    },
+    {
+      "departure_date": "2026-09-22",
+      "return_date": "2026-10-10",
+      "price_usd": 1311,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1561
+    },
+    {
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-10",
+      "price_usd": 1311,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1561
+    },
+    {
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-10",
+      "price_usd": 1311,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1561
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-10",
+      "price_usd": 1332,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2200,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1582
+    },
+    {
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-08",
+      "price_usd": 1364,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1614
+    },
+    {
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-14",
+      "price_usd": 1203,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2200,
+      "airline": "Air Canada",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1703
+    },
+    {
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-16",
+      "price_usd": 1203,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "Air Canada",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1703
+    },
+    {
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-10",
+      "price_usd": 1460,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2200,
+      "airline": "American",
+      "stops": 1,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1710
+    },
+    {
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-14",
+      "price_usd": 1228,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "Air Canada",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1728
+    },
+    {
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-16",
+      "price_usd": 1228,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "Air Canada",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1728
+    },
+    {
+      "departure_date": "2026-09-22",
+      "return_date": "2026-10-08",
+      "price_usd": 1317,
+      "price_level": "low",
+      "typical_low": 1500,
+      "typical_high": 2150,
+      "airline": "Avianca",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1817
+    },
+    {
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-08",
+      "price_usd": 1317,
+      "price_level": "low",
+      "typical_low": 1450,
+      "typical_high": 2000,
+      "airline": "Avianca",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "score": 1817
+    }
+  ],
+  "target_price_usd": null,
+  "stop_penalty_usd": 250,
+  "history": [
+    {
+      "checked_at": "2026-05-28T21:30:29.965348+00:00",
+      "best_usd": 1383,
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-08",
+      "price_level": "low"
+    }
+  ]
+}

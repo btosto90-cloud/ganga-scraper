@@ -2,11 +2,10 @@ name: Flight Hunter — Daily
 
 on:
   schedule:
-    # 3 corridas/día (6:37, 12:37, 18:37 UTC = 3:37, 9:37, 15:37 ART).
-    # Las gangas duran horas, no días → polling más frecuente las caza antes
-    # y dispara alerta Telegram al toque. SerpApi cachea iguales (free).
-    # Minutos raros + off-peak → muy bajo skip-rate en GitHub Actions.
-    - cron: "37 6,12,18 * * *"
+    # 1 corrida/día (11:37 UTC = 8:37 ART). El vigilante escanea ~25 fechas de
+    # UNA ruta → 25/día ≈ 750/mes (entra en SerpApi Starter 1.000 con margen).
+    # Un vuelo a meses no necesita polling horario; un chequeo diario alcanza.
+    - cron: "37 11 * * *"
   workflow_dispatch:
 
 jobs:
@@ -32,37 +31,31 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run scraper
+      - name: Vigilar la ruta (watch_route.py)
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          # Plan Starter (1.000/mes), 3 corridas/día: 9×3=27/día ≈ 810/mes.
-          # Bajamos de 11→9 para liberar ~180/mes para el feature Calendario
-          # (price-calendar.js, ~12 searches por calendario fresco, cacheado 48h).
-          # SerpApi cachea iguales (free) → uso real menor.
-          FLIGHT_PRICE_MAX_RESOLVE: "9"
-          # Telegram para alertas cuando aparece 🟢 ganga verificada (dedup 24h).
+          # Tope de pares (ida,vuelta) por corrida. 25 ≈ 750/mes en 1 corrida/día.
+          FLIGHT_WATCH_MAX_PAIRS: "25"
+          # Telegram: alerta al tocar nuevo mínimo o tu precio objetivo (dedup 24h).
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python run.py
+        run: python watch_route.py
 
       - name: Show output preview
         run: |
-          echo "=== flights.json head ==="
-          head -c 500 public/data/flights.json || true
-          echo ""
-          echo "=== stats ==="
-          python -c "import json; d=json.load(open('public/data/flights.json')); print(json.dumps(d.get('stats',{}), indent=2)); print('Sources:', d.get('sources',{}))"
+          echo "=== watch.json best ==="
+          python -c "import json; d=json.load(open('public/data/watch.json')); b=d['best']; print(d['route'], '| mejor USD', b['price_usd'], b['departure_date'], '->', b['return_date'], '|', b['airline'], b['stops'], 'esc |', b['price_level']); print('fechas escaneadas:', len(d['results']), '| best_ever:', d['best_ever_usd'])"
 
       - name: Commit changes
         run: |
           cd ../..
           git config user.name "flight-hunter-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add flight-hunter/flights/public/data/flights.json flight-hunter/flights/data/price_history.json flight-hunter/flights/data/flight_alerts_state.json 2>/dev/null || true
+          git add flight-hunter/flights/public/data/watch.json flight-hunter/flights/data/watch_state.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore(flights): daily refresh $(date -u +%Y-%m-%d)"
+            git commit -m "chore(flights): watch refresh $(date -u +%Y-%m-%d)"
             # Reintento robusto: si alguien pusheó en el medio, rebase y reintenta.
             for i in 1 2 3; do
               if git push; then break; fi
