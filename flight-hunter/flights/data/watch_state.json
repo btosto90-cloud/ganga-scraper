@@ -1,5 +1,5 @@
 {
-  "best_ever_usd": 1383,
+  "best_ever_usd": 1382,
   "history": [
     {
       "checked_at": "2026-05-28T21:30:29.965348+00:00",
@@ -14,23 +14,32 @@
       "departure_date": "2026-09-24",
       "return_date": "2026-10-08",
       "price_level": "low"
+    },
+    {
+      "checked_at": "2026-05-29T14:21:20.604581+00:00",
+      "best_usd": 1382,
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-08",
+      "price_level": "low"
     }
   ],
   "last_alert": {
-    "price_usd": 1383,
-    "ts": 1780003831,
-    "reason": "MEJOR PRECIO HOY"
+    "price_usd": 1382,
+    "ts": 1780064481,
+    "reason": "NUEVA MÍNIMA"
   },
   "best_ever_detail": {
     "departure_date": "2026-09-24",
     "return_date": "2026-10-08",
-    "price_usd": 1383,
+    "price_usd": 1382,
     "price_level": "low",
     "typical_low": 1500,
     "typical_high": 2200,
     "airline": "LEVEL",
     "stops": 0,
     "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-    "score": 1383
+    "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-24/2026-10-08/",
+    "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-24/2026-10-08/1/0/0",
+    "score": 1382
   }
 }
