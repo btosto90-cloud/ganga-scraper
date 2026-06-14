@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-13T15:15:42.488611Z",
-  "count": 9823,
+  "updated": "2026-06-14T10:56:05.370891Z",
+  "count": 9828,
   "events": [
     {
       "id": "5597212",
@@ -117876,6 +117876,66 @@
       "first_seen": "2026-06-10",
       "last_seen_at": "2026-06-12T17:06:16.000630Z",
       "days_lived": 3,
+      "fuente": "ac"
+    },
+    {
+      "id": "5490934",
+      "model_key": "audi_a3_2016",
+      "brand": "audi",
+      "model": "a3",
+      "year": 2016,
+      "last_price_usd": 18900,
+      "first_seen": "2026-06-13",
+      "last_seen_at": "2026-06-13T15:15:42.895027Z",
+      "days_lived": 1,
+      "fuente": "rg"
+    },
+    {
+      "id": "ac__auto_usado_ford_ecosport_16l_se_72812dd1d52240b79",
+      "model_key": "ford_ecosport_2015",
+      "brand": "ford",
+      "model": "ecosport",
+      "year": 2015,
+      "last_price_usd": 10959,
+      "first_seen": "2026-06-08",
+      "last_seen_at": "2026-06-13T15:15:42.895027Z",
+      "days_lived": 6,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_ford_focus_5p_16l_s_57531eab99e84a0287",
+      "model_key": "ford_focus_2015",
+      "brand": "ford",
+      "model": "focus",
+      "year": 2015,
+      "last_price_usd": 9800,
+      "first_seen": "2026-06-02",
+      "last_seen_at": "2026-06-13T15:15:42.895027Z",
+      "days_lived": 12,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_chevrolet_spin_lt_18_5_pas_my_link_e14",
+      "model_key": "chevrolet_spin_2016",
+      "brand": "chevrolet",
+      "model": "spin",
+      "year": 2016,
+      "last_price_usd": 9589,
+      "first_seen": "2026-06-11",
+      "last_seen_at": "2026-06-13T15:15:42.895027Z",
+      "days_lived": 3,
+      "fuente": "ac"
+    },
+    {
+      "id": "ac__auto_usado_chevrolet_prisma_ltz_aut_a11460c0845d4",
+      "model_key": "chevrolet_prisma_2019",
+      "brand": "chevrolet",
+      "model": "prisma",
+      "year": 2019,
+      "last_price_usd": 13014,
+      "first_seen": "2026-06-09",
+      "last_seen_at": "2026-06-13T15:15:42.895027Z",
+      "days_lived": 5,
       "fuente": "ac"
     }
   ]

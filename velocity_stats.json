@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-13T15:15:42.585840Z",
-  "count": 970,
+  "updated": "2026-06-14T10:56:05.466210Z",
+  "count": 971,
   "stats": {
     "toyota_corolla_2022": {
       "n": 13,
@@ -1449,7 +1449,7 @@
       "median_sale_price_usd": 24000
     },
     "audi_a3_2016": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 20000
@@ -2475,10 +2475,10 @@
       "median_sale_price_usd": 6429
     },
     "ford_focus_2015": {
-      "n": 36,
+      "n": 37,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11429
+      "median_sale_price_usd": 11301
     },
     "ford_ecosport_2018_sport": {
       "n": 8,
@@ -3975,10 +3975,10 @@
       "median_sale_price_usd": 8223
     },
     "ford_ecosport_2015": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10350
+      "median_sale_price_usd": 10959
     },
     "ford_fiesta_2016": {
       "n": 23,
@@ -4323,10 +4323,10 @@
       "median_sale_price_usd": 4808
     },
     "chevrolet_spin_2016": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10420
+      "median_sale_price_usd": 9589
     },
     "chevrolet_astra_2008": {
       "n": 3,
@@ -5821,6 +5821,12 @@
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 14138
+    },
+    "chevrolet_prisma_2019": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10959
     }
   }
 }
