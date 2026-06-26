@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-26T11:00:28.728833Z",
-  "count": 1137,
+  "updated": "2026-06-26T15:08:43.778175Z",
+  "count": 1140,
   "stats": {
     "toyota_corolla_2022": {
       "n": 19,
@@ -1227,8 +1227,8 @@
       "median_sale_price_usd": 10134
     },
     "ford_focus_2007": {
-      "n": 7,
-      "median_days_lived": 1,
+      "n": 8,
+      "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5734
     },
@@ -1797,10 +1797,10 @@
       "median_sale_price_usd": 24042
     },
     "volkswagen_vento_2012": {
-      "n": 13,
+      "n": 15,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12069
+      "median_sale_price_usd": 11864
     },
     "volkswagen_other_2005": {
       "n": 4,
@@ -2805,7 +2805,7 @@
       "median_sale_price_usd": 17857
     },
     "volkswagen_gol_2008": {
-      "n": 21,
+      "n": 22,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5474
@@ -3633,10 +3633,10 @@
       "median_sale_price_usd": 24476
     },
     "volkswagen_gol_2012": {
-      "n": 33,
+      "n": 35,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 7343
+      "median_sale_price_usd": 6993
     },
     "ford_ka_2017": {
       "n": 36,
@@ -3741,10 +3741,10 @@
       "median_sale_price_usd": 9143
     },
     "volkswagen_vento_2018": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 20286
+      "median_sale_price_usd": 20588
     },
     "volkswagen_golf_2017": {
       "n": 13,
@@ -3861,7 +3861,7 @@
       "median_sale_price_usd": 16655
     },
     "volkswagen_gol_2011": {
-      "n": 35,
+      "n": 36,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6272
@@ -4113,7 +4113,7 @@
       "median_sale_price_usd": 22300
     },
     "volkswagen_suran_2014": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8741
@@ -4149,7 +4149,7 @@
       "median_sale_price_usd": 9091
     },
     "volkswagen_up_2015": {
-      "n": 23,
+      "n": 25,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8966
@@ -4161,10 +4161,10 @@
       "median_sale_price_usd": 8000
     },
     "volkswagen_gol_2016": {
-      "n": 28,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9655
+      "median_sale_price_usd": 9589
     },
     "volkswagen_suran_2008": {
       "n": 10,
@@ -4185,7 +4185,7 @@
       "median_sale_price_usd": 7552
     },
     "volkswagen_up_2017": {
-      "n": 15,
+      "n": 17,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10383
@@ -4784,6 +4784,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 7466
     },
+    "volkswagen_tiguan_2012_4motion": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 14035
+    },
     "volkswagen_gol_2019_trendline": {
       "n": 3,
       "median_days_lived": 1,
@@ -4833,7 +4839,7 @@
       "median_sale_price_usd": 12281
     },
     "volkswagen_suran_2013_trendline": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8699
@@ -4867,6 +4873,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9343
+    },
+    "volkswagen_crossfox_2012_comfortline": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8151
     },
     "volkswagen_fox_2007": {
       "n": 4,
@@ -5415,10 +5427,10 @@
       "median_sale_price_usd": 10596
     },
     "chevrolet_agile_2012": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6507
+      "median_sale_price_usd": 6294
     },
     "renault_captur_2019_cvt": {
       "n": 3,
@@ -5619,10 +5631,10 @@
       "median_sale_price_usd": 11986
     },
     "peugeot_307_2008": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5245
+      "median_sale_price_usd": 5817
     },
     "peugeot_207_2016": {
       "n": 6,
@@ -5901,7 +5913,7 @@
       "median_sale_price_usd": 10000
     },
     "volkswagen_gol_2014": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8500
@@ -6369,7 +6381,7 @@
       "median_sale_price_usd": 13378
     },
     "volkswagen_gol_2021": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 13356
@@ -6644,6 +6656,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 9617
     },
+    "volkswagen_suran_2012_trendline": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 6863
+    },
     "nissan_versa_2019": {
       "n": 4,
       "median_days_lived": 2,
@@ -6657,7 +6675,7 @@
       "median_sale_price_usd": 10000
     },
     "volkswagen_taos_2021_highline": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 25959
