@@ -14,12 +14,12 @@
       "2026-10-16"
     ]
   },
-  "generated_at": "2026-06-26T13:36:59.244813+00:00",
+  "generated_at": "2026-06-27T12:55:17.154148+00:00",
   "currency": "USD",
   "best": {
     "departure_date": "2026-09-28",
     "return_date": "2026-10-08",
-    "price_usd": 1342,
+    "price_usd": 1338,
     "price_level": "low",
     "typical_low": 1450,
     "typical_high": 2050,
@@ -28,14 +28,14 @@
     "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
     "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-08/",
     "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-08/1/0/0",
-    "score": 1342
+    "score": 1338
   },
   "best_ever_usd": 1291,
   "results": [
     {
       "departure_date": "2026-09-28",
       "return_date": "2026-10-08",
-      "price_usd": 1342,
+      "price_usd": 1338,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -44,12 +44,12 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMDhqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-08/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-08/1/0/0",
-      "score": 1342
+      "score": 1338
     },
     {
       "departure_date": "2026-09-30",
       "return_date": "2026-10-12",
-      "price_usd": 1435,
+      "price_usd": 1430,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -58,13 +58,13 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-30/2026-10-12/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-30/2026-10-12/1/0/0",
-      "score": 1435
+      "score": 1430
     },
     {
       "departure_date": "2026-09-28",
       "return_date": "2026-10-12",
-      "price_usd": 1452,
-      "price_level": "typical",
+      "price_usd": 1447,
+      "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2100,
       "airline": "LEVEL",
@@ -72,12 +72,40 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-12/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-12/1/0/0",
-      "score": 1452
+      "score": 1447
+    },
+    {
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-10",
+      "price_usd": 1475,
+      "price_level": "typical",
+      "typical_low": 1450,
+      "typical_high": 2050,
+      "airline": "LEVEL",
+      "stops": 0,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-10/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-10/1/0/0",
+      "score": 1475
+    },
+    {
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-10",
+      "price_usd": 1515,
+      "price_level": "typical",
+      "typical_low": 1450,
+      "typical_high": 2050,
+      "airline": "LEVEL",
+      "stops": 0,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-30/2026-10-10/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-30/2026-10-10/1/0/0",
+      "score": 1515
     },
     {
       "departure_date": "2026-09-22",
       "return_date": "2026-10-14",
-      "price_usd": 1332,
+      "price_usd": 1350,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -86,12 +114,12 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-22/2026-10-14/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-22/2026-10-14/1/0/0",
-      "score": 1582
+      "score": 1600
     },
     {
       "departure_date": "2026-09-30",
       "return_date": "2026-10-14",
-      "price_usd": 1333,
+      "price_usd": 1352,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -100,54 +128,40 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-30/2026-10-14/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-30/2026-10-14/1/0/0",
-      "score": 1583
-    },
-    {
-      "departure_date": "2026-09-26",
-      "return_date": "2026-10-14",
-      "price_usd": 1335,
-      "price_level": null,
-      "typical_low": null,
-      "typical_high": null,
-      "airline": "Air France",
-      "stops": 1,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-26/2026-10-14/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-26/2026-10-14/1/0/0",
-      "score": 1585
+      "score": 1602
     },
     {
       "departure_date": "2026-09-22",
-      "return_date": "2026-10-10",
-      "price_usd": 1394,
-      "price_level": null,
-      "typical_low": null,
-      "typical_high": null,
-      "airline": "Iberia",
+      "return_date": "2026-10-16",
+      "price_usd": 1418,
+      "price_level": "low",
+      "typical_low": 1450,
+      "typical_high": 2050,
+      "airline": "ITA",
       "stops": 1,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-22/2026-10-10/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-22/2026-10-10/1/0/0",
-      "score": 1644
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-22/2026-10-16/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-22/2026-10-16/1/0/0",
+      "score": 1668
     },
     {
-      "departure_date": "2026-09-24",
-      "return_date": "2026-10-10",
-      "price_usd": 1394,
-      "price_level": null,
-      "typical_low": null,
-      "typical_high": null,
-      "airline": "Iberia",
+      "departure_date": "2026-09-30",
+      "return_date": "2026-10-16",
+      "price_usd": 1418,
+      "price_level": "low",
+      "typical_low": 1450,
+      "typical_high": 2050,
+      "airline": "ITA",
       "stops": 1,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-24/2026-10-10/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-24/2026-10-10/1/0/0",
-      "score": 1644
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-30/2026-10-16/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-30/2026-10-16/1/0/0",
+      "score": 1668
     },
     {
       "departure_date": "2026-09-26",
       "return_date": "2026-10-10",
-      "price_usd": 1394,
+      "price_usd": 1501,
       "price_level": null,
       "typical_low": null,
       "typical_high": null,
@@ -156,12 +170,26 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-26/2026-10-10/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-26/2026-10-10/1/0/0",
-      "score": 1644
+      "score": 1751
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-14",
+      "price_usd": 1318,
+      "price_level": "low",
+      "typical_low": 1450,
+      "typical_high": 2050,
+      "airline": "Air Canada",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-26/2026-10-14/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-26/2026-10-14/1/0/0",
+      "score": 1818
     },
     {
       "departure_date": "2026-09-28",
       "return_date": "2026-10-14",
-      "price_usd": 1339,
+      "price_usd": 1319,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2100,
@@ -170,12 +198,26 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-14/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-14/1/0/0",
-      "score": 1839
+      "score": 1819
+    },
+    {
+      "departure_date": "2026-09-26",
+      "return_date": "2026-10-16",
+      "price_usd": 1371,
+      "price_level": "low",
+      "typical_low": 1450,
+      "typical_high": 2050,
+      "airline": "Air Canada",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-26/2026-10-16/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-26/2026-10-16/1/0/0",
+      "score": 1871
     },
     {
       "departure_date": "2026-09-24",
       "return_date": "2026-10-14",
-      "price_usd": 1387,
+      "price_usd": 1391,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -184,12 +226,12 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTRqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-24/2026-10-14/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-24/2026-10-14/1/0/0",
-      "score": 1887
+      "score": 1891
     },
     {
       "departure_date": "2026-09-28",
       "return_date": "2026-10-16",
-      "price_usd": 1392,
+      "price_usd": 1395,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -198,7 +240,7 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-16/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-16/1/0/0",
-      "score": 1892
+      "score": 1895
     },
     {
       "departure_date": "2026-09-22",
@@ -259,7 +301,7 @@
     {
       "departure_date": "2026-09-24",
       "return_date": "2026-10-16",
-      "price_usd": 1441,
+      "price_usd": 1444,
       "price_level": "low",
       "typical_low": 1450,
       "typical_high": 2050,
@@ -268,21 +310,7 @@
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-24/2026-10-16/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-24/2026-10-16/1/0/0",
-      "score": 1941
-    },
-    {
-      "departure_date": "2026-09-26",
-      "return_date": "2026-10-16",
-      "price_usd": 1441,
-      "price_level": "low",
-      "typical_low": 1450,
-      "typical_high": 2050,
-      "airline": "Air Canada",
-      "stops": 2,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI2agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-26/2026-10-16/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-26/2026-10-16/1/0/0",
-      "score": 1941
+      "score": 1944
     },
     {
       "departure_date": "2026-09-22",
@@ -299,32 +327,18 @@
       "score": 1977
     },
     {
-      "departure_date": "2026-09-28",
-      "return_date": "2026-10-10",
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-12",
       "price_usd": 1477,
       "price_level": "typical",
       "typical_low": 1450,
       "typical_high": 2050,
       "airline": "British Airways",
       "stops": 2,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI4agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-28/2026-10-10/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-28/2026-10-10/1/0/0",
-      "score": 1977
-    },
-    {
-      "departure_date": "2026-09-24",
-      "return_date": "2026-10-12",
-      "price_usd": 1486,
-      "price_level": "typical",
-      "typical_low": 1450,
-      "typical_high": 2050,
-      "airline": "Iberia",
-      "stops": 2,
       "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTJqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
       "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-24/2026-10-12/",
       "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-24/2026-10-12/1/0/0",
-      "score": 1986
+      "score": 1977
     },
     {
       "departure_date": "2026-09-26",
@@ -342,45 +356,31 @@
     },
     {
       "departure_date": "2026-09-22",
-      "return_date": "2026-10-16",
-      "price_usd": 1502,
-      "price_level": "typical",
-      "typical_low": 1450,
-      "typical_high": 2050,
-      "airline": "Turkish Airlines",
-      "stops": 2,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-22/2026-10-16/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-22/2026-10-16/1/0/0",
-      "score": 2002
-    },
-    {
-      "departure_date": "2026-09-30",
-      "return_date": "2026-10-16",
-      "price_usd": 1502,
-      "price_level": "typical",
-      "typical_low": 1450,
-      "typical_high": 2050,
-      "airline": "Turkish Airlines",
-      "stops": 2,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTZqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-30/2026-10-16/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-30/2026-10-16/1/0/0",
-      "score": 2002
-    },
-    {
-      "departure_date": "2026-09-30",
       "return_date": "2026-10-10",
-      "price_usd": 1555,
+      "price_usd": 1514,
       "price_level": "typical",
       "typical_low": 1450,
       "typical_high": 2050,
+      "airline": "British Airways",
+      "stops": 2,
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTIyagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-22/2026-10-10/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-22/2026-10-10/1/0/0",
+      "score": 2014
+    },
+    {
+      "departure_date": "2026-09-24",
+      "return_date": "2026-10-10",
+      "price_usd": 1622,
+      "price_level": "typical",
+      "typical_low": 1450,
+      "typical_high": 2100,
       "airline": "Turkish Airlines",
       "stops": 2,
-      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTMwagcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
-      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-30/2026-10-10/",
-      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-30/2026-10-10/1/0/0",
-      "score": 2055
+      "link": "https://www.google.com/travel/flights?hl=es&gl=ar&curr=USD&tfs=CBwQAhoeEgoyMDI2LTA5LTI0agcIARIDRVpFcgcIARIDQkNOGh4SCjIwMjYtMTAtMTBqBwgBEgNCQ05yBwgBEgNFWkVAAUgBcAGYAQE&tfu=EgIIAQ",
+      "kiwi": "https://www.kiwi.com/en/search/results/EZE/BCN/2026-09-24/2026-10-10/",
+      "despegar": "https://www.despegar.com.ar/shop/flights/results/roundtrip/EZE/BCN/2026-09-24/2026-10-10/1/0/0",
+      "score": 2122
     }
   ],
   "target_price_usd": null,
@@ -599,6 +599,13 @@
     {
       "checked_at": "2026-06-26T13:36:59.244813+00:00",
       "best_usd": 1342,
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-08",
+      "price_level": "low"
+    },
+    {
+      "checked_at": "2026-06-27T12:55:17.154148+00:00",
+      "best_usd": 1338,
       "departure_date": "2026-09-28",
       "return_date": "2026-10-08",
       "price_level": "low"
