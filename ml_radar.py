@@ -164,12 +164,42 @@ def annotate_fresh(l, result):
         l['bucket_z_score'] = bucket['z_score']
 
 
+def _alert_meta(l, alerted_at):
+    """Snapshot del listing al momento de alertar — para el loop de calibración.
+    Permite medir, semanas después, qué umbrales generan gangas que efectivamente
+    se vendieron rápido (= reales) vs cuáles quedaron (= falsos positivos).
+    """
+    return {
+        'alerted_at': alerted_at,
+        'precio_usd': l.get('precio_usd'),
+        'precio_justo': l.get('precio_justo'),
+        'descuento_justo_pct': l.get('descuento_justo_pct'),
+        'ref_fuente': l.get('ref_fuente'),
+        'ganga_confidence': l.get('ganga_confidence'),
+        'ganga_tag': l.get('ganga_tag'),
+        'brand': l.get('brand'),
+        'model': l.get('model'),
+        'year': l.get('year'),
+        'km': l.get('km'),
+        'provincia': l.get('provincia'),
+        'en_zona': l.get('en_zona'),
+        'fuente': l.get('fuente'),
+        'bucket_n': l.get('bucket_n'),
+        'bucket_median_usd': l.get('bucket_median_usd'),
+        'bucket_z_score': l.get('bucket_z_score'),
+    }
+
+
 def main():
     from playwright.sync_api import sync_playwright
 
     buckets, sold_index, velocity_index, model_index, existing_ids = load_context()
     state = json.load(open(STATE_FILE)) if os.path.exists(STATE_FILE) else {}
-    alerted = set(state.get('alerted', []))
+    # Backward compat: 'alerted' antes era list[str] (solo IDs). Nuevo formato:
+    # dict {id: meta} para que la calibración futura tenga snapshot de cada alerta.
+    raw_alerted = state.get('alerted', [])
+    alerted = ({aid: {} for aid in raw_alerted} if isinstance(raw_alerted, list)
+               else dict(raw_alerted))
     today = datetime.utcnow().date().isoformat()
 
     print(f"Radar: contexto {len(existing_ids)} ids conocidos, {len(alerted)} ya alertados")
@@ -209,7 +239,7 @@ def main():
                     continue
                 annotate_fresh(l, result)
                 hallazgos.append(l)
-                alerted.add(lid)
+                alerted[lid] = _alert_meta(l, datetime.utcnow().isoformat() + 'Z')
 
         deadline = time.time() + MAX_RUN_SECONDS
 
@@ -259,13 +289,15 @@ def main():
             else:
                 # No se pudo enviar → NO marcarlas como alertadas, reintentar el próximo run
                 print("Telegram: no se pudo enviar tras reintentos — quedan para el próximo run")
-                alerted -= nuevos_ids
+                for nid in nuevos_ids:
+                    alerted.pop(nid, None)
         else:
             print("Sin credenciales Telegram (~/.ganga-auto/telegram.env) — solo log:")
             for l in hallazgos[:MAX_ALERTS]:
                 print(f"  [{l.get('ganga_confidence')}] {(l.get('title') or '')[:42]} "
                       f"${l.get('precio_usd')} ({l.get('descuento_justo_pct')}% bajo justo) — {l.get('url')}")
-            alerted -= nuevos_ids
+            for nid in nuevos_ids:
+                alerted.pop(nid, None)
 
     # Recordatorio one-shot: armar el loop de calibración cuando haya data madura.
     reminder_sent = state.get('reminder_calibracion_sent', False)
@@ -283,8 +315,11 @@ def main():
             except Exception as e:
                 print(f"Recordatorio falló: {e}")
 
-    # Persistir estado (cap para no crecer infinito)
-    state = {'alerted': sorted(alerted)[-8000:], 'last_run': datetime.utcnow().isoformat() + 'Z',
+    # Persistir estado: cap a 8000 manteniendo las más RECIENTES por alerted_at
+    # (las legacy sin meta caen primero). Formato nuevo: dict {id: meta}.
+    sorted_items = sorted(alerted.items(), key=lambda kv: (kv[1] or {}).get('alerted_at') or '')
+    alerted_capped = dict(sorted_items[-8000:])
+    state = {'alerted': alerted_capped, 'last_run': datetime.utcnow().isoformat() + 'Z',
              'reminder_calibracion_sent': reminder_sent}
     json.dump(state, open(STATE_FILE, 'w'), indent=2)
 
