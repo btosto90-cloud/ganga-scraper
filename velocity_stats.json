@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-02T10:49:28.346359Z",
-  "count": 1170,
+  "updated": "2026-07-03T10:44:47.324958Z",
+  "count": 1180,
   "stats": {
     "toyota_corolla_2022": {
       "n": 22,
@@ -207,19 +207,19 @@
       "median_sale_price_usd": 11777
     },
     "peugeot_2008_2019": {
+      "n": 35,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 14191
+    },
+    "peugeot_308_2022": {
       "n": 33,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 14286
-    },
-    "peugeot_308_2022": {
-      "n": 32,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 22300
+      "median_sale_price_usd": 22222
     },
     "peugeot_208_2014": {
-      "n": 65,
+      "n": 68,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9790
@@ -231,16 +231,16 @@
       "median_sale_price_usd": 5679
     },
     "peugeot_308_2014": {
-      "n": 38,
+      "n": 41,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9408
     },
     "peugeot_308_2020": {
-      "n": 8,
+      "n": 11,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13636
+      "median_sale_price_usd": 12745
     },
     "peugeot_other_2005": {
       "n": 6,
@@ -249,16 +249,16 @@
       "median_sale_price_usd": 5357
     },
     "peugeot_208_2023": {
-      "n": 60,
+      "n": 61,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 16786
+      "median_sale_price_usd": 16781
     },
     "peugeot_2008_2018": {
-      "n": 15,
+      "n": 17,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12714
+      "median_sale_price_usd": 12587
     },
     "peugeot_408_2015": {
       "n": 11,
@@ -291,7 +291,7 @@
       "median_sale_price_usd": 18467
     },
     "peugeot_308_2012": {
-      "n": 23,
+      "n": 24,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8889
@@ -315,7 +315,7 @@
       "median_sale_price_usd": 7000
     },
     "peugeot_208_2015": {
-      "n": 63,
+      "n": 65,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9655
@@ -333,13 +333,13 @@
       "median_sale_price_usd": 8500
     },
     "peugeot_208_2019": {
-      "n": 44,
+      "n": 45,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11777
     },
     "peugeot_2008_2016": {
-      "n": 47,
+      "n": 49,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10544
@@ -357,7 +357,7 @@
       "median_sale_price_usd": 11150
     },
     "peugeot_208_2016": {
-      "n": 41,
+      "n": 44,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10274
@@ -405,16 +405,16 @@
       "median_sale_price_usd": 19443
     },
     "peugeot_208_2018": {
-      "n": 44,
+      "n": 45,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11900
     },
     "peugeot_208_2013": {
-      "n": 27,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8772
+      "median_sale_price_usd": 8741
     },
     "peugeot_208_2018_gt": {
       "n": 6,
@@ -447,7 +447,7 @@
       "median_sale_price_usd": 7857
     },
     "fiat_cronos_2023": {
-      "n": 53,
+      "n": 54,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 15643
@@ -495,13 +495,13 @@
       "median_sale_price_usd": 20753
     },
     "fiat_cronos_2020": {
-      "n": 20,
+      "n": 21,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13240
+      "median_sale_price_usd": 13217
     },
     "fiat_cronos_2022": {
-      "n": 45,
+      "n": 46,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 14286
@@ -675,7 +675,7 @@
       "median_sale_price_usd": 23000
     },
     "mercedes_a200_2018": {
-      "n": 12,
+      "n": 13,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 25900
@@ -759,7 +759,7 @@
       "median_sale_price_usd": 8276
     },
     "citroen_c3_2016": {
-      "n": 33,
+      "n": 34,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9635
@@ -782,6 +782,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 8000
     },
+    "citroen_other_2015": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11786
+    },
     "citroen_c3_2025": {
       "n": 3,
       "median_days_lived": 1,
@@ -789,7 +795,7 @@
       "median_sale_price_usd": 23571
     },
     "citroen_c3_2018": {
-      "n": 33,
+      "n": 34,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10959
@@ -849,10 +855,10 @@
       "median_sale_price_usd": 7143
     },
     "chery_other_2017": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10616
+      "median_sale_price_usd": 10544
     },
     "chery_tiggo_2018_luxury": {
       "n": 3,
@@ -879,10 +885,10 @@
       "median_sale_price_usd": 12474
     },
     "ford_ka_2019": {
-      "n": 30,
+      "n": 31,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11579
+      "median_sale_price_usd": 11538
     },
     "ford_focus_2018": {
       "n": 43,
@@ -1089,7 +1095,7 @@
       "median_sale_price_usd": 5172
     },
     "bmw_335_2008_coupe": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 28900
@@ -1173,16 +1179,16 @@
       "median_sale_price_usd": 12329
     },
     "citroen_c3_2012": {
-      "n": 21,
+      "n": 22,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7877
     },
     "citroen_other_2018": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12143
+      "median_sale_price_usd": 11881
     },
     "citroen_c3_2010": {
       "n": 4,
@@ -1221,7 +1227,7 @@
       "median_sale_price_usd": 8904
     },
     "citroen_c3_2023": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 15216
@@ -1263,16 +1269,16 @@
       "median_sale_price_usd": 3214
     },
     "fiat_palio_2007": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5172
     },
     "peugeot_206_2000": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 2843
+      "median_sale_price_usd": 2852
     },
     "fiat_punto_2011": {
       "n": 9,
@@ -1365,7 +1371,7 @@
       "median_sale_price_usd": 18000
     },
     "mercedes_c250_2012": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 18500
@@ -1383,19 +1389,19 @@
       "median_sale_price_usd": 4483
     },
     "chevrolet_cruze_2017": {
-      "n": 78,
+      "n": 79,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13566
+      "median_sale_price_usd": 13537
     },
     "chevrolet_classic_2014": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6781
     },
     "peugeot_208_2020": {
-      "n": 24,
+      "n": 25,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 13699
@@ -1845,10 +1851,10 @@
       "median_sale_price_usd": 7143
     },
     "chevrolet_other_2016": {
-      "n": 20,
+      "n": 21,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10214
+      "median_sale_price_usd": 10135
     },
     "chevrolet_cruze_2023": {
       "n": 27,
@@ -1893,10 +1899,10 @@
       "median_sale_price_usd": 5085
     },
     "chevrolet_other_2012": {
-      "n": 14,
+      "n": 15,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6993
+      "median_sale_price_usd": 6977
     },
     "chevrolet_spin_2019": {
       "n": 6,
@@ -1911,10 +1917,10 @@
       "median_sale_price_usd": 8214
     },
     "chevrolet_cruze_2018": {
-      "n": 63,
+      "n": 66,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13684
+      "median_sale_price_usd": 13705
     },
     "chevrolet_other_2008_st": {
       "n": 3,
@@ -1959,7 +1965,7 @@
       "median_sale_price_usd": 4825
     },
     "chevrolet_cruze_2020": {
-      "n": 28,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 16783
@@ -1977,7 +1983,7 @@
       "median_sale_price_usd": 13214
     },
     "chevrolet_spin_2017": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11860
@@ -2001,7 +2007,7 @@
       "median_sale_price_usd": 10490
     },
     "chevrolet_onix_2020": {
-      "n": 50,
+      "n": 52,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12892
@@ -2037,10 +2043,10 @@
       "median_sale_price_usd": 7000
     },
     "chevrolet_tracker_2019": {
-      "n": 9,
+      "n": 11,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 14286
+      "median_sale_price_usd": 13851
     },
     "chevrolet_onix_2017": {
       "n": 43,
@@ -2049,7 +2055,7 @@
       "median_sale_price_usd": 10231
     },
     "chevrolet_cruze_2015": {
-      "n": 16,
+      "n": 17,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10743
@@ -2061,16 +2067,16 @@
       "median_sale_price_usd": 12329
     },
     "chevrolet_cruze_2019": {
-      "n": 22,
-      "median_days_lived": 2,
+      "n": 23,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 14685
     },
     "peugeot_308_2016": {
-      "n": 27,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11189
+      "median_sale_price_usd": 11150
     },
     "peugeot_208_2026_gt": {
       "n": 6,
@@ -2097,16 +2103,16 @@
       "median_sale_price_usd": 21000
     },
     "peugeot_308_2013": {
-      "n": 40,
+      "n": 41,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8782
+      "median_sale_price_usd": 8711
     },
     "peugeot_208_2024_gt": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 20979
+      "median_sale_price_usd": 20906
     },
     "peugeot_other_2018": {
       "n": 9,
@@ -2181,7 +2187,7 @@
       "median_sale_price_usd": 15261
     },
     "honda_fit_2009": {
-      "n": 21,
+      "n": 22,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8741
@@ -2294,6 +2300,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 4181
     },
+    "ford_territory_2023_titanium": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 29929
+    },
     "ford_ka_2011": {
       "n": 23,
       "median_days_lived": 2,
@@ -2307,7 +2319,7 @@
       "median_sale_price_usd": 6786
     },
     "chevrolet_prisma_2017": {
-      "n": 33,
+      "n": 34,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9790
@@ -2355,10 +2367,10 @@
       "median_sale_price_usd": 28000
     },
     "peugeot_408_2017": {
-      "n": 22,
+      "n": 23,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11071
+      "median_sale_price_usd": 10820
     },
     "peugeot_2008_2016_sport": {
       "n": 5,
@@ -2391,10 +2403,10 @@
       "median_sale_price_usd": 8214
     },
     "hyundai_other_2011": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8400
+      "median_sale_price_usd": 12000
     },
     "hyundai_other_2026": {
       "n": 6,
@@ -2433,7 +2445,7 @@
       "median_sale_price_usd": 21286
     },
     "nissan_march_2017": {
-      "n": 19,
+      "n": 20,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10890
@@ -2481,7 +2493,7 @@
       "median_sale_price_usd": 8571
     },
     "citroen_c3_2006": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 4694
@@ -2553,10 +2565,10 @@
       "median_sale_price_usd": 5714
     },
     "ford_other_2018": {
-      "n": 13,
+      "n": 14,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11357
+      "median_sale_price_usd": 11429
     },
     "ford_other_2019_st": {
       "n": 3,
@@ -2565,10 +2577,10 @@
       "median_sale_price_usd": 13214
     },
     "ford_other_2017": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10357
+      "median_sale_price_usd": 10492
     },
     "ford_ecosport_2012_sport": {
       "n": 3,
@@ -2619,10 +2631,10 @@
       "median_sale_price_usd": 6357
     },
     "ford_focus_2015": {
-      "n": 54,
+      "n": 56,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11189
+      "median_sale_price_usd": 11182
     },
     "ford_ecosport_2018_sport": {
       "n": 8,
@@ -2661,7 +2673,7 @@
       "median_sale_price_usd": 11571
     },
     "ford_focus_2017": {
-      "n": 49,
+      "n": 50,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12745
@@ -2679,10 +2691,10 @@
       "median_sale_price_usd": 10214
     },
     "ford_focus_2014": {
-      "n": 26,
+      "n": 27,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10140
+      "median_sale_price_usd": 10135
     },
     "ford_focus_2008": {
       "n": 7,
@@ -2703,10 +2715,10 @@
       "median_sale_price_usd": 12000
     },
     "chevrolet_cruze_2024": {
-      "n": 17,
+      "n": 18,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 22549
+      "median_sale_price_usd": 22623
     },
     "chevrolet_other_2017": {
       "n": 19,
@@ -2733,7 +2745,7 @@
       "median_sale_price_usd": 13636
     },
     "chevrolet_tracker_2017": {
-      "n": 14,
+      "n": 15,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 13007
@@ -2757,10 +2769,10 @@
       "median_sale_price_usd": 9650
     },
     "chevrolet_tracker_2016": {
-      "n": 14,
+      "n": 15,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11824
+      "median_sale_price_usd": 11786
     },
     "honda_fit_2013": {
       "n": 4,
@@ -2835,10 +2847,10 @@
       "median_sale_price_usd": 5455
     },
     "ford_ka_2018": {
-      "n": 38,
+      "n": 39,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10420
+      "median_sale_price_usd": 10417
     },
     "chevrolet_meriva_2010": {
       "n": 3,
@@ -3057,7 +3069,7 @@
       "median_sale_price_usd": 19357
     },
     "chevrolet_classic_2015": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7850
@@ -3129,7 +3141,7 @@
       "median_sale_price_usd": 3929
     },
     "ford_focus_2013": {
-      "n": 29,
+      "n": 30,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9121
@@ -3165,7 +3177,7 @@
       "median_sale_price_usd": 11071
     },
     "chevrolet_cruze_2011": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9121
@@ -3201,10 +3213,10 @@
       "median_sale_price_usd": 10500
     },
     "renault_clio_2016": {
-      "n": 32,
+      "n": 33,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8512
+      "median_sale_price_usd": 8421
     },
     "renault_other_2015": {
       "n": 4,
@@ -3309,7 +3321,7 @@
       "median_sale_price_usd": 9653
     },
     "renault_clio_2012": {
-      "n": 30,
+      "n": 31,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6757
@@ -3621,10 +3633,10 @@
       "median_sale_price_usd": 10699
     },
     "ford_focus_2017_titanium": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 2,
       "p25_days_lived": 2,
-      "median_sale_price_usd": 15000
+      "median_sale_price_usd": 15331
     },
     "ford_focus_2003": {
       "n": 3,
@@ -3633,10 +3645,10 @@
       "median_sale_price_usd": 4097
     },
     "ford_ecosport_2013_titanium": {
-      "n": 8,
-      "median_days_lived": 2,
+      "n": 9,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10565
+      "median_sale_price_usd": 10495
     },
     "ford_other_2019_sport": {
       "n": 3,
@@ -3675,7 +3687,7 @@
       "median_sale_price_usd": 7261
     },
     "ford_ka_2017": {
-      "n": 36,
+      "n": 37,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10274
@@ -3927,10 +3939,10 @@
       "median_sale_price_usd": 4406
     },
     "chevrolet_onix_2021": {
-      "n": 14,
+      "n": 17,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12095
+      "median_sale_price_usd": 11960
     },
     "peugeot_206_2005": {
       "n": 4,
@@ -3939,10 +3951,10 @@
       "median_sale_price_usd": 4545
     },
     "fiat_cronos_2019": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12558
+      "median_sale_price_usd": 12625
     },
     "fiat_pulse_2022": {
       "n": 8,
@@ -3969,7 +3981,7 @@
       "median_sale_price_usd": 6923
     },
     "peugeot_206_2007_premium": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5648
@@ -4046,6 +4058,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 21357
     },
+    "nissan_note_2019": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12211
+    },
     "nissan_kicks_2022_exclusive": {
       "n": 3,
       "median_days_lived": 2,
@@ -4059,10 +4077,10 @@
       "median_sale_price_usd": 6574
     },
     "fiat_siena_2014": {
-      "n": 19,
+      "n": 20,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8219
+      "median_sale_price_usd": 8362
     },
     "fiat_idea_2010": {
       "n": 4,
@@ -4089,10 +4107,10 @@
       "median_sale_price_usd": 6732
     },
     "ford_ecosport_2015_titanium": {
-      "n": 4,
+      "n": 5,
       "median_days_lived": 2,
-      "p25_days_lived": 2,
-      "median_sale_price_usd": 11777
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10839
     },
     "ford_ka_2008": {
       "n": 19,
@@ -4299,7 +4317,7 @@
       "median_sale_price_usd": 9900
     },
     "ford_fiesta_2016": {
-      "n": 34,
+      "n": 35,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10420
@@ -4329,22 +4347,22 @@
       "median_sale_price_usd": 5611
     },
     "ford_ecosport_2016": {
-      "n": 20,
+      "n": 21,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11189
     },
     "ford_fiesta_2014": {
-      "n": 48,
+      "n": 49,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8982
     },
     "ford_fiesta_2015": {
-      "n": 28,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9722
+      "median_sale_price_usd": 9720
     },
     "ford_ecosport_2022": {
       "n": 16,
@@ -4359,10 +4377,10 @@
       "median_sale_price_usd": 7534
     },
     "ford_fiesta_2013": {
-      "n": 19,
+      "n": 20,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8904
+      "median_sale_price_usd": 9021
     },
     "ford_fiesta_2015_titanium": {
       "n": 9,
@@ -4383,25 +4401,25 @@
       "median_sale_price_usd": 11818
     },
     "ford_fiesta_2007": {
-      "n": 22,
+      "n": 23,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5205
     },
     "ford_ecosport_2018": {
-      "n": 30,
+      "n": 31,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 13217
     },
     "ford_ecosport_2017": {
-      "n": 27,
+      "n": 28,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11888
+      "median_sale_price_usd": 11930
     },
     "ford_ka_2011_top": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5944
@@ -4449,7 +4467,7 @@
       "median_sale_price_usd": 13287
     },
     "citroen_ds3_2016": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 11224
@@ -4461,16 +4479,16 @@
       "median_sale_price_usd": 21794
     },
     "citroen_c4_cactus_2022": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 16084
+      "median_sale_price_usd": 15331
     },
     "citroen_c4_lounge_2015": {
-      "n": 16,
+      "n": 17,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9492
+      "median_sale_price_usd": 9408
     },
     "citroen_c_elysee_2018": {
       "n": 7,
@@ -4484,6 +4502,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 11644
     },
+    "citroen_c4_cactus_2023": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 16944
+    },
     "citroen_c3_2008": {
       "n": 3,
       "median_days_lived": 1,
@@ -4491,7 +4515,7 @@
       "median_sale_price_usd": 5226
     },
     "citroen_c4_lounge_2014": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9231
@@ -4509,10 +4533,10 @@
       "median_sale_price_usd": 15315
     },
     "toyota_etios_2018_sedan": {
-      "n": 4,
-      "median_days_lived": 24,
+      "n": 5,
+      "median_days_lived": 16,
       "p25_days_lived": 13,
-      "median_sale_price_usd": 13472
+      "median_sale_price_usd": 12787
     },
     "volkswagen_suran_2007_highline": {
       "n": 4,
@@ -4521,7 +4545,7 @@
       "median_sale_price_usd": 6000
     },
     "chevrolet_celta_2013": {
-      "n": 31,
+      "n": 32,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6272
@@ -4665,13 +4689,13 @@
       "median_sale_price_usd": 8362
     },
     "ford_ecosport_2010": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7095
     },
     "ford_ecosport_2020": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 15245
@@ -4689,13 +4713,19 @@
       "median_sale_price_usd": 20946
     },
     "ford_fiesta_2006": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 4808
     },
+    "ford_fiesta_2003": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 3234
+    },
     "chevrolet_spin_2016": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9589
@@ -4731,10 +4761,10 @@
       "median_sale_price_usd": 5436
     },
     "chevrolet_corsa_2010": {
-      "n": 19,
+      "n": 20,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5069
+      "median_sale_price_usd": 5208
     },
     "chevrolet_corsa_2007": {
       "n": 17,
@@ -4743,10 +4773,10 @@
       "median_sale_price_usd": 4762
     },
     "peugeot_307_2011": {
-      "n": 18,
+      "n": 19,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 7241
+      "median_sale_price_usd": 7192
     },
     "peugeot_207_2012": {
       "n": 64,
@@ -4755,19 +4785,19 @@
       "median_sale_price_usd": 6877
     },
     "peugeot_206_2004": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5245
     },
     "peugeot_207_2013": {
-      "n": 40,
+      "n": 41,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6643
     },
     "peugeot_207_2011": {
-      "n": 34,
+      "n": 35,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6294
@@ -4983,10 +5013,10 @@
       "median_sale_price_usd": 12281
     },
     "ford_ecosport_2011_xls": {
-      "n": 15,
+      "n": 17,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 7641
+      "median_sale_price_usd": 7591
     },
     "ford_fiesta_2017_titanium": {
       "n": 4,
@@ -5001,10 +5031,10 @@
       "median_sale_price_usd": 8068
     },
     "ford_focus_2005": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5405
+      "median_sale_price_usd": 4575
     },
     "ford_ecosport_2011": {
       "n": 9,
@@ -5013,7 +5043,7 @@
       "median_sale_price_usd": 7649
     },
     "ford_focus_2016_titanium": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 13201
@@ -5025,7 +5055,7 @@
       "median_sale_price_usd": 6294
     },
     "ford_fiesta_2012": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8322
@@ -5055,10 +5085,10 @@
       "median_sale_price_usd": 19164
     },
     "chevrolet_prisma_2018": {
-      "n": 23,
+      "n": 25,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10135
+      "median_sale_price_usd": 10069
     },
     "chevrolet_astra_2010": {
       "n": 7,
@@ -5145,10 +5175,10 @@
       "median_sale_price_usd": 3497
     },
     "peugeot_307_2007": {
-      "n": 12,
+      "n": 13,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6000
+      "median_sale_price_usd": 5965
     },
     "peugeot_408_2012": {
       "n": 15,
@@ -5163,19 +5193,19 @@
       "median_sale_price_usd": 5536
     },
     "peugeot_207_2010": {
-      "n": 27,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6054
+      "median_sale_price_usd": 6027
     },
     "peugeot_207_2014": {
-      "n": 17,
+      "n": 18,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7228
     },
     "peugeot_208_2019_gt": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 14564
@@ -5253,10 +5283,10 @@
       "median_sale_price_usd": 23500
     },
     "fiat_palio_2000": {
-      "n": 10,
-      "median_days_lived": 2,
+      "n": 11,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 3345
+      "median_sale_price_usd": 3299
     },
     "fiat_siena_2016": {
       "n": 16,
@@ -5307,16 +5337,16 @@
       "median_sale_price_usd": 12937
     },
     "fiat_siena_2013": {
-      "n": 17,
+      "n": 18,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6578
     },
     "fiat_palio_2013": {
-      "n": 30,
+      "n": 33,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 7534
+      "median_sale_price_usd": 7483
     },
     "fiat_500_2018": {
       "n": 16,
@@ -5457,13 +5487,13 @@
       "median_sale_price_usd": 5137
     },
     "peugeot_208_2023_tiptronic": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 18,
-      "p25_days_lived": 2,
-      "median_sale_price_usd": 6316
+      "p25_days_lived": 8,
+      "median_sale_price_usd": 15850
     },
     "peugeot_207_2015": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7192
@@ -5493,7 +5523,7 @@
       "median_sale_price_usd": 10596
     },
     "chevrolet_agile_2012": {
-      "n": 10,
+      "n": 11,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6507
@@ -5559,10 +5589,10 @@
       "median_sale_price_usd": 16900
     },
     "ford_fiesta_2017": {
-      "n": 28,
+      "n": 29,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11000
+      "median_sale_price_usd": 10963
     },
     "ford_ka_2006": {
       "n": 5,
@@ -5577,10 +5607,10 @@
       "median_sale_price_usd": 9091
     },
     "ford_ecosport_2014": {
-      "n": 18,
-      "median_days_lived": 2,
+      "n": 19,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 10000
+      "median_sale_price_usd": 9901
     },
     "ford_ka_2014": {
       "n": 10,
@@ -5601,7 +5631,7 @@
       "median_sale_price_usd": 16014
     },
     "ford_kuga_2014": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 13240
@@ -5613,7 +5643,7 @@
       "median_sale_price_usd": 14583
     },
     "ford_fiesta_2016_titanium": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10140
@@ -5655,13 +5685,13 @@
       "median_sale_price_usd": 5946
     },
     "chevrolet_corsa_2013": {
-      "n": 10,
+      "n": 11,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5944
+      "median_sale_price_usd": 5245
     },
     "chevrolet_agile_2011": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6419
@@ -5679,10 +5709,10 @@
       "median_sale_price_usd": 8951
     },
     "chevrolet_celta_2012": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6181
+      "median_sale_price_usd": 6411
     },
     "chevrolet_other_2023": {
       "n": 3,
@@ -5727,10 +5757,10 @@
       "median_sale_price_usd": 16224
     },
     "peugeot_206_2013": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6597
+      "median_sale_price_usd": 6463
     },
     "peugeot_2008_2025_gt": {
       "n": 3,
@@ -5775,7 +5805,7 @@
       "median_sale_price_usd": 3902
     },
     "fiat_siena_1998": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 4041
@@ -5787,7 +5817,7 @@
       "median_sale_price_usd": 5379
     },
     "fiat_siena_2010": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5556
@@ -5805,16 +5835,16 @@
       "median_sale_price_usd": 5944
     },
     "fiat_palio_2012": {
-      "n": 18,
+      "n": 19,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7786
     },
     "fiat_uno_2012": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5929
+      "median_sale_price_usd": 6469
     },
     "fiat_uno_2014": {
       "n": 10,
@@ -5829,10 +5859,10 @@
       "median_sale_price_usd": 3484
     },
     "hyundai_creta_2023": {
-      "n": 6,
-      "median_days_lived": 3,
+      "n": 7,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 21034
+      "median_sale_price_usd": 20748
     },
     "fiat_uno_2008": {
       "n": 4,
@@ -5841,10 +5871,10 @@
       "median_sale_price_usd": 4218
     },
     "chery_qq_2012": {
-      "n": 4,
+      "n": 5,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6000
+      "median_sale_price_usd": 5593
     },
     "ford_escort_1998": {
       "n": 3,
@@ -5871,16 +5901,16 @@
       "median_sale_price_usd": 6000
     },
     "peugeot_207_2009": {
-      "n": 10,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5648
+      "median_sale_price_usd": 5594
     },
     "peugeot_206_2003": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 3497
+      "median_sale_price_usd": 3357
     },
     "peugeot_307_2008_premium": {
       "n": 5,
@@ -5907,7 +5937,7 @@
       "median_sale_price_usd": 7692
     },
     "citroen_c_elysee_2017": {
-      "n": 10,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9441
@@ -5935,6 +5965,12 @@
       "median_days_lived": 3,
       "p25_days_lived": 2,
       "median_sale_price_usd": 7000
+    },
+    "renault_kangoo_2012": {
+      "n": 3,
+      "median_days_lived": 25,
+      "p25_days_lived": 6,
+      "median_sale_price_usd": 6993
     },
     "renault_symbol_2013": {
       "n": 5,
@@ -6063,7 +6099,7 @@
       "median_sale_price_usd": 13217
     },
     "chevrolet_meriva_2012": {
-      "n": 12,
+      "n": 13,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6034
@@ -6087,10 +6123,10 @@
       "median_sale_price_usd": 9790
     },
     "chevrolet_sonic_2015": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8649
+      "median_sale_price_usd": 8000
     },
     "renault_megane_2016": {
       "n": 3,
@@ -6123,13 +6159,13 @@
       "median_sale_price_usd": 32517
     },
     "citroen_c4_cactus_2024": {
-      "n": 3,
-      "median_days_lived": 1,
+      "n": 4,
+      "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 19000
     },
     "citroen_c3_aircross_2017": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10616
@@ -6164,6 +6200,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 17483
     },
+    "ford_ecosport_2005": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 5902
+    },
     "ford_ecosport_2017_titanium": {
       "n": 3,
       "median_days_lived": 2,
@@ -6177,16 +6219,16 @@
       "median_sale_price_usd": 19441
     },
     "chevrolet_corsa_2012": {
-      "n": 12,
+      "n": 13,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5854
     },
     "chevrolet_onix_2026": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 21603
+      "median_sale_price_usd": 20984
     },
     "chevrolet_corsa_2000": {
       "n": 6,
@@ -6291,16 +6333,16 @@
       "median_sale_price_usd": 20205
     },
     "chevrolet_prisma_2014": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8741
     },
     "chevrolet_sonic_2014": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 2,
       "p25_days_lived": 2,
-      "median_sale_price_usd": 8042
+      "median_sale_price_usd": 7803
     },
     "chevrolet_corsa_2009": {
       "n": 7,
@@ -6393,8 +6435,8 @@
       "median_sale_price_usd": 16900
     },
     "ford_fiesta_2010": {
-      "n": 6,
-      "median_days_lived": 2,
+      "n": 7,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5986
     },
@@ -6513,7 +6555,7 @@
       "median_sale_price_usd": 17561
     },
     "chevrolet_celta_2011": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6164
@@ -6525,7 +6567,7 @@
       "median_sale_price_usd": 4730
     },
     "fiat_500_2012": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9643
@@ -6782,6 +6824,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 6757
     },
+    "chevrolet_aveo_2010": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 6969
+    },
     "ford_kuga_2020": {
       "n": 4,
       "median_days_lived": 2,
@@ -6795,7 +6843,7 @@
       "median_sale_price_usd": 18815
     },
     "citroen_c4_lounge_2014_exclusive": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9617
@@ -6812,9 +6860,15 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 10897
     },
-    "citroen_c4_lounge_2017": {
-      "n": 9,
+    "nissan_note_2019_cvt": {
+      "n": 3,
       "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12393
+    },
+    "citroen_c4_lounge_2017": {
+      "n": 10,
+      "median_days_lived": 3,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9901
     },
@@ -6927,7 +6981,7 @@
       "median_sale_price_usd": 10274
     },
     "citroen_xsara_2012": {
-      "n": 4,
+      "n": 5,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7534
@@ -6937,6 +6991,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5172
+    },
+    "fiat_spazio_1996": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 2951
     },
     "renault_other_1997": {
       "n": 4,
@@ -6951,19 +7011,19 @@
       "median_sale_price_usd": 19110
     },
     "chevrolet_classic_2006": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 4662
     },
     "fiat_siena_2006": {
-      "n": 3,
+      "n": 6,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 3741
+      "median_sale_price_usd": 3902
     },
     "hyundai_tucson_2018": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 19214
