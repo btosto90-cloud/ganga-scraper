@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-20T10:57:04.918439Z",
-  "count": 1375,
+  "updated": "2026-07-21T10:31:28.362257Z",
+  "count": 1381,
   "stats": {
     "toyota_corolla_2022": {
       "n": 27,
@@ -207,10 +207,10 @@
       "median_sale_price_usd": 15208
     },
     "peugeot_308_2017": {
-      "n": 52,
+      "n": 53,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11498
+      "median_sale_price_usd": 11379
     },
     "peugeot_2008_2022": {
       "n": 5,
@@ -231,7 +231,7 @@
       "median_sale_price_usd": 21769
     },
     "peugeot_208_2014": {
-      "n": 93,
+      "n": 94,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9635
@@ -715,6 +715,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7143
+    },
+    "kia_picanto_2015": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10131
     },
     "kia_other_2026_gt_line": {
       "n": 4,
@@ -1527,10 +1533,10 @@
       "median_sale_price_usd": 25500
     },
     "audi_a1_2012": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13263
+      "median_sale_price_usd": 13500
     },
     "audi_a3_2006": {
       "n": 11,
@@ -1569,16 +1575,16 @@
       "median_sale_price_usd": 12800
     },
     "audi_a3_2011_sportback": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12786
     },
     "audi_a4_2012": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12500
+      "median_sale_price_usd": 12857
     },
     "audi_q3_2013": {
       "n": 4,
@@ -1617,10 +1623,10 @@
       "median_sale_price_usd": 11500
     },
     "audi_a4_2017": {
-      "n": 7,
-      "median_days_lived": 2,
+      "n": 9,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 22500
+      "median_sale_price_usd": 23000
     },
     "audi_a3_2010": {
       "n": 3,
@@ -1640,6 +1646,18 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 20429
     },
+    "audi_a1_2013_sportback": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 16000
+    },
+    "audi_q5_2011_quattro": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 15862
+    },
     "audi_a6_2012": {
       "n": 3,
       "median_days_lived": 1,
@@ -1653,7 +1671,7 @@
       "median_sale_price_usd": 24000
     },
     "audi_a3_2016": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 19900
@@ -1977,7 +1995,7 @@
       "median_sale_price_usd": 10000
     },
     "chevrolet_cruze_2023": {
-      "n": 45,
+      "n": 46,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 20000
@@ -2127,10 +2145,10 @@
       "median_sale_price_usd": 10135
     },
     "chevrolet_cruze_2016": {
-      "n": 24,
+      "n": 25,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11525
+      "median_sale_price_usd": 11513
     },
     "chevrolet_onix_2020": {
       "n": 77,
@@ -4232,6 +4250,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 4834
     },
+    "volkswagen_suran_2007_comfortline": {
+      "n": 3,
+      "median_days_lived": 8,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 5245
+    },
     "volkswagen_suran_2011_trendline": {
       "n": 4,
       "median_days_lived": 25,
@@ -4383,10 +4407,10 @@
       "median_sale_price_usd": 8564
     },
     "volkswagen_gol_2010": {
-      "n": 28,
+      "n": 29,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 6271
+      "median_sale_price_usd": 6230
     },
     "ford_ecosport_2015_titanium": {
       "n": 10,
@@ -4425,7 +4449,7 @@
       "median_sale_price_usd": 13069
     },
     "volkswagen_gol_2009": {
-      "n": 20,
+      "n": 21,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5817
@@ -4527,7 +4551,7 @@
       "median_sale_price_usd": 18836
     },
     "volkswagen_gol_2013": {
-      "n": 41,
+      "n": 42,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7719
@@ -5289,7 +5313,7 @@
       "median_sale_price_usd": 12384
     },
     "volkswagen_suran_2013_trendline": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8515
@@ -5457,10 +5481,10 @@
       "median_sale_price_usd": 19164
     },
     "chevrolet_prisma_2018": {
-      "n": 40,
+      "n": 41,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9934
+      "median_sale_price_usd": 9900
     },
     "chevrolet_astra_2010": {
       "n": 12,
@@ -6111,7 +6135,7 @@
       "median_sale_price_usd": 7285
     },
     "chevrolet_tracker_2024": {
-      "n": 13,
+      "n": 14,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 20906
@@ -7015,6 +7039,12 @@
       "median_days_lived": 26,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7843
+    },
+    "audi_a3_2010_sportback": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11900
     },
     "ford_fiesta_2010": {
       "n": 10,
@@ -8251,6 +8281,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 14052
+    },
+    "audi_q3_2013_quattro": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 19000
     }
   }
 }
