@@ -2,10 +2,10 @@ name: Flight Hunter — Daily
 
 on:
   schedule:
-    # 1 corrida/día (11:37 UTC = 8:37 ART). El vigilante escanea ~25 fechas de
-    # UNA ruta → 25/día ≈ 750/mes (entra en SerpApi Starter 1.000 con margen).
-    # Un vuelo a meses no necesita polling horario; un chequeo diario alcanza.
-    - cron: "37 11 * * *"
+    # 2 corridas/semana (lunes y jueves, 11:37 UTC = 8:37 ART). El vigilante
+    # escanea las 25 combinaciones completas por corrida: promedio ≈217/mes y
+    # máximo 250/mes, dentro del plan gratuito de SerpApi.
+    - cron: "37 11 * * 1,4"
   workflow_dispatch:
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
       - name: Vigilar la ruta (watch_route.py)
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          # Tope de pares (ida,vuelta) por corrida. 25 ≈ 750/mes en 1 corrida/día.
+          # 25 pares × hasta 10 corridas/mes = 250 consultas como máximo.
           FLIGHT_WATCH_MAX_PAIRS: "25"
           # Telegram: alerta al tocar nuevo mínimo o tu precio objetivo (dedup 24h).
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
