@@ -1,37 +1,7 @@
 {
-  "updated": "2026-09-11T19:03:58.675024Z",
+  "updated": "2026-09-12T12:13:49.437161Z",
   "count": 873,
   "stats": {
-    "audi_a3_2016": {
-      "n": 5,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 19800
-    },
-    "ford_ecosport_2015": {
-      "n": 11,
-      "median_days_lived": 2,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 9834
-    },
-    "ford_focus_2015": {
-      "n": 37,
-      "median_days_lived": 2,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 11105
-    },
-    "chevrolet_spin_2016": {
-      "n": 5,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 9508
-    },
-    "chevrolet_prisma_2019": {
-      "n": 7,
-      "median_days_lived": 2,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 10135
-    },
     "audi_q3_2018": {
       "n": 6,
       "median_days_lived": 3,
@@ -926,6 +896,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 15887
     },
+    "ford_focus_2015": {
+      "n": 36,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 11111
+    },
     "ford_ka_2008": {
       "n": 17,
       "median_days_lived": 1,
@@ -1027,6 +1003,12 @@
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9868
+    },
+    "chevrolet_prisma_2019": {
+      "n": 6,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10135
     },
     "chevrolet_tracker_2023": {
       "n": 10,
@@ -2456,6 +2438,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 8784
     },
+    "ford_ecosport_2015": {
+      "n": 10,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9834
+    },
     "ford_other_2017": {
       "n": 6,
       "median_days_lived": 1,
@@ -2905,6 +2893,12 @@
       "median_days_lived": 4,
       "p25_days_lived": 1,
       "median_sale_price_usd": 23900
+    },
+    "audi_a3_2016": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 19900
     },
     "volkswagen_polo_2018": {
       "n": 9,
@@ -4783,6 +4777,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 4437
+    },
+    "chevrolet_spin_2016": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9508
     },
     "peugeot_2008_2018": {
       "n": 8,
