@@ -2,13 +2,6 @@
   "best_ever_usd": 1180,
   "history": [
     {
-      "checked_at": "2026-07-01T13:55:00.079701+00:00",
-      "best_usd": 1539,
-      "departure_date": "2026-09-28",
-      "return_date": "2026-10-10",
-      "price_level": null
-    },
-    {
       "checked_at": "2026-07-02T13:21:24.568403+00:00",
       "best_usd": 1413,
       "departure_date": "2026-09-30",
@@ -420,6 +413,13 @@
       "departure_date": "2026-09-28",
       "return_date": "2026-10-08",
       "price_level": "low"
+    },
+    {
+      "checked_at": "2026-09-14T17:03:22.714985+00:00",
+      "best_usd": 1805,
+      "departure_date": "2026-09-28",
+      "return_date": "2026-10-12",
+      "price_level": "typical"
     }
   ],
   "last_alert": {
