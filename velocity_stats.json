@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-06T14:55:21.814364Z",
-  "count": 547,
+  "updated": "2026-10-06T15:14:36.900191Z",
+  "count": 554,
   "stats": {
     "volkswagen_bora_2008": {
       "n": 4,
@@ -153,10 +153,10 @@
       "median_sale_price_usd": 6230
     },
     "volkswagen_up_2016": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8449
+      "median_sale_price_usd": 8852
     },
     "volkswagen_gol_2006": {
       "n": 5,
@@ -483,7 +483,7 @@
       "median_sale_price_usd": 8278
     },
     "peugeot_207_2010": {
-      "n": 13,
+      "n": 14,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 5817
@@ -675,7 +675,7 @@
       "median_sale_price_usd": 10588
     },
     "fiat_cronos_2023": {
-      "n": 19,
+      "n": 20,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 15082
@@ -687,13 +687,13 @@
       "median_sale_price_usd": 6492
     },
     "fiat_palio_2013": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7148
     },
     "fiat_palio_2014": {
-      "n": 15,
+      "n": 16,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7086
@@ -705,10 +705,10 @@
       "median_sale_price_usd": 4950
     },
     "fiat_cronos_2022": {
-      "n": 12,
+      "n": 14,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13443
+      "median_sale_price_usd": 13592
     },
     "fiat_palio_2000": {
       "n": 3,
@@ -729,9 +729,9 @@
       "median_sale_price_usd": 3934
     },
     "fiat_siena_2014": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 3,
-      "p25_days_lived": 2,
+      "p25_days_lived": 1,
       "median_sale_price_usd": 7213
     },
     "fiat_punto_2013": {
@@ -741,10 +741,10 @@
       "median_sale_price_usd": 7566
     },
     "fiat_cronos_2021": {
-      "n": 16,
+      "n": 18,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 13816
+      "median_sale_price_usd": 13377
     },
     "fiat_palio_2012": {
       "n": 9,
@@ -1185,7 +1185,7 @@
       "median_sale_price_usd": 4803
     },
     "fiat_uno_2011": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 3,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6513
@@ -1250,11 +1250,17 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 6536
     },
-    "fiat_punto_2008": {
+    "fiat_argo_2019": {
       "n": 3,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5232
+      "median_sale_price_usd": 11053
+    },
+    "fiat_punto_2008": {
+      "n": 4,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 5960
     },
     "fiat_punto_2011": {
       "n": 6,
@@ -1737,15 +1743,15 @@
       "median_sale_price_usd": 7947
     },
     "fiat_cronos_2020": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12154
+      "median_sale_price_usd": 12903
     },
     "fiat_pulse_2022": {
-      "n": 4,
-      "median_days_lived": 4,
-      "p25_days_lived": 2,
+      "n": 5,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
       "median_sale_price_usd": 18543
     },
     "fiat_cronos_2026": {
@@ -1916,6 +1922,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 17000
     },
+    "audi_a1_2018": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 20500
+    },
     "volkswagen_bora_2009": {
       "n": 5,
       "median_days_lived": 1,
@@ -2013,10 +2025,10 @@
       "median_sale_price_usd": 17179
     },
     "peugeot_308_2014": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9551
+      "median_sale_price_usd": 9150
     },
     "peugeot_other_2013": {
       "n": 4,
@@ -2127,16 +2139,22 @@
       "median_sale_price_usd": 4276
     },
     "fiat_palio_2007": {
-      "n": 4,
-      "median_days_lived": 4,
-      "p25_days_lived": 3,
-      "median_sale_price_usd": 5166
+      "n": 5,
+      "median_days_lived": 3,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 4792
     },
     "fiat_500_2018": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 15395
+      "median_sale_price_usd": 15497
+    },
+    "fiat_palio_1998": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 2894
     },
     "fiat_siena_2016": {
       "n": 3,
@@ -2391,7 +2409,7 @@
       "median_sale_price_usd": 4503
     },
     "renault_sandero_2015": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9868
@@ -2847,15 +2865,15 @@
       "median_sale_price_usd": 2581
     },
     "fiat_mobi_2017": {
-      "n": 3,
-      "median_days_lived": 3,
-      "p25_days_lived": 2,
-      "median_sale_price_usd": 8224
-    },
-    "fiat_argo_2022": {
       "n": 4,
       "median_days_lived": 3,
-      "p25_days_lived": 3,
+      "p25_days_lived": 2,
+      "median_sale_price_usd": 9061
+    },
+    "fiat_argo_2022": {
+      "n": 5,
+      "median_days_lived": 3,
+      "p25_days_lived": 1,
       "median_sale_price_usd": 12821
     },
     "citroen_c3_aircross_2019": {
@@ -3170,6 +3188,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 15000
     },
+    "audi_a4_2013": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 16500
+    },
     "audi_q5_2011_quattro": {
       "n": 3,
       "median_days_lived": 1,
@@ -3188,11 +3212,23 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 16987
     },
+    "audi_a6_2018_quattro": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 28500
+    },
     "audi_a3_2019": {
       "n": 3,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 20500
+    },
+    "volkswagen_suran_2017": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 10449
     },
     "mercedes_c200_2012": {
       "n": 3,
@@ -3211,6 +3247,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7628
+    },
+    "volkswagen_fox_2013_trendline": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8738
     },
     "fiat_fastback_2025": {
       "n": 3,
