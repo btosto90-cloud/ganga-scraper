@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-07T15:26:35.812557Z",
-  "count": 536,
+  "updated": "2026-10-07T16:13:59.738055Z",
+  "count": 539,
   "stats": {
     "toyota_corolla_2020": {
       "n": 6,
@@ -189,10 +189,10 @@
       "median_sale_price_usd": 9085
     },
     "ford_focus_2016": {
-      "n": 25,
+      "n": 26,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 11148
+      "median_sale_price_usd": 11254
     },
     "ford_ecosport_2014": {
       "n": 6,
@@ -201,10 +201,10 @@
       "median_sale_price_usd": 9281
     },
     "ford_focus_2012": {
-      "n": 4,
+      "n": 5,
       "median_days_lived": 2,
-      "p25_days_lived": 2,
-      "median_sale_price_usd": 7869
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 7692
     },
     "ford_ka_2011_top": {
       "n": 8,
@@ -339,7 +339,7 @@
       "median_sale_price_usd": 12583
     },
     "chevrolet_onix_2020": {
-      "n": 24,
+      "n": 25,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12131
@@ -795,7 +795,7 @@
       "median_sale_price_usd": 15894
     },
     "toyota_corolla_2023": {
-      "n": 4,
+      "n": 5,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 24172
@@ -867,7 +867,7 @@
       "median_sale_price_usd": 34098
     },
     "toyota_yaris_2025": {
-      "n": 11,
+      "n": 12,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 21854
@@ -1023,7 +1023,7 @@
       "median_sale_price_usd": 11290
     },
     "ford_ecosport_2013": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9272
@@ -1119,7 +1119,7 @@
       "median_sale_price_usd": 7566
     },
     "chevrolet_cruze_2023": {
-      "n": 17,
+      "n": 18,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 18874
@@ -1149,10 +1149,10 @@
       "median_sale_price_usd": 7616
     },
     "chevrolet_other_2016": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9205
+      "median_sale_price_usd": 9272
     },
     "chevrolet_corsa_2012": {
       "n": 5,
@@ -1623,9 +1623,9 @@
       "median_sale_price_usd": 10032
     },
     "ford_focus_2017": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 2,
-      "p25_days_lived": 2,
+      "p25_days_lived": 1,
       "median_sale_price_usd": 12583
     },
     "ford_ka_2010": {
@@ -1641,7 +1641,7 @@
       "median_sale_price_usd": 9613
     },
     "ford_ka_2020": {
-      "n": 8,
+      "n": 9,
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 10903
@@ -2390,6 +2390,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 8824
     },
+    "chevrolet_corsa_2008": {
+      "n": 3,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 4787
+    },
     "chevrolet_corsa_2009": {
       "n": 3,
       "median_days_lived": 2,
@@ -2769,10 +2775,16 @@
       "median_sale_price_usd": 19869
     },
     "jeep_renegade_2018_sport": {
-      "n": 3,
-      "median_days_lived": 1,
+      "n": 4,
+      "median_days_lived": 3,
       "p25_days_lived": 1,
       "median_sale_price_usd": 16000
+    },
+    "jeep_compass_2023": {
+      "n": 3,
+      "median_days_lived": 3,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 26797
     },
     "jeep_renegade_2017_sport": {
       "n": 3,
@@ -2961,7 +2973,7 @@
       "median_sale_price_usd": 10492
     },
     "citroen_c4_cactus_2022": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 14377
@@ -3001,6 +3013,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 16500
+    },
+    "jeep_compass_2020_sport": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 18275
     },
     "audi_q3_2018": {
       "n": 4,
