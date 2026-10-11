@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-11T14:53:43.280955Z",
-  "count": 459,
+  "updated": "2026-10-11T15:20:43.149338Z",
+  "count": 467,
   "stats": {
     "toyota_corolla_cross_2022_xei": {
       "n": 9,
@@ -57,10 +57,10 @@
       "median_sale_price_usd": 16667
     },
     "volkswagen_gol_2012": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5751
+      "median_sale_price_usd": 5629
     },
     "volkswagen_gol_2004": {
       "n": 3,
@@ -68,17 +68,23 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 3846
     },
+    "volkswagen_suran_2011": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 6299
+    },
     "volkswagen_suran_2013": {
-      "n": 5,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7668
     },
     "volkswagen_gol_2015": {
-      "n": 5,
+      "n": 6,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8333
+      "median_sale_price_usd": 8940
     },
     "volkswagen_suran_2012": {
       "n": 4,
@@ -93,7 +99,7 @@
       "median_sale_price_usd": 18689
     },
     "volkswagen_gol_2014": {
-      "n": 9,
+      "n": 10,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7285
@@ -129,10 +135,22 @@
       "median_sale_price_usd": 9836
     },
     "volkswagen_bora_2009": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 7843
+    },
+    "volkswagen_other_2011": {
       "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9000
+      "median_sale_price_usd": 10714
+    },
+    "volkswagen_golf_2015": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 14423
     },
     "volkswagen_gol_2010": {
       "n": 10,
@@ -159,8 +177,8 @@
       "median_sale_price_usd": 4615
     },
     "volkswagen_golf_2018": {
-      "n": 4,
-      "median_days_lived": 2,
+      "n": 5,
+      "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 18500
     },
@@ -549,7 +567,7 @@
       "median_sale_price_usd": 5298
     },
     "renault_kwid_2018": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 8818
@@ -639,10 +657,10 @@
       "median_sale_price_usd": 8918
     },
     "renault_duster_2013": {
-      "n": 12,
+      "n": 13,
       "median_days_lived": 2,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 8824
+      "median_sale_price_usd": 8754
     },
     "renault_other_2010": {
       "n": 3,
@@ -999,10 +1017,10 @@
       "median_sale_price_usd": 8852
     },
     "volkswagen_gol_2013": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 7541
+      "median_sale_price_usd": 7468
     },
     "volkswagen_up_2019": {
       "n": 3,
@@ -1023,7 +1041,7 @@
       "median_sale_price_usd": 6536
     },
     "volkswagen_suran_2008": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 6492
@@ -1035,16 +1053,16 @@
       "median_sale_price_usd": 10392
     },
     "volkswagen_up_2017": {
-      "n": 6,
+      "n": 7,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9836
+      "median_sale_price_usd": 9091
     },
     "volkswagen_gol_2017": {
-      "n": 6,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 9836
+      "median_sale_price_usd": 9804
     },
     "volkswagen_up_2015": {
       "n": 4,
@@ -1965,10 +1983,10 @@
       "median_sale_price_usd": 2581
     },
     "fiat_mobi_2017": {
-      "n": 4,
-      "median_days_lived": 3,
-      "p25_days_lived": 2,
-      "median_sale_price_usd": 9061
+      "n": 5,
+      "median_days_lived": 2,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 8766
     },
     "fiat_500_2018": {
       "n": 3,
@@ -2276,6 +2294,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 10258
     },
+    "volkswagen_vento_2014": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 16000
+    },
     "volkswagen_vento_2013": {
       "n": 3,
       "median_days_lived": 1,
@@ -2289,10 +2313,16 @@
       "median_sale_price_usd": 7692
     },
     "volkswagen_gol_2009": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 5128
+      "median_sale_price_usd": 5519
+    },
+    "volkswagen_other_2012": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 7843
     },
     "ford_ka_2018": {
       "n": 10,
@@ -2511,7 +2541,7 @@
       "median_sale_price_usd": 14103
     },
     "volkswagen_up_2018": {
-      "n": 7,
+      "n": 8,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9548
@@ -2708,6 +2738,18 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 18910
     },
+    "chery_tiggo_2015": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9500
+    },
+    "chery_tiggo_2019": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 13636
+    },
     "chery_qq_2017": {
       "n": 4,
       "median_days_lived": 1,
@@ -2715,7 +2757,7 @@
       "median_sale_price_usd": 7628
     },
     "chery_tiggo_2017_luxury": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12200
@@ -2727,10 +2769,16 @@
       "median_sale_price_usd": 8974
     },
     "chery_tiggo_2018_luxury": {
+      "n": 6,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12700
+    },
+    "chery_qq_2012": {
       "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 12821
+      "median_sale_price_usd": 4870
     },
     "chery_tiggo_2018_comfortline": {
       "n": 3,
