@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-19T15:13:14.773507Z",
-  "count": 155,
+  "updated": "2026-10-19T15:30:38.739814Z",
+  "count": 158,
   "stats": {
     "ford_ecosport_2015": {
       "n": 5,
@@ -37,6 +37,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9808
+    },
+    "peugeot_208_2024_gt": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 18641
     },
     "peugeot_208_2017": {
       "n": 3,
@@ -297,13 +303,13 @@
       "median_sale_price_usd": 9615
     },
     "peugeot_308_2012": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
-      "median_sale_price_usd": 7395
+      "median_sale_price_usd": 7974
     },
     "peugeot_208_2020": {
-      "n": 3,
+      "n": 4,
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12141
@@ -313,6 +319,12 @@
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 15335
+    },
+    "peugeot_308_2017": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9904
     },
     "renault_logan_2017": {
       "n": 5,
@@ -925,6 +937,12 @@
       "median_days_lived": 3,
       "p25_days_lived": 3,
       "median_sale_price_usd": 22000
+    },
+    "chery_tiggo_7_2026": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 34286
     },
     "toyota_corolla_2015_xei": {
       "n": 4,
