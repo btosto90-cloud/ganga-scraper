@@ -1,85 +1,7 @@
 {
-  "updated": "2026-10-18T23:02:02.048039Z",
-  "count": 163,
+  "updated": "2026-10-19T15:13:14.773507Z",
+  "count": 155,
   "stats": {
-    "audi_q3_2013_quattro": {
-      "n": 4,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 19000
-    },
-    "audi_a4_2016": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 20900
-    },
-    "audi_a4_2012": {
-      "n": 6,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 14000
-    },
-    "audi_a1_2013_sportback": {
-      "n": 4,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 15000
-    },
-    "audi_a4_2013": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 16500
-    },
-    "audi_q5_2011_quattro": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 14706
-    },
-    "volkswagen_gol_2010": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 5425
-    },
-    "volkswagen_gol_2013": {
-      "n": 5,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 6149
-    },
-    "volkswagen_gol_2009": {
-      "n": 5,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 5128
-    },
-    "chevrolet_cruze_2016": {
-      "n": 4,
-      "median_days_lived": 2,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 10543
-    },
-    "chevrolet_cruze_2023": {
-      "n": 6,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 17799
-    },
-    "peugeot_208_2014": {
-      "n": 3,
-      "median_days_lived": 1,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 8000
-    },
-    "kia_sportage_2017": {
-      "n": 3,
-      "median_days_lived": 4,
-      "p25_days_lived": 1,
-      "median_sale_price_usd": 20000
-    },
     "ford_ecosport_2015": {
       "n": 5,
       "median_days_lived": 1,
@@ -103,6 +25,12 @@
       "median_days_lived": 2,
       "p25_days_lived": 1,
       "median_sale_price_usd": 9615
+    },
+    "chevrolet_cruze_2023": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 17799
     },
     "chevrolet_onix_2016": {
       "n": 3,
@@ -308,6 +236,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 5751
     },
+    "volkswagen_gol_2013": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 7348
+    },
     "volkswagen_suran_2013": {
       "n": 5,
       "median_days_lived": 1,
@@ -355,6 +289,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 12581
+    },
+    "chevrolet_cruze_2016": {
+      "n": 3,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 9615
     },
     "peugeot_308_2012": {
       "n": 3,
@@ -620,6 +560,12 @@
       "p25_days_lived": 1,
       "median_sale_price_usd": 21795
     },
+    "audi_a4_2012": {
+      "n": 5,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 12500
+    },
     "audi_a5_2018": {
       "n": 3,
       "median_days_lived": 1,
@@ -649,6 +595,12 @@
       "median_days_lived": 1,
       "p25_days_lived": 1,
       "median_sale_price_usd": 7045
+    },
+    "volkswagen_gol_2009": {
+      "n": 4,
+      "median_days_lived": 1,
+      "p25_days_lived": 1,
+      "median_sale_price_usd": 5128
     },
     "volkswagen_gol_2017": {
       "n": 5,
